@@ -12,9 +12,13 @@ HeretaungaHomestead1F_OnFrame:
 @ ------------------------------------------------------------------
 Homestead_EventScript_Birthday::
 	lockall
+	playbgm MUS_ROUTE118, TRUE
+	applymovement LOCALID_HOMESTEAD_RATA, Homestead_Movement_RataNotice
+	applymovement LOCALID_HOMESTEAD_KAURI, Homestead_Movement_KauriNotice
+	waitmovement 0
+	msgbox Homestead_Text_RataThereYouAre, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, Homestead_Movement_PlayerToTable
 	waitmovement 0
-	playbgm MUS_ROUTE118, TRUE
 	msgbox Homestead_Text_RataHappyBirthday, MSGBOX_DEFAULT
 	msgbox Homestead_Text_KauriLookAtYou, MSGBOX_DEFAULT
 	msgbox Homestead_Text_RataWePlanned, MSGBOX_DEFAULT
@@ -129,7 +133,20 @@ Homestead_Movement_PlayerToTable:
 	walk_left
 	walk_left
 	walk_left
+	walk_left
 	face_left
+	step_end
+
+Homestead_Movement_RataNotice:
+	emote_exclamation_mark
+	delay_16
+	face_right
+	step_end
+
+Homestead_Movement_KauriNotice:
+	emote_exclamation_mark
+	delay_16
+	face_up
 	step_end
 
 Homestead_Movement_TamaNotice:
@@ -159,10 +176,14 @@ Homestead_EventScript_Tama::
 	end
 
 @ ------------------------- text -------------------------
+Homestead_Text_RataThereYouAre:
+	.string "Rata: …! There you are,\n"
+	.string "sleepyhead!\p"
+	.string "Come down, come down…\n"
+	.string "everyone's waiting.$"
+
 Homestead_Text_RataHappyBirthday:
-	.string "Rata: {PLAYER}! There you are.\p"
-	.string "Happy birthday, sweetheart.\n"
-	.string "Come here… everyone's waiting.\p"
+	.string "Rata: Happy birthday, sweetheart.\p"
 	.string "Look at us, eh? All four of us,\n"
 	.string "under one roof.$"
 
@@ -204,8 +225,10 @@ Homestead_Text_RataItSuitsYou:
 	.string "…Yes. It suits you.$"
 
 Homestead_Text_TamaMustBeNice:
-	.string "Tama: Must be nice.\p"
-	.string "Nobody chipped in for mine.$"
+	.string "Tama: Must be nice being the\n"
+	.string "favourite one.\p"
+	.string "I didn't get these same choices\n"
+	.string "when I turned your age.$"
 
 Homestead_Text_RataTama:
 	.string "Rata: Tama…$"

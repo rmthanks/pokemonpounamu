@@ -126,36 +126,48 @@ g[27][25] = HEDGE
 
 heretaunga = g
 
-# ================= ORCHARD ROAD (16 x 32) — the road north to Ahuriri =================
-W2, H2 = 16, 32
+# ================= ROUTE 51 (16 x 44) — the coastal road north to Ahuriri =================
+W2, H2 = 16, 44
 r = [[GRASS]*W2 for _ in range(H2)]
 ring_trees(r, W2, H2)
 # south opening (from Heretaunga) x7-8; north opening (to Ahuriri, blocked) x7-8
-fill(r, 7, 30, 2, 2, GRASS)
+fill(r, 7, 42, 2, 2, GRASS)
 fill(r, 7, 0, 2, 2, GRASS)
-# winding road
-fill(r, 7, 24, 2, 8, SAND)
-fill(r, 4, 23, 5, 2, SAND)
-fill(r, 4, 16, 2, 8, SAND)
-fill(r, 4, 15, 8, 2, SAND)
-fill(r, 10, 8, 2, 8, SAND)
-fill(r, 7, 7, 5, 2, SAND)
-fill(r, 7, 2, 2, 6, SAND)
+# winding road (south to north)
+fill(r, 7, 36, 2, 8, SAND)
+fill(r, 4, 35, 5, 2, SAND)
+fill(r, 4, 28, 2, 8, SAND)
+fill(r, 4, 27, 8, 2, SAND)
+fill(r, 10, 20, 2, 8, SAND)
+fill(r, 7, 19, 5, 2, SAND)
+fill(r, 7, 12, 2, 8, SAND)
+fill(r, 7, 11, 5, 2, SAND)
+fill(r, 10, 4, 2, 8, SAND)
+fill(r, 8, 3, 4, 2, SAND)
+fill(r, 7, 2, 2, 2, SAND)
 # tall grass fields
-fill(r, 10, 25, 4, 4, TALL)
-fill(r, 2, 10, 2, 5, TALL)
-fill(r, 7, 10, 3, 4, TALL)
-fill(r, 2, 3, 4, 3, TALL)
-fill(r, 12, 18, 3, 4, TALL)
-# trees & flowers
-tree_row(r, 11, 4, 1)
-tree_row(r, 3, 19, 1)
-for (x, y) in [(3,8),(12,13),(6,21),(13,29),(2,17)]:
+fill(r, 10, 37, 4, 4, TALL)
+fill(r, 2, 30, 2, 5, TALL)
+fill(r, 7, 30, 3, 4, TALL)
+fill(r, 2, 22, 4, 3, TALL)
+fill(r, 12, 24, 3, 4, TALL)
+fill(r, 2, 12, 3, 4, TALL)
+fill(r, 4, 6, 3, 3, TALL)
+fill(r, 12, 12, 3, 4, TALL)
+# hedgerow orchard edges & trees
+tree_row(r, 11, 32, 1)
+tree_row(r, 3, 17, 1)
+tree_row(r, 12, 8, 1)
+for x in range(2, 7):
+    r[10][x] = HEDGE
+for x in range(9, 14):
+    r[29][x] = HEDGE
+for (x, y) in [(3,28),(12,25),(6,33),(13,41),(2,25),(5,13),(13,17),(3,5)]:
     if r[y][x] == GRASS: r[y][x] = FLOWER
 orchard_road = r
 
-# ================= HOMESTEAD 1F (13 x 10) =================
-W3, H3 = 13, 10
+# ================= HOMESTEAD 1F (15 x 11, fills the screen) =================
+W3, H3 = 15, 11
 FLOOR = cell(h1, LH1, 8, 5)     # 201 wood floor
 WALL_TOP = cell(h1, LH1, 1, 0)  # 26E wall top
 LEDGE_L = cell(h1, LH1, 0, 4)   # 204 left wall edge
@@ -164,32 +176,34 @@ for x in range(W3):
     f1[0][x] = WALL_TOP
 # kitchen strip (fridge/sink/counters) sampled verbatim
 put(f1, 0, 1, block(h1, LH1, 0, 1, 5, 2))
-# stair block to 2F at top-right (3 wide x 3 tall incl. wall)
-put(f1, 9, 0, block(h1, LH1, 7, 0, 4, 3))
+# stair block to 2F at top-right (4 wide x 3 tall incl. wall)
+put(f1, 11, 0, block(h1, LH1, 7, 0, 4, 3))
 # family table + chairs + rug set (6 wide x 4 tall)
-put(f1, 3, 4, block(h1, LH1, 1, 5, 6, 4))
+put(f1, 4, 5, block(h1, LH1, 1, 5, 6, 4))
 # left wall edge
 for y in range(3, H3):
     f1[y][0] = LEDGE_L
 # exit mats at bottom center
-put(f1, 6, H3-1, [[cell(h1, LH1, 8, 8), cell(h1, LH1, 9, 8)]])
+put(f1, 7, H3-1, [[cell(h1, LH1, 8, 8), cell(h1, LH1, 9, 8)]])
 homestead1f = f1
 
-# ================= HOMESTEAD 2F — Marama's room (10 x 8) =================
-W4, H4 = 10, 8
+# ================= HOMESTEAD 2F — Marama's room (15 x 10, fills the screen) =================
+W4, H4 = 15, 10
 FLOOR2 = cell(h2, LH2, 8, 7)
-WALLT2 = cell(h2, LH2, 1, 0)
+WALL2_TOP  = cell(h2, LH2, 1, 0)   # plain wall top strip
+WALL2_FACE = cell(h2, LH2, 1, 1)   # plain wall face strip
 f2 = [[FLOOR2]*W4 for _ in range(H4)]
 for x in range(W4):
-    f2[0][x] = WALLT2
-# stairs down block (3 wide x 2 tall) top-right — vanilla warp tile is its center
-put(f2, 7, 0, block(h2, LH2, 6, 0, 3, 2))
-# desk/console corner sampled from vanilla row 0-2 left side
+    f2[0][x] = WALL2_TOP
+    f2[1][x] = WALL2_FACE
+# desk/console corner (includes its own wall) top-left
 put(f2, 0, 0, block(h2, LH2, 0, 0, 4, 3))
-# bed block bottom-left
-put(f2, 0, 4, block(h2, LH2, 0, 3, 3, 3))
+# stairs down block (3 wide x 2 tall) top-right
+put(f2, 12, 0, block(h2, LH2, 6, 0, 3, 2))
+# bed block left
+put(f2, 1, 4, block(h2, LH2, 0, 3, 3, 3))
 # rug center-right
-put(f2, 5, 3, block(h2, LH2, 4, 3, 4, 4))
+put(f2, 7, 4, block(h2, LH2, 4, 3, 4, 4))
 marama_room = f2
 
 # ---- write out ----
@@ -201,7 +215,10 @@ def write_layout(name, grid, folder):
                 f.write(struct.pack('<H', v))
     # border: 2x2 trees for exteriors, black (wall top) for interiors
     with open(f'{ROOT}/data/layouts/{folder}/border.bin', 'wb') as f:
-        if 'Homestead' in folder or 'Room' in folder:
+        if '2F' in folder:
+            for v in (WALL2_TOP, WALL2_TOP, WALL2_FACE, WALL2_FACE):
+                f.write(struct.pack('<H', v))
+        elif 'Homestead' in folder:
             for v in (WALL_TOP, WALL_TOP, WALL_TOP, WALL_TOP):
                 f.write(struct.pack('<H', v))
         else:
@@ -215,9 +232,9 @@ write_layout('MaramaRoom', marama_room, 'HeretaungaHomestead2F')
 
 specs = [
     ('LAYOUT_HERETAUNGA_TOWN', 'HeretaungaTown_Layout', 40, 28, 'gTileset_General', 'gTileset_Petalburg', 'HeretaungaTown'),
-    ('LAYOUT_ORCHARD_ROAD', 'OrchardRoad_Layout', 16, 32, 'gTileset_General', 'gTileset_Petalburg', 'OrchardRoad'),
-    ('LAYOUT_HERETAUNGA_HOMESTEAD_1F', 'HeretaungaHomestead1F_Layout', 13, 10, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead1F'),
-    ('LAYOUT_HERETAUNGA_HOMESTEAD_2F', 'HeretaungaHomestead2F_Layout', 10, 8, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead2F'),
+    ('LAYOUT_ORCHARD_ROAD', 'OrchardRoad_Layout', 16, 44, 'gTileset_General', 'gTileset_Petalburg', 'OrchardRoad'),
+    ('LAYOUT_HERETAUNGA_HOMESTEAD_1F', 'HeretaungaHomestead1F_Layout', 15, 11, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead1F'),
+    ('LAYOUT_HERETAUNGA_HOMESTEAD_2F', 'HeretaungaHomestead2F_Layout', 15, 10, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead2F'),
 ]
 ids = {l['id'] for l in LAYOUTS['layouts']}
 for lid, name, w, h, p, s, folder in specs:

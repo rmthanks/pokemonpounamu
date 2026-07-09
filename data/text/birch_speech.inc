@@ -9,8 +9,14 @@ gText_Birch_Welcome::
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This little one is a Pokémon.\p"
-	.string "\n"
+	.string "This one? Solrock.\n"
+	.string "We go way back.\p"
+	.string "Long ago, I snared the sun itself…\n"
+	.string "made it walk slower across the\l"
+	.string "sky, so people had time to live.\p"
+	.string "…It still pinches an hour back\n"
+	.string "off me every spring, mind you.\l"
+	.string "We have an arrangement.\p"
 	.string "$"
 
 gText_Birch_MainSpeech::
