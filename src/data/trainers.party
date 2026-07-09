@@ -17566,3 +17566,131 @@ Level: 18
 
 Swablu
 Level: 18
+
+=== TRAINER_AWHI ===
+Name: Awhi
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer / Smart Switching
+
+Mightyena
+Level: 46
+
+Cacturne
+Level: 46
+
+Sableye
+Level: 47
+
+Absol
+Level: 47
+
+Shiftry
+Level: 49
+
+=== TRAINER_TOA ===
+Name: Toa
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer / Smart Switching
+
+Breloom
+Level: 48
+
+Hariyama
+Level: 49
+
+Medicham
+Level: 49
+
+Heracross
+Level: 50
+
+Machamp
+Level: 51
+
+=== TRAINER_WHETU ===
+Name: Whetu
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer / Smart Switching
+
+Xatu
+Level: 50
+
+Claydol
+Level: 51
+
+Lunatone
+Level: 51
+
+Alakazam
+Level: 52
+
+Gardevoir
+Level: 53
+
+=== TRAINER_PO ===
+Name: Po
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer / Smart Switching
+
+Shedinja
+Level: 52
+
+Sableye
+Level: 53
+
+Mismagius
+Level: 53
+
+Dusclops
+Level: 54
+
+Banette
+Level: 55
+
+=== TRAINER_MAUI ===
+Name: Maui
+Class: Champion
+Pic: Champion Wallace
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer / Smart Switching
+
+Flygon
+Level: 55
+
+Tyranitar
+Level: 56
+
+Aggron
+Level: 56
+
+Gardevoir
+Level: 57
+
+Absol
+Level: 57
+
+Solgaleo
+Level: 60

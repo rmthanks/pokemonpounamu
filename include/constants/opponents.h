@@ -905,12 +905,17 @@
 #define TRAINER_OTEPOTI_PROSPECT             896
 #define TRAINER_MANU                        897
 #define TRAINER_WELLINGTON_PROSPECT         898
+#define TRAINER_AWHI                        899
+#define TRAINER_TOA                         900
+#define TRAINER_WHETU                       901
+#define TRAINER_PO                          902
+#define TRAINER_MAUI                        903
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     899
+#define TRAINERS_COUNT_EMERALD     904
 #define MAX_TRAINERS_COUNT_EMERALD 1120
 
 #if IS_FRLG
