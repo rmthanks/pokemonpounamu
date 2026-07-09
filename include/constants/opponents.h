@@ -868,13 +868,17 @@
 #define TRAINER_R51_ANARU                   859
 #define TRAINER_R51_MEREANA                 860
 #define TRAINER_R51_WIREMU                  861
+#define TRAINER_R2N_REWI                    862
+#define TRAINER_R2N_PIRI                    863
+#define TRAINER_R2E_MIHI                    864
+#define TRAINER_R2E_HEMI                    865
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     862
-#define MAX_TRAINERS_COUNT_EMERALD 864
+#define TRAINERS_COUNT_EMERALD     866
+#define MAX_TRAINERS_COUNT_EMERALD 1120
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

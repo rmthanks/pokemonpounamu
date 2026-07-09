@@ -371,6 +371,124 @@ for (x, y) in [(4,22),(12,14),(3,12),(13,3),(9,3)]:
     if b[y][x] == GRASS: b[y][x] = FLOWER
 route2bay = b
 
+
+# ================= ROUTE 2 NORTH (16 x 70) — checkpoint to Wairoa =================
+W5, H5 = 16, 70
+r2n = [[GRASS]*W5 for _ in range(H5)]
+ring_trees(r2n, W5, H5)
+fill(r2n, 7, 0, 2, 2, GRASS)    # north opening (Wairoa)
+fill(r2n, 7, 68, 2, 2, GRASS)   # south opening (Route 2 Bay)
+fill(r2n, 7, 2, 2, 66, SAND)    # the highway
+# lay-bys / widenings
+fill(r2n, 5, 60, 2, 3, SAND)
+fill(r2n, 9, 40, 2, 3, SAND)
+fill(r2n, 5, 18, 2, 3, SAND)
+# tall grass fields flanking (path kept clear)
+fill(r2n, 2, 62, 4, 4, TALL)
+fill(r2n, 10, 55, 4, 5, TALL)
+fill(r2n, 2, 46, 3, 6, TALL)
+fill(r2n, 11, 33, 3, 5, TALL)
+fill(r2n, 2, 28, 4, 4, TALL)
+fill(r2n, 10, 14, 4, 4, TALL)
+fill(r2n, 2, 8, 3, 5, TALL)
+# hedgerows with gaps at the road
+for x in list(range(2,7))+list(range(9,14)):
+    r2n[52][x] = HEDGE
+for x in list(range(2,7))+list(range(9,14)):
+    r2n[24][x] = HEDGE
+# tree clusters
+tree_row(r2n, 3, 36, 2)
+tree_row(r2n, 11, 20, 2)
+tree_row(r2n, 3, 5, 1)
+for (x,y) in [(4,58),(11,45),(3,31),(12,27),(5,12),(10,7),(13,63),(2,41)]:
+    if r2n[y][x] == GRASS: r2n[y][x] = FLOWER
+route2_north = r2n
+
+# ================= WAIROA (20 x 16) — hamlet at the river mouth =================
+W6, H6 = 20, 16
+wr = [[GRASS]*W6 for _ in range(H6)]
+ring_trees(wr, W6, H6)
+fill(wr, 7, 0, 2, 2, GRASS)     # north opening (Route 2 east leg)
+fill(wr, 7, 14, 2, 2, GRASS)    # south opening (Route 2 north leg)
+fill(wr, 7, 2, 2, 12, SAND)     # through-road
+put(wr, 2, 3, PC_BLOCK)         # Pokemon Center, door (3,6)
+fill(wr, 3, 7, 4, 1, SAND)
+put(wr, 11, 3, OHOUSE)          # cottage, door (12,6)
+fill(wr, 9, 7, 4, 1, SAND)
+put(wr, 13, 9, PHOUSE4)         # cottage, door (14,12)
+fill(wr, 9, 12, 5, 1, SAND)
+wr[8][4] = SIGN_L; wr[8][5] = SIGN_R   # town sign west of road
+for (x,y) in [(4,10),(16,4),(11,13),(3,12)]:
+    if wr[y][x] == GRASS: wr[y][x] = FLOWER
+wairoa = wr
+
+# ================= ROUTE 2 EAST (16 x 85) — Wairoa to Turanga =================
+W7, H7 = 16, 84
+r2e = [[GRASS]*W7 for _ in range(H7)]
+ring_trees(r2e, W7, H7)
+fill(r2e, 7, 0, 2, 2, GRASS)
+fill(r2e, 7, 82, 2, 2, GRASS)
+fill(r2e, 7, 2, 2, 80, SAND)
+fill(r2e, 9, 70, 2, 3, SAND)
+fill(r2e, 5, 50, 2, 3, SAND)
+fill(r2e, 9, 25, 2, 3, SAND)
+fill(r2e, 2, 76, 4, 5, TALL)
+fill(r2e, 10, 64, 4, 5, TALL)
+fill(r2e, 2, 57, 3, 5, TALL)
+fill(r2e, 11, 44, 3, 6, TALL)
+fill(r2e, 2, 37, 4, 5, TALL)
+fill(r2e, 10, 30, 4, 4, TALL)
+fill(r2e, 2, 17, 3, 6, TALL)
+fill(r2e, 11, 9, 3, 5, TALL)
+for x in list(range(2,7))+list(range(9,14)):
+    r2e[73][x] = HEDGE
+for x in list(range(2,7))+list(range(9,14)):
+    r2e[41][x] = HEDGE
+for x in list(range(2,7))+list(range(9,14)):
+    r2e[14][x] = HEDGE
+tree_row(r2e, 3, 68, 2)
+tree_row(r2e, 11, 53, 2)
+tree_row(r2e, 3, 27, 2)
+tree_row(r2e, 11, 18, 1)
+for (x,y) in [(4,74),(11,60),(3,48),(12,35),(5,21),(10,11),(13,79),(2,66)]:
+    if r2e[y][x] == GRASS: r2e[y][x] = FLOWER
+route2_east = r2e
+
+# ================= TURANGA (26 x 22) — first light city =================
+W8, H8 = 26, 22
+tg = [[GRASS]*W8 for _ in range(H8)]
+ring_trees(tg, W8, H8)
+fill(tg, 7, 20, 2, 2, GRASS)    # south opening (Route 2)
+fill(tg, 12, 0, 2, 2, GRASS)    # north opening (Route 35, gated)
+# streets
+paved(tg, 6, 8, 16, 3)          # main street EW
+fill(tg, 7, 11, 2, 9, SAND)     # south road to opening
+fill(tg, 12, 2, 2, 6, SAND)     # north road to Route 35 gate
+# civic row (north side of main street)
+put(tg, 3, 3, PC_BLOCK)         # door (4,6)
+fill(tg, 4, 7, 1, 1, SAND)
+put(tg, 8, 3, MART_BLOCK)       # door (9,6)
+fill(tg, 9, 7, 1, 1, SAND)
+put(tg, 16, 2, LAB)             # Tairawhiti museum, door (19,6)
+fill(tg, 19, 7, 1, 1, SAND)
+# houses (south side)
+put(tg, 2, 13, PHOUSE5)         # door (4,16)
+fill(tg, 4, 17, 1, 1, SAND)
+put(tg, 10, 13, OHOUSE)         # door (11,16)
+fill(tg, 11, 17, 1, 1, SAND)
+put(tg, 15, 13, PHOUSE4)        # door (16,16)
+fill(tg, 16, 17, 1, 1, SAND)
+# harbour basin (pond block) SE corner
+put(tg, 19, 14, POND)
+# waharoa gate to Hikurangi Track: east edge opening + hedge frame
+fill(tg, 24, 9, 2, 2, GRASS)    # east opening in the ring
+tg[8][23] = HEDGE; tg[11][23] = HEDGE
+tg[9][21] = SIGN_L; tg[9][22] = SIGN_R  # track sign
+tg[12][10] = SIGN_L; tg[12][11] = SIGN_R  # town sign near south road
+for (x,y) in [(5,12),(14,12),(21,3),(2,18),(17,11)]:
+    if tg[y][x] == GRASS: tg[y][x] = FLOWER
+turanga = tg
+
 # ---- write out ----
 def write_layout(name, grid, folder):
     os.makedirs(f'{ROOT}/data/layouts/{folder}', exist_ok=True)
@@ -393,6 +511,10 @@ def write_layout(name, grid, folder):
 write_layout('HeretaungaTown', heretaunga, 'HeretaungaTown')
 write_layout('AhuririCity', ahuriri, 'AhuririCity')
 write_layout('Route2Bay', route2bay, 'Route2Bay')
+write_layout('Route2North', route2_north, 'Route2North')
+write_layout('Wairoa', wairoa, 'Wairoa')
+write_layout('Route2East', route2_east, 'Route2East')
+write_layout('Turanga', turanga, 'Turanga')
 write_layout('OrchardRoad', orchard_road, 'OrchardRoad')
 write_layout('HomesteadF1', homestead1f, 'HeretaungaHomestead1F')
 write_layout('MaramaRoom', marama_room, 'HeretaungaHomestead2F')
@@ -402,6 +524,10 @@ specs = [
     ('LAYOUT_AHURIRI_CITY', 'AhuririCity_Layout', 44, 36, 'gTileset_General', 'gTileset_Mauville', 'AhuririCity'),
     ('LAYOUT_ROUTE2_BAY', 'Route2Bay_Layout', 16, 26, 'gTileset_General', 'gTileset_Petalburg', 'Route2Bay'),
     ('LAYOUT_ORCHARD_ROAD', 'OrchardRoad_Layout', 16, 44, 'gTileset_General', 'gTileset_Petalburg', 'OrchardRoad'),
+    ('LAYOUT_ROUTE2_NORTH', 'Route2North_Layout', 16, 70, 'gTileset_General', 'gTileset_Petalburg', 'Route2North'),
+    ('LAYOUT_WAIROA', 'Wairoa_Layout', 20, 16, 'gTileset_General', 'gTileset_Petalburg', 'Wairoa'),
+    ('LAYOUT_ROUTE2_EAST', 'Route2East_Layout', 16, 84, 'gTileset_General', 'gTileset_Petalburg', 'Route2East'),
+    ('LAYOUT_TURANGA', 'Turanga_Layout', 26, 22, 'gTileset_General', 'gTileset_Petalburg', 'Turanga'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_1F', 'HeretaungaHomestead1F_Layout', 15, 11, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead1F'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_2F', 'HeretaungaHomestead2F_Layout', 15, 10, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead2F'),
 ]

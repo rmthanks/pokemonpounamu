@@ -16984,3 +16984,63 @@ Level: 6
 
 Combee
 Level: 6
+
+=== TRAINER_R2N_REWI ===
+Name: Rewi
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magikarp
+Level: 11
+
+Wingull
+Level: 13
+
+=== TRAINER_R2N_PIRI ===
+Name: Piri
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Geodude
+Level: 12
+
+Aron
+Level: 13
+
+=== TRAINER_R2E_MIHI ===
+Name: Mihi
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Hoppip
+Level: 13
+
+Skiploom
+Level: 14
+
+=== TRAINER_R2E_HEMI ===
+Name: Hemi
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 13
+
+Electrike
+Level: 14

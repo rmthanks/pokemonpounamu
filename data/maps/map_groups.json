@@ -137,7 +137,14 @@
     "HeretaungaTown",
     "OrchardRoad",
     "AhuririCity",
-    "Route2Bay"
+    "Route2Bay",
+    "Route2North",
+    "Wairoa",
+    "WairoaPokemonCenter1F",
+    "Route2East",
+    "Turanga",
+    "TurangaPokemonCenter1F",
+    "TurangaMart"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

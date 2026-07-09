@@ -9389,6 +9389,50 @@
       "border_filepath": "data/layouts/Route2Bay/border.bin",
       "blockdata_filepath": "data/layouts/Route2Bay/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_NORTH",
+      "name": "Route2North_Layout",
+      "width": 16,
+      "height": 70,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route2North/border.bin",
+      "blockdata_filepath": "data/layouts/Route2North/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_WAIROA",
+      "name": "Wairoa_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Wairoa/border.bin",
+      "blockdata_filepath": "data/layouts/Wairoa/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_EAST",
+      "name": "Route2East_Layout",
+      "width": 16,
+      "height": 84,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route2East/border.bin",
+      "blockdata_filepath": "data/layouts/Route2East/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TURANGA",
+      "name": "Turanga_Layout",
+      "width": 26,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Turanga/border.bin",
+      "blockdata_filepath": "data/layouts/Turanga/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

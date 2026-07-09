@@ -18,6 +18,11 @@
       "map": "MAP_AHURIRI_CITY",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE2_NORTH",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [

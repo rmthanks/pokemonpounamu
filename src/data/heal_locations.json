@@ -357,6 +357,22 @@
       "y": 14,
       "respawn_map": "MAP_AHURIRI_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_AHURIRI_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_WAIROA",
+      "map": "MAP_WAIROA",
+      "x": 3,
+      "y": 7,
+      "respawn_map": "MAP_WAIROA_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_WAIROA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_TURANGA",
+      "map": "MAP_TURANGA",
+      "x": 4,
+      "y": 7,
+      "respawn_map": "MAP_TURANGA_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_TURANGA_NURSE"
     }
   ]
 }
