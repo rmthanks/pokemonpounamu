@@ -115,3 +115,105 @@ HeretaungaTown_Text_Route2Gate:
 	.string "If you're wanting Te Whanganui-\n"
 	.string "a-Tara, it's the long way round\l"
 	.string "for you. Sorry, mate.$"
+
+@ ------------------------------------------------------------------
+@ Rata - Grass gym leader. The orchard IS the gym. Badge 1.
+@ ------------------------------------------------------------------
+HeretaungaTown_EventScript_Rata::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE01_GET, HeretaungaTown_EventScript_RataRetalk
+	msgbox HeretaungaTown_Text_RataPreBattle, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_RATA, HeretaungaTown_Text_RataDefeat
+	msgbox HeretaungaTown_Text_RataBadgeSpeech, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_BADGE
+	message HeretaungaTown_Text_ReceivedOrchardBadge
+	waitfanfare
+	waitmessage
+	setflag FLAG_BADGE01_GET
+	msgbox HeretaungaTown_Text_RataGoNorth, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EventScript_RataRetalk::
+	msgbox HeretaungaTown_Text_RataOrchardRetalk, MSGBOX_DEFAULT
+	release
+	end
+
+@ ------------------------------------------------------------------
+@ Functional buildings: the i-SITE and the Matariki hall.
+@ ------------------------------------------------------------------
+HeretaungaTown_EventScript_ISite::
+	lockall
+	msgbox HeretaungaTown_Text_ISite, MSGBOX_DEFAULT
+	goto_if_set FLAG_UNUSED_0x021, HeretaungaTown_EventScript_ISiteDone
+	msgbox HeretaungaTown_Text_ISiteFreebies, MSGBOX_DEFAULT
+	giveitem ITEM_POKE_BALL, 5
+	setflag FLAG_UNUSED_0x021
+HeretaungaTown_EventScript_ISiteDone::
+	releaseall
+	end
+
+HeretaungaTown_EventScript_MatarikiHall::
+	msgbox HeretaungaTown_Text_MatarikiHall, MSGBOX_SIGN
+	end
+
+@ ------------------------- text -------------------------
+HeretaungaTown_Text_RataPreBattle:
+	.string "Rata: Out here, love, I'm not\n"
+	.string "your mum.\p"
+	.string "I'm the Heretaunga gym leader.\n"
+	.string "The orchard picked me long\l"
+	.string "before you were born.\p"
+	.string "Show me what you and your little\n"
+	.string "one have learned between\l"
+	.string "the rows.$"
+
+HeretaungaTown_Text_RataDefeat:
+	.string "…Oh.\p"
+	.string "Oh, there it is.$"
+
+HeretaungaTown_Text_RataBadgeSpeech:
+	.string "Rata: You've grown right past\n"
+	.string "the fence line, my love.\p"
+	.string "And I never even saw it happen.$"
+
+HeretaungaTown_Text_ReceivedOrchardBadge:
+	.string "{PLAYER} received the Orchard Badge\n"
+	.string "from Rata!$"
+
+HeretaungaTown_Text_RataGoNorth:
+	.string "Rata: The Orchard Badge.\n"
+	.string "First of eight.\p"
+	.string "Your father keeps the second,\n"
+	.string "up in Ahuriri.\p"
+	.string "All Deco corners and sea light,\n"
+	.string "that town. Route 51 will take\l"
+	.string "you straight up.\p"
+	.string "Go and surprise him.\p"
+	.string "…He'll pretend he knew you were\n"
+	.string "coming. He always pretends.$"
+
+HeretaungaTown_Text_RataOrchardRetalk:
+	.string "Rata: Tell your father the apples\n"
+	.string "came in sweet this year.\p"
+	.string "…And that he still owes me\n"
+	.string "a fence post.$"
+
+HeretaungaTown_Text_ISite:
+	.string "HERETAUNGA i-SITE\n"
+	.string "Your gateway to Te Matau-a-Maui!\p"
+	.string "The window display is all Te Mata:\p"
+	.string "“THE SLEEPING GIANT -\n"
+	.string "RIDGE WALKS OPEN NEXT SEASON.”$"
+
+HeretaungaTown_Text_ISiteFreebies:
+	.string "A rack of freebies for new\n"
+	.string "trainers stands by the door.$"
+
+HeretaungaTown_Text_MatarikiHall:
+	.string "MATARIKI WHANAU HALL\p"
+	.string "Closed for preparations.\p"
+	.string "The whole town books it out for\n"
+	.string "the Matariki festival… nothing\l"
+	.string "moves in there till the stars do.$"

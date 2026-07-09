@@ -135,7 +135,9 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "HeretaungaTown",
-    "OrchardRoad"
+    "OrchardRoad",
+    "AhuririCity",
+    "Route2Bay"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -146,7 +148,10 @@
     "HeretaungaHomestead1F",
     "HeretaungaHomestead2F",
     "HeretaungaPokemonCenter1F",
-    "HeretaungaMart"
+    "HeretaungaMart",
+    "AhuririPokemonCenter1F",
+    "AhuririMart",
+    "AhuririGym"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

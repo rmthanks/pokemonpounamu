@@ -261,7 +261,12 @@ Homestead_Text_RataOrchardIsYours:
 Homestead_Text_RataRetalk:
 	.string "Rata: The whole orchard grew from\n"
 	.string "one tree, you know.\p"
-	.string "Roots first. Always roots first.$"
+	.string "Roots first. Always roots first.\p"
+	.string "…I'll be out among the rows when\n"
+	.string "you're ready for a proper battle.\p"
+	.string "Bring that little one of yours.\n"
+	.string "I don't go easy. Not even on\l"
+	.string "birthdays.$"
 
 Homestead_Text_KauriRetalk:
 	.string "Kauri: Don't mind your brother.\p"

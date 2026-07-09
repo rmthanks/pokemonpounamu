@@ -1,0 +1,70 @@
+{
+  "id": "MAP_ROUTE2_BAY",
+  "name": "Route2Bay",
+  "layout": "LAYOUT_ROUTE2_BAY",
+  "music": "MUS_ROUTE101",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ROUTE_102",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_AHURIRI_CITY",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+      "x": 7,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2Bay_EventScript_Grunt1",
+      "flag": "0",
+      "local_id": "LOCALID_R2_GRUNT1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 8,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2Bay_EventScript_Grunt2",
+      "flag": "0",
+      "local_id": "LOCALID_R2_GRUNT2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2Bay_EventScript_TamaIdle",
+      "flag": "FLAG_TEMP_14",
+      "local_id": "LOCALID_R2_TAMA"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

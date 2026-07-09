@@ -278,6 +278,99 @@ put(f2, 1, 4, block(h2, LH2, 0, 3, 3, 3))
 put(f2, 7, 4, block(h2, LH2, 4, 3, 4, 4))
 marama_room = f2
 
+
+# ---- Mauville-sampled deco kit (Ahuriri uses secondary gTileset_Mauville) ----
+LM, lm = load('LAYOUT_MAUVILLE_CITY')
+MGYM     = block(lm, LM, 5, 1, 6, 5)      # deco gym, door local (3,4)
+THEATRE  = block(lm, LM, 5, 10, 7, 4)     # game-corner deco building, door local (3,3)
+MHOUSE4  = block(lm, LM, 18, 11, 4, 4)    # deco house 4w, door local (1,3)
+MHOUSE5  = block(lm, LM, 31, 11, 5, 4)    # deco house 5w, door local (1,3)
+MWALL_V  = cell(lm, LM, 0, 1)             # deco wall vertical
+MWALL_H  = cell(lm, LM, 1, 4)             # deco wall horizontal (291)
+ASPH_NW=cell(lm,LM,0,8); ASPH_N=cell(lm,LM,1,8); ASPH_C=cell(lm,LM,1,9)
+SEA    = 0x1170
+BEACH  = 0x3001 | 0  # plain grass placeholder replaced below
+BEACH  = 0x30C6 & 0  # (computed below)
+BEACH  = 0x0C6 | 0x3000   # flowery shore shrub strip fallback
+SHRUB  = (GRASS & 0xFC00) | 0x0C6
+
+def asphalt(g, x0, y0, w, h):
+    for y in range(y0, y0+h):
+        for x in range(x0, x0+w):
+            g[y][x] = ASPH_N if y == y0 else ASPH_C
+
+# ================= AHURIRI (44 x 36) — Napier, Art Deco =================
+WA, HA = 44, 36
+a = [[GRASS]*WA for _ in range(HA)]
+ring_trees(a, WA, HA)
+# sea on the east (Marine Parade)
+for y in range(0, HA):
+    for x in range(38, WA):
+        a[y][x] = SEA
+for y in range(1, HA-1):
+    a[y][37] = SHRUB          # shore strip
+# south exit (Route 51) x7-9 / north exit (Route 2) x7-9
+fill(a, 7, 34, 3, 2, GRASS)
+fill(a, 7, 0, 3, 2, GRASS)
+# asphalt roads: N-S spine + two E-W avenues
+asphalt(a, 7, 2, 3, 32)
+asphalt(a, 4, 16, 32, 2)
+asphalt(a, 4, 26, 32, 2)
+asphalt(a, 34, 4, 2, 24)      # Marine Parade promenade
+# GYM (Kauri's — Deco showpiece) north of first avenue
+put(a, 12, 4, MGYM)           # door (15,8)
+for y in range(9,16): a[y][15]=ASPH_C
+# PC + MART on the first avenue
+put(a, 20, 10, PC_BLOCK)      # door (21,13)
+for y in range(14,16): a[y][21]=ASPH_C
+put(a, 27, 10, MART_BLOCK)    # door (28,13)
+for y in range(14,16): a[y][28]=ASPH_C
+# Deco Theatre (function: move tutor venue) south-west
+put(a, 4, 20, THEATRE)        # door (7,23)
+# deco houses
+put(a, 13, 20, MHOUSE4)       # door (14,23)
+put(a, 19, 20, MHOUSE5)       # door (20,23)
+put(a, 26, 20, MHOUSE4)       # door (27,23)
+put(a, 13, 29, MHOUSE5)       # door (14,32)
+put(a, 21, 29, MHOUSE4)       # door (22,32)
+put(a, 28, 29, MHOUSE4)       # door (29,32)
+put(a, 24, 4, MHOUSE5)        # door (25,7)
+for y in range(8,16): a[y][25]=ASPH_C
+# deco walls + plaza flavour
+for x in range(12, 33):
+    a[3][x] = MWALL_H
+for (x, y) in [(11,12),(18,12),(31,8),(5,18),(11,18),(24,18),(31,18),(5,30),(11,34),(26,34),(33,22)]:
+    if a[y][x] == GRASS: a[y][x] = FLOWER
+# Pania of the Reef — statue nod on the promenade (sign + flowers)
+a[12][35] = SIGN_L
+for (x, y) in [(34,11),(36,12),(34,13)]:
+    if a[y][x] == GRASS: a[y][x] = FLOWER
+ahuriri = a
+
+# ================= ROUTE 2 (BAY STRETCH STUB, 16 x 26) — north out of Ahuriri =================
+WB, HB = 16, 26
+b = [[GRASS]*WB for _ in range(HB)]
+ring_trees(b, WB, HB)
+fill(b, 7, 24, 3, 2, GRASS)     # south opening from Ahuriri
+# road north
+fill(b, 7, 14, 2, 10, SAND)
+fill(b, 5, 13, 6, 2, SAND)
+fill(b, 5, 6, 2, 8, SAND)
+fill(b, 5, 4, 8, 2, SAND)
+# THE CHECKPOINT — Mob barricade across the road (exile threshold set-piece)
+for x in range(2, 14):
+    if x not in (7, 8):
+        b[10][x] = HEDGE
+# grass fields
+fill(b, 10, 16, 4, 5, TALL)
+fill(b, 2, 15, 3, 6, TALL)
+fill(b, 10, 5, 4, 4, TALL)
+fill(b, 2, 4, 2, 5, TALL)
+tree_row(b, 11, 12, 1)
+for (x, y) in [(4,22),(12,14),(3,12),(13,3),(9,3)]:
+    if b[y][x] == GRASS: b[y][x] = FLOWER
+route2bay = b
+
 # ---- write out ----
 def write_layout(name, grid, folder):
     os.makedirs(f'{ROOT}/data/layouts/{folder}', exist_ok=True)
@@ -298,12 +391,16 @@ def write_layout(name, grid, folder):
                 f.write(struct.pack('<H', v))
 
 write_layout('HeretaungaTown', heretaunga, 'HeretaungaTown')
+write_layout('AhuririCity', ahuriri, 'AhuririCity')
+write_layout('Route2Bay', route2bay, 'Route2Bay')
 write_layout('OrchardRoad', orchard_road, 'OrchardRoad')
 write_layout('HomesteadF1', homestead1f, 'HeretaungaHomestead1F')
 write_layout('MaramaRoom', marama_room, 'HeretaungaHomestead2F')
 
 specs = [
     ('LAYOUT_HERETAUNGA_TOWN', 'HeretaungaTown_Layout', 60, 40, 'gTileset_General', 'gTileset_Petalburg', 'HeretaungaTown'),
+    ('LAYOUT_AHURIRI_CITY', 'AhuririCity_Layout', 44, 36, 'gTileset_General', 'gTileset_Mauville', 'AhuririCity'),
+    ('LAYOUT_ROUTE2_BAY', 'Route2Bay_Layout', 16, 26, 'gTileset_General', 'gTileset_Petalburg', 'Route2Bay'),
     ('LAYOUT_ORCHARD_ROAD', 'OrchardRoad_Layout', 16, 44, 'gTileset_General', 'gTileset_Petalburg', 'OrchardRoad'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_1F', 'HeretaungaHomestead1F_Layout', 15, 11, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead1F'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_2F', 'HeretaungaHomestead2F_Layout', 15, 10, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead2F'),

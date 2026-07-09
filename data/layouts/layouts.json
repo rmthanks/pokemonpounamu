@@ -9367,6 +9367,28 @@
       "border_filepath": "data/layouts/HeretaungaHomestead2F/border.bin",
       "blockdata_filepath": "data/layouts/HeretaungaHomestead2F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_AHURIRI_CITY",
+      "name": "AhuririCity_Layout",
+      "width": 44,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/AhuririCity/border.bin",
+      "blockdata_filepath": "data/layouts/AhuririCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_BAY",
+      "name": "Route2Bay_Layout",
+      "width": 16,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route2Bay/border.bin",
+      "blockdata_filepath": "data/layouts/Route2Bay/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

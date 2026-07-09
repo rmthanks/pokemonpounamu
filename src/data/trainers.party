@@ -16877,3 +16877,110 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_RATA ===
+Name: Rata
+Class: Leader
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Items: Potion / Potion
+Double Battle: No
+AI: Basic Trainer
+
+Cherubi
+Level: 7
+
+Hoppip
+Level: 8
+
+Appletun
+Level: 10
+
+=== TRAINER_KAURI ===
+Name: Kauri
+Class: Leader
+Pic: Leader Norman
+Gender: Male
+Music: Male
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Snubbull
+Level: 12
+
+Mawile
+Level: 13
+
+Granbull
+Level: 15
+
+=== TRAINER_TAMA_AMBUSH ===
+Name: Tama
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Poochyena
+Level: 14
+
+Mightyena
+Level: 17
+
+=== TRAINER_AHURIRI_PROSPECT ===
+Name: Nikau
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Snubbull
+Level: 11
+
+=== TRAINER_R51_ANARU ===
+Name: Anaru
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Applin
+Level: 8
+
+=== TRAINER_R51_MEREANA ===
+Name: Mereana
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Hoppip
+Level: 6
+
+Cherubi
+Level: 7
+
+=== TRAINER_R51_WIREMU ===
+Name: Wiremu
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 6
+
+Combee
+Level: 6
