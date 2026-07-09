@@ -13,18 +13,21 @@ GFXDIR = 'graphics/title_screen'
 NCOLORS = 14
 MAXTILES = 512
 
-from PIL import ImageEnhance
 im = Image.open(SRC).convert('RGB').resize((240,160), Image.LANCZOS)
-im = ImageEnhance.Color(im).enhance(1.25)
 a = np.asarray(im)
 lum = a.astype(int).sum(axis=2)
-thresh = np.percentile(lum, 99.7)
-sun_px = a[lum >= thresh]
-boost = np.vstack([a.reshape(-1,3)] + [sun_px]*40)
+sun_px = a[lum >= np.percentile(lum, 99.7)]
+r_, g_, b_ = a[...,0].astype(int), a[...,1].astype(int), a[...,2].astype(int)
+green_px = a[(g_ > r_*0.95) & (g_ > b_*1.1) & (lum > 150) & (lum < 620)]
+boost = np.vstack([a.reshape(-1,3)] + [sun_px]*40 + ([green_px]*6 if len(green_px) else []))
 side = int(len(boost)**0.5)
 boost_img = Image.fromarray(boost[:side*side].reshape(side,side,3))
 pal_src = boost_img.quantize(colors=NCOLORS, method=Image.MEDIANCUT, kmeans=25, dither=Image.Dither.NONE)
+# hybrid: flat sky (dedups tiles), dithered land (keeps tonality)
+SKY_SPLIT = 68
 q = im.quantize(palette=pal_src, dither=Image.Dither.NONE)
+qd = im.quantize(palette=pal_src, dither=Image.Dither.FLOYDSTEINBERG)
+q.paste(qd.crop((0,SKY_SPLIT,240,160)), (0,SKY_SPLIT))
 pal = pal_src.getpalette()[:NCOLORS*3]
 px = np.asarray(q, dtype=np.uint8) + 1      # shift to indices 1..14 (0 = transparent)
 
@@ -53,9 +56,38 @@ for ty in range(32):
         idx,hf,vf=hit
         tilemap[ty,tx] = idx | (hf<<10) | (vf<<11) | (14<<12)
 n=len(order)
-print('unique tiles:',n)
+print('unique tiles (exact):',n)
+# approximate merge: collapse tiles differing by <= T pixels until within budget
+T=0
+while n>MAXTILES and T<6:
+    T+=1
+    arr=np.stack(order)                       # (n,8,8)
+    keep=[]; remap={}
+    for i in range(len(arr)):
+        merged=False
+        ti=arr[i]
+        for j in keep:
+            for cand in (arr[j],arr[j][:, ::-1],arr[j][::-1,:],arr[j][::-1,::-1]):
+                if int((ti!=cand).sum())<=T:
+                    remap[i]=j; merged=True; break
+            if merged: break
+        if not merged:
+            remap[i]=i; keep.append(i)
+    # rebuild order + tilemap indices
+    newindex={}
+    neworder=[]
+    for j in keep:
+        newindex[j]=len(neworder); neworder.append(order[j])
+    flat=tilemap.flatten()
+    for k in range(len(flat)):
+        e=int(flat[k]); idx=e&0x3FF
+        tgt=newindex[remap[idx]]
+        flat[k]=(e & ~0x3FF)|tgt
+    tilemap=flat.reshape(32,32)
+    order=neworder; n=len(order)
+    print(f'approx merge T={T}: {n} tiles')
 if n>MAXTILES:
-    print('over budget; increasing posterization', file=sys.stderr); sys.exit(2)
+    print('over budget even after merging', file=sys.stderr); sys.exit(2)
 
 # tilesheet png: 16 tiles wide
 rows=(n+15)//16

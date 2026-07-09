@@ -1,6 +1,7 @@
 #include "global.h"
 #include "palette.h"
 #include "main.h"
+#include "scanline_effect.h"
 #include "task.h"
 #include "bg.h"
 #include "malloc.h"
@@ -89,6 +90,10 @@ static EWRAM_DATA struct CreditsData *sCreditsData = {0};
 
 static const u16 sCredits_Pal[] = INCGFX_U16("graphics/credits/credits.pal", ".gbapal");
 static const u32 sCreditsCopyrightEnd_Gfx[] = INCGFX_U32("graphics/credits/the_end_copyright.png", ".4bpp.smol");
+// Pounamu: the back of Te Mata o Rongokako at dusk - the side you could never see
+static const u32 sPounamuEndGfx[] = INCGFX_U32("graphics/credits/pounamu_end.png", ".4bpp.smol");
+static const u32 sPounamuEndTilemap[] = INCGFX_U32("graphics/credits/pounamu_end.bin", ".smolTM");
+static const u16 sPounamuEndPal[] = INCGFX_U16("graphics/credits/pounamu_end.pal", ".gbapal");
 
 static void SpriteCB_CreditsMonBg(struct Sprite *);
 static void Task_WaitPaletteFade(u8);
@@ -616,8 +621,14 @@ static void Task_CreditsTheEnd2(u8 taskId)
 static void Task_CreditsTheEnd3(u8 taskId)
 {
     ResetGpuAndVram();
+    ScanlineEffect_Stop();
+    SetGpuReg(REG_OFFSET_BG1HOFS, 0);
+    SetGpuReg(REG_OFFSET_BG1VOFS, 0);
     ResetPaletteFade();
     LoadTheEndScreen(0, 0x3800, BG_PLTT_ID(0));
+    DecompressDataWithHeaderVram(sPounamuEndGfx, (void *)(VRAM + 0x8000));
+    DecompressDataWithHeaderVram(sPounamuEndTilemap, (void *)(VRAM + 0xE000));
+    LoadPalette(sPounamuEndPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
     ResetSpriteData();
     FreeAllSpritePalettes();
     BeginNormalPaletteFade(PALETTES_ALL, 8, 16, 0, RGB_BLACK);
@@ -627,10 +638,16 @@ static void Task_CreditsTheEnd3(u8 taskId)
                                | BGCNT_SCREENBASE(7)
                                | BGCNT_16COLOR
                                | BGCNT_TXT256x256);
+    SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(1)
+                               | BGCNT_CHARBASE(2)
+                               | BGCNT_SCREENBASE(28)
+                               | BGCNT_16COLOR
+                               | BGCNT_TXT256x256);
     EnableInterrupts(INTR_FLAG_VBLANK);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0
                                 | DISPCNT_OBJ_1D_MAP
-                                | DISPCNT_BG0_ON);
+                                | DISPCNT_BG0_ON
+                                | DISPCNT_BG1_ON);
 
     gTasks[taskId].tDelay = 235; //set this to 215 to actually show "THE END" in time to the last song beat
     gTasks[taskId].func = Task_CreditsTheEnd4;
@@ -1288,7 +1305,7 @@ static void LoadTheEndScreen(u16 tileOffsetLoad, u16 tileOffsetWrite, u16 palOff
     baseTile = (palOffset / 16) << 12;
 
     for (i = 0; i < 32 * 32; i++)
-        ((u16 *) (VRAM + tileOffsetWrite))[i] = baseTile + 1;
+        ((u16 *) (VRAM + tileOffsetWrite))[i] = baseTile;  // Pounamu: transparent, backdrop shows
 }
 
 static u16 GetLetterMapTile(u8 baseTiles)
@@ -1296,7 +1313,7 @@ static u16 GetLetterMapTile(u8 baseTiles)
     u16 out = (baseTiles & 0x3F) + 80;
 
     if (baseTiles == 0xFF)
-        return 1;
+        return 0;  // Pounamu: transparent cell
 
     if (baseTiles & (1 << 7))
         out |= 1 << 11;
@@ -1324,7 +1341,7 @@ static void DrawTheEnd(u16 offset, u16 palette)
     u16 baseTile = (palette / 16) << 12;
 
     for (pos = 0; pos < 32 * 32; pos++)
-        ((u16 *) (VRAM + offset))[pos] = baseTile + 1;
+        ((u16 *) (VRAM + offset))[pos] = baseTile;  // Pounamu: transparent, backdrop shows
 
     DrawLetterMapTiles(sTheEnd_LetterMap_T, 3, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_H, 7, 7, offset, palette);
