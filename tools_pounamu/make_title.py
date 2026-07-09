@@ -13,9 +13,19 @@ GFXDIR = 'graphics/title_screen'
 NCOLORS = 14
 MAXTILES = 512
 
+from PIL import ImageEnhance
 im = Image.open(SRC).convert('RGB').resize((240,160), Image.LANCZOS)
-q = im.quantize(colors=NCOLORS, method=Image.MEDIANCUT, dither=Image.Dither.NONE)
-pal = q.getpalette()[:NCOLORS*3]
+im = ImageEnhance.Color(im).enhance(1.25)
+a = np.asarray(im)
+lum = a.astype(int).sum(axis=2)
+thresh = np.percentile(lum, 99.7)
+sun_px = a[lum >= thresh]
+boost = np.vstack([a.reshape(-1,3)] + [sun_px]*40)
+side = int(len(boost)**0.5)
+boost_img = Image.fromarray(boost[:side*side].reshape(side,side,3))
+pal_src = boost_img.quantize(colors=NCOLORS, method=Image.MEDIANCUT, kmeans=25, dither=Image.Dither.NONE)
+q = im.quantize(palette=pal_src, dither=Image.Dither.NONE)
+pal = pal_src.getpalette()[:NCOLORS*3]
 px = np.asarray(q, dtype=np.uint8) + 1      # shift to indices 1..14 (0 = transparent)
 
 # compose into 256x256 map (32x32 tiles); pad with the sky color (top-left pixel)
