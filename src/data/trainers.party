@@ -17044,3 +17044,90 @@ Level: 13
 
 Electrike
 Level: 14
+
+=== TRAINER_R35_TAI ===
+Name: Tai
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 14
+
+Wailmer
+Level: 15
+
+=== TRAINER_R35_NIKORA ===
+Name: Nikora
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Poochyena
+Level: 14
+
+Electrike
+Level: 15
+
+=== TRAINER_R35_MANAIA ===
+Name: Manaia
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Taillow
+Level: 15
+
+Pidgeotto
+Level: 16
+
+=== TRAINER_R35_AROHA ===
+Name: Aroha
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Skiploom
+Level: 15
+
+Combee
+Level: 15
+
+=== TRAINER_BOP_RANGI ===
+Name: Rangi
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Mightyena
+Level: 17
+
+=== TRAINER_BOP_KIRI ===
+Name: Kiri
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Marill
+Level: 16
+
+Flaaffy
+Level: 17

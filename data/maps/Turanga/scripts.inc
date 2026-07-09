@@ -58,10 +58,9 @@ Turanga_Text_Roadworks:
 	.string "Route 35 round the East Cape?\n"
 	.string "Longest, loneliest, most\l"
 	.string "beautiful road in the country.\p"
-	.string "Crew's still clearing the first\n"
-	.string "stretch. Come back soon, eh.\p"
-	.string "(Route 35 and the East Cape\n"
-	.string "arrive in the next build!)$"
+	.string "All clear as of this morning.\n"
+	.string "Off you go, eh.\p"
+	.string "Tell the Cape I said hello.$"
 
 Turanga_Text_MainStreetWoman:
 	.string "News from the Bay says the gym\n"

@@ -144,7 +144,16 @@
     "Route2East",
     "Turanga",
     "TurangaPokemonCenter1F",
-    "TurangaMart"
+    "TurangaMart",
+    "Route35A",
+    "Route35B",
+    "Opotiki",
+    "OpotikiPokemonCenter1F",
+    "Route2BoP",
+    "Tauranga",
+    "TaurangaPokemonCenter1F",
+    "TaurangaMart",
+    "Route36"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

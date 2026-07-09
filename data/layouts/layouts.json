@@ -9433,6 +9433,72 @@
       "border_filepath": "data/layouts/Turanga/border.bin",
       "blockdata_filepath": "data/layouts/Turanga/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE35_A",
+      "name": "Route35A_Layout",
+      "width": 16,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route35A/border.bin",
+      "blockdata_filepath": "data/layouts/Route35A/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE35_B",
+      "name": "Route35B_Layout",
+      "width": 16,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route35B/border.bin",
+      "blockdata_filepath": "data/layouts/Route35B/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OPOTIKI",
+      "name": "Opotiki_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Opotiki/border.bin",
+      "blockdata_filepath": "data/layouts/Opotiki/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_BOP",
+      "name": "Route2BoP_Layout",
+      "width": 16,
+      "height": 94,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route2BoP/border.bin",
+      "blockdata_filepath": "data/layouts/Route2BoP/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TAURANGA",
+      "name": "Tauranga_Layout",
+      "width": 40,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Tauranga/border.bin",
+      "blockdata_filepath": "data/layouts/Tauranga/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE36",
+      "name": "Route36_Layout",
+      "width": 40,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route36/border.bin",
+      "blockdata_filepath": "data/layouts/Route36/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

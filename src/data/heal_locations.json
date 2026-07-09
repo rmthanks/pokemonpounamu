@@ -373,6 +373,22 @@
       "y": 7,
       "respawn_map": "MAP_TURANGA_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_TURANGA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_OPOTIKI",
+      "map": "MAP_OPOTIKI",
+      "x": 3,
+      "y": 7,
+      "respawn_map": "MAP_OPOTIKI_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_OPOTIKI_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_TAURANGA",
+      "map": "MAP_TAURANGA",
+      "x": 7,
+      "y": 14,
+      "respawn_map": "MAP_TAURANGA_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_TAURANGA_NURSE"
     }
   ]
 }
