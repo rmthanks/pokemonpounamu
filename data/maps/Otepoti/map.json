@@ -1,10 +1,10 @@
 {
-  "id": "MAP_WELLINGTON",
-  "name": "Wellington",
-  "layout": "LAYOUT_WELLINGTON",
+  "id": "MAP_OTEPOTI",
+  "name": "Otepoti",
+  "layout": "LAYOUT_OTEPOTI",
   "music": "MUS_SOOTOPOLIS",
   "region": "REGION_HOENN",
-  "region_map_section": "MAPSEC_SOOTOPOLIS_CITY",
+  "region_map_section": "MAPSEC_MOSSDEEP_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_CITY",
@@ -15,99 +15,86 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE1_KAPITI",
+      "map": "MAP_ROUTE1_SOUTH",
       "offset": 0,
       "direction": "up"
     }
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
-      "x": 25,
-      "y": 11,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Wellington_EventScript_GymKid",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 37,
-      "y": 12,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Wellington_EventScript_BeehiveMan",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 20,
-      "y": 13,
+      "x": 14,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Wellington_EventScript_WindWoman",
+      "script": "Otepoti_EventScript_ColdWoman",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 30,
-      "y": 25,
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 23,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Wellington_EventScript_FerryMan",
+      "script": "Otepoti_EventScript_GymKid",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 33,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Otepoti_EventScript_StudentMan",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
       "x": 10,
-      "y": 24,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Wellington_EventScript_CafeKid",
+      "script": "Otepoti_EventScript_Kid",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 11,
+      "x": 6,
+      "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_WELLINGTON_POKEMON_CENTER_1F",
+      "dest_map": "MAP_OTEPOTI_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 13,
-      "y": 11,
+      "x": 14,
+      "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_WELLINGTON_MART",
+      "dest_map": "MAP_OTEPOTI_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 30,
-      "y": 26,
+      "x": 25,
+      "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_WAITOHI",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_OTEPOTI_GYM",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
@@ -115,26 +102,10 @@
     {
       "type": "sign",
       "x": 23,
-      "y": 11,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Wellington_EventScript_GymSign"
-    },
-    {
-      "type": "sign",
-      "x": 35,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Wellington_EventScript_BeehiveSign"
-    },
-    {
-      "type": "sign",
-      "x": 40,
-      "y": 26,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Wellington_EventScript_FerrySign"
+      "script": "Otepoti_EventScript_GymSign"
     }
   ]
 }

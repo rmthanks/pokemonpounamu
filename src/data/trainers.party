@@ -17334,3 +17334,198 @@ Level: 27
 
 Onix
 Level: 28
+
+=== TRAINER_R6_SOL ===
+Name: Sol
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Machoke
+Level: 28
+
+Manectric
+Level: 29
+
+=== TRAINER_R6_NOVA ===
+Name: Nova
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Jumpluff
+Level: 28
+
+Altaria
+Level: 29
+
+=== TRAINER_R7_KAE ===
+Name: Kae
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Onix
+Level: 30
+
+Machoke
+Level: 31
+
+=== TRAINER_R7_RANGI ===
+Name: Rangi
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Swellow
+Level: 30
+
+Absol
+Level: 31
+
+=== TRAINER_R1S_FROST ===
+Name: Frost
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Glalie
+Level: 33
+
+Machamp
+Level: 34
+
+=== TRAINER_R1S_KAIA ===
+Name: Kaia
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Altaria
+Level: 33
+
+Snorunt
+Level: 33
+
+=== TRAINER_ROTO ===
+Name: Roto
+Class: Leader
+Pic: Black Belt
+Gender: Male
+Music: Male
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Slugma
+Level: 27
+
+Torkoal
+Level: 28
+
+Magcargo
+Level: 30
+
+=== TRAINER_WHAKATU_PROSPECT ===
+Name: Ember
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Numel
+Level: 27
+
+Slugma
+Level: 27
+
+=== TRAINER_POU ===
+Name: Pou
+Class: Leader
+Pic: Black Belt
+Gender: Male
+Music: Male
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Aron
+Level: 31
+
+Lairon
+Level: 32
+
+Steelix
+Level: 34
+
+=== TRAINER_OTAUTAHI_PROSPECT ===
+Name: Rueben
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Machoke
+Level: 31
+
+Lairon
+Level: 32
+
+=== TRAINER_HUKA ===
+Name: Huka
+Class: Leader
+Pic: Expert F
+Gender: Female
+Music: Female
+Items: Hyper Potion / Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Snorunt
+Level: 35
+
+Glalie
+Level: 36
+
+Sealeo
+Level: 37
+
+Walrein
+Level: 39
+
+=== TRAINER_OTEPOTI_PROSPECT ===
+Name: Bree
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Glalie
+Level: 35
+
+Sealeo
+Level: 36

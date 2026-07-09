@@ -90,7 +90,7 @@
     },
     {
       "id": "MAPSEC_FORTREE_CITY",
-      "name": "Fortree City",
+      "name": "Whakatu",
       "x": 12,
       "y": 0,
       "width": 1,
@@ -98,7 +98,7 @@
     },
     {
       "id": "MAPSEC_LILYCOVE_CITY",
-      "name": "Lilycove City",
+      "name": "Otautahi",
       "x": 18,
       "y": 3,
       "width": 2,
@@ -106,7 +106,7 @@
     },
     {
       "id": "MAPSEC_MOSSDEEP_CITY",
-      "name": "Mossdeep City",
+      "name": "Otepoti",
       "x": 24,
       "y": 5,
       "width": 2,
@@ -122,7 +122,7 @@
     },
     {
       "id": "MAPSEC_EVER_GRANDE_CITY",
-      "name": "Ever Grande City",
+      "name": "Waitohi",
       "x": 27,
       "y": 8,
       "width": 1,
@@ -202,7 +202,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_110",
-      "name": "Route 110",
+      "name": "Route 6",
       "x": 8,
       "y": 7,
       "width": 1,
@@ -210,7 +210,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_111",
-      "name": "Route 111",
+      "name": "Route 7",
       "x": 8,
       "y": 0,
       "width": 1,
@@ -218,7 +218,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_112",
-      "name": "Route 112",
+      "name": "Route 1",
       "x": 6,
       "y": 3,
       "width": 2,

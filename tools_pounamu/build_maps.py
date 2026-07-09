@@ -778,6 +778,119 @@ for (x,y) in [(10,16),(30,10),(44,16),(3,30),(40,20)]:
     if wl[y][x] == GRASS: wl[y][x] = FLOWER
 wellington = wl
 
+
+# ================= WAITOHI (22 x 18) — Picton, ferry arrival =================
+Wwt, Hwt = 22, 18
+wt = [[GRASS]*Wwt for _ in range(Hwt)]
+ring_trees(wt, Wwt, Hwt)
+fill(wt, 7, 16, 2, 2, GRASS)     # south opening (Route 6)
+fill(wt, 7, 4, 2, 12, SAND)      # main road down from the wharf
+put(wt, 2, 5, PC_BLOCK)          # door (3,8)
+fill(wt, 3, 9, 4, 1, SAND)
+put(wt, 12, 5, OHOUSE)           # door (13,8)
+fill(wt, 9, 9, 4, 1, SAND)
+# ferry terminal at the top (warp back to Wellington)
+put(wt, 6, 1, MART_BLOCK)        # terminal building, door (7,4) -> ferry warp
+wt[9][4] = SIGN_L; wt[9][5] = SIGN_R
+put(wt, 14, 11, POND)            # the sounds
+for (x,y) in [(4,12),(17,6),(11,14)]:
+    if wt[y][x] == GRASS: wt[y][x] = FLOWER
+waitohi = wt
+
+# ================= ROUTE 6 (16 x 90) — Waitohi to Whakatu =================
+route6 = rural_route(90, [
+    ('sand',9,78,2,3),('sand',5,52,2,3),('sand',9,28,2,3),
+    ('tall',2,80,4,5),('tall',10,70,4,5),('tall',2,60,3,6),('tall',11,46,3,6),
+    ('tall',2,38,4,5),('tall',10,30,4,4),('tall',2,18,3,6),('tall',11,10,3,5),
+    ('hedge',0,66,0,0),('hedge',0,40,0,0),('hedge',0,15,0,0),
+    ('trees',3,56,2,0),('trees',11,50,2,0),('trees',3,24,2,0),
+    ('flower',4,73,0,0),('flower',11,55,0,0),('flower',3,34,0,0),('flower',12,21,0,0),
+])
+
+# ================= WHAKATU (32 x 26) — Nelson, sunny city, Gym 6 =================
+Wwk, Hwk = 32, 26
+wk = [[GRASS]*Wwk for _ in range(Hwk)]
+ring_trees(wk, Wwk, Hwk)
+fill(wk, 7, 0, 2, 2, GRASS)      # north opening (Route 6)
+fill(wk, 24, 12, 2, 2, GRASS)    # east opening (Route 7)
+paved(wk, 5, 12, 22, 3)          # main street
+fill(wk, 7, 2, 2, 10, SAND)      # north road
+put(wk, 5, 8, PC_BLOCK)          # door (6,11)
+put(wk, 13, 8, MART_BLOCK)       # door (14,11)
+put(wk, 20, 7, GYMHALL)          # gym, door (23,11)
+put(wk, 5, 17, PHOUSE5)          # door (7,20)
+put(wk, 13, 17, OHOUSE)          # door (14,20)
+put(wk, 21, 16, POND)            # harbour basin (Tasman)
+fill(wk, 6, 15, 10, 1, SAND)
+wk[11][21] = SIGN_L; wk[11][22] = SIGN_R
+for (x,y) in [(10,16),(27,10),(3,20),(28,20)]:
+    if wk[y][x] == GRASS: wk[y][x] = FLOWER
+whakatu = wk
+
+# ================= ROUTE 7 (16 x 96) — Lewis Pass, longest road =================
+route7 = rural_route(96, [
+    ('sand',9,84,2,3),('sand',5,58,2,3),('sand',9,32,2,3),
+    ('tall',2,86,4,5),('tall',10,76,4,5),('tall',2,66,3,6),('tall',11,50,3,6),
+    ('tall',2,42,4,5),('tall',10,34,4,4),('tall',2,22,3,6),('tall',11,12,3,5),
+    ('hedge',0,72,0,0),('hedge',0,46,0,0),('hedge',0,18,0,0),
+    ('trees',3,60,2,0),('trees',11,54,2,0),('trees',3,28,2,0),
+    ('flower',4,79,0,0),('flower',11,63,0,0),('flower',3,38,0,0),('flower',12,25,0,0),
+])
+
+# ================= OTAUTAHI (50 x 36) — Christchurch, rebuild city, Gym 7 =================
+Wot, Hot = 50, 36
+ot = [[GRASS]*Wot for _ in range(Hot)]
+ring_trees(ot, Wot, Hot)
+fill(ot, 7, 0, 2, 2, GRASS)      # north opening (Route 7)
+fill(ot, 7, 34, 2, 2, GRASS)     # south opening (Route 1 south)
+paved(ot, 5, 12, 40, 3)          # cathedral square street
+paved(ot, 5, 22, 34, 3)          # second street
+fill(ot, 7, 2, 2, 10, SAND)      # north road
+fill(ot, 7, 15, 2, 19, SAND)     # spine road
+put(ot, 5, 8, PC_BLOCK)          # door (6,11)
+put(ot, 13, 8, MART_BLOCK)       # door (14,11)
+put(ot, 22, 7, GYMHALL)          # gym, door (25,11)
+put(ot, 34, 8, LAB)              # cardboard cathedral / civic, door (37,12)
+put(ot, 12, 25, PHOUSE5)         # door (14,28)
+put(ot, 20, 25, OHOUSE)          # door (21,28)
+put(ot, 28, 25, PHOUSE4)         # door (29,28)
+fill(ot, 13, 22, 18, 1, SAND)
+ot[11][23] = SIGN_L; ot[11][24] = SIGN_R
+ot[11][35] = SIGN_L; ot[11][36] = SIGN_R
+for (x,y) in [(10,16),(40,16),(3,28),(44,26),(18,20)]:
+    if ot[y][x] == GRASS: ot[y][x] = FLOWER
+otautahi = ot
+
+# ================= ROUTE 1 SOUTH (16 x 96) — Otautahi to Otepoti =================
+route1south = rural_route(96, [
+    ('sand',9,82,2,3),('sand',5,56,2,3),('sand',9,30,2,3),
+    ('tall',10,86,4,5),('tall',2,76,4,5),('tall',11,64,3,6),('tall',2,58,3,5),
+    ('tall',10,44,4,5),('tall',2,36,4,4),('tall',11,24,3,6),('tall',2,10,3,5),
+    ('hedge',0,70,0,0),('hedge',0,42,0,0),('hedge',0,16,0,0),
+    ('trees',3,62,2,0),('trees',11,52,2,0),('trees',3,26,2,0),
+    ('flower',12,80,0,0),('flower',3,50,0,0),('flower',11,38,0,0),('flower',4,13,0,0),
+])
+
+# ================= OTEPOTI (40 x 32) — Dunedin, cold far south, Gym 8 =================
+Wop2, Hop2 = 40, 32
+op2 = [[GRASS]*Wop2 for _ in range(Hop2)]
+ring_trees(op2, Wop2, Hop2)
+fill(op2, 7, 0, 2, 2, GRASS)     # north opening (Route 1 south)
+paved(op2, 5, 14, 30, 3)         # the Octagon street
+fill(op2, 7, 2, 2, 12, SAND)     # north road
+put(op2, 5, 10, PC_BLOCK)        # door (6,13)
+put(op2, 13, 10, MART_BLOCK)     # door (14,13)
+put(op2, 22, 9, GYMHALL)         # gym, door (25,13)
+put(op2, 31, 10, PHOUSE4)        # door (32,13)
+put(op2, 5, 19, PHOUSE5)         # door (7,22)
+put(op2, 13, 19, OHOUSE)         # door (14,22)
+put(op2, 24, 20, POND)           # harbour
+fill(op2, 7, 17, 18, 1, SAND)
+op2[13][23] = SIGN_L; op2[13][24] = SIGN_R
+for (x,y) in [(10,18),(34,16),(3,24),(30,24)]:
+    if op2[y][x] == GRASS: op2[y][x] = FLOWER
+otepoti = op2
+
 # ---- write out ----
 def write_layout(name, grid, folder):
     os.makedirs(f'{ROOT}/data/layouts/{folder}', exist_ok=True)
@@ -821,6 +934,13 @@ write_layout('Route3', route3, 'Route3')
 write_layout('Whanganui', whanganui, 'Whanganui')
 write_layout('Route1Kapiti', route1kapiti, 'Route1Kapiti')
 write_layout('Wellington', wellington, 'Wellington')
+write_layout('Waitohi', waitohi, 'Waitohi')
+write_layout('Route6', route6, 'Route6')
+write_layout('Whakatu', whakatu, 'Whakatu')
+write_layout('Route7', route7, 'Route7')
+write_layout('Otautahi', otautahi, 'Otautahi')
+write_layout('Route1South', route1south, 'Route1South')
+write_layout('Otepoti', otepoti, 'Otepoti')
 write_layout('OrchardRoad', orchard_road, 'OrchardRoad')
 write_layout('HomesteadF1', homestead1f, 'HeretaungaHomestead1F')
 write_layout('MaramaRoom', marama_room, 'HeretaungaHomestead2F')
@@ -851,6 +971,13 @@ specs = [
     ('LAYOUT_WHANGANUI', 'Whanganui_Layout', 20, 16, 'gTileset_General', 'gTileset_Petalburg', 'Whanganui'),
     ('LAYOUT_ROUTE1_KAPITI', 'Route1Kapiti_Layout', 16, 80, 'gTileset_General', 'gTileset_Petalburg', 'Route1Kapiti'),
     ('LAYOUT_WELLINGTON', 'Wellington_Layout', 50, 40, 'gTileset_General', 'gTileset_Petalburg', 'Wellington'),
+    ('LAYOUT_WAITOHI', 'Waitohi_Layout', 22, 18, 'gTileset_General', 'gTileset_Petalburg', 'Waitohi'),
+    ('LAYOUT_ROUTE6', 'Route6_Layout', 16, 90, 'gTileset_General', 'gTileset_Petalburg', 'Route6'),
+    ('LAYOUT_WHAKATU', 'Whakatu_Layout', 32, 26, 'gTileset_General', 'gTileset_Petalburg', 'Whakatu'),
+    ('LAYOUT_ROUTE7', 'Route7_Layout', 16, 96, 'gTileset_General', 'gTileset_Petalburg', 'Route7'),
+    ('LAYOUT_OTAUTAHI', 'Otautahi_Layout', 50, 36, 'gTileset_General', 'gTileset_Petalburg', 'Otautahi'),
+    ('LAYOUT_ROUTE1_SOUTH', 'Route1South_Layout', 16, 96, 'gTileset_General', 'gTileset_Petalburg', 'Route1South'),
+    ('LAYOUT_OTEPOTI', 'Otepoti_Layout', 40, 32, 'gTileset_General', 'gTileset_Petalburg', 'Otepoti'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_1F', 'HeretaungaHomestead1F_Layout', 15, 11, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead1F'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_2F', 'HeretaungaHomestead2F_Layout', 15, 10, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead2F'),
 ]

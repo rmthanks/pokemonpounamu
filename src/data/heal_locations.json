@@ -429,6 +429,38 @@
       "y": 12,
       "respawn_map": "MAP_WELLINGTON_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_WELLINGTON_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_WAITOHI",
+      "map": "MAP_WAITOHI",
+      "x": 3,
+      "y": 9,
+      "respawn_map": "MAP_WAITOHI_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_WAITOHI_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_WHAKATU",
+      "map": "MAP_WHAKATU",
+      "x": 6,
+      "y": 12,
+      "respawn_map": "MAP_WHAKATU_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_WHAKATU_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_OTAUTAHI",
+      "map": "MAP_OTAUTAHI",
+      "x": 6,
+      "y": 12,
+      "respawn_map": "MAP_OTAUTAHI_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_OTAUTAHI_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_OTEPOTI",
+      "map": "MAP_OTEPOTI",
+      "x": 6,
+      "y": 14,
+      "respawn_map": "MAP_OTEPOTI_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_OTEPOTI_NURSE"
     }
   ]
 }

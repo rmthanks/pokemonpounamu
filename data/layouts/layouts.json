@@ -5566,28 +5566,24 @@
     {
       "id": "LAYOUT_ROUTE6",
       "name": "Route6_Layout",
-      "width": 24,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_VermilionCity",
-      "border_filepath": "data/layouts/Route6_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route6_Frlg/map.bin",
-      "layout_version": "frlg"
+      "width": 16,
+      "height": 90,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route6/border.bin",
+      "blockdata_filepath": "data/layouts/Route6/map.bin",
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_ROUTE7",
       "name": "Route7_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_CeladonCity",
-      "border_filepath": "data/layouts/Route7_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route7_Frlg/map.bin",
-      "layout_version": "frlg"
+      "width": 16,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin",
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_ROUTE8",
@@ -9593,6 +9589,61 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Wellington/border.bin",
       "blockdata_filepath": "data/layouts/Wellington/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_WAITOHI",
+      "name": "Waitohi_Layout",
+      "width": 22,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Waitohi/border.bin",
+      "blockdata_filepath": "data/layouts/Waitohi/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_WHAKATU",
+      "name": "Whakatu_Layout",
+      "width": 32,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Whakatu/border.bin",
+      "blockdata_filepath": "data/layouts/Whakatu/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OTAUTAHI",
+      "name": "Otautahi_Layout",
+      "width": 50,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Otautahi/border.bin",
+      "blockdata_filepath": "data/layouts/Otautahi/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_SOUTH",
+      "name": "Route1South_Layout",
+      "width": 16,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route1South/border.bin",
+      "blockdata_filepath": "data/layouts/Route1South/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OTEPOTI",
+      "name": "Otepoti_Layout",
+      "width": 40,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Otepoti/border.bin",
+      "blockdata_filepath": "data/layouts/Otepoti/map.bin",
       "layout_version": "emerald"
     }
   ]
