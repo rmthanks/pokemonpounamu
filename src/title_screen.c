@@ -29,6 +29,7 @@ enum {
     TAG_VERSION = 1000,
     TAG_PRESS_START_COPYRIGHT,
     TAG_LOGO_SHINE,
+    TAG_BIRDS,
 };
 
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
@@ -306,6 +307,81 @@ static const struct SpritePalette sSpritePalette_PressStart[] =
     },
     {},
 };
+
+// Pounamu: gulls drifting across the dawn
+static const u32 sTitleScreenBirdsGfx[] = INCGFX_U32("graphics/title_screen/birds.png", ".4bpp.smol");
+static const u16 sTitleScreenBirdsPal[] = INCGFX_U16("graphics/title_screen/birds.png", ".gbapal");
+
+static const struct CompressedSpriteSheet sSpriteSheet_Birds[] =
+{
+    {
+        .data = sTitleScreenBirdsGfx,
+        .size = 0x100,
+        .tag = TAG_BIRDS
+    },
+    {},
+};
+
+static const struct SpritePalette sSpritePalette_Birds[] =
+{
+    {
+        .data = sTitleScreenBirdsPal,
+        .tag = TAG_BIRDS
+    },
+    {},
+};
+
+static const struct OamData sBirdOamData =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .shape = SPRITE_SHAPE(16x16),
+    .size = SPRITE_SIZE(16x16),
+    .priority = 3,
+};
+
+static const union AnimCmd sBirdAnim[] =
+{
+    ANIMCMD_FRAME(0, 24),
+    ANIMCMD_FRAME(4, 24),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sBirdAnimTable[] =
+{
+    sBirdAnim,
+};
+
+static void SpriteCB_Bird(struct Sprite *sprite);
+
+static const struct SpriteTemplate sBirdSpriteTemplate =
+{
+    .tileTag = TAG_BIRDS,
+    .paletteTag = TAG_BIRDS,
+    .oam = &sBirdOamData,
+    .anims = sBirdAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_Bird,
+};
+
+static void SpriteCB_Bird(struct Sprite *sprite)
+{
+    sprite->data[0]++;
+    if (sprite->data[0] & 1)
+        sprite->x--;
+    sprite->y2 = gSineTable[(u8)(sprite->data[0])] >> 6;
+    if (sprite->x < -16)
+        DestroySprite(sprite);
+}
+
+static void CreateBirdSprite(s16 x, s16 y, u16 phase)
+{
+    u8 spriteId = CreateSprite(&sBirdSpriteTemplate, x, y, 2);
+    if (spriteId != MAX_SPRITES)
+        gSprites[spriteId].data[0] = phase;
+}
 
 static const struct OamData sPokemonLogoShineOamData =
 {
@@ -611,6 +687,8 @@ void CB2_InitTitleScreen(void)
         gReservedSpritePaletteCount = 9;
         LoadCompressedSpriteSheet(&sSpriteSheet_EmeraldVersion[0]);
         LoadCompressedSpriteSheet(&sSpriteSheet_PressStart[0]);
+        LoadCompressedSpriteSheet(&sSpriteSheet_Birds[0]);
+        LoadSpritePalette(&sSpritePalette_Birds[0]);
         LoadCompressedSpriteSheet(&sPokemonLogoShineSpriteSheet[0]);
         LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadSpritePalette(&sSpritePalette_PressStart[0]);
@@ -746,7 +824,7 @@ static void Task_TitleScreenPhase2(u8 taskId)
     else
     {
         gTasks[taskId].tSkipToNext = TRUE;
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG0 | BLDCNT_TGT2_BD);
+        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG0 | BLDCNT_TGT2_OBJ | BLDCNT_TGT2_BD);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(6, 15));
         SetGpuReg(REG_OFFSET_BLDY, 0);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1
@@ -817,6 +895,14 @@ static void Task_TitleScreenPhase3(u8 taskId)
             gBattle_BG1_X = 0;
         }
         UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
+        // Pounamu: gulls cross the bay now and then
+        if ((gTasks[taskId].tCounter % 520) == 200)
+        {
+            u16 wave = gTasks[taskId].tCounter / 520;
+            CreateBirdSprite(DISPLAY_WIDTH + 8, 52 + (wave % 3) * 7, 0);
+            if (wave & 1)
+                CreateBirdSprite(DISPLAY_WIDTH + 20, 60 + (wave % 3) * 5, 40);
+        }
         if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
