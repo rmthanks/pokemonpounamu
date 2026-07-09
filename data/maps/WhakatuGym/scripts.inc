@@ -5,7 +5,7 @@ WhakatuGym_EventScript_Roto::
 	lock
 	faceplayer
 	goto_if_set FLAG_BADGE06_GET, WhakatuGym_EventScript_RotoRetalk
-	goto_if_unset FLAG_BADGE04_GET, WhakatuGym_EventScript_RotoNoBadge
+	goto_if_unset FLAG_BADGE05_GET, WhakatuGym_EventScript_RotoNoBadge
 	msgbox WhakatuGym_Text_Pre, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ROTO, WhakatuGym_Text_Defeat
 	msgbox WhakatuGym_Text_BadgeSpeech, MSGBOX_DEFAULT

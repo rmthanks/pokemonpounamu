@@ -188,6 +188,7 @@ gStdScripts_End::
 	.include "data/maps/Wellington/scripts.inc"
 	.include "data/maps/WellingtonPokemonCenter1F/scripts.inc"
 	.include "data/maps/WellingtonMart/scripts.inc"
+	.include "data/maps/WellingtonGym/scripts.inc"
 	.include "data/maps/Waitohi/scripts.inc"
 	.include "data/maps/WaitohiPokemonCenter1F/scripts.inc"
 	.include "data/maps/Route6/scripts.inc"

@@ -17529,3 +17529,40 @@ Level: 35
 
 Sealeo
 Level: 36
+
+=== TRAINER_MANU ===
+Name: Manu
+Class: Leader
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Swablu
+Level: 17
+
+Taillow
+Level: 18
+
+Pelipper
+Level: 19
+
+Swellow
+Level: 21
+
+=== TRAINER_WELLINGTON_PROSPECT ===
+Name: Gale
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Taillow
+Level: 18
+
+Swablu
+Level: 18
