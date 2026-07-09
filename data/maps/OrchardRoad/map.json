@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_HERETAUNGA_TOWN",
-      "offset": -12,
+      "offset": -21,
       "direction": "down"
     }
   ],

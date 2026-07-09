@@ -9327,8 +9327,8 @@
     {
       "id": "LAYOUT_HERETAUNGA_TOWN",
       "name": "HeretaungaTown_Layout",
-      "width": 40,
-      "height": 28,
+      "width": 60,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/HeretaungaTown/border.bin",

@@ -84,3 +84,34 @@ HeretaungaTown_Text_TeMataGate:
 	.string "the storms.\p"
 	.string "That hill will still be asleep\n"
 	.string "whenever it opens again.$"
+
+HeretaungaTown_EventScript_FlaxKid::
+	msgbox HeretaungaTown_Text_FlaxKid, MSGBOX_NPC
+	end
+
+HeretaungaTown_Text_FlaxKid:
+	.string "We play down at the park pond\n"
+	.string "after kura.\p"
+	.string "Sometimes something ripples the\n"
+	.string "water and it's NOT an eel…$"
+
+HeretaungaTown_EventScript_HavelockLady::
+	msgbox HeretaungaTown_Text_HavelockLady, MSGBOX_NPC
+	end
+
+HeretaungaTown_Text_HavelockLady:
+	.string "Havelock's quieter than the city\n"
+	.string "side. We like it that way.\p"
+	.string "Lovely view of the ridge from my\n"
+	.string "washing line.$"
+
+HeretaungaTown_EventScript_Route2Gate::
+	msgbox HeretaungaTown_Text_Route2Gate, MSGBOX_NPC
+	end
+
+HeretaungaTown_Text_Route2Gate:
+	.string "Road over the Remutakas is out,\n"
+	.string "e hoa. Slips everywhere.\p"
+	.string "If you're wanting Te Whanganui-\n"
+	.string "a-Tara, it's the long way round\l"
+	.string "for you. Sorry, mate.$"
