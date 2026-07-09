@@ -26,7 +26,7 @@
     },
     {
       "id": "MAPSEC_LAVARIDGE_TOWN",
-      "name": "Lavaridge Town",
+      "name": "Rotorua",
       "x": 5,
       "y": 3,
       "width": 1,
@@ -34,7 +34,7 @@
     },
     {
       "id": "MAPSEC_FALLARBOR_TOWN",
-      "name": "Fallarbor Town",
+      "name": "Taupo",
       "x": 3,
       "y": 0,
       "width": 1,
@@ -162,7 +162,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_105",
-      "name": "Route 105",
+      "name": "Route 5",
       "x": 0,
       "y": 10,
       "width": 1,

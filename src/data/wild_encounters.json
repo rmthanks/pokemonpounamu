@@ -37129,6 +37129,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ROUTE5_POUNAMU",
+          "base_label": "gRoute5Pounamu",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 19,
+                "max_level": 21,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_ELECTRIKE"
+              },
+              {
+                "min_level": 19,
+                "max_level": 21,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 19,
+                "max_level": 21,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 19,
+                "max_level": 21,
+                "species": "SPECIES_SWELLOW"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_MANECTRIC"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_KIRLIA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_GLIGAR"
+              }
+            ]
+          }
         }
       ]
     },

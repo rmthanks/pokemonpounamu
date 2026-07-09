@@ -1,10 +1,10 @@
 {
-  "id": "MAP_TAURANGA",
-  "name": "Tauranga",
-  "layout": "LAYOUT_TAURANGA",
-  "music": "MUS_SLATEPORT",
+  "id": "MAP_ROTORUA",
+  "name": "Rotorua",
+  "layout": "LAYOUT_ROTORUA",
+  "music": "MUS_VERDANTURF",
   "region": "REGION_HOENN",
-  "region_map_section": "MAPSEC_MAUVILLE_CITY",
+  "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_CITY",
@@ -15,103 +15,103 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE2_BOP",
-      "offset": 0,
-      "direction": "down"
+      "map": "MAP_ROUTE36",
+      "offset": 7,
+      "direction": "right"
     },
     {
-      "map": "MAP_ROUTE36",
-      "offset": 9,
-      "direction": "left"
+      "map": "MAP_ROUTE5",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 18,
-      "y": 14,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Tauranga_EventScript_GymKid",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 6,
-      "y": 5,
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 14,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Tauranga_EventScript_MauaoMan",
+      "script": "Rotorua_EventScript_PoolMan",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 20,
-      "y": 17,
+      "x": 22,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Tauranga_EventScript_StreetWoman",
+      "script": "Rotorua_EventScript_StreetWoman",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 32,
-      "y": 22,
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 30,
+      "y": 15,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Tauranga_EventScript_PondMan",
+      "script": "Rotorua_EventScript_GymFan",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 13,
-      "y": 20,
+      "x": 11,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Tauranga_EventScript_SurfKid",
+      "script": "Rotorua_EventScript_NoseKid",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 34,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Rotorua_EventScript_Kuia",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 7,
+      "x": 9,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_TAURANGA_POKEMON_CENTER_1F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 25,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_TAURANGA_MART",
+      "dest_map": "MAP_ROTORUA_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 17,
-      "y": 12,
+      "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_TAURANGA_GYM",
+      "dest_map": "MAP_ROTORUA_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ROTORUA_GYM",
       "dest_warp_id": "0"
     }
   ],
@@ -119,19 +119,11 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 15,
-      "y": 13,
+      "x": 23,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Tauranga_EventScript_GymSign"
-    },
-    {
-      "type": "sign",
-      "x": 4,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Tauranga_EventScript_MauaoSign"
+      "script": "Rotorua_EventScript_GeyserSign"
     }
   ]
 }

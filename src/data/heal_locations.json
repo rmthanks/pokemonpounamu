@@ -389,6 +389,22 @@
       "y": 14,
       "respawn_map": "MAP_TAURANGA_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_TAURANGA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_ROTORUA",
+      "map": "MAP_ROTORUA",
+      "x": 9,
+      "y": 14,
+      "respawn_map": "MAP_ROTORUA_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_ROTORUA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_TAUPO",
+      "map": "MAP_TAUPO",
+      "x": 5,
+      "y": 10,
+      "respawn_map": "MAP_TAUPO_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_TAUPO_NURSE"
     }
   ]
 }

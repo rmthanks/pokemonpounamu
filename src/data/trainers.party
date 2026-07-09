@@ -17131,3 +17131,101 @@ Level: 16
 
 Flaaffy
 Level: 17
+
+=== TRAINER_WHENUA ===
+Name: Whenua
+Class: Leader
+Pic: Expert F
+Gender: Female
+Music: Female
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Trapinch
+Level: 19
+
+Numel
+Level: 20
+
+Marshtomp
+Level: 22
+
+=== TRAINER_ROTORUA_PROSPECT ===
+Name: Hika
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Numel
+Level: 19
+
+Slugma
+Level: 19
+
+=== TRAINER_MUA ===
+Name: Mua
+Class: Leader
+Pic: Fisherman
+Gender: Male
+Music: Male
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Pelipper
+Level: 23
+
+Wailmer
+Level: 23
+
+Kingler
+Level: 25
+
+=== TRAINER_TAURANGA_PROSPECT ===
+Name: Hoani
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 22
+
+Marill
+Level: 22
+
+=== TRAINER_R5_PITA ===
+Name: Pita
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Slugma
+Level: 20
+
+Numel
+Level: 20
+
+=== TRAINER_R5_ERU ===
+Name: Eru
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Geodude
+Level: 20
+
+Onix
+Level: 21

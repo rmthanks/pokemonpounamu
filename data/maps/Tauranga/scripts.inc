@@ -65,8 +65,8 @@ Tauranga_Text_SurfKid:
 Tauranga_Text_GymSign:
 	.string "TAURANGA GYM\n"
 	.string "Leader: MUA - the tide's own.\p"
-	.string "“Gone fishing.”\p"
-	.string "(Gym 4 opens in a later build!)$"
+	.string "“Back from fishing.\n"
+	.string "Bring your own bait.”$"
 
 Tauranga_Text_MauaoSign:
 	.string "MAUAO\p"

@@ -587,8 +587,7 @@ ring_trees(r36, Wu, Hu)
 fill(r36, 38, 7, 2, 2, GRASS)   # east opening (Tauranga)
 fill(r36, 4, 7, 34, 2, SAND)    # the road west
 fill(r36, 2, 7, 2, 2, GRASS)
-for y in range(2, 14):
-    r36[y][3] = HEDGE           # roadworks barrier wall
+fill(r36, 0, 7, 2, 2, GRASS)    # west opening (Rotorua)
 fill(r36, 10, 3, 4, 3, TALL)
 fill(r36, 24, 10, 4, 3, TALL)
 tree_row(r36, 17, 3, 2)
@@ -596,6 +595,81 @@ tree_row(r36, 29, 11, 2)
 for (x,y) in [(8,11),(21,4),(33,11)]:
     if r36[y][x] == GRASS: r36[y][x] = FLOWER
 route36 = r36
+
+
+# ================= ROTORUA (40 x 30) — geothermal city, Gym 3 =================
+Wr2, Hr2 = 40, 30
+ro = [[GRASS]*Wr2 for _ in range(Hr2)]
+ring_trees(ro, Wr2, Hr2)
+fill(ro, 38, 14, 2, 2, GRASS)    # east opening (Route 36)
+fill(ro, 7, 28, 2, 2, GRASS)     # south opening (Route 5)
+paved(ro, 6, 14, 32, 3)          # main street
+fill(ro, 7, 17, 2, 11, SAND)     # south road
+put(ro, 8, 10, PC_BLOCK)         # door (9,13)
+put(ro, 16, 10, MART_BLOCK)      # door (17,13)
+put(ro, 26, 9, GYMHALL)          # gym, door (29,13)
+# geothermal pools (draft: pond blocks; Ryan can repaint as mud)
+put(ro, 11, 19, POND)
+put(ro, 25, 19, POND)
+# houses + lane
+put(ro, 19, 20, OHOUSE)          # door (20,23)
+put(ro, 33, 19, PHOUSE4)         # door (34,22)
+fill(ro, 9, 24, 26, 1, SAND)
+fill(ro, 20, 24, 1, 1, SAND)
+fill(ro, 34, 23, 1, 1, SAND)
+ro[18][23] = SIGN_L; ro[18][24] = SIGN_R   # geyser sign
+for (x,y) in [(5,12),(22,12),(36,16),(5,22),(13,27)]:
+    if ro[y][x] == GRASS: ro[y][x] = FLOWER
+rotorua = ro
+
+# ================= ROUTE 5 (16 x 80) — Rotorua to Taupo, thermal country =================
+route5 = rural_route(80, [
+    ('sand',9,66,2,3),('sand',5,40,2,3),('sand',9,16,2,3),
+    ('tall',10,70,4,5),('tall',2,60,4,5),('tall',11,48,3,6),('tall',2,44,3,5),
+    ('tall',10,30,4,5),('tall',2,22,4,4),('tall',11,10,3,6),
+    ('hedge',0,54,0,0),('hedge',0,26,0,0),
+    ('trees',3,64,2,0),('trees',11,36,2,0),('trees',3,13,2,0),
+    ('flower',12,74,0,0),('flower',3,51,0,0),('flower',11,33,0,0),('flower',4,7,0,0),
+])
+
+# ================= TAUPO (30 x 24) — lake town stub =================
+Wtp, Htp = 30, 24
+tp = [[GRASS]*Wtp for _ in range(Htp)]
+ring_trees(tp, Wtp, Htp)
+fill(tp, 7, 0, 2, 2, GRASS)      # north opening (Route 5)
+fill(tp, 28, 10, 2, 2, GRASS)    # east opening (Route 5 ranges road - the exemplar)
+fill(tp, 7, 2, 2, 8, SAND)       # north road
+paved(tp, 4, 10, 24, 3)          # main street to the east gate
+put(tp, 4, 6, PC_BLOCK)          # door (5,9)
+put(tp, 12, 6, MART_BLOCK)       # door (13,9)
+put(tp, 20, 6, PHOUSE4)          # door (21,9)
+put(tp, 4, 15, OHOUSE)           # door (5,18)
+fill(tp, 5, 19, 1, 1, SAND)
+fill(tp, 5, 13, 1, 2, SAND)
+put(tp, 14, 16, POND)            # the lake (stub - grows later)
+tp[15][12] = SIGN_L; tp[15][13] = SIGN_R   # lake sign
+for (x,y) in [(10,14),(24,14),(3,13),(23,20)]:
+    if tp[y][x] == GRASS: tp[y][x] = FLOWER
+taupo = tp
+
+# ================= ROUTE 5 RANGES (40 x 16) — the exemplar gate =================
+Wrr, Hrr = 40, 16
+rr5 = [[GRASS]*Wrr for _ in range(Hrr)]
+ring_trees(rr5, Wrr, Hrr)
+fill(rr5, 0, 7, 2, 2, GRASS)     # west opening (Taupo)
+fill(rr5, 2, 7, 36, 2, SAND)     # the road home - visible all the way east
+for y in range(2, 7):
+    rr5[y][20] = HEDGE           # checkpoint barricade (north half)
+for y in range(9, 14):
+    rr5[y][20] = HEDGE           # checkpoint barricade (south half)
+rr5[6][16] = SIGN_L; rr5[6][17] = SIGN_R   # checkpoint sign
+fill(rr5, 8, 3, 4, 3, TALL)
+fill(rr5, 26, 11, 4, 3, TALL)
+tree_row(rr5, 12, 11, 2)
+tree_row(rr5, 30, 3, 2)
+for (x,y) in [(6,11),(24,4),(34,11)]:
+    if rr5[y][x] == GRASS: rr5[y][x] = FLOWER
+route5ranges = rr5
 
 # ---- write out ----
 def write_layout(name, grid, folder):
@@ -629,6 +703,10 @@ write_layout('Opotiki', opotiki, 'Opotiki')
 write_layout('Route2BoP', route2bop, 'Route2BoP')
 write_layout('Tauranga', tauranga, 'Tauranga')
 write_layout('Route36', route36, 'Route36')
+write_layout('Rotorua', rotorua, 'Rotorua')
+write_layout('Route5', route5, 'Route5')
+write_layout('Taupo', taupo, 'Taupo')
+write_layout('Route5Ranges', route5ranges, 'Route5Ranges')
 write_layout('OrchardRoad', orchard_road, 'OrchardRoad')
 write_layout('HomesteadF1', homestead1f, 'HeretaungaHomestead1F')
 write_layout('MaramaRoom', marama_room, 'HeretaungaHomestead2F')
@@ -648,6 +726,10 @@ specs = [
     ('LAYOUT_ROUTE2_BOP', 'Route2BoP_Layout', 16, 94, 'gTileset_General', 'gTileset_Petalburg', 'Route2BoP'),
     ('LAYOUT_TAURANGA', 'Tauranga_Layout', 40, 34, 'gTileset_General', 'gTileset_Petalburg', 'Tauranga'),
     ('LAYOUT_ROUTE36', 'Route36_Layout', 40, 16, 'gTileset_General', 'gTileset_Petalburg', 'Route36'),
+    ('LAYOUT_ROTORUA', 'Rotorua_Layout', 40, 30, 'gTileset_General', 'gTileset_Petalburg', 'Rotorua'),
+    ('LAYOUT_ROUTE5', 'Route5_Layout', 16, 80, 'gTileset_General', 'gTileset_Petalburg', 'Route5'),
+    ('LAYOUT_TAUPO', 'Taupo_Layout', 30, 24, 'gTileset_General', 'gTileset_Petalburg', 'Taupo'),
+    ('LAYOUT_ROUTE5_RANGES', 'Route5Ranges_Layout', 40, 16, 'gTileset_General', 'gTileset_Petalburg', 'Route5Ranges'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_1F', 'HeretaungaHomestead1F_Layout', 15, 11, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead1F'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_2F', 'HeretaungaHomestead2F_Layout', 15, 10, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead2F'),
 ]

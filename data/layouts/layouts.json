@@ -5557,15 +5557,13 @@
     {
       "id": "LAYOUT_ROUTE5",
       "name": "Route5_Layout",
-      "width": 48,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_CeruleanCity",
-      "border_filepath": "data/layouts/Route5_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route5_Frlg/map.bin",
-      "layout_version": "frlg"
+      "width": 16,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route5/border.bin",
+      "blockdata_filepath": "data/layouts/Route5/map.bin",
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_ROUTE6",
@@ -9498,6 +9496,39 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route36/border.bin",
       "blockdata_filepath": "data/layouts/Route36/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROTORUA",
+      "name": "Rotorua_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Rotorua/border.bin",
+      "blockdata_filepath": "data/layouts/Rotorua/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TAUPO",
+      "name": "Taupo_Layout",
+      "width": 30,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Taupo/border.bin",
+      "blockdata_filepath": "data/layouts/Taupo/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE5_RANGES",
+      "name": "Route5Ranges_Layout",
+      "width": 40,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route5Ranges/border.bin",
+      "blockdata_filepath": "data/layouts/Route5Ranges/map.bin",
       "layout_version": "emerald"
     }
   ]
