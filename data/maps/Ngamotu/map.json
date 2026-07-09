@@ -1,13 +1,13 @@
 {
-  "id": "MAP_TAUPO",
-  "name": "Taupo",
-  "layout": "LAYOUT_TAUPO",
-  "music": "MUS_FALLARBOR",
+  "id": "MAP_NGAMOTU",
+  "name": "Ngamotu",
+  "layout": "LAYOUT_NGAMOTU",
+  "music": "MUS_VERDANTURF",
   "region": "REGION_HOENN",
-  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
+  "region_map_section": "MAPSEC_VERDANTURF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
-  "map_type": "MAP_TYPE_TOWN",
+  "map_type": "MAP_TYPE_CITY",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -15,38 +15,33 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE5_POUNAMU",
+      "map": "MAP_ROUTE43_POUNAMU",
       "offset": 0,
       "direction": "up"
     },
     {
-      "map": "MAP_ROUTE5_RANGES",
-      "offset": 3,
-      "direction": "right"
-    },
-    {
-      "map": "MAP_ROUTE1_DESERT",
-      "offset": 7,
+      "map": "MAP_ROUTE3_POUNAMU",
+      "offset": 0,
       "direction": "down"
     }
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 16,
-      "y": 15,
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 23,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Taupo_EventScript_LakeMan",
+      "script": "Ngamotu_EventScript_MountainMan",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 10,
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 14,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -54,49 +49,49 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Taupo_EventScript_StreetWoman",
+      "script": "Ngamotu_EventScript_StreetWoman",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 24,
-      "y": 11,
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 23,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Taupo_EventScript_GateOldMan",
+      "script": "Ngamotu_EventScript_GymKid",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 20,
-      "y": 15,
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 10,
+      "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Taupo_EventScript_Kid",
+      "script": "Ngamotu_EventScript_SurfKid",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 5,
+      "x": 3,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_TAUPO_POKEMON_CENTER_1F",
+      "dest_map": "MAP_NGAMOTU_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_TAUPO_MART",
+      "dest_map": "MAP_NGAMOTU_MART",
       "dest_warp_id": "0"
     }
   ],
@@ -104,11 +99,11 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 12,
-      "y": 15,
+      "x": 23,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Taupo_EventScript_LakeSign"
+      "script": "Ngamotu_EventScript_TaranakiSign"
     }
   ]
 }

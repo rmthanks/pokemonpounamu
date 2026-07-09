@@ -163,7 +163,19 @@
     "TaupoPokemonCenter1F",
     "TaupoMart",
     "Route5Ranges",
-    "TaurangaGym"
+    "TaurangaGym",
+    "Route1Desert",
+    "Route43",
+    "Ngamotu",
+    "NgamotuPokemonCenter1F",
+    "NgamotuMart",
+    "Route3",
+    "Whanganui",
+    "WhanganuiPokemonCenter1F",
+    "Route1Kapiti",
+    "Wellington",
+    "WellingtonPokemonCenter1F",
+    "WellingtonMart"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

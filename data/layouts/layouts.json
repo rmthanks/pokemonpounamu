@@ -5531,15 +5531,13 @@
     {
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
-      "width": 84,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_PewterCity",
-      "border_filepath": "data/layouts/Route3_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route3_Frlg/map.bin",
-      "layout_version": "frlg"
+      "width": 16,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin",
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_ROUTE4",
@@ -9529,6 +9527,72 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route5Ranges/border.bin",
       "blockdata_filepath": "data/layouts/Route5Ranges/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_DESERT",
+      "name": "Route1Desert_Layout",
+      "width": 16,
+      "height": 90,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route1Desert/border.bin",
+      "blockdata_filepath": "data/layouts/Route1Desert/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE43",
+      "name": "Route43_Layout",
+      "width": 16,
+      "height": 70,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route43/border.bin",
+      "blockdata_filepath": "data/layouts/Route43/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_NGAMOTU",
+      "name": "Ngamotu_Layout",
+      "width": 30,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Ngamotu/border.bin",
+      "blockdata_filepath": "data/layouts/Ngamotu/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_WHANGANUI",
+      "name": "Whanganui_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Whanganui/border.bin",
+      "blockdata_filepath": "data/layouts/Whanganui/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_KAPITI",
+      "name": "Route1Kapiti_Layout",
+      "width": 16,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route1Kapiti/border.bin",
+      "blockdata_filepath": "data/layouts/Route1Kapiti/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_WELLINGTON",
+      "name": "Wellington_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Wellington/border.bin",
+      "blockdata_filepath": "data/layouts/Wellington/map.bin",
       "layout_version": "emerald"
     }
   ]

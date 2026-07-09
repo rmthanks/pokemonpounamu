@@ -671,6 +671,113 @@ for (x,y) in [(6,11),(24,4),(34,11)]:
     if rr5[y][x] == GRASS: rr5[y][x] = FLOWER
 route5ranges = rr5
 
+
+# ================= ROUTE 1 DESERT ROAD (16 x 90) — Taupo south, tussock =================
+route1desert = rural_route(90, [
+    ('sand',9,78,2,3),('sand',5,52,2,3),('sand',9,28,2,3),
+    ('tall',2,80,4,5),('tall',10,70,4,5),('tall',2,60,3,6),('tall',11,46,3,6),
+    ('tall',2,38,4,5),('tall',10,30,4,4),('tall',2,18,3,6),('tall',11,10,3,5),
+    ('hedge',0,66,0,0),('hedge',0,40,0,0),('hedge',0,15,0,0),
+    ('trees',3,56,2,0),('trees',11,50,2,0),('trees',3,24,2,0),
+    ('flower',4,73,0,0),('flower',11,55,0,0),('flower',3,34,0,0),('flower',12,21,0,0),
+])
+
+# ================= ROUTE 43 (16 x 70) — Forgotten World to Ngamotu =================
+route43 = rural_route(70, [
+    ('sand',9,58,2,3),('sand',5,34,2,3),('sand',9,14,2,3),
+    ('tall',10,62,4,5),('tall',2,52,4,5),('tall',11,40,3,6),('tall',2,34,3,5),
+    ('tall',10,24,4,5),('tall',2,16,4,4),('tall',11,8,3,5),
+    ('hedge',0,48,0,0),('hedge',0,22,0,0),
+    ('trees',3,44,2,0),('trees',11,30,2,0),('trees',3,12,2,0),
+    ('flower',12,64,0,0),('flower',3,41,0,0),('flower',11,27,0,0),('flower',4,10,0,0),
+])
+
+# ================= NGAMOTU (30 x 24) — New Plymouth, Taranaki on the horizon =================
+Wng, Hng = 30, 24
+ng = [[GRASS]*Wng for _ in range(Hng)]
+ring_trees(ng, Wng, Hng)
+fill(ng, 7, 0, 2, 2, GRASS)      # north opening (Route 43)
+fill(ng, 7, 22, 2, 2, GRASS)     # south opening (Route 3)
+paved(ng, 4, 10, 24, 3)          # main street
+fill(ng, 7, 13, 2, 9, SAND)      # south road
+fill(ng, 7, 2, 2, 8, SAND)       # north road
+put(ng, 2, 6, PC_BLOCK)          # door (3,9)
+put(ng, 12, 6, MART_BLOCK)       # door (13,9)
+put(ng, 20, 5, GYMHALL)          # gym shell, door (23,9)
+put(ng, 2, 15, PHOUSE4)          # door (3,18)
+put(ng, 12, 15, OHOUSE)          # door (13,18)
+fill(ng, 5, 19, 9, 1, SAND)
+put(ng, 20, 16, POND)            # coastal basin
+ng[8][23] = SIGN_L; ng[8][24] = SIGN_R   # Taranaki lookout sign (top of gym approach)
+tp2=(11,12)
+for (x,y) in [(10,13),(24,14),(3,20),(27,7)]:
+    if ng[y][x] == GRASS: ng[y][x] = FLOWER
+ngamotu = ng
+
+# ================= ROUTE 3 (16 x 80) — Ngamotu to Whanganui =================
+route3 = rural_route(80, [
+    ('sand',9,68,2,3),('sand',5,42,2,3),('sand',9,18,2,3),
+    ('tall',2,72,4,5),('tall',10,62,4,5),('tall',2,52,3,6),('tall',11,38,3,6),
+    ('tall',2,30,4,5),('tall',10,24,4,4),('tall',2,12,3,6),
+    ('hedge',0,58,0,0),('hedge',0,30,0,0),
+    ('trees',3,66,2,0),('trees',11,46,2,0),('trees',3,20,2,0),
+    ('flower',12,74,0,0),('flower',3,49,0,0),('flower',11,33,0,0),('flower',4,9,0,0),
+])
+
+# ================= WHANGANUI (20 x 16) — river hamlet =================
+Wwg, Hwg = 20, 16
+wg = [[GRASS]*Wwg for _ in range(Hwg)]
+ring_trees(wg, Wwg, Hwg)
+fill(wg, 7, 0, 2, 2, GRASS)      # north opening (Route 3)
+fill(wg, 7, 14, 2, 2, GRASS)     # south opening (Route 1 Kapiti)
+fill(wg, 7, 2, 2, 12, SAND)
+put(wg, 2, 3, PC_BLOCK)          # door (3,6)
+fill(wg, 3, 7, 4, 1, SAND)
+put(wg, 11, 3, OHOUSE)           # door (12,6)
+fill(wg, 9, 7, 4, 1, SAND)
+put(wg, 13, 9, POND)             # the river bend
+wg[9][4] = SIGN_L; wg[9][5] = SIGN_R
+for (x,y) in [(4,10),(16,4),(3,12)]:
+    if wg[y][x] == GRASS: wg[y][x] = FLOWER
+whanganui = wg
+
+# ================= ROUTE 1 KAPITI (16 x 80) — Whanganui to Wellington =================
+route1kapiti = rural_route(80, [
+    ('sand',9,66,2,3),('sand',5,40,2,3),('sand',9,16,2,3),
+    ('tall',10,70,4,5),('tall',2,60,4,5),('tall',11,48,3,6),('tall',2,42,3,5),
+    ('tall',10,30,4,5),('tall',2,22,4,4),('tall',11,12,3,6),('tall',2,7,3,5),
+    ('hedge',0,54,0,0),('hedge',0,26,0,0),
+    ('trees',3,62,2,0),('trees',11,36,2,0),('trees',3,15,2,0),
+    ('flower',12,72,0,0),('flower',3,50,0,0),('flower',11,33,0,0),('flower',4,10,0,0),
+])
+
+# ================= TE WHANGANUI-A-TARA (50 x 40) — Wellington, harbour city, Gym 5 =================
+Wwl, Hwl = 50, 40
+wl = [[GRASS]*Wwl for _ in range(Hwl)]
+ring_trees(wl, Wwl, Hwl)
+fill(wl, 7, 0, 2, 2, GRASS)      # north opening (Route 1 Kapiti)
+# harbour eats the south-east
+fill(wl, 26, 26, 22, 12, SEA if 'SEA' in dir() else GRASS)
+paved(wl, 4, 12, 40, 3)          # upper street
+paved(wl, 4, 22, 30, 3)          # lower street
+fill(wl, 7, 15, 2, 7, SAND)      # connector
+fill(wl, 7, 2, 2, 10, SAND)      # north road
+put(wl, 2, 8, PC_BLOCK)          # door (3,11)
+put(wl, 12, 8, MART_BLOCK)       # door (13,11)
+put(wl, 22, 7, GYMHALL)          # gym, door (25,11)
+put(wl, 34, 8, LAB)              # Beehive (parliament) - civic, door (37,12)
+put(wl, 4, 18, PHOUSE5)          # door (6,21)
+put(wl, 12, 25, OHOUSE)          # door (13,28)
+put(wl, 20, 25, PHOUSE4)         # door (21,28)
+fill(wl, 6, 22, 1, 3, SAND)
+wl[11][23] = SIGN_L; wl[11][24] = SIGN_R   # gym sign
+wl[7][35] = SIGN_L; wl[7][36] = SIGN_R     # beehive sign
+# cable car track (vertical sand line up the west hill)
+fill(wl, 2, 4, 1, 8, SAND)
+for (x,y) in [(10,16),(30,10),(44,16),(3,30),(40,20)]:
+    if wl[y][x] == GRASS: wl[y][x] = FLOWER
+wellington = wl
+
 # ---- write out ----
 def write_layout(name, grid, folder):
     os.makedirs(f'{ROOT}/data/layouts/{folder}', exist_ok=True)
@@ -707,6 +814,13 @@ write_layout('Rotorua', rotorua, 'Rotorua')
 write_layout('Route5', route5, 'Route5')
 write_layout('Taupo', taupo, 'Taupo')
 write_layout('Route5Ranges', route5ranges, 'Route5Ranges')
+write_layout('Route1Desert', route1desert, 'Route1Desert')
+write_layout('Route43', route43, 'Route43')
+write_layout('Ngamotu', ngamotu, 'Ngamotu')
+write_layout('Route3', route3, 'Route3')
+write_layout('Whanganui', whanganui, 'Whanganui')
+write_layout('Route1Kapiti', route1kapiti, 'Route1Kapiti')
+write_layout('Wellington', wellington, 'Wellington')
 write_layout('OrchardRoad', orchard_road, 'OrchardRoad')
 write_layout('HomesteadF1', homestead1f, 'HeretaungaHomestead1F')
 write_layout('MaramaRoom', marama_room, 'HeretaungaHomestead2F')
@@ -730,6 +844,13 @@ specs = [
     ('LAYOUT_ROUTE5', 'Route5_Layout', 16, 80, 'gTileset_General', 'gTileset_Petalburg', 'Route5'),
     ('LAYOUT_TAUPO', 'Taupo_Layout', 30, 24, 'gTileset_General', 'gTileset_Petalburg', 'Taupo'),
     ('LAYOUT_ROUTE5_RANGES', 'Route5Ranges_Layout', 40, 16, 'gTileset_General', 'gTileset_Petalburg', 'Route5Ranges'),
+    ('LAYOUT_ROUTE1_DESERT', 'Route1Desert_Layout', 16, 90, 'gTileset_General', 'gTileset_Petalburg', 'Route1Desert'),
+    ('LAYOUT_ROUTE43', 'Route43_Layout', 16, 70, 'gTileset_General', 'gTileset_Petalburg', 'Route43'),
+    ('LAYOUT_NGAMOTU', 'Ngamotu_Layout', 30, 24, 'gTileset_General', 'gTileset_Petalburg', 'Ngamotu'),
+    ('LAYOUT_ROUTE3', 'Route3_Layout', 16, 80, 'gTileset_General', 'gTileset_Petalburg', 'Route3'),
+    ('LAYOUT_WHANGANUI', 'Whanganui_Layout', 20, 16, 'gTileset_General', 'gTileset_Petalburg', 'Whanganui'),
+    ('LAYOUT_ROUTE1_KAPITI', 'Route1Kapiti_Layout', 16, 80, 'gTileset_General', 'gTileset_Petalburg', 'Route1Kapiti'),
+    ('LAYOUT_WELLINGTON', 'Wellington_Layout', 50, 40, 'gTileset_General', 'gTileset_Petalburg', 'Wellington'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_1F', 'HeretaungaHomestead1F_Layout', 15, 11, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead1F'),
     ('LAYOUT_HERETAUNGA_HOMESTEAD_2F', 'HeretaungaHomestead2F_Layout', 15, 10, 'gTileset_Building', 'gTileset_BrendansMaysHouse', 'HeretaungaHomestead2F'),
 ]

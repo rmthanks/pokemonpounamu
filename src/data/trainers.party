@@ -17229,3 +17229,108 @@ Level: 20
 
 Onix
 Level: 21
+
+=== TRAINER_R1D_KOA ===
+Name: Koa
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Machop
+Level: 21
+
+Trapinch
+Level: 22
+
+=== TRAINER_R1D_ARI ===
+Name: Ari
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Numel
+Level: 21
+
+Sandshrew
+Level: 22
+
+=== TRAINER_R43_WAI ===
+Name: Wai
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Swablu
+Level: 23
+
+Kirlia
+Level: 24
+
+=== TRAINER_R3_RICO ===
+Name: Rico
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Mightyena
+Level: 25
+
+Machoke
+Level: 26
+
+=== TRAINER_R3_ANA ===
+Name: Ana
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Swablu
+Level: 25
+
+Skiploom
+Level: 25
+
+=== TRAINER_R1K_TAMA2 ===
+Name: Hemi
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Swellow
+Level: 27
+
+Pelipper
+Level: 27
+
+=== TRAINER_R1K_RAE ===
+Name: Rae
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Machoke
+Level: 27
+
+Onix
+Level: 28

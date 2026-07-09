@@ -405,6 +405,30 @@
       "y": 10,
       "respawn_map": "MAP_TAUPO_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_TAUPO_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_NGAMOTU",
+      "map": "MAP_NGAMOTU",
+      "x": 3,
+      "y": 10,
+      "respawn_map": "MAP_NGAMOTU_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_NGAMOTU_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_WHANGANUI",
+      "map": "MAP_WHANGANUI",
+      "x": 3,
+      "y": 7,
+      "respawn_map": "MAP_WHANGANUI_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_WHANGANUI_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_WELLINGTON",
+      "map": "MAP_WELLINGTON",
+      "x": 3,
+      "y": 12,
+      "respawn_map": "MAP_WELLINGTON_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_WELLINGTON_NURSE"
     }
   ]
 }
