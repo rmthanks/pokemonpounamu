@@ -891,8 +891,9 @@ static void Task_TitleScreenPhase3(u8 taskId)
         if (++gTasks[taskId].tCounter & 1)
         {
             gTasks[taskId].tBg1Y++;
-            gBattle_BG1_Y = gTasks[taskId].tBg1Y / 2;
-            gBattle_BG1_X = 0;
+            // Pounamu: clouds drift slowly across the sky, west with the gulls
+            gBattle_BG1_X = gTasks[taskId].tBg1Y / 8;
+            gBattle_BG1_Y = 0;
         }
         UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
         // Pounamu: gulls cross the bay now and then

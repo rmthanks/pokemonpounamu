@@ -100,4 +100,12 @@ cpx=lut[vpx]
 cl=Image.fromarray(cpx,mode='P')
 cl.putpalette(palette+[0,0,0]*(256-16))
 cl.save(f'{GFXDIR}/clouds.png')
-print('title backdrop + mist written')
+
+# mask the mist tilemap to the sky band (rows 0-9, above the horizon)
+cb=bytearray(open(f'{GFXDIR}/clouds_vanilla.bin','rb').read())
+for i in range(0,len(cb),2):
+    row=(i//2)//32
+    if row>=10:
+        cb[i]=0; cb[i+1]=0
+open(f'{GFXDIR}/clouds.bin','wb').write(bytes(cb))
+print('title backdrop + sky-band mist written')

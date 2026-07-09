@@ -1340,10 +1340,25 @@ static void Task_Scene1_PanUp(u8 taskId)
     }
 }
 
+static void Task_Scene1_FadeToTitle(u8 taskId);
+
+// Pounamu: the dawn scene IS the intro. Fade to first light, cut to the title.
 static void Task_Scene1_End(u8 taskId)
 {
-    if (gIntroFrameCounter > TIMER_START_SCENE_2)
-        gTasks[taskId].func = Task_Scene2_Load;
+    if (gIntroFrameCounter > TIMER_START_SCENE_2 && !gPaletteFade.active)
+    {
+        BeginNormalPaletteFade(PALETTES_ALL, 4, 0, 16, RGB_WHITEALPHA);
+        gTasks[taskId].func = Task_Scene1_FadeToTitle;
+    }
+}
+
+static void Task_Scene1_FadeToTitle(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        DestroyTask(taskId);
+        SetMainCallback2(MainCB2_EndIntro);
+    }
 }
 
 static void Task_Scene2_Load(u8 taskId)
