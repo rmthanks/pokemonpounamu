@@ -52,3 +52,69 @@ Taupo_Text_Kid:
 Taupo_Text_LakeSign:
 	.string "LAKE TAUPO\p"
 	.string "“The heart of the fish.”$"
+
+@ ---- The Choice: north fork (Lugia) ----
+Taupo_EventScript_LakeBoatman::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x903, Taupo_EventScript_BoatmanAfter
+	goto_if_set FLAG_UNUSED_0x902, Taupo_EventScript_BoatmanTooLate
+	goto_if_unset FLAG_UNUSED_0x900, Taupo_EventScript_BoatmanClosed
+	msgbox Taupo_Text_BoatmanWarn, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Taupo_EventScript_BoatmanNo
+	setflag FLAG_UNUSED_0x901
+	closemessage
+	warp MAP_TAUPO_LAKE_ISLE, 13, 17
+	waitstate
+	end
+
+Taupo_EventScript_BoatmanClosed::
+	msgbox Taupo_Text_BoatmanClosed, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_EventScript_BoatmanNo::
+	msgbox Taupo_Text_BoatmanNo, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_EventScript_BoatmanTooLate::
+	msgbox Taupo_Text_BoatmanTooLate, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_EventScript_BoatmanAfter::
+	msgbox Taupo_Text_BoatmanAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_Text_BoatmanClosed:
+	.string "Boatman: The isle? Nobody lands\n"
+	.string "there, e hoa. That water\l"
+	.string "belongs to what's under it.$"
+
+Taupo_Text_BoatmanWarn:
+	.string "Boatman: …So it's true, then.\n"
+	.string "What your old man said.\p"
+	.string "Listen once: if I row you out,\n"
+	.string "there's no rowing to the OTHER\l"
+	.string "one after. There isn't time.\l"
+	.string "There was never time for both.\p"
+	.string "You choose with your feet.\n"
+	.string "…Get in?$"
+
+Taupo_Text_BoatmanNo:
+	.string "Boatman: Aye. Think on it.\p"
+	.string "But don't think long. Your\n"
+	.string "brother isn't.$"
+
+Taupo_Text_BoatmanTooLate:
+	.string "Boatman: You went south.\p"
+	.string "…The lake's been dark two days\n"
+	.string "now. Whatever came for the\l"
+	.string "diver, it didn't row.$"
+
+Taupo_Text_BoatmanAfter:
+	.string "Boatman: Done is done, e hoa.\p"
+	.string "Whatever you carry now, carry\n"
+	.string "it all the way to that tower.$"

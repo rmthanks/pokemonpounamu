@@ -198,6 +198,8 @@ gStdScripts_End::
 	.include "data/maps/TeMataTrack/scripts.inc"
 	.include "data/maps/TeMataSummit/scripts.inc"
 	.include "data/maps/HeretaungaFlowerShop/scripts.inc"
+	.include "data/maps/TaupoLakeIsle/scripts.inc"
+	.include "data/maps/Piopiotahi/scripts.inc"
 	.include "data/maps/Waitohi/scripts.inc"
 	.include "data/maps/WaitohiPokemonCenter1F/scripts.inc"
 	.include "data/maps/Route6/scripts.inc"

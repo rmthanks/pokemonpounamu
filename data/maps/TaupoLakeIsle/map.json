@@ -1,0 +1,43 @@
+{
+  "id": "MAP_TAUPO_LAKE_ISLE",
+  "name": "TaupoLakeIsle",
+  "layout": "LAYOUT_SOUTHERN_ISLAND_INTERIOR",
+  "music": "MUS_ABNORMAL_WEATHER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LUGIA)",
+      "x": 13,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TaupoLakeIsle_EventScript_Lugia",
+      "flag": "FLAG_UNUSED_0x905"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_TAUPO",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
