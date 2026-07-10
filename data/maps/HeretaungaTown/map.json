@@ -259,6 +259,13 @@
       "elevation": 3,
       "dest_map": "MAP_TE_MATA_TRACK",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 53,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_HERETAUNGA_FLOWER_SHOP",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -9645,6 +9645,28 @@
       "border_filepath": "data/layouts/Otepoti/border.bin",
       "blockdata_filepath": "data/layouts/Otepoti/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TE_MATA_SUMMIT",
+      "name": "TeMataSummit_Layout",
+      "width": 50,
+      "height": 37,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/TeMataSummit/border.bin",
+      "blockdata_filepath": "data/layouts/TeMataSummit/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HERETAUNGA_FLOWER_SHOP",
+      "name": "HeretaungaFlowerShop_Layout",
+      "width": 15,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PrettyPetalFlowerShop",
+      "border_filepath": "data/layouts/HeretaungaFlowerShop/border.bin",
+      "blockdata_filepath": "data/layouts/HeretaungaFlowerShop/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
