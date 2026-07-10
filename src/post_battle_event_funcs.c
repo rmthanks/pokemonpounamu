@@ -36,10 +36,9 @@ int GameClear(void)
 
     SetContinueGameWarpStatus();
 
-    if (gSaveBlock2Ptr->playerGender == MALE)
-        SetContinueGameWarpToHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F);
-    else
-        SetContinueGameWarpToHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F);
+    // Pounamu: wake in Otepoti after the credits (vanilla warped to Littleroot,
+    // stranding the player in unused Hoenn maps). The Rongokako quake fires here.
+    SetContinueGameWarpToHealLocation(HEAL_LOCATION_OTEPOTI);
 
     ribbonGet = FALSE;
 
