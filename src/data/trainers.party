@@ -17694,3 +17694,99 @@ Level: 57
 
 Solgaleo
 Level: 60
+
+=== TRAINER_TOWER_GRUNT_1 ===
+Name: Enforcer
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Mightyena
+Level: 58
+
+Skuntank
+Level: 58
+
+=== TRAINER_TOWER_GRUNT_2 ===
+Name: Enforcer
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Honchkrow
+Level: 59
+
+Toxicroak
+Level: 59
+
+=== TRAINER_TOWER_GRUNT_3 ===
+Name: Captain
+Class: Aqua Admin
+Pic: Aqua Admin M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer
+
+Krookodile
+Level: 60
+
+Bisharp
+Level: 60
+
+Drapion
+Level: 61
+
+=== TRAINER_TAMA_TOWER_LUGIA ===
+Name: Tama
+Class: Champion
+Pic: Champion Wallace
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Tyranitar
+Level: 63
+
+Hydreigon
+Level: 63
+
+Aegislash
+Level: 64
+
+Solgaleo
+Level: 66
+
+Lugia
+Level: 65
+
+=== TRAINER_TAMA_TOWER_HOOH ===
+Name: Tama
+Class: Champion
+Pic: Champion Wallace
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Tyranitar
+Level: 63
+
+Hydreigon
+Level: 63
+
+Aegislash
+Level: 64
+
+Solgaleo
+Level: 66
+
+Ho-Oh
+Level: 65

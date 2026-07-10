@@ -611,7 +611,11 @@
     "BattlePyramidSquare14",
     "BattlePyramidSquare15",
     "BattlePyramidSquare16",
-    "UnionRoom"
+    "UnionRoom",
+    "TamakiMakaurau",
+    "SkyTowerLobby",
+    "SkyTowerMid",
+    "SkyTowerTop"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Northwest",

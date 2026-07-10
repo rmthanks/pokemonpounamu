@@ -70,3 +70,38 @@ Wellington_Text_FerrySign:
 	.string "(The South Island opens in a\n"
 	.string "later build - the ferry is your\l"
 	.string "door across.)$"
+
+@ ---- Ferry north: Tamaki Makaurau (post-Choice) ----
+Wellington_EventScript_TamakiFerry::
+	lock
+	faceplayer
+	goto_if_unset FLAG_UNUSED_0x903, Wellington_EventScript_TamakiFerryClosed
+	msgbox Wellington_Text_TamakiFerry, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Wellington_EventScript_TamakiFerryNo
+	closemessage
+	warp MAP_TAMAKI_MAKAURAU, 53, 33
+	waitstate
+	end
+
+Wellington_EventScript_TamakiFerryClosed::
+	msgbox Wellington_Text_TamakiFerryClosed, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_EventScript_TamakiFerryNo::
+	release
+	end
+
+Wellington_Text_TamakiFerryClosed:
+	.string "Sailor: Tamaki? Nothing sails\n"
+	.string "north right now, mate.\p"
+	.string "Whole harbour up there answers\n"
+	.string "to one tower, and the tower\l"
+	.string "isn't taking visitors.$"
+
+Wellington_Text_TamakiFerry:
+	.string "Sailor: Tamaki Makaurau.\p"
+	.string "…You're really going up there,\n"
+	.string "carrying what you carry.\p"
+	.string "One tower. One brother.\n"
+	.string "…Board her?$"

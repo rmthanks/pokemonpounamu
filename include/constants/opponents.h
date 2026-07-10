@@ -915,7 +915,13 @@
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     904
+#define TRAINER_TOWER_GRUNT_1               904
+#define TRAINER_TOWER_GRUNT_2               905
+#define TRAINER_TOWER_GRUNT_3               906
+#define TRAINER_TAMA_TOWER_LUGIA            907
+#define TRAINER_TAMA_TOWER_HOOH             908
+
+#define TRAINERS_COUNT_EMERALD     909
 #define MAX_TRAINERS_COUNT_EMERALD 1120
 
 #if IS_FRLG
