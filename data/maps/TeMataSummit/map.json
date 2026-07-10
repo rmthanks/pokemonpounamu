@@ -1,0 +1,66 @@
+{
+  "id": "MAP_TE_MATA_SUMMIT",
+  "name": "TeMataSummit",
+  "layout": "LAYOUT_MT_PYRE_SUMMIT",
+  "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_MT_PYRE",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(REGIGIGAS)",
+      "x": 23,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TeMataSummit_EventScript_Rongokako",
+      "flag": "FLAG_UNUSED_0x026"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 31,
+      "elevation": 3,
+      "dest_map": "MAP_TE_MATA_TRACK",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 23,
+      "y": 31,
+      "elevation": 3,
+      "dest_map": "MAP_TE_MATA_TRACK",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 24,
+      "y": 31,
+      "elevation": 3,
+      "dest_map": "MAP_TE_MATA_TRACK",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "TeMataSummit_EventScript_Pou"
+    }
+  ]
+}

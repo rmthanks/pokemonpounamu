@@ -195,6 +195,8 @@ gStdScripts_End::
 	.include "data/maps/PounamuLeagueWhetu/scripts.inc"
 	.include "data/maps/PounamuLeaguePo/scripts.inc"
 	.include "data/maps/PounamuLeagueMaui/scripts.inc"
+	.include "data/maps/TeMataTrack/scripts.inc"
+	.include "data/maps/TeMataSummit/scripts.inc"
 	.include "data/maps/Waitohi/scripts.inc"
 	.include "data/maps/WaitohiPokemonCenter1F/scripts.inc"
 	.include "data/maps/Route6/scripts.inc"

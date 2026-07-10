@@ -51,7 +51,16 @@ HeretaungaTown_Text_Woman:
 	.string "in that orchard, me included.$"
 
 HeretaungaTown_EventScript_TeMataBoy::
-	msgbox HeretaungaTown_Text_TeMataBoy, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x025, HeretaungaTown_EventScript_TeMataBoyPostQuake
+	msgbox HeretaungaTown_Text_TeMataBoy, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EventScript_TeMataBoyPostQuake::
+	msgbox HeretaungaTown_Text_TeMataBoyPostQuake, MSGBOX_DEFAULT
+	release
 	end
 
 HeretaungaTown_Text_TeMataBoy:
@@ -61,6 +70,14 @@ HeretaungaTown_Text_TeMataBoy:
 	.string "that hill.\p"
 	.string "…I reckon she's having me on.\n"
 	.string "Probably.$"
+
+HeretaungaTown_Text_TeMataBoyPostQuake:
+	.string "Nan didn't say “I told you so.”\p"
+	.string "She just put the kettle on and\n"
+	.string "looked out the window at the\l"
+	.string "ridge for a really long time.\p"
+	.string "…The ridge looks DIFFERENT,\n"
+	.string "eh. Like a made bed.$"
 
 HeretaungaTown_EventScript_OrchardWorker::
 	msgbox HeretaungaTown_Text_OrchardWorker, MSGBOX_NPC
@@ -75,8 +92,38 @@ HeretaungaTown_Text_OrchardWorker:
 	.string "their keep somehow.$"
 
 HeretaungaTown_EventScript_TeMataGate::
-	msgbox HeretaungaTown_Text_TeMataGate, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x025, HeretaungaTown_EventScript_TeMataGateOpen
+	msgbox HeretaungaTown_Text_TeMataGate, MSGBOX_DEFAULT
+	release
 	end
+
+HeretaungaTown_EventScript_TeMataGateOpen::
+	msgbox HeretaungaTown_Text_TeMataGateOpen, MSGBOX_DEFAULT
+	release
+	end
+
+@ The waharoa itself. Post-game, stepping east opens the first ascent.
+HeretaungaTown_EventScript_TeMataTrackEntry::
+	lockall
+	goto_if_set FLAG_UNUSED_0x025, HeretaungaTown_EventScript_TeMataTrackGo
+	msgbox HeretaungaTown_Text_TeMataTrackClosed, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, HeretaungaTown_Movement_StepBackWest
+	waitmovement 0
+	releaseall
+	end
+
+HeretaungaTown_EventScript_TeMataTrackGo::
+	releaseall
+	warp MAP_TE_MATA_TRACK, 10, 43
+	waitstate
+	end
+
+HeretaungaTown_Movement_StepBackWest:
+	walk_left
+	step_end
 
 HeretaungaTown_Text_TeMataGate:
 	.string "The Te Mata track? Closed, love.\p"
@@ -84,6 +131,24 @@ HeretaungaTown_Text_TeMataGate:
 	.string "the storms.\p"
 	.string "That hill will still be asleep\n"
 	.string "whenever it opens again.$"
+
+HeretaungaTown_Text_TeMataGateOpen:
+	.string "The quake snapped the chain on\n"
+	.string "the waharoa like it was string.\p"
+	.string "Rangers went up Tuesday morning.\n"
+	.string "Came back down Tuesday morning,\l"
+	.string "walking very fast.\p"
+	.string "…Track's open, love.\p"
+	.string "Nobody said it was SAFE.$"
+
+HeretaungaTown_Text_TeMataTrackClosed:
+	.string "The waharoa is chained shut.\p"
+	.string "A weathered notice hangs from\n"
+	.string "the crossbar:\p"
+	.string "“TRACK CLOSED - slips along\n"
+	.string "the ridge.\p"
+	.string "The hill will still be here\n"
+	.string "when you're older.”$"
 
 HeretaungaTown_EventScript_FlaxKid::
 	msgbox HeretaungaTown_Text_FlaxKid, MSGBOX_NPC
