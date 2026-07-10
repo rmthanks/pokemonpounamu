@@ -229,6 +229,45 @@
       "script": "HeretaungaTown_EventScript_Rata",
       "flag": "0",
       "local_id": "LOCALID_HERETAUNGA_RATA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(VESPIQUEN)",
+      "x": 46,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HeretaungaTown_EventScript_Queen",
+      "flag": "FLAG_UNUSED_0x044"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 48,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HeretaungaTown_EventScript_Kuia",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 26,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HeretaungaTown_EventScript_Watchers",
+      "flag": "FLAG_UNUSED_0x040"
     }
   ],
   "warp_events": [
@@ -295,6 +334,24 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "HeretaungaTown_EventScript_TeMataTrackEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 22,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "HeretaungaTown_EventScript_Watchers"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 21,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "HeretaungaTown_EventScript_Watchers"
     }
   ],
   "bg_events": [
@@ -313,6 +370,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HeretaungaTown_EventScript_MatarikiHall"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HeretaungaTown_EventScript_JobBoard"
     }
   ]
 }

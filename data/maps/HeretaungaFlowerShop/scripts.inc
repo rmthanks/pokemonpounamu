@@ -10,6 +10,8 @@ HeretaungaFlowerShop_MapScripts::
 HeretaungaFlowerShop_EventScript_Mum::
 	lock
 	faceplayer
+	goto_if_unset FLAG_UNUSED_0x040, HeretaungaFlowerShop_EventScript_MumErrand
+	call_if_set FLAG_UNUSED_0x042, HeretaungaFlowerShop_EventScript_TrySweetNectar
 	goto_if_set FLAG_BADGE01_GET, HeretaungaFlowerShop_EventScript_MumShop
 	msgbox HeretaungaFlowerShop_Text_MumIntro, MSGBOX_DEFAULT
 	call HeretaungaFlowerShop_EventScript_OpenMintShop
@@ -52,6 +54,7 @@ HeretaungaFlowerShop_EventScript_Regular::
 	end
 
 HeretaungaFlowerShop_EventScript_PlaqueSign::
+	setflag FLAG_UNUSED_0x047
 	msgbox HeretaungaFlowerShop_Text_Plaque, MSGBOX_SIGN
 	end
 
@@ -106,3 +109,47 @@ HeretaungaFlowerShop_Text_Plaque:
 	.string "“BAY DEVELOPMENT - HEAD OFFICE.”\p"
 	.string "Someone has taped a seed packet\n"
 	.string "over the word OFFICE.$"
+
+HeretaungaFlowerShop_EventScript_MumErrand::
+	goto_if_set FLAG_UNUSED_0x041, HeretaungaFlowerShop_EventScript_MumErrandRemind
+	msgbox HeretaungaFlowerShop_Text_MumErrand, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x041
+	release
+	end
+
+HeretaungaFlowerShop_EventScript_MumErrandRemind::
+	msgbox HeretaungaFlowerShop_Text_MumErrandRemind, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaFlowerShop_EventScript_TrySweetNectar::
+	goto_if_set FLAG_UNUSED_0x043, HeretaungaFlowerShop_EventScript_NectarGiven
+	msgbox HeretaungaFlowerShop_Text_SweetNectar, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x043
+	return
+
+HeretaungaFlowerShop_EventScript_NectarGiven::
+	return
+
+HeretaungaFlowerShop_Text_MumErrand:
+	.string "Mum: Perfect timing, love.\p"
+	.string "Take this crate of cuttings to\n"
+	.string "the i-SITE for me? West end of\l"
+	.string "town, past the Centre.\p"
+	.string "…And if anyone stops you on\n"
+	.string "the way - and someone will -\l"
+	.string "you let them look, and you\l"
+	.string "keep walking. Bay rules.$"
+
+HeretaungaFlowerShop_Text_MumErrandRemind:
+	.string "Mum: The i-SITE, love. West\n"
+	.string "end. Crate's not getting any\l"
+	.string "lighter.$"
+
+HeretaungaFlowerShop_Text_SweetNectar:
+	.string "Mum: The queen's sulking, is\n"
+	.string "she? Mm. She does that.\p"
+	.string "Here - SWEET NECTAR, from the\n"
+	.string "back shelf. One sniff and\l"
+	.string "she'll remember what her wings\l"
+	.string "are for.$"
