@@ -93,6 +93,27 @@
       "elevation": 0,
       "dest_map": "MAP_NGAMOTU_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_NGAMOTU_WIND_GALLERY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_NGAMOTU_SURF_HIGHWAY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_NGAMOTU_GARDENER_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

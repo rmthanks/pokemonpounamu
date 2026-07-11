@@ -111,6 +111,20 @@
       "elevation": 0,
       "dest_map": "MAP_TAUPO_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_TAUPO_ANGLERS_LODGE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_TAUPO_SKYDIVE_FLAT",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

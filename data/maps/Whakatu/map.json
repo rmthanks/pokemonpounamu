@@ -100,6 +100,20 @@
       "elevation": 0,
       "dest_map": "MAP_WHAKATU_GYM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_WHAKATU_SUN_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_WHAKATU_BOULDER_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

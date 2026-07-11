@@ -113,6 +113,34 @@
       "elevation": 0,
       "dest_map": "MAP_OTAUTAHI_GYM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_OTAUTAHI_ISITE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_OTAUTAHI_REBUILD_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_OTAUTAHI_GARDEN_FLAT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_OTAUTAHI_CATHEDRAL_FLAT",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

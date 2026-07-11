@@ -106,6 +106,34 @@
       "elevation": 0,
       "dest_map": "MAP_TURANGA_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_TURANGA_SURF_SHACK",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_TURANGA_VINEYARD_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_TURANGA_KAPA_HAKA_HALL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_TURANGA_NANNY_FLAT",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

@@ -128,6 +128,20 @@
       "elevation": 0,
       "dest_map": "MAP_POUNAMU_LEAGUE_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_OTEPOTI_SCARFIE_FLAT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_OTEPOTI_STONE_VILLA",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

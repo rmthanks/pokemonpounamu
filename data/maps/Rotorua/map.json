@@ -113,6 +113,20 @@
       "elevation": 0,
       "dest_map": "MAP_ROTORUA_GYM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_ROTORUA_STEAM_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_ROTORUA_GUIDE_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

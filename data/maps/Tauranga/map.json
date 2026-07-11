@@ -113,6 +113,27 @@
       "elevation": 0,
       "dest_map": "MAP_TAURANGA_GYM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_TAURANGA_PORT_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_TAURANGA_MAUAO_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_TAURANGA_BACH_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

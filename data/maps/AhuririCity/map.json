@@ -113,6 +113,62 @@
       "elevation": 0,
       "dest_map": "MAP_AHURIRI_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_SUNRISE_VILLA",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_GALLERY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_QUARTER_HOUSE_1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_QUARTER_HOUSE_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_QUARTER_HOUSE_3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_SEASIDE_HOUSE_1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_SEASIDE_HOUSE_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_AHURIRI_SEASIDE_HOUSE_3",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
