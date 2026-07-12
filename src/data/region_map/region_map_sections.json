@@ -3,47 +3,47 @@
     {
       "id": "MAPSEC_LITTLEROOT_TOWN",
       "name": "Heretaunga",
-      "x": 4,
-      "y": 11,
+      "x": 23,
+      "y": 6,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_OLDALE_TOWN",
       "name": "Havelock North",
-      "x": 4,
-      "y": 9,
+      "x": 24,
+      "y": 7,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_DEWFORD_TOWN",
       "name": "Turanga",
-      "x": 2,
-      "y": 14,
+      "x": 25,
+      "y": 4,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_LAVARIDGE_TOWN",
       "name": "Rotorua",
-      "x": 5,
-      "y": 3,
+      "x": 22,
+      "y": 4,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_FALLARBOR_TOWN",
       "name": "Taupo",
-      "x": 3,
-      "y": 0,
+      "x": 21,
+      "y": 5,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_VERDANTURF_TOWN",
       "name": "Ngamotu",
-      "x": 4,
+      "x": 17,
       "y": 6,
       "width": 1,
       "height": 1
@@ -51,82 +51,82 @@
     {
       "id": "MAPSEC_PACIFIDLOG_TOWN",
       "name": "Whanganui",
-      "x": 17,
-      "y": 10,
+      "x": 19,
+      "y": 7,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_PETALBURG_CITY",
       "name": "Ahuriri",
-      "x": 1,
-      "y": 9,
+      "x": 24,
+      "y": 6,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_SLATEPORT_CITY",
       "name": "Opotiki",
-      "x": 8,
-      "y": 10,
+      "x": 24,
+      "y": 4,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "MAPSEC_MAUVILLE_CITY",
       "name": "Tauranga",
-      "x": 8,
-      "y": 6,
-      "width": 2,
+      "x": 23,
+      "y": 4,
+      "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_RUSTBORO_CITY",
       "name": "Wairoa",
-      "x": 0,
+      "x": 24,
       "y": 5,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "MAPSEC_FORTREE_CITY",
       "name": "Whakatu",
-      "x": 12,
-      "y": 0,
+      "x": 18,
+      "y": 10,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_LILYCOVE_CITY",
       "name": "Otautahi",
-      "x": 18,
-      "y": 3,
-      "width": 2,
+      "x": 17,
+      "y": 11,
+      "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_MOSSDEEP_CITY",
       "name": "Otepoti",
-      "x": 24,
-      "y": 5,
-      "width": 2,
+      "x": 15,
+      "y": 12,
+      "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_SOOTOPOLIS_CITY",
       "name": "Te Whanganui-a-Tara",
       "x": 21,
-      "y": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_EVER_GRANDE_CITY",
       "name": "Waitohi",
-      "x": 27,
-      "y": 8,
+      "x": 19,
+      "y": 10,
       "width": 1,
-      "height": 2
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_101",
