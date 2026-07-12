@@ -19,7 +19,7 @@ HeretaungaTown_OnTransition_ShowAwhi::
 
 HeretaungaTown_OnTransition_Break::
 	goto_if_set FLAG_UNUSED_0x048, HeretaungaTown_OnTransition_HideTama
-	goto_if_set FLAG_BADGE02_GET, HeretaungaTown_OnTransition_ShowTama
+	goto_if_eq VAR_POUNAMU_INTRO_STATE, 3, HeretaungaTown_OnTransition_ShowTama
 	goto HeretaungaTown_OnTransition_HideTama
 
 HeretaungaTown_OnTransition_ShowTama::
@@ -651,6 +651,7 @@ HeretaungaTown_EventScript_BreakOutcome::
 	msgbox HeretaungaTown_Text_BreakRataSendaway, MSGBOX_DEFAULT
 	setflag FLAG_UNUSED_0x048
 	setflag FLAG_UNUSED_0x049
+	setvar VAR_POUNAMU_INTRO_STATE, 4
 	removeobject 21
 	release
 	end

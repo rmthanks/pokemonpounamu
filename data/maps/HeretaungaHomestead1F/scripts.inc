@@ -1,10 +1,40 @@
 HeretaungaHomestead1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HeretaungaHomestead1F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, HeretaungaHomestead1F_OnFrame
 	.byte 0
 
 HeretaungaHomestead1F_OnFrame:
 	map_script_2 VAR_POUNAMU_INTRO_STATE, 0, Homestead_EventScript_Birthday
+	map_script_2 VAR_TEMP_2, 1, Homestead_EventScript_Homecoming
 	.2byte 0
+
+@ Tama vanishes from home once the Break happens; Awhi appears for the
+@ homecoming (post-tower). VAR_TEMP_2 arms the homecoming scene once.
+HeretaungaHomestead1F_OnTransition::
+	setvar VAR_TEMP_2, 0
+	call HeretaungaHomestead1F_OnTransition_Tama
+	call HeretaungaHomestead1F_OnTransition_Awhi
+	end
+
+HeretaungaHomestead1F_OnTransition_Tama::
+	goto_if_set FLAG_UNUSED_0x048, HeretaungaHomestead1F_HideTama
+	clearflag FLAG_UNUSED_0x054
+	return
+HeretaungaHomestead1F_HideTama::
+	setflag FLAG_UNUSED_0x054
+	return
+
+HeretaungaHomestead1F_OnTransition_Awhi::
+	goto_if_unset FLAG_UNUSED_0x907, HeretaungaHomestead1F_HideAwhi
+	clearflag FLAG_UNUSED_0x055
+	goto_if_set FLAG_UNUSED_0x068, HeretaungaHomestead1F_AwhiDone
+	setvar VAR_TEMP_2, 1
+	return
+HeretaungaHomestead1F_AwhiDone::
+	return
+HeretaungaHomestead1F_HideAwhi::
+	setflag FLAG_UNUSED_0x055
+	return
 
 @ ------------------------------------------------------------------
 @ The birthday cold-open. A rare gathering: both parents in one room,
@@ -279,3 +309,100 @@ Homestead_Text_TamaRetalk:
 	.string "Tama: What?\p"
 	.string "…Look after it. That's all\n"
 	.string "I'm saying.$"
+
+@ ==================================================================
+@ THE HOMECOMING - the birthday room, answered. Post-tower, before
+@ the final climb. Parents reconciled, Tama's chair empty, Awhi at
+@ the table. Maui's call arrives while everyone is together.
+@ ==================================================================
+Homestead_EventScript_Homecoming::
+	lockall
+	setvar VAR_TEMP_2, 0
+	msgbox Homestead_Text_HomecomingRata, MSGBOX_DEFAULT
+	msgbox Homestead_Text_HomecomingKauri, MSGBOX_DEFAULT
+	msgbox Homestead_Text_HomecomingAwhi1, MSGBOX_DEFAULT
+	msgbox Homestead_Text_HomecomingChair, MSGBOX_DEFAULT
+	playse SE_PIN
+	msgbox Homestead_Text_HomecomingPhone, MSGBOX_DEFAULT
+	msgbox Homestead_Text_HomecomingCall, MSGBOX_DEFAULT
+	msgbox Homestead_Text_HomecomingAwhi2, MSGBOX_DEFAULT
+	msgbox Homestead_Text_HomecomingRata2, MSGBOX_DEFAULT
+	special HealPlayerParty
+	setflag FLAG_UNUSED_0x068
+	releaseall
+	end
+
+Homestead_EventScript_AwhiHome::
+	lock
+	faceplayer
+	msgbox Homestead_Text_AwhiHomeRetalk, MSGBOX_DEFAULT
+	release
+	end
+
+Homestead_Text_HomecomingRata:
+	.string "Rata: …There you are,\n"
+	.string "sleepyhead.\p"
+	.string "Same words as that morning, eh.\n"
+	.string "Same kitchen.\p"
+	.string "Different everything.$"
+
+Homestead_Text_HomecomingKauri:
+	.string "Kauri: The tower's yours to\n"
+	.string "finish, they tell me. The four\l"
+	.string "walls are going home. The\l"
+	.string "summit's waiting.\p"
+	.string "…I'm not president of anything\n"
+	.string "anymore.\p"
+	.string "Turns out I don't miss it.\n"
+	.string "Turns out I was only ever\l"
+	.string "guarding the wrong thing.$"
+
+Homestead_Text_HomecomingAwhi1:
+	.string "Awhi: They gave me the seedling\n"
+	.string "shift AND the good chair.\p"
+	.string "Fifteen years I hovered at the\n"
+	.string "edge of this family.\p"
+	.string "Turns out you just… sit down.\n"
+	.string "That's the whole trick.$"
+
+Homestead_Text_HomecomingChair:
+	.string "One chair at the table sits\n"
+	.string "empty.\p"
+	.string "Nobody has moved it.\p"
+	.string "Nobody will.$"
+
+Homestead_Text_HomecomingPhone:
+	.string "…The phone rings.\p"
+	.string "Rata answers - then goes very\n"
+	.string "still, and holds it out to\l"
+	.string "Awhi with both hands.$"
+
+Homestead_Text_HomecomingCall:
+	.string "Awhi: …Yes. Yes, this is her.\p"
+	.string "…\p"
+	.string "The whanau seat.\p"
+	.string "…You're sure? You know where\n"
+	.string "I've been. You know WHOSE I-\p"
+	.string "…\p"
+	.string "…Yeah. Yes.\p"
+	.string "I accept.$"
+
+Homestead_Text_HomecomingAwhi2:
+	.string "Awhi: The League wants me to\n"
+	.string "hold the whanau wall. Me.\p"
+	.string "…Marama. When you climb it -\n"
+	.string "and you will - I want you\l"
+	.string "first.\p"
+	.string "My first challenge, your last\n"
+	.string "climb. Deal?\p"
+	.string "Don't you dare go easy.$"
+
+Homestead_Text_HomecomingRata2:
+	.string "Rata: Eat something before you\n"
+	.string "go, love.\p"
+	.string "Champions still need breakfast.$"
+
+Homestead_Text_AwhiHomeRetalk:
+	.string "Awhi: First challenge.\n"
+	.string "Your last climb.\p"
+	.string "I'll be waiting at the tower.$"

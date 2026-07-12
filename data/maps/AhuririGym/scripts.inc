@@ -65,7 +65,7 @@ AhuririGym_EventScript_ExileCommon::
 	fadescreen FADE_TO_BLACK
 	special HealPlayerParty
 	msgbox AhuririGym_Text_ExileNarration, MSGBOX_DEFAULT
-	setvar VAR_POUNAMU_INTRO_STATE, 4
+	setvar VAR_POUNAMU_INTRO_STATE, 3
 	warp MAP_ROUTE2_BAY, 7, 6
 	waitstate
 	release
