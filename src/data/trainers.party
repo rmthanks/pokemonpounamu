@@ -16887,6 +16887,7 @@ Music: Female
 Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
+Starting Status: Grassy Terrain
 
 Cherubi
 Level: 7
@@ -16906,6 +16907,7 @@ Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
+Starting Status: Misty Terrain
 
 Snubbull
 Level: 12
@@ -17141,6 +17143,7 @@ Music: Female
 Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
+Starting Status: Sea Of Fire Player / Sea Of Fire Opponent
 
 Trapinch
 Level: 19
@@ -17468,6 +17471,7 @@ Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
+Starting Status: Trick Room
 
 Aron
 Level: 31
@@ -17539,6 +17543,7 @@ Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
+Starting Status: Tailwind Player / Tailwind Opponent
 
 Swablu
 Level: 17
