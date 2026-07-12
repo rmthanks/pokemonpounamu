@@ -1,5 +1,15 @@
 HeretaungaTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HeretaungaTown_OnTransition
 	.byte 0
+
+HeretaungaTown_OnTransition::
+	goto_if_set FLAG_UNUSED_0x907, HeretaungaTown_OnTransition_ShowAwhi
+	setflag FLAG_UNUSED_0x90A
+	end
+
+HeretaungaTown_OnTransition_ShowAwhi::
+	clearflag FLAG_UNUSED_0x90A
+	end
 
 @ Threshold 1: the pair, whole, overhead - the only time until the tower.
 HeretaungaTown_EventScript_Shadows::
@@ -528,3 +538,43 @@ HeretaungaTown_Text_ManuLog:
 	.string "Every reserve, every coast.\p"
 	.string "Start looking UP, e hoa.”\p"
 	.string "(The MANU LOG has begun.)$"
+
+@ ------------------------------------------------------------------
+@ Awhi, home at last, by the flower shop. The Red-style pointer.
+@ ------------------------------------------------------------------
+HeretaungaTown_EventScript_AwhiPostgame::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x90B, HeretaungaTown_EventScript_AwhiRepeat
+	msgbox HeretaungaTown_Text_AwhiPointer, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x90B
+	release
+	end
+
+HeretaungaTown_EventScript_AwhiRepeat::
+	msgbox HeretaungaTown_Text_AwhiRepeat, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_AwhiPointer:
+	.string "Awhi: Marama. Look at you.\p"
+	.string "Your mum's got me on the\n"
+	.string "seedling shift. Turns out I'm\l"
+	.string "good at growing things.\l"
+	.string "Who knew.\p"
+	.string "…Tama? …\p"
+	.string "Haven't seen him in a long\n"
+	.string "time. He doesn't call.\l"
+	.string "He doesn't want to be called.\p"
+	.string "Last I heard - round the\n"
+	.string "mountains. The big ones,\l"
+	.string "middle of the island.\p"
+	.string "If you find him, don't try to\n"
+	.string "fix him. Just stand there.\p"
+	.string "That's the thing he never had.$"
+
+HeretaungaTown_Text_AwhiRepeat:
+	.string "Awhi: Round the mountains.\n"
+	.string "That's all I know, love.\p"
+	.string "Old Tawhai used to keep that\n"
+	.string "road, up past Taupo. Ask him.$"

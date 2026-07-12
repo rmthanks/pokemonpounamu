@@ -920,8 +920,9 @@
 #define TRAINER_TOWER_GRUNT_3               906
 #define TRAINER_TAMA_TOWER_LUGIA            907
 #define TRAINER_TAMA_TOWER_HOOH             908
+#define TRAINER_TAMA_RUAPEHU                909
 
-#define TRAINERS_COUNT_EMERALD     909
+#define TRAINERS_COUNT_EMERALD     910
 #define MAX_TRAINERS_COUNT_EMERALD 1120
 
 #if IS_FRLG

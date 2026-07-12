@@ -17790,3 +17790,58 @@ Level: 66
 
 Ho-Oh
 Level: 65
+
+=== TRAINER_TAMA_RUAPEHU ===
+Name: Tama
+Class: Champion
+Pic: Champion Wallace
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Tyranitar @ Focus Sash
+Level: 80
+Ability: Sand Stream
+- Stone Edge
+- Crunch
+- Earthquake
+- Dragon Dance
+
+Hydreigon @ Choice Specs
+Level: 80
+- Draco Meteor
+- Dark Pulse
+- Flamethrower
+- Flash Cannon
+
+Aegislash @ Leftovers
+Level: 79
+Ability: Stance Change
+- King's Shield
+- Shadow Ball
+- Sacred Sword
+- Flash Cannon
+
+Salamence @ Lum Berry
+Level: 79
+Ability: Intimidate
+- Dragon Dance
+- Dual Wingbeat
+- Earthquake
+- Iron Head
+
+Metagross @ Assault Vest
+Level: 80
+- Meteor Mash
+- Zen Headbutt
+- Bullet Punch
+- Earthquake
+
+Mightyena @ Choice Band
+Level: 82
+Ability: Intimidate
+- Crunch
+- Play Rough
+- Fire Fang
+- Ice Fang

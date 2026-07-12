@@ -118,3 +118,85 @@ Taupo_Text_BoatmanAfter:
 	.string "Boatman: Done is done, e hoa.\p"
 	.string "Whatever you carry now, carry\n"
 	.string "it all the way to that tower.$"
+
+@ ------------------------------------------------------------------
+@ Tawhai - the road mentor, keeper of the Tongariro gate. He barred
+@ this road all game; post-tower, with Awhi's pointer, he opens it.
+@ ------------------------------------------------------------------
+Taupo_EventScript_Tawhai::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x90C, Taupo_EventScript_TawhaiOpen
+	goto_if_unset FLAG_UNUSED_0x907, Taupo_EventScript_TawhaiBarred
+	goto_if_unset FLAG_UNUSED_0x90B, Taupo_EventScript_TawhaiWaiting
+	msgbox Taupo_Text_TawhaiOpens, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x90C
+	goto Taupo_EventScript_TawhaiAsk
+
+Taupo_EventScript_TawhaiOpen::
+	msgbox Taupo_Text_TawhaiRoadOpen, MSGBOX_DEFAULT
+	goto Taupo_EventScript_TawhaiAsk
+
+Taupo_EventScript_TawhaiAsk::
+	msgbox Taupo_Text_TawhaiHeadUp, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Taupo_EventScript_TawhaiStay
+	msgbox Taupo_Text_TawhaiGoSlow, MSGBOX_DEFAULT
+	closemessage
+	warp MAP_RUAPEHU_ASCENT, 28, 40
+	waitstate
+	release
+	end
+
+Taupo_EventScript_TawhaiStay::
+	msgbox Taupo_Text_TawhaiStay, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_EventScript_TawhaiBarred::
+	msgbox Taupo_Text_TawhaiBarred, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_EventScript_TawhaiWaiting::
+	msgbox Taupo_Text_TawhaiWaiting, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_Text_TawhaiBarred:
+	.string "Tawhai: The mountain-family is\n"
+	.string "grieving, e tama. That road\l"
+	.string "stays shut while the Bay burns.\p"
+	.string "Not for you. Not for anyone.$"
+
+Taupo_Text_TawhaiWaiting:
+	.string "Tawhai: The tower is quiet.\n"
+	.string "Good. You did that.\p"
+	.string "…You're looking for something\n"
+	.string "now. When you know WHAT, come\l"
+	.string "back and ask me properly.$"
+
+Taupo_Text_TawhaiOpens:
+	.string "Tawhai: …Ruapehu. I know.\p"
+	.string "I've seen the smoke of his\n"
+	.string "campfire from the tea tree\l"
+	.string "line, most evenings.\p"
+	.string "I barred this road to everyone\n"
+	.string "for years. Today I open it.\p"
+	.string "He asked me the same thing\n"
+	.string "you're about to.$"
+
+Taupo_Text_TawhaiRoadOpen:
+	.string "Tawhai: The maunga waits.\n"
+	.string "So does he.$"
+
+Taupo_Text_TawhaiHeadUp:
+	.string "Head up the mountain now?$"
+
+Taupo_Text_TawhaiGoSlow:
+	.string "Tawhai: Go up slow.\n"
+	.string "Come down whole.$"
+
+Taupo_Text_TawhaiStay:
+	.string "Tawhai: The mountain has\n"
+	.string "waited this long. It can wait\l"
+	.string "for you to be ready.$"

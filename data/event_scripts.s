@@ -198,6 +198,8 @@ gStdScripts_End::
 	.include "data/maps/TeMataTrack/scripts.inc"
 	.include "data/maps/TeMataSummit/scripts.inc"
 	.include "data/maps/HeretaungaFlowerShop/scripts.inc"
+	.include "data/maps/RuapehuAscent/scripts.inc"
+	.include "data/maps/RuapehuSummit/scripts.inc"
 	.include "data/maps/HeretaungaOrchardCottage/scripts.inc"
 	.include "data/maps/HeretaungaShearersQuarters/scripts.inc"
 	.include "data/maps/HeretaungaBerryHouse/scripts.inc"
