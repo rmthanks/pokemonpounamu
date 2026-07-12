@@ -1,5 +1,19 @@
 Wellington_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Wellington_OnTransition
 	.byte 0
+
+Wellington_OnTransition::
+	goto_if_set FLAG_UNUSED_0x04A, Wellington_OnTransition_HideStrait
+	goto_if_set FLAG_BADGE05_GET, Wellington_OnTransition_ShowStrait
+	goto Wellington_OnTransition_HideStrait
+
+Wellington_OnTransition_ShowStrait::
+	clearflag FLAG_UNUSED_0x04B
+	end
+
+Wellington_OnTransition_HideStrait::
+	setflag FLAG_UNUSED_0x04B
+	end
 Wellington_EventScript_GymKid::
 	msgbox Wellington_Text_GymKid, MSGBOX_NPC
 	end
@@ -105,3 +119,123 @@ Wellington_Text_TamakiFerry:
 	.string "carrying what you carry.\p"
 	.string "One tower. One brother.\n"
 	.string "…Board her?$"
+
+@ ==================================================================
+@ COOK STRAIT - Act 2 climax. "Blessed." Tama stands on the ferry
+@ ramp itself: nobody crosses until this scene resolves.
+@ ==================================================================
+Wellington_EventScript_KauriStrait::
+	lock
+	faceplayer
+	msgbox Wellington_Text_KauriBeside, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_EventScript_TamaStrait::
+	lock
+	faceplayer
+	msgbox Wellington_Text_StraitTama1, MSGBOX_DEFAULT
+	msgbox Wellington_Text_StraitKauri1, MSGBOX_DEFAULT
+	msgbox Wellington_Text_StraitTama2, MSGBOX_DEFAULT
+	closemessage
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto_if_ne VAR_RESULT, 0, Wellington_EventScript_StraitBattle
+	special LoadPlayerParty
+	closemessage
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto Wellington_EventScript_StraitBattle
+
+Wellington_EventScript_StraitBattle::
+	multi_2_vs_1 TRAINER_TAMA_STRAIT, Wellington_Text_StraitTamaBattleEnd, PARTNER_KAURI
+	special LoadPlayerParty
+	special HealPlayerParty
+	msgbox Wellington_Text_StraitDraw, MSGBOX_DEFAULT
+	msgbox Wellington_Text_StraitOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Wellington_EventScript_StraitYes
+	msgbox Wellington_Text_StraitRefuseNo, MSGBOX_DEFAULT
+	goto Wellington_EventScript_StraitOutcome
+
+Wellington_EventScript_StraitYes::
+	msgbox Wellington_Text_StraitRefuseYes, MSGBOX_DEFAULT
+	goto Wellington_EventScript_StraitOutcome
+
+Wellington_EventScript_StraitOutcome::
+	msgbox Wellington_Text_StraitTamaLeaves, MSGBOX_DEFAULT
+	msgbox Wellington_Text_StraitBlessing, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x04A
+	setflag FLAG_UNUSED_0x04B
+	removeobject 7
+	removeobject 8
+	release
+	end
+
+Wellington_Text_KauriBeside:
+	.string "Kauri: …Stay close, son.$"
+
+Wellington_Text_StraitTama1:
+	.string "Tama: Five badges.\p"
+	.string "You've grown teeth, little\n"
+	.string "brother.$"
+
+Wellington_Text_StraitKauri1:
+	.string "Kauri: …Son.$"
+
+Wellington_Text_StraitTama2:
+	.string "Tama: Don't.\p"
+	.string "You lost the right to that\n"
+	.string "word in Ahuriri.\p"
+	.string "…Both of you, then. The old\n"
+	.string "man and the runaway.\p"
+	.string "Good. I've been wanting to\n"
+	.string "count this properly.$"
+
+Wellington_Text_StraitTamaBattleEnd:
+	.string "…$"
+
+Wellington_Text_StraitDraw:
+	.string "Neither side is standing\n"
+	.string "clean.\p"
+	.string "For the first time in his\n"
+	.string "life, Tama looks at you like\l"
+	.string "arithmetic that stopped\l"
+	.string "adding up.$"
+
+Wellington_Text_StraitOffer:
+	.string "Tama: …New sum, then.\p"
+	.string "Come home. Rule the Bay beside\n"
+	.string "me. Blood where blood belongs.\p"
+	.string "One condition.\p"
+	.string "The orchard gets a new tenant.\p"
+	.string "Mum goes.\p"
+	.string "Well?$"
+
+Wellington_Text_StraitRefuseNo:
+	.string "You said no with your whole\n"
+	.string "chest.$"
+
+Wellington_Text_StraitRefuseYes:
+	.string "Your hand hovers…\p"
+	.string "…and drops.\p"
+	.string "Some words refuse to be said.\p"
+	.string "…No.$"
+
+Wellington_Text_StraitTamaLeaves:
+	.string "Tama: …Twice.\p"
+	.string "Twice now my family has picked\n"
+	.string "the door over me.\p"
+	.string "Keep your south, little\n"
+	.string "brother. Climb your mountains.\p"
+	.string "The tower will be mine.$"
+
+Wellington_Text_StraitBlessing:
+	.string "Kauri: …She's still growing\n"
+	.string "things? Your mother?\p"
+	.string "…Course she is.\p"
+	.string "Go on, son. Cross the water.\n"
+	.string "Finish becoming whoever it is\l"
+	.string "you are.\p"
+	.string "I'll hold the strait.$"

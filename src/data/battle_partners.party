@@ -42,3 +42,62 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+
+=== PARTNER_RATA ===
+Name: RATA
+Class: Leader
+Pic: Leaf
+Gender: Female
+Music: Female
+AI: Basic Trainer
+
+Skiploom
+Level: 18
+- Bullet Seed
+- Fairy Wind
+- Stun Spore
+- Synthesis
+
+Flapple
+Level: 19
+- Grav Apple
+- Dragon Breath
+- Growth
+- Protect
+
+Appletun
+Level: 20
+- Apple Acid
+- Body Press
+- Recover
+- Growth
+
+=== PARTNER_KAURI ===
+Name: KAURI
+Class: Leader
+Pic: Red
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Mawile
+Level: 41
+- Play Rough
+- Iron Head
+- Crunch
+- Swords Dance
+
+Mimikyu
+Level: 41
+- Play Rough
+- Shadow Claw
+- Shadow Sneak
+- Swords Dance
+
+Granbull @ Sitrus Berry
+Level: 42
+Ability: Intimidate
+- Play Rough
+- Crunch
+- Earthquake
+- Bulk Up

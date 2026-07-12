@@ -17850,3 +17850,154 @@ Ability: Intimidate
 - Play Rough
 - Fire Fang
 - Ice Fang
+
+=== TRAINER_TAMA_BREAK ===
+Name: Tama
+Class: Champion
+Pic: Champion Wallace
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Mightyena @ Sitrus Berry
+Level: 30
+Ability: Intimidate
+- Crunch
+- Ice Fang
+- Swagger
+- Roar
+
+Deino
+Level: 28
+- Dragon Breath
+- Crunch
+- Work Up
+- Bite
+
+Honedge
+Level: 28
+- Shadow Sneak
+- Aerial Ace
+- Swords Dance
+- Autotomize
+
+=== TRAINER_TAMA_STRAIT ===
+Name: Tama
+Class: Champion
+Pic: Champion Wallace
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Mightyena @ Lum Berry
+Level: 46
+Ability: Intimidate
+- Crunch
+- Play Rough
+- Ice Fang
+- Sucker Punch
+
+Zweilous
+Level: 45
+- Dragon Rush
+- Crunch
+- Work Up
+- Scary Face
+
+Doublade @ Eviolite
+Level: 45
+- Iron Head
+- Shadow Claw
+- Shadow Sneak
+- Swords Dance
+
+Tyranitar
+Level: 46
+Ability: Sand Stream
+- Rock Slide
+- Crunch
+- Earthquake
+- Dragon Dance
+
+=== TRAINER_RATA_POSTGAME ===
+Name: Rata
+Class: Leader
+Pic: Leaf
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Smart Trainer
+
+Cherrim @ Heat Rock
+Level: 67
+Ability: Flower Gift
+- Sunny Day
+- Petal Blizzard
+- Play Rough
+- Solar Beam
+
+Lilligant
+Level: 68
+- Quiver Dance
+- Petal Dance
+- Sleep Powder
+- Pollen Puff
+
+Flapple @ Life Orb
+Level: 69
+Ability: Hustle
+- Grav Apple
+- Dragon Rush
+- Sucker Punch
+- U-turn
+
+Appletun @ Leftovers
+Level: 70
+Ability: Thick Fat
+- Apple Acid
+- Dragon Pulse
+- Body Press
+- Recover
+
+=== TRAINER_KAURI_POSTGAME ===
+Name: Kauri
+Class: Leader
+Pic: Red
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Clefable @ Leftovers
+Level: 67
+Ability: Magic Guard
+- Moonblast
+- Soft-Boiled
+- Calm Mind
+- Flamethrower
+
+Mimikyu @ Life Orb
+Level: 68
+Ability: Disguise
+- Play Rough
+- Shadow Claw
+- Shadow Sneak
+- Swords Dance
+
+Mawile
+Level: 69
+Ability: Intimidate
+- Play Rough
+- Iron Head
+- Sucker Punch
+- Swords Dance
+
+Granbull @ Sitrus Berry
+Level: 70
+Ability: Intimidate
+- Play Rough
+- Crunch
+- Earthquake
+- Bulk Up

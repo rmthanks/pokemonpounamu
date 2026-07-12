@@ -3,13 +3,45 @@ HeretaungaTown_MapScripts::
 	.byte 0
 
 HeretaungaTown_OnTransition::
+	call HeretaungaTown_OnTransition_Awhi
+	call HeretaungaTown_OnTransition_Break
+	call HeretaungaTown_OnTransition_Parents
+	end
+
+HeretaungaTown_OnTransition_Awhi::
 	goto_if_set FLAG_UNUSED_0x907, HeretaungaTown_OnTransition_ShowAwhi
 	setflag FLAG_UNUSED_0x90A
-	end
+	return
 
 HeretaungaTown_OnTransition_ShowAwhi::
 	clearflag FLAG_UNUSED_0x90A
-	end
+	return
+
+HeretaungaTown_OnTransition_Break::
+	goto_if_set FLAG_UNUSED_0x048, HeretaungaTown_OnTransition_HideTama
+	goto_if_set FLAG_BADGE02_GET, HeretaungaTown_OnTransition_ShowTama
+	goto HeretaungaTown_OnTransition_HideTama
+
+HeretaungaTown_OnTransition_ShowTama::
+	clearflag FLAG_UNUSED_0x049
+	return
+
+HeretaungaTown_OnTransition_HideTama::
+	setflag FLAG_UNUSED_0x049
+	return
+
+HeretaungaTown_OnTransition_Parents::
+	goto_if_set FLAG_UNUSED_0x04E, HeretaungaTown_OnTransition_HideParents
+	goto_if_set FLAG_UNUSED_0x907, HeretaungaTown_OnTransition_ShowParents
+	goto HeretaungaTown_OnTransition_HideParents
+
+HeretaungaTown_OnTransition_ShowParents::
+	clearflag FLAG_UNUSED_0x04F
+	return
+
+HeretaungaTown_OnTransition_HideParents::
+	setflag FLAG_UNUSED_0x04F
+	return
 
 @ Threshold 1: the pair, whole, overhead - the only time until the tower.
 HeretaungaTown_EventScript_Shadows::
@@ -578,3 +610,165 @@ HeretaungaTown_Text_AwhiRepeat:
 	.string "That's all I know, love.\p"
 	.string "Old Tawhai used to keep that\n"
 	.string "road, up past Taupo. Ask him.$"
+
+@ ==================================================================
+@ THE BREAK - Act 1 climax. The first of the four double battles.
+@ ==================================================================
+HeretaungaTown_EventScript_TamaBreak::
+	lock
+	faceplayer
+	msgbox HeretaungaTown_Text_BreakTama1, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_BreakRata1, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_BreakTama2, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_BreakRataWithMe, MSGBOX_DEFAULT
+	closemessage
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto_if_ne VAR_RESULT, 0, HeretaungaTown_EventScript_BreakBattle
+	special LoadPlayerParty
+	msgbox HeretaungaTown_Text_BreakRataWithMe, MSGBOX_DEFAULT
+	closemessage
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto HeretaungaTown_EventScript_BreakBattle
+
+HeretaungaTown_EventScript_BreakBattle::
+	multi_2_vs_1 TRAINER_TAMA_BREAK, HeretaungaTown_Text_BreakTamaWinsBattle, PARTNER_RATA
+	special LoadPlayerParty
+	special HealPlayerParty
+	goto_if_eq VAR_RESULT, 1, HeretaungaTown_EventScript_BreakPlayerWon
+	msgbox HeretaungaTown_Text_BreakAfterLoss, MSGBOX_DEFAULT
+	goto HeretaungaTown_EventScript_BreakOutcome
+
+HeretaungaTown_EventScript_BreakPlayerWon::
+	msgbox HeretaungaTown_Text_BreakAfterWin, MSGBOX_DEFAULT
+	goto HeretaungaTown_EventScript_BreakOutcome
+
+HeretaungaTown_EventScript_BreakOutcome::
+	msgbox HeretaungaTown_Text_BreakTamaTaunt, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_BreakRataSendaway, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x048
+	setflag FLAG_UNUSED_0x049
+	removeobject 21
+	release
+	end
+
+HeretaungaTown_Text_BreakTama1:
+	.string "Tama: There he is.\p"
+	.string "The kid who beat the president.\p"
+	.string "He lost to a CHILD, so the\n"
+	.string "chair was loose. I tightened\l"
+	.string "it. The Bay answers to me now,\l"
+	.string "little brother.$"
+
+HeretaungaTown_Text_BreakRata1:
+	.string "Rata: Tama. Not here.\n"
+	.string "Not like this.$"
+
+HeretaungaTown_Text_BreakTama2:
+	.string "Tama: Like WHAT, Mum?\p"
+	.string "Like sons picking up what\n"
+	.string "fathers drop?\p"
+	.string "You taught me gardens. He\n"
+	.string "taught me weight.\p"
+	.string "Only one lesson stuck.$"
+
+HeretaungaTown_Text_BreakRataWithMe:
+	.string "Rata: Marama - with me.\p"
+	.string "One time, love, we do this\n"
+	.string "together.$"
+
+HeretaungaTown_Text_BreakTamaWinsBattle:
+	.string "That's the whole of it, then.$"
+
+HeretaungaTown_Text_BreakAfterLoss:
+	.string "It wasn't close.\p"
+	.string "It was arithmetic.$"
+
+HeretaungaTown_Text_BreakAfterWin:
+	.string "Tama: …Hm.\p"
+	.string "Crews. Numbers. Every road out\n"
+	.string "of the Bay, mine by morning.\p"
+	.string "It changes nothing.$"
+
+HeretaungaTown_Text_BreakTamaTaunt:
+	.string "Tama: Run, little brother.\n"
+	.string "Run far.\p"
+	.string "You could NEVER come back.\p"
+	.string "…Remember that I said it\n"
+	.string "kindly.$"
+
+HeretaungaTown_Text_BreakRataSendaway:
+	.string "Rata: Go, love. North. Past the\n"
+	.string "checkpoints. Don't stop.\p"
+	.string "Not because you're weak.\p"
+	.string "Because you're the one thing\n"
+	.string "I can still save.$"
+
+@ ==================================================================
+@ THE PARENTS' DOUBLE BATTLE - post-game gate to Te Mata. "Reunited."
+@ ==================================================================
+HeretaungaTown_EventScript_ParentsGate::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x04E, HeretaungaTown_EventScript_ParentsDone
+	msgbox HeretaungaTown_Text_ParentsIntro, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_ParentsReady, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_EventScript_ParentsNotYet
+	trainerbattle_two_trainers TRAINER_RATA_POSTGAME, HeretaungaTown_Text_ParentsRataLose, TRAINER_KAURI_POSTGAME, HeretaungaTown_Text_ParentsKauriLose
+	msgbox HeretaungaTown_Text_ParentsAfter, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x04E
+	release
+	end
+
+HeretaungaTown_EventScript_ParentsNotYet::
+	msgbox HeretaungaTown_Text_ParentsNotYet, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EventScript_ParentsDone::
+	msgbox HeretaungaTown_Text_ParentsDoneMsg, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_ParentsIntro:
+	.string "Rata: Love. We've been waiting.\n"
+	.string "Both of us.\p"
+	.string "Kauri: The mountain's awake up\n"
+	.string "there. Before you climb it…\p"
+	.string "…your mother and I have one\n"
+	.string "thing left to teach you.\p"
+	.string "Rata: Together, this time.\p"
+	.string "First time for everything, eh.$"
+
+HeretaungaTown_Text_ParentsReady:
+	.string "Face them both at once?$"
+
+HeretaungaTown_Text_ParentsNotYet:
+	.string "Rata: We'll be here, love.\p"
+	.string "We're not going anywhere.\n"
+	.string "Either of us. Not this time.$"
+
+HeretaungaTown_Text_ParentsRataLose:
+	.string "There it is.\p"
+	.string "The whole apple.$"
+
+HeretaungaTown_Text_ParentsKauriLose:
+	.string "…Sweet and sour and standing.\p"
+	.string "That's my kid.$"
+
+HeretaungaTown_Text_ParentsAfter:
+	.string "Kauri: …We couldn't stay\n"
+	.string "standing together, your mother\l"
+	.string "and I. Not once. Not ever.\p"
+	.string "Today we did.\p"
+	.string "You did that.\p"
+	.string "Rata: Go on up, love.\p"
+	.string "Wave to the giant for me.$"
+
+HeretaungaTown_Text_ParentsDoneMsg:
+	.string "Rata: The track's yours, love.\p"
+	.string "Kauri: Tell the giant we said\n"
+	.string "good morning.$"

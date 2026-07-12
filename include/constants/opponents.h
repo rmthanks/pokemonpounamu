@@ -921,8 +921,12 @@
 #define TRAINER_TAMA_TOWER_LUGIA            907
 #define TRAINER_TAMA_TOWER_HOOH             908
 #define TRAINER_TAMA_RUAPEHU                909
+#define TRAINER_TAMA_BREAK                  910
+#define TRAINER_TAMA_STRAIT                 911
+#define TRAINER_RATA_POSTGAME               912
+#define TRAINER_KAURI_POSTGAME              913
 
-#define TRAINERS_COUNT_EMERALD     910
+#define TRAINERS_COUNT_EMERALD     914
 #define MAX_TRAINERS_COUNT_EMERALD 1120
 
 #if IS_FRLG
