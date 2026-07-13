@@ -57,6 +57,9 @@ RuapehuSummit_Text_TamaAfter:
 	.string "Tama looks past you - out over\n"
 	.string "the whole island, to where the\l"
 	.string "Bay lies beyond the ranges.\p"
+	.string "You raise your hand.\p"
+	.string "He looks at it for a long,\n"
+	.string "long time.\p"
 	.string "Tama: …Same time next climb,\n"
 	.string "little brother.$"
 

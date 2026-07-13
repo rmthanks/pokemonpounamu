@@ -38,6 +38,7 @@ SkyTowerTop_EventScript_Recognition::
 	msgbox SkyTowerTop_Text_Recognition2, MSGBOX_DEFAULT
 	playse SE_PIN
 	msgbox SkyTowerTop_Text_Police, MSGBOX_DEFAULT
+	msgbox SkyTowerTop_Text_AlmostWave, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_UNUSED_0x907
 	setvar VAR_TEMP_1, 1
@@ -89,6 +90,13 @@ SkyTowerTop_Text_Recognition2:
 	.string "as it leaves.\p"
 	.string "Nothing he took ever chose him.\n"
 	.string "That was always the wound.$"
+
+SkyTowerTop_Text_AlmostWave:
+	.string "At the stairwell door he stops.\p"
+	.string "His hand lifts -\n"
+	.string "halfway -\p"
+	.string "Sirens.\p"
+	.string "He's gone.$"
 
 SkyTowerTop_Text_Police:
 	.string "Sirens - dozens of them,\n"

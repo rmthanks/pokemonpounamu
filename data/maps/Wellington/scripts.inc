@@ -165,6 +165,7 @@ Wellington_EventScript_StraitYes::
 
 Wellington_EventScript_StraitOutcome::
 	msgbox Wellington_Text_StraitTamaLeaves, MSGBOX_DEFAULT
+	msgbox Wellington_Text_StraitWave, MSGBOX_DEFAULT
 	msgbox Wellington_Text_StraitBlessing, MSGBOX_DEFAULT
 	setflag FLAG_UNUSED_0x04A
 	setflag FLAG_UNUSED_0x04B
@@ -230,6 +231,13 @@ Wellington_Text_StraitTamaLeaves:
 	.string "Keep your south, little\n"
 	.string "brother. Climb your mountains.\p"
 	.string "The tower will be mine.$"
+
+Wellington_Text_StraitWave:
+	.string "You raise your hand.\p"
+	.string "His fingers curl.\p"
+	.string "His hand stays at his side.\p"
+	.string "He crosses the terminal\n"
+	.string "without looking back.$"
 
 Wellington_Text_StraitBlessing:
 	.string "Kauri: …She's still growing\n"

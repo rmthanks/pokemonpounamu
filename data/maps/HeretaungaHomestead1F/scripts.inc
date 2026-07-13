@@ -148,6 +148,7 @@ Homestead_EventScript_TamaSoftens::
 	waitmovement 0
 	msgbox Homestead_Text_TamaDotDotDot, MSGBOX_DEFAULT
 	msgbox Homestead_Text_TamaGoodOneThough, MSGBOX_DEFAULT
+	msgbox Homestead_Text_TamaHalfWave, MSGBOX_DEFAULT
 	msgbox Homestead_Text_RataOrchardIsYours, MSGBOX_DEFAULT
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 	setflag FLAG_SYS_POKEMON_GET
@@ -282,6 +283,15 @@ Homestead_Text_TamaDotDotDot:
 
 Homestead_Text_TamaGoodOneThough:
 	.string "Tama: …It's a good one, though.$"
+
+Homestead_Text_TamaHalfWave:
+	.string "For a second his hand comes up -\n"
+	.string "the old wave, the one he'd give\l"
+	.string "you from the orchard gate when\l"
+	.string "you were small, waving you home\l"
+	.string "from the school road.\p"
+	.string "Then he catches himself,\n"
+	.string "and puts it away.$"
 
 Homestead_Text_RataOrchardIsYours:
 	.string "Rata: Go on, you two. Some fresh air.\p"

@@ -648,6 +648,7 @@ HeretaungaTown_EventScript_BreakPlayerWon::
 
 HeretaungaTown_EventScript_BreakOutcome::
 	msgbox HeretaungaTown_Text_BreakTamaTaunt, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_BreakWave, MSGBOX_DEFAULT
 	msgbox HeretaungaTown_Text_BreakRataSendaway, MSGBOX_DEFAULT
 	setflag FLAG_UNUSED_0x048
 	setflag FLAG_UNUSED_0x049
@@ -700,6 +701,14 @@ HeretaungaTown_Text_BreakTamaTaunt:
 	.string "You could NEVER come back.\p"
 	.string "…Remember that I said it\n"
 	.string "kindly.$"
+
+HeretaungaTown_Text_BreakWave:
+	.string "You raise your hand anyway.\p"
+	.string "The old wave. The orchard-gate\n"
+	.string "wave.\p"
+	.string "Tama looks at it for a long\n"
+	.string "moment.\p"
+	.string "He turns away.$"
 
 HeretaungaTown_Text_BreakRataSendaway:
 	.string "Rata: Go, love. North. Past the\n"
