@@ -3,6 +3,7 @@ HeretaungaTown_MapScripts::
 	.byte 0
 
 HeretaungaTown_OnTransition::
+	call HeretaungaTown_OnTransition_OrchardHide
 	call HeretaungaTown_OnTransition_Awhi
 	call HeretaungaTown_OnTransition_Break
 	call HeretaungaTown_OnTransition_Parents
@@ -15,6 +16,16 @@ HeretaungaTown_OnTransition_Awhi::
 
 HeretaungaTown_OnTransition_ShowAwhi::
 	clearflag FLAG_UNUSED_0x90A
+	return
+
+HeretaungaTown_OnTransition_OrchardHide::
+	goto_if_set FLAG_UNUSED_0x029, HeretaungaTown_OnTransition_OrchardKeepHidden
+	setflag FLAG_UNUSED_0x027
+	setflag FLAG_UNUSED_0x028
+	return
+HeretaungaTown_OnTransition_OrchardKeepHidden::
+	setflag FLAG_UNUSED_0x027
+	setflag FLAG_UNUSED_0x028
 	return
 
 HeretaungaTown_OnTransition_Break::
@@ -49,9 +60,115 @@ HeretaungaTown_EventScript_Shadows::
 	delay 30
 	playse SE_FLEE
 	msgbox HeretaungaTown_Text_TwoShadows, MSGBOX_DEFAULT
+	@ --- the brother stumbles in from the orchard ---
+	clearflag FLAG_UNUSED_0x027
+	addobject 24
+	delay 16
+	playse SE_PIN
+	turnobject 24, DIR_NORTH
+	msgbox HeretaungaTown_Text_OrchardTama1, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_OrchardTama2, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_OrchardWave, MSGBOX_DEFAULT
+	setflag B_FLAG_NO_WHITEOUT
+	trainerbattle_no_intro TRAINER_TAMA_ORCHARD, HeretaungaTown_Text_OrchardTamaLost
+	clearflag B_FLAG_NO_WHITEOUT
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, HeretaungaTown_EventScript_OrchardPlayerWon
+	msgbox HeretaungaTown_Text_OrchardTamaGloat, MSGBOX_DEFAULT
+	goto HeretaungaTown_EventScript_OrchardMum
+
+HeretaungaTown_EventScript_OrchardPlayerWon::
+	msgbox HeretaungaTown_Text_OrchardTamaFluke, MSGBOX_DEFAULT
+	goto HeretaungaTown_EventScript_OrchardMum
+
+HeretaungaTown_EventScript_OrchardMum::
+	removeobject 24
+	setflag FLAG_UNUSED_0x027
+	delay 16
+	clearflag FLAG_UNUSED_0x028
+	addobject 25
+	delay 16
+	playse SE_PIN
+	msgbox HeretaungaTown_Text_OrchardMum1, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_OrchardMum2, MSGBOX_DEFAULT
+	special HealPlayerParty
+	removeobject 25
+	setflag FLAG_UNUSED_0x028
+	setflag FLAG_UNUSED_0x029
 	setvar VAR_POUNAMU_INTRO_STATE, 2
 	releaseall
 	end
+
+HeretaungaTown_EventScript_TamaOrchardIdle::
+	msgbox HeretaungaTown_Text_OrchardTama1, MSGBOX_NPC
+	end
+
+HeretaungaTown_EventScript_MumOrchardIdle::
+	msgbox HeretaungaTown_Text_OrchardMum2, MSGBOX_NPC
+	end
+
+HeretaungaTown_Text_OrchardTama1:
+	.string "Tama: …So there you are.\p"
+	.string "Down here showing off your\n"
+	.string "birthday present to the bees?$"
+
+HeretaungaTown_Text_OrchardTama2:
+	.string "Tama: Let's see it, then.\n"
+	.string "The gift Mum and Dad drove\l"
+	.string "across the island for.\p"
+	.string "The one nobody drove anywhere\n"
+	.string "for me.\p"
+	.string "Send it out. I want to see how\n"
+	.string "much of it is real.$"
+
+HeretaungaTown_Text_OrchardWave:
+	.string "You raise your hand - force of\n"
+	.string "habit, the old gate-wave.\p"
+	.string "He's already reaching for a\n"
+	.string "Poke Ball.$"
+
+HeretaungaTown_Text_OrchardTamaLost:
+	.string "…$"
+
+HeretaungaTown_Text_OrchardTamaWon:
+	.string "Tama: Hm.$"
+
+HeretaungaTown_Text_OrchardTamaGloat:
+	.string "Tama: That's it?\p"
+	.string "All that fuss, and it goes down\n"
+	.string "to a stray dog I caught behind\l"
+	.string "the packhouse.\p"
+	.string "Keep it if it makes you happy.\n"
+	.string "Presents don't make you strong,\l"
+	.string "little brother.$"
+
+HeretaungaTown_Text_OrchardTamaFluke:
+	.string "Tama: …Lucky. The dog's tired.\p"
+	.string "Don't let it go to your head.\n"
+	.string "A present is still just a\l"
+	.string "present.$"
+
+HeretaungaTown_Text_OrchardMum1:
+	.string "Rata: Oi! Tama - leave your\n"
+	.string "brother be!\p"
+	.string "…And you. Up off the grass,\n"
+	.string "love. It's only a scrape.$"
+
+HeretaungaTown_Text_OrchardMum2:
+	.string "Rata: Don't you worry about\n"
+	.string "your brother. That's an old\l"
+	.string "ache in him, not a strong one.\p"
+	.string "Here's what you do: take that\n"
+	.string "wee one out along the rows, out\l"
+	.string "into the wild, and you GROW it.\p"
+	.string "Same as any seedling. Roots\n"
+	.string "first.\p"
+	.string "And when it's ready - when\n"
+	.string "YOU'RE ready - you come back to\l"
+	.string "the orchard and you battle me\l"
+	.string "properly. For the badge.\p"
+	.string "I don't go easy, mind. Not even\n"
+	.string "for my own.$"
+
 
 HeretaungaTown_Text_TwoShadows:
 	.string "…?\p"

@@ -18001,3 +18001,20 @@ Ability: Intimidate
 - Crunch
 - Earthquake
 - Bulk Up
+
+=== TRAINER_TAMA_ORCHARD ===
+Name: Tama
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Poochyena @ Oran Berry
+Level: 8
+Ability: Run Away
+- Tackle
+- Howl
+- Sand Attack
+- Bite

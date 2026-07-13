@@ -320,6 +320,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HeretaungaTown_EventScript_ParentsGate",
       "flag": "FLAG_UNUSED_0x04F"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 44,
+      "y": 23,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HeretaungaTown_EventScript_TamaOrchardIdle",
+      "flag": "FLAG_UNUSED_0x027"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "x": 45,
+      "y": 22,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HeretaungaTown_EventScript_MumOrchardIdle",
+      "flag": "FLAG_UNUSED_0x028"
     }
   ],
   "warp_events": [
