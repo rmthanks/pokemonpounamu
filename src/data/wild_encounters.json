@@ -37474,6 +37474,489 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ROUTE36",
+          "base_label": "gRoute36",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_PIKIPEK"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_COMBEE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_SKIPLOOM"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_POOCHYENA"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_TRUMBEAK"
+              },
+              {
+                "min_level": 17,
+                "max_level": 18,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 17,
+                "max_level": 18,
+                "species": "SPECIES_VESPIQUEN"
+              },
+              {
+                "min_level": 17,
+                "max_level": 18,
+                "species": "SPECIES_SLUGMA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE5_RANGES",
+          "base_label": "gRoute5Ranges",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 24,
+                "species": "SPECIES_NOCTOWL"
+              },
+              {
+                "min_level": 22,
+                "max_level": 24,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 22,
+                "max_level": 24,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 22,
+                "max_level": 24,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 22,
+                "max_level": 24,
+                "species": "SPECIES_SKIPLOOM"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_PARASECT"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_FORRETRESS"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_URSARING"
+              },
+              {
+                "min_level": 25,
+                "max_level": 26,
+                "species": "SPECIES_VESPIQUEN"
+              },
+              {
+                "min_level": 25,
+                "max_level": 26,
+                "species": "SPECIES_HERACROSS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE6_POUNAMU",
+          "base_label": "gRoute6",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_CUTIEFLY"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_COTTONEE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_JUMPLUFF"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 26,
+                "max_level": 28,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_COMBEE"
+              },
+              {
+                "min_level": 27,
+                "max_level": 28,
+                "species": "SPECIES_RIBOMBEE"
+              },
+              {
+                "min_level": 27,
+                "max_level": 28,
+                "species": "SPECIES_WHIMSICOTT"
+              },
+              {
+                "min_level": 27,
+                "max_level": 28,
+                "species": "SPECIES_YANMEGA"
+              },
+              {
+                "min_level": 27,
+                "max_level": 28,
+                "species": "SPECIES_VESPIQUEN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE7_POUNAMU",
+          "base_label": "gRoute7",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_PHANPY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_MURKROW"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_PILOSWINE"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 31,
+                "max_level": 32,
+                "species": "SPECIES_ABOMASNOW"
+              },
+              {
+                "min_level": 31,
+                "max_level": 32,
+                "species": "SPECIES_DONPHAN"
+              },
+              {
+                "min_level": 31,
+                "max_level": 32,
+                "species": "SPECIES_BAGON"
+              },
+              {
+                "min_level": 32,
+                "max_level": 32,
+                "species": "SPECIES_SHELGON"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE1_SOUTH",
+          "base_label": "gRoute1South",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_WOOLOO"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_ELECTRIKE"
+              },
+              {
+                "min_level": 33,
+                "max_level": 35,
+                "species": "SPECIES_SNORUNT"
+              },
+              {
+                "min_level": 34,
+                "max_level": 36,
+                "species": "SPECIES_DUBWOOL"
+              },
+              {
+                "min_level": 33,
+                "max_level": 35,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 34,
+                "max_level": 36,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 34,
+                "max_level": 36,
+                "species": "SPECIES_MANECTRIC"
+              },
+              {
+                "min_level": 35,
+                "max_level": 36,
+                "species": "SPECIES_PILOSWINE"
+              },
+              {
+                "min_level": 35,
+                "max_level": 36,
+                "species": "SPECIES_DELIBIRD"
+              },
+              {
+                "min_level": 35,
+                "max_level": 36,
+                "species": "SPECIES_GLALIE"
+              },
+              {
+                "min_level": 35,
+                "max_level": 36,
+                "species": "SPECIES_ABSOL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_TE_MATA_TRACK",
+          "base_label": "gTeMataTrack",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_ROCKRUFF"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SKARMORY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_MIGHTYENA"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_CARBINK"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_VESPIQUEN"
+              },
+              {
+                "min_level": 48,
+                "max_level": 51,
+                "species": "SPECIES_LYCANROC"
+              },
+              {
+                "min_level": 48,
+                "max_level": 51,
+                "species": "SPECIES_GLISCOR"
+              },
+              {
+                "min_level": 48,
+                "max_level": 51,
+                "species": "SPECIES_HONEDGE"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_APPLETUN"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_FLAPPLE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 52,
+                "species": "SPECIES_DOUBLADE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_RUAPEHU_ASCENT",
+          "base_label": "gRuapehuAscent",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_SNORUNT"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 53,
+                "max_level": 56,
+                "species": "SPECIES_PILOSWINE"
+              },
+              {
+                "min_level": 53,
+                "max_level": 56,
+                "species": "SPECIES_SKARMORY"
+              },
+              {
+                "min_level": 54,
+                "max_level": 57,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 54,
+                "max_level": 57,
+                "species": "SPECIES_GLALIE"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_WEAVILE"
+              },
+              {
+                "min_level": 56,
+                "max_level": 59,
+                "species": "SPECIES_MAMOSWINE"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 56,
+                "max_level": 59,
+                "species": "SPECIES_DRUDDIGON"
+              },
+              {
+                "min_level": 57,
+                "max_level": 60,
+                "species": "SPECIES_DEINO"
+              },
+              {
+                "min_level": 58,
+                "max_level": 60,
+                "species": "SPECIES_AVALUGG"
+              }
+            ]
+          }
         }
       ]
     },
