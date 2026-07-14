@@ -17546,16 +17546,16 @@ AI: Basic Trainer
 Starting Status: Tailwind Player / Tailwind Opponent
 
 Swablu
-Level: 17
+Level: 26
 
-Taillow
-Level: 18
+Noctowl
+Level: 26
 
 Pelipper
-Level: 19
+Level: 27
 
 Swellow
-Level: 21
+Level: 28
 
 === TRAINER_WELLINGTON_PROSPECT ===
 Name: Gale
@@ -17710,10 +17710,10 @@ Double Battle: No
 AI: Basic Trainer
 
 Mightyena
-Level: 58
+Level: 41
 
 Skuntank
-Level: 58
+Level: 41
 
 === TRAINER_TOWER_GRUNT_2 ===
 Name: Enforcer
@@ -17725,10 +17725,10 @@ Double Battle: No
 AI: Basic Trainer
 
 Honchkrow
-Level: 59
+Level: 42
 
 Toxicroak
-Level: 59
+Level: 42
 
 === TRAINER_TOWER_GRUNT_3 ===
 Name: Captain
@@ -17740,13 +17740,13 @@ Double Battle: No
 AI: Smart Trainer
 
 Krookodile
-Level: 60
+Level: 43
 
 Bisharp
-Level: 60
+Level: 43
 
 Drapion
-Level: 61
+Level: 44
 
 === TRAINER_TAMA_TOWER_LUGIA ===
 Name: Tama
@@ -17758,19 +17758,19 @@ Double Battle: No
 AI: Smart Trainer
 
 Tyranitar
-Level: 63
+Level: 45
 
 Hydreigon
-Level: 63
+Level: 45
 
 Aegislash
-Level: 64
+Level: 46
 
 Solgaleo
-Level: 66
+Level: 48
 
 Lugia
-Level: 65
+Level: 47
 
 === TRAINER_TAMA_TOWER_HOOH ===
 Name: Tama
@@ -17782,19 +17782,19 @@ Double Battle: No
 AI: Smart Trainer
 
 Tyranitar
-Level: 63
+Level: 45
 
 Hydreigon
-Level: 63
+Level: 45
 
 Aegislash
-Level: 64
+Level: 46
 
 Solgaleo
-Level: 66
+Level: 48
 
 Ho-Oh
-Level: 65
+Level: 47
 
 === TRAINER_TAMA_RUAPEHU ===
 Name: Tama
@@ -17861,7 +17861,7 @@ Double Battle: No
 AI: Smart Trainer
 
 Mightyena @ Sitrus Berry
-Level: 30
+Level: 24
 Ability: Intimidate
 - Crunch
 - Ice Fang
@@ -17869,14 +17869,14 @@ Ability: Intimidate
 - Roar
 
 Deino
-Level: 28
+Level: 22
 - Dragon Breath
 - Crunch
 - Work Up
 - Bite
 
 Honedge
-Level: 28
+Level: 22
 - Shadow Sneak
 - Aerial Ace
 - Swords Dance
@@ -17892,7 +17892,7 @@ Double Battle: No
 AI: Smart Trainer
 
 Mightyena @ Lum Berry
-Level: 46
+Level: 30
 Ability: Intimidate
 - Crunch
 - Play Rough
@@ -17900,21 +17900,21 @@ Ability: Intimidate
 - Sucker Punch
 
 Zweilous
-Level: 45
+Level: 29
 - Dragon Rush
 - Crunch
 - Work Up
 - Scary Face
 
 Doublade @ Eviolite
-Level: 45
+Level: 29
 - Iron Head
 - Shadow Claw
 - Shadow Sneak
 - Swords Dance
 
 Tyranitar
-Level: 46
+Level: 30
 Ability: Sand Stream
 - Rock Slide
 - Crunch

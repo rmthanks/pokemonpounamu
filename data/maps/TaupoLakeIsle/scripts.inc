@@ -22,7 +22,7 @@ TaupoLakeIsle_EventScript_Lugia::
 	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_LUGIA, 55
+	setwildbattle SPECIES_LUGIA, 45
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE

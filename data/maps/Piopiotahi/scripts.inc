@@ -22,7 +22,7 @@ Piopiotahi_EventScript_HoOh::
 	playmoncry SPECIES_HO_OH, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_HO_OH, 55
+	setwildbattle SPECIES_HO_OH, 45
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
