@@ -35,3 +35,12 @@ Known contributing artists (per the thread; confirm per-folder on import):
 3. **No generative-AI assets in shipped content** (PokéCommunity prohibits AI content in fan games;
    AI stays private-reference/concept only).
 4. When in doubt about a licence, don't import it.
+
+## Title & credits backdrops (14 July 2026)
+- Title screen backdrop: pixel-art render of Ryan's own photo of Te Mata Peak at dawn
+  (photo by Ryan; pixel-art conversion generated with Grok).
+- Credits "THE END" backdrop: pixel-art render of Te Mata o Rongokako from the west at
+  sunset (source painting supplied by Ryan; pixel-art conversion generated with Grok).
+- NOTE: both conversions are AI-generated images. Fine for personal/playtest builds, but
+  PokeCommunity prohibits AI-generated assets in released fan games - replace with
+  hand-made art (or hand-pixel the photos) before any public release there.
