@@ -59,7 +59,7 @@ Taupo_EventScript_LakeBoatman::
 	faceplayer
 	goto_if_set FLAG_UNUSED_0x903, Taupo_EventScript_BoatmanAfter
 	goto_if_set FLAG_UNUSED_0x902, Taupo_EventScript_BoatmanTooLate
-	goto_if_unset FLAG_UNUSED_0x900, Taupo_EventScript_BoatmanClosed
+	goto_if_unset FLAG_UNUSED_0x900, Taupo_EventScript_BoatmanPreChoice
 	msgbox Taupo_Text_BoatmanWarn, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Taupo_EventScript_BoatmanNo
 	setflag FLAG_UNUSED_0x901
@@ -236,3 +236,89 @@ Taupo_Text_HoriAfter:
 	.string "…Nah. Doesn't matter whose kid\n"
 	.string "y'are. Shoes are shoes.\p"
 	.string "Next town. Bring the shoes.$"
+
+@ ==================================================================
+@ THE LAKE MEETS YOU. Mid-game Lugia bond - a recognition, not a
+@ capture. Gated: badge 3+, before the Choice opens. FLAG_UNUSED_0x27F
+@ ==================================================================
+Taupo_EventScript_BoatmanPreChoice::
+	goto_if_set FLAG_UNUSED_0x27F, Taupo_EventScript_BoatmanClosed
+	goto_if_unset FLAG_BADGE03_GET, Taupo_EventScript_BoatmanClosed
+	msgbox Taupo_Text_BondOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Taupo_EventScript_BondNo
+	closemessage
+	fadescreen FADE_TO_BLACK
+	delay 30
+	fadescreen FADE_FROM_BLACK
+	msgbox Taupo_Text_BondOut, MSGBOX_DEFAULT
+	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox Taupo_Text_BondRises, MSGBOX_DEFAULT
+	msgbox Taupo_Text_BondGone, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	delay 30
+	fadescreen FADE_FROM_BLACK
+	msgbox Taupo_Text_BondShore, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x27F
+	release
+	end
+
+Taupo_EventScript_BondNo::
+	msgbox Taupo_Text_BondNoReply, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_Text_BondOffer:
+	.string "Boatman: Flat as glass today.\n"
+	.string "Doesn't happen twice a year.\p"
+	.string "…I take people out when it's\n"
+	.string "like this. Just out and back.\l"
+	.string "No rod, no fuss.\p"
+	.string "The lake likes some people.\n"
+	.string "I've a feeling about you.\p"
+	.string "Coming?$"
+
+Taupo_Text_BondNoReply:
+	.string "Boatman: Another still day,\n"
+	.string "then. If the lake allows one.$"
+
+Taupo_Text_BondOut:
+	.string "Halfway out, the water goes\n"
+	.string "quiet-heavy, the way a room\l"
+	.string "goes quiet when someone\l"
+	.string "important walks in.\p"
+	.string "Something passes under the\n"
+	.string "hull.\p"
+	.string "Longer than the boat.\p"
+	.string "Longer than the jetty.$"
+
+Taupo_Text_BondRises:
+	.string "It rises alongside.\p"
+	.string "Silver, in its own weather.\n"
+	.string "An eye like a well.\p"
+	.string "It holds there, half the lake\n"
+	.string "balanced on its stillness -\p"
+	.string "watching you.\p"
+	.string "Not the boat. Not the boatman.\p"
+	.string "You.$"
+
+Taupo_Text_BondGone:
+	.string "No fear comes. That's the\n"
+	.string "strange part - you keep\l"
+	.string "waiting for the fear.\p"
+	.string "What comes instead is the\n"
+	.string "feeling of being… read.\l"
+	.string "Gently. All the way down.\p"
+	.string "Then the lake closes over it\n"
+	.string "like an eye going shut, and\l"
+	.string "the sun remembers to be warm.$"
+
+Taupo_Text_BondShore:
+	.string "The boatman doesn't speak\n"
+	.string "until the jetty.\p"
+	.string "Boatman: …Forty years on this\n"
+	.string "lake.\p"
+	.string "It has never once come up for\n"
+	.string "anybody.\p"
+	.string "…Whatever you're carrying,\n"
+	.string "kid - carry it careful.$"

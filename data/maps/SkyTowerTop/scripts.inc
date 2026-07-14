@@ -18,6 +18,10 @@ SkyTowerTop_OnFrame:
 @ The summit. The brother. The bird that never chose him.
 SkyTowerTop_EventScript_Tama::
 	lockall
+	msgbox SkyTowerTop_Text_FallenFind, MSGBOX_DEFAULT
+	msgbox SkyTowerTop_Text_FallenRata, MSGBOX_DEFAULT
+	msgbox SkyTowerTop_Text_FallenKauri, MSGBOX_DEFAULT
+	msgbox SkyTowerTop_Text_FallenClose, MSGBOX_DEFAULT
 	msgbox SkyTowerTop_Text_Tama1, MSGBOX_DEFAULT
 	goto_if_set FLAG_UNUSED_0x901, SkyTowerTop_EventScript_TamaHasHoOh
 	trainerbattle_no_intro TRAINER_TAMA_TOWER_LUGIA, SkyTowerTop_Text_TamaDefeat
@@ -121,3 +125,60 @@ SkyTowerTop_EventScript_TamaIdle::
 SkyTowerTop_Text_TamaIdle:
 	.string "He watches the harbour and\n"
 	.string "says nothing at all.$"
+
+SkyTowerTop_EventScript_FallenRata::
+	msgbox SkyTowerTop_Text_FallenRata, MSGBOX_NPC
+	end
+
+SkyTowerTop_EventScript_FallenKauri::
+	msgbox SkyTowerTop_Text_FallenKauri, MSGBOX_NPC
+	end
+
+SkyTowerTop_Text_FallenFind:
+	.string "The last door opens onto wind\n"
+	.string "and glass -\p"
+	.string "and the first thing you see is\n"
+	.string "not your brother.\p"
+	.string "It's them.\p"
+	.string "Mum. Dad. Propped against the\n"
+	.string "rail on opposite sides of the\l"
+	.string "deck, beaten.\p"
+	.string "They each came alone.\p"
+	.string "They each found out.$"
+
+SkyTowerTop_Text_FallenRata:
+	.string "Rata: …Hello, love.\p"
+	.string "Don't fuss. I've fallen out of\n"
+	.string "more trees than this.\p"
+	.string "…I came for my boy. The old\n"
+	.string "way. On my own two feet, on my\l"
+	.string "own stubbornness.\p"
+	.string "It wasn't enough. It was never\n"
+	.string "going to be.\p"
+	.string "…Look at your father, there.\n"
+	.string "The fool came alone too.$"
+
+SkyTowerTop_Text_FallenKauri:
+	.string "Kauri: …Kid.\p"
+	.string "Twenty years I told people\n"
+	.string "strength is what you can carry\l"
+	.string "by yourself.\p"
+	.string "Your mother and I climbed this\n"
+	.string "tower one hour apart.\p"
+	.string "ONE HOUR. Neither of us called\n"
+	.string "the other.\p"
+	.string "…We taught him that, you know.\n"
+	.string "The alone thing.\p"
+	.string "Go. Finish what we couldn't.\n"
+	.string "And {PLAYER} -\p"
+	.string "don't do it our way.$"
+
+SkyTowerTop_Text_FallenClose:
+	.string "They can't stand. They can't\n"
+	.string "follow.\p"
+	.string "But as you cross the deck, you\n"
+	.string "hear it behind you -\p"
+	.string "two people who haven't spoken\n"
+	.string "in years, talking. Quietly.\p"
+	.string "You climb the last stairs with\n"
+	.string "their voices at your back.$"

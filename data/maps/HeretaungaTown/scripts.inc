@@ -362,6 +362,25 @@ HeretaungaTown_EventScript_Rata::
 	end
 
 HeretaungaTown_EventScript_RataRetalk::
+	goto_if_unset FLAG_UNUSED_0x04E, HeretaungaTown_EventScript_RataRetalkPlain
+	goto_if_set FLAG_UNUSED_0x27E, HeretaungaTown_EventScript_RataRevealDone
+	msgbox HeretaungaTown_Text_RevealWalk, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_RevealLayer1, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_RevealLayer1b, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_RevealLayer2, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_RevealLayer3, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_RevealHeld, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_RevealRelief, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x27E
+	release
+	end
+
+HeretaungaTown_EventScript_RataRevealDone::
+	msgbox HeretaungaTown_Text_RevealAfter, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EventScript_RataRetalkPlain::
 	msgbox HeretaungaTown_Text_RataOrchardRetalk, MSGBOX_DEFAULT
 	release
 	end
@@ -1242,3 +1261,100 @@ HeretaungaTown_Text_HoriAfter:
 	.string "You got lucky, eh. The Mob's got\n"
 	.string "HEAPS of shoes… wait.\p"
 	.string "Forget I said that.$"
+
+@ ==================================================================
+@ MUM'S REVEAL (staged reveal part 2) - post-game, after the parents'
+@ double battle. Three layers. The landing of the whole story.
+@ done: FLAG_UNUSED_0x27E
+@ ==================================================================
+HeretaungaTown_Text_RevealWalk:
+	.string "Rata: Walk with me a minute,\n"
+	.string "love. The sour rows.\p"
+	.string "I think best where it's sour.$"
+
+HeretaungaTown_Text_RevealLayer1:
+	.string "Rata: You'll have heard pieces\n"
+	.string "by now. From Tawhai. From Awhi.\l"
+	.string "From your own eyes.\p"
+	.string "Here's my piece. It's the\n"
+	.string "hardest one, so I'll say it\l"
+	.string "plain.\p"
+	.string "I have two kinds of apple in\n"
+	.string "me, same as the trees.\p"
+	.string "And I fed them to the wrong\n"
+	.string "people.$"
+
+HeretaungaTown_Text_RevealLayer1b:
+	.string "Rata: Your dad, when he was\n"
+	.string "drowning - I gave him sour.\p"
+	.string "Every time that man reached for\n"
+	.string "me, I made him pay for the last\l"
+	.string "time first.\p"
+	.string "And Tama - my Tama - I gave him\n"
+	.string "sweet and only sweet. Never\l"
+	.string "once told that boy no.\p"
+	.string "Your father gave him armour.\n"
+	.string "I gave him appetite.\p"
+	.string "We built your brother together,\n"
+	.string "love. Between the two of us,\l"
+	.string "we built him.$"
+
+HeretaungaTown_Text_RevealLayer2:
+	.string "Rata: So when you think of your\n"
+	.string "brother - and you will, your\l"
+	.string "whole life -\p"
+	.string "don't you DARE think “unloved.”\p"
+	.string "He was loved past all sense.\n"
+	.string "He was loved WRONG.\p"
+	.string "There's a world between those.\p"
+	.string "Grieve him as a boy everyone\n"
+	.string "fed and no one nourished.\p"
+	.string "That's the true grief. I'm\n"
+	.string "giving it to you because you're\l"
+	.string "strong enough to carry the\l"
+	.string "true one.$"
+
+HeretaungaTown_Text_RevealLayer3:
+	.string "Rata: …And here's my fear,\n"
+	.string "since we're standing in the\l"
+	.string "sour rows anyway.\p"
+	.string "You've got the same stock in\n"
+	.string "you. Same roots. Same weather.\p"
+	.string "Everything that went to seed in\n"
+	.string "your father and your brother is\l"
+	.string "IN you, love.\p"
+	.string "I sent you away to save you\n"
+	.string "from Tama. That's true.\p"
+	.string "But I also sent you away from\n"
+	.string "ME.\p"
+	.string "Before my love could do to you\n"
+	.string "what it did to him.$"
+
+HeretaungaTown_Text_RevealHeld:
+	.string "You don't argue.\p"
+	.string "You just stand there in the\n"
+	.string "sour rows - all of it in you,\l"
+	.string "held.\p"
+	.string "Roots and reach. Sweet and\n"
+	.string "sour.\p"
+	.string "Your father's stance. Your\n"
+	.string "mother's eyes.\p"
+	.string "Whole.$"
+
+HeretaungaTown_Text_RevealRelief:
+	.string "Rata looks at you for a long\n"
+	.string "time.\p"
+	.string "Whatever she was afraid of\n"
+	.string "seeing…\p"
+	.string "…isn't what she sees.\p"
+	.string "Rata: No. Not you, eh.\p"
+	.string "You're the whole apple.\p"
+	.string "…Go on, love. The kettle's on\n"
+	.string "when you're done being\l"
+	.string "legendary.$"
+
+HeretaungaTown_Text_RevealAfter:
+	.string "Rata: The orchard's coming\n"
+	.string "back. Slowly. Same as all of\l"
+	.string "us.\p"
+	.string "Kettle's on, love.$"
