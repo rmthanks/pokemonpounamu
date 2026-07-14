@@ -266,7 +266,7 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
+#define VAR_POUNAMU_PACK_STATE                           0x40F7 // Pounamu Job 06: pond pack (0 none, 1 hunting, 2 leader out, 3 leader beaten, 4 done)
 #define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
 #define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
 #define VAR_UNUSED_0x40FA                                0x40FA // Unused Var

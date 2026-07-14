@@ -138,6 +138,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Rotorua_EventScript_GeyserSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 33,
+      "y": 25,
+      "elevation": 3,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x269"
     }
   ]
 }

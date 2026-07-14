@@ -209,6 +209,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Wellington_EventScript_FerrySign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 25,
+      "elevation": 3,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x26D"
     }
   ]
 }

@@ -161,6 +161,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Turanga_EventScript_TownSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 14,
+      "elevation": 3,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x268"
     }
   ]
 }

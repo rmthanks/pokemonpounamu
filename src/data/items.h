@@ -2878,12 +2878,12 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_STAR_PIECE] =
     {
-        .name = ITEM_NAME("Star Piece"),
+        .name = ITEM_NAME("Pounamu Shard"),
         .price = (I_PRICE >= GEN_7) ? 12000 * TREASURE_FACTOR: 9800,
         .description = COMPOUND_STRING(
-            "A red gem shard.\n"
-            "It would sell for a\n"
-            "very high price."),
+            "A shard of raw river\n"
+            "pounamu. A carver\n"
+            "could shape this."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,

@@ -149,6 +149,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Taupo_EventScript_LakeSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 15,
+      "elevation": 3,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x26A"
     }
   ]
 }

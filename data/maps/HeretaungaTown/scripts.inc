@@ -7,6 +7,7 @@ HeretaungaTown_OnTransition::
 	call HeretaungaTown_OnTransition_Awhi
 	call HeretaungaTown_OnTransition_Break
 	call HeretaungaTown_OnTransition_Parents
+	call HeretaungaTown_OnTransition_Pack
 	end
 
 HeretaungaTown_OnTransition_Awhi::
@@ -899,3 +900,312 @@ HeretaungaTown_Text_ParentsDoneMsg:
 	.string "Rata: The track's yours, love.\p"
 	.string "Kauri: Tell the giant we said\n"
 	.string "good morning.$"
+
+@ ---------------------------------------------------------------
+@ Job 06: Shadows at the Gate - the pond pack (VAR_POUNAMU_PACK_STATE)
+@ 0 none / 1 hunting / 2 leader out / 3 leader beaten / 4 done
+@ pups: FLAG_UNUSED_0x02A/057/058, temp vis: FLAG_TEMP_2/3/4, leader FLAG_TEMP_5
+@ localids: kid 26, pups 27/28/29, leader 30
+@ ---------------------------------------------------------------
+HeretaungaTown_OnTransition_Pack::
+	goto_if_eq VAR_POUNAMU_PACK_STATE, 1, HeretaungaTown_Pack_TransHunting
+	goto_if_eq VAR_POUNAMU_PACK_STATE, 2, HeretaungaTown_Pack_TransLeader
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_4
+	setflag FLAG_TEMP_5
+	return
+
+HeretaungaTown_Pack_TransHunting::
+	setflag FLAG_TEMP_5
+	call_if_set FLAG_UNUSED_0x02A, HeretaungaTown_Pack_HideP1
+	call_if_set FLAG_UNUSED_0x02B, HeretaungaTown_Pack_HideP2
+	call_if_set FLAG_UNUSED_0x02C, HeretaungaTown_Pack_HideP3
+	return
+
+HeretaungaTown_Pack_HideP1::
+	setflag FLAG_TEMP_2
+	return
+HeretaungaTown_Pack_HideP2::
+	setflag FLAG_TEMP_3
+	return
+HeretaungaTown_Pack_HideP3::
+	setflag FLAG_TEMP_4
+	return
+
+HeretaungaTown_Pack_TransLeader::
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_4
+	return
+
+HeretaungaTown_EventScript_PondKid::
+	lock
+	faceplayer
+	goto_if_eq VAR_POUNAMU_PACK_STATE, 1, HeretaungaTown_Pack_KidHunting
+	goto_if_eq VAR_POUNAMU_PACK_STATE, 2, HeretaungaTown_Pack_KidLeader
+	goto_if_eq VAR_POUNAMU_PACK_STATE, 3, HeretaungaTown_Pack_KidReward
+	goto_if_eq VAR_POUNAMU_PACK_STATE, 4, HeretaungaTown_Pack_KidDone
+	msgbox HeretaungaTown_Text_PondKidOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_Pack_KidNo
+	msgbox HeretaungaTown_Text_PondKidAccept, MSGBOX_DEFAULT
+	setvar VAR_POUNAMU_PACK_STATE, 1
+	clearflag FLAG_TEMP_2
+	clearflag FLAG_TEMP_3
+	clearflag FLAG_TEMP_4
+	addobject 27
+	addobject 28
+	addobject 29
+	release
+	end
+
+HeretaungaTown_Pack_KidNo::
+	msgbox HeretaungaTown_Text_PondKidNo, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Pack_KidHunting::
+	msgbox HeretaungaTown_Text_PondKidHunting, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Pack_KidLeader::
+	msgbox HeretaungaTown_Text_PondKidLeader, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Pack_KidReward::
+	msgbox HeretaungaTown_Text_PondKidThanks, MSGBOX_DEFAULT
+	giveitem ITEM_SOOTHE_BELL
+	setvar VAR_POUNAMU_PACK_STATE, 4
+	msgbox HeretaungaTown_Text_PondKidThanks2, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Pack_KidDone::
+	msgbox HeretaungaTown_Text_PondKidAfter, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EventScript_PackPup1::
+	lock
+	faceplayer
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox HeretaungaTown_Text_PupGrowl, MSGBOX_DEFAULT
+	setwildbattle SPECIES_POOCHYENA, 7
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_WON, HeretaungaTown_Pack_PupStays
+	setflag FLAG_UNUSED_0x02A
+	removeobject 27
+	goto HeretaungaTown_Pack_AfterPup
+
+HeretaungaTown_EventScript_PackPup2::
+	lock
+	faceplayer
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox HeretaungaTown_Text_PupGrowl, MSGBOX_DEFAULT
+	setwildbattle SPECIES_POOCHYENA, 7
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_WON, HeretaungaTown_Pack_PupStays
+	setflag FLAG_UNUSED_0x02B
+	removeobject 28
+	goto HeretaungaTown_Pack_AfterPup
+
+HeretaungaTown_EventScript_PackPup3::
+	lock
+	faceplayer
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox HeretaungaTown_Text_PupGrowl, MSGBOX_DEFAULT
+	setwildbattle SPECIES_POOCHYENA, 7
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_WON, HeretaungaTown_Pack_PupStays
+	setflag FLAG_UNUSED_0x02C
+	removeobject 29
+	goto HeretaungaTown_Pack_AfterPup
+
+HeretaungaTown_Pack_PupStays::
+	msgbox HeretaungaTown_Text_PupFlees, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Pack_AfterPup::
+	goto_if_unset FLAG_UNUSED_0x02A, HeretaungaTown_Pack_PupsLeft
+	goto_if_unset FLAG_UNUSED_0x02B, HeretaungaTown_Pack_PupsLeft
+	goto_if_unset FLAG_UNUSED_0x02C, HeretaungaTown_Pack_PupsLeft
+	delay 30
+	playmoncry SPECIES_MIGHTYENA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox HeretaungaTown_Text_LeaderComes, MSGBOX_DEFAULT
+	setvar VAR_POUNAMU_PACK_STATE, 2
+	clearflag FLAG_TEMP_5
+	addobject 30
+	release
+	end
+
+HeretaungaTown_Pack_PupsLeft::
+	msgbox HeretaungaTown_Text_PupBeaten, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EventScript_PackLeader::
+	lock
+	faceplayer
+	playmoncry SPECIES_MIGHTYENA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox HeretaungaTown_Text_LeaderStands, MSGBOX_DEFAULT
+	setwildbattle SPECIES_MIGHTYENA, 11
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_WON, HeretaungaTown_Pack_LeaderStays
+	setvar VAR_POUNAMU_PACK_STATE, 3
+	removeobject 30
+	msgbox HeretaungaTown_Text_LeaderBeaten, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Pack_LeaderStays::
+	msgbox HeretaungaTown_Text_LeaderStays, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_PondKidOffer:
+	.string "You know how the pond ripples\n"
+	.string "and everyone says it's eels?\p"
+	.string "It's not eels. It's PUPS.\p"
+	.string "A whole pack of Poochyena snuck\n"
+	.string "in and they nicked my togs bag!\p"
+	.string "Three of them, hiding round the\n"
+	.string "banks. And one BIG one.\p"
+	.string "Can you chase them off?$"
+
+HeretaungaTown_Text_PondKidAccept:
+	.string "Ka pai! Check the banks and the\n"
+	.string "flowers. And watch the water!$"
+
+HeretaungaTown_Text_PondKidNo:
+	.string "…I'm not going home without\n"
+	.string "my togs bag.$"
+
+HeretaungaTown_Text_PondKidHunting:
+	.string "Three pups! Round the banks and\n"
+	.string "in the flowers. Go get 'em!$"
+
+HeretaungaTown_Text_PondKidLeader:
+	.string "Did you HEAR that growl?\p"
+	.string "That's the big one! It's down by\n"
+	.string "the south bank!$"
+
+HeretaungaTown_Text_PondKidThanks:
+	.string "You did it! The pond's ours\n"
+	.string "again!\p"
+	.string "And look - my togs bag! It was\n"
+	.string "under the flax the whole time.\p"
+	.string "Here. Nan says it makes Pokemon\n"
+	.string "trust you. I want you to have it.$"
+
+HeretaungaTown_Text_PondKidThanks2:
+	.string "Nan also says the big one was\n"
+	.string "probably just hungry.\p"
+	.string "…Nan feels sorry for EVERYTHING.$"
+
+HeretaungaTown_Text_PondKidAfter:
+	.string "We're back swimming after kura.\n"
+	.string "Come sometime! The water's mint.$"
+
+HeretaungaTown_Text_PupGrowl:
+	.string "Grrr! The pup bares its\n"
+	.string "little teeth!$"
+
+HeretaungaTown_Text_PupFlees:
+	.string "The pup yips and dives back\n"
+	.string "into the flax!$"
+
+HeretaungaTown_Text_PupBeaten:
+	.string "The pup tumbles, shakes itself,\n"
+	.string "and scarpers out the gate!$"
+
+HeretaungaTown_Text_LeaderComes:
+	.string "A long, low growl rolls\n"
+	.string "across the water…\p"
+	.string "Something big steps out of the\n"
+	.string "flax on the south bank.$"
+
+HeretaungaTown_Text_LeaderStands:
+	.string "The big one plants its feet.\n"
+	.string "It is NOT scarpering!$"
+
+HeretaungaTown_Text_LeaderBeaten:
+	.string "The big one shakes itself off,\n"
+	.string "gives you a long look…\p"
+	.string "…and lopes away south, out of\n"
+	.string "town.\p"
+	.string "The pond is quiet again.$"
+
+@ ---------------------------------------------------------------
+@ Job 15: Kids of the Pond - Hemi won't walk home after dark
+@ evening/night only (gettimeofday: 2 evening, 3 night). done: FLAG_UNUSED_0x02F
+@ localid 31, temp vis FLAG_TEMP_6
+@ ---------------------------------------------------------------
+HeretaungaTown_OnTransition_PondFriend::
+	setflag FLAG_TEMP_6
+	goto_if_set FLAG_UNUSED_0x02F, HeretaungaTown_PondFriend_TransEnd
+	gettimeofday
+	goto_if_eq VAR_0x8000, 2, HeretaungaTown_PondFriend_Show
+	goto_if_eq VAR_0x8000, 3, HeretaungaTown_PondFriend_Show
+	return
+HeretaungaTown_PondFriend_Show::
+	clearflag FLAG_TEMP_6
+HeretaungaTown_PondFriend_TransEnd::
+	return
+
+HeretaungaTown_EventScript_PondFriend::
+	lock
+	faceplayer
+	msgbox HeretaungaTown_Text_HemiScared, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 40
+	msgbox HeretaungaTown_Text_HemiWatch, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_HemiThanks, MSGBOX_DEFAULT
+	giveitem ITEM_BIG_MUSHROOM, 2
+	setflag FLAG_UNUSED_0x02F
+	closemessage
+	playse SE_EXIT
+	removeobject 31
+	msgbox HeretaungaTown_Text_HemiRuns, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_HemiScared:
+	.string "Hemi: I stayed too long skimming\n"
+	.string "stones and now it's getting dark…\p"
+	.string "Mata reckons the pond eel comes\n"
+	.string "out at night. The one that's not\l"
+	.string "an eel! It's THIS long!\p"
+	.string "W-will you stand by the water\n"
+	.string "while I leg it for the gate?$"
+
+HeretaungaTown_Text_HemiWatch:
+	.string "You plant yourself between Hemi\n"
+	.string "and the dark water.\p"
+	.string "…Nothing so much as ripples.$"
+
+HeretaungaTown_Text_HemiThanks:
+	.string "Hemi: KA PAI! You're staunch as!\p"
+	.string "Here - Mum packs me these for\n"
+	.string "the walk home. You have them!$"
+
+HeretaungaTown_Text_HemiRuns:
+	.string "Hemi legs it for the gate without\n"
+	.string "looking back once.$"
+
+HeretaungaTown_Text_LeaderStays:
+	.string "It circles back to the bank,\n"
+	.string "hackles up.$"
