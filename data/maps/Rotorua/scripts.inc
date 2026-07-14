@@ -59,3 +59,52 @@ Rotorua_Text_GeyserSign:
 	.string "POHUTU GEYSER VIEWPOINT\p"
 	.string "“Please do not time your visit.\n"
 	.string "He is not a bus.”$"
+
+@ AWHI - road meeting 2 of 4. The news worsens. met: FLAG_UNUSED_0x27A
+Rotorua_EventScript_Awhi::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x27A, Rotorua_EventScript_AwhiRetalk
+	msgbox Rotorua_Text_Awhi1, MSGBOX_DEFAULT
+	msgbox Rotorua_Text_Awhi2, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x27A
+	release
+	end
+
+Rotorua_EventScript_AwhiRetalk::
+	msgbox Rotorua_Text_AwhiAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Rotorua_Text_Awhi1:
+	.string "Awhi: There you are. You've\n"
+	.string "grown a badge or two since\l"
+	.string "Wairoa.\p"
+	.string "News. It's not good.\p"
+	.string "The orchard's struggling - he's\n"
+	.string "squeezing every supplier in\l"
+	.string "the Bay.\p"
+	.string "And my own parents… you should\n"
+	.string "hear them now. Under your dad\l"
+	.string "they had lines they wouldn't\l"
+	.string "cross.\p"
+	.string "Under Tama there are no lines.\n"
+	.string "I don't recognise them, kid.$"
+
+Rotorua_Text_Awhi2:
+	.string "Awhi: …You want to know why I\n"
+	.string "left your brother?\p"
+	.string "I watched him put the armour on.\n"
+	.string "One plate at a time. Every hurt,\l"
+	.string "another plate.\p"
+	.string "And one day I said something\n"
+	.string "true and kind, and it just…\l"
+	.string "clinked off.\p"
+	.string "You can't love a man through\n"
+	.string "armour. I tried, kid. I tried\l"
+	.string "for years.$"
+
+Rotorua_Text_AwhiAfter:
+	.string "Awhi: The mud pools are good\n"
+	.string "for thinking.\p"
+	.string "Not so good for answers.$"

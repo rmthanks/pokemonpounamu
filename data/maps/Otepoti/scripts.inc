@@ -137,3 +137,39 @@ Otepoti_Text_SBoatAfter:
 	.string "Sail's yours whenever you want\n"
 	.string "the water, champ. But the\l"
 	.string "choosing's finished.$"
+
+@ AWHI - road meeting 4 of 4. She goes north to him - and becomes
+@ the door. Object flag FLAG_UNUSED_0x27C is SET here: she leaves.
+Otepoti_EventScript_Awhi::
+	lock
+	faceplayer
+	msgbox Otepoti_Text_Awhi1, MSGBOX_DEFAULT
+	msgbox Otepoti_Text_Awhi2, MSGBOX_DEFAULT
+	closemessage
+	playse SE_EXIT
+	removeobject 7
+	setflag FLAG_UNUSED_0x27C
+	release
+	end
+
+Otepoti_Text_Awhi1:
+	.string "Awhi: Last one, kid. Then I'm\n"
+	.string "gone a while.\p"
+	.string "He's got a tower full of\n"
+	.string "frightened people and plans\l"
+	.string "with wings on them.\p"
+	.string "And he asked me to come north.\n"
+	.string "To be near him.\p"
+	.string "…I'm going.$"
+
+Otepoti_Text_Awhi2:
+	.string "Awhi: Don't say it. I know\n"
+	.string "exactly what it looks like.\p"
+	.string "But hear me: when you come for\n"
+	.string "that tower - and you will -\l"
+	.string "you'll need a door.\p"
+	.string "I'll be the door.\p"
+	.string "…Someone who loves him should\n"
+	.string "be there when it ends.\p"
+	.string "Even if the him I love ended\n"
+	.string "years ago.$"

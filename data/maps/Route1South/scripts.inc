@@ -25,3 +25,31 @@ Route1South_Text_KaiaDefeat:
 Route1South_Text_KaiaPost:
 	.string "The road ends at Otepoti. Steepest streets in the world down there. Bring good brakes.$"
 
+
+@ Pae - "the horizon". The other wanderer.
+Route1South_EventScript_Pae::
+	lock
+	faceplayer
+	msgbox Route1South_Text_Pae, MSGBOX_DEFAULT
+	release
+	end
+
+Route1South_Text_Pae:
+	.string "Pae: You can see a long way\n"
+	.string "from down here.\p"
+	.string "Never quite far enough. But.\p"
+	.string "I've walked toward the horizon\n"
+	.string "my whole life. You'd be amazed\l"
+	.string "how it keeps… moving.\p"
+	.string "My little brother stopped\n"
+	.string "walking, once. Just STOPPED,\l"
+	.string "and looked -\p"
+	.string "and the whole world came to\n"
+	.string "him.\p"
+	.string "Never learned the trick of it\n"
+	.string "myself.\p"
+	.string "…If you ever meet him - at the\n"
+	.string "top of something, probably -\l"
+	.string "don't mention me, eh.\p"
+	.string "…Or do.\p"
+	.string "Do.$"

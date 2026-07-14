@@ -167,6 +167,10 @@ Wellington_EventScript_StraitOutcome::
 	msgbox Wellington_Text_StraitTamaLeaves, MSGBOX_DEFAULT
 	msgbox Wellington_Text_StraitWave, MSGBOX_DEFAULT
 	msgbox Wellington_Text_StraitBlessing, MSGBOX_DEFAULT
+	delay 40
+	playmoncry SPECIES_HO_OH, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox Wellington_Text_HoOhCrossing, MSGBOX_DEFAULT
 	setflag FLAG_UNUSED_0x04A
 	setflag FLAG_UNUSED_0x04B
 	removeobject 7
@@ -283,3 +287,12 @@ Wellington_Text_HoriAfter:
 	.string "Across the strait.\p"
 	.string "I'll be there. With a plan.\n"
 	.string "And a beanie.$"
+
+Wellington_Text_HoOhCrossing:
+	.string "Far out over the strait, colour\n"
+	.string "flares through the spray -\p"
+	.string "a bird like a bonfire, riding\n"
+	.string "the southerly down the world.\p"
+	.string "Gone before you can name it.\p"
+	.string "The water it crossed keeps\n"
+	.string "glittering a while.$"

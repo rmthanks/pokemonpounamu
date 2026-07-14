@@ -30,6 +30,10 @@ Route2Bay_EventScript_Exile::
 	removeobject LOCALID_R2_TAMA
 	fadescreen FADE_FROM_BLACK
 	msgbox Route2Bay_Text_ExileClose, MSGBOX_DEFAULT
+	delay 40
+	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox Route2Bay_Text_LugiaSurfaces, MSGBOX_DEFAULT
 	special HealPlayerParty
 	setvar VAR_POUNAMU_INTRO_STATE, 5
 	releaseall
@@ -123,3 +127,14 @@ Route2Bay_Text_Grunt2After:
 	.string "Nothing personal, kid.\p"
 	.string "…Alright. It's a little bit\n"
 	.string "personal.$"
+
+Route2Bay_Text_LugiaSurfaces:
+	.string "…Out on the grey water of the\n"
+	.string "bay, something vast breaks the\l"
+	.string "surface.\p"
+	.string "Silver. Older than the road.\n"
+	.string "Older than the Bay's name.\p"
+	.string "It looks at you - LOOKS at\n"
+	.string "you -\p"
+	.string "and slides back under, going\n"
+	.string "north, the way you must.$"

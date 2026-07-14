@@ -31,7 +31,7 @@ PounamuLeagueAwhi_EventScript_Awhi::
 	end
 
 PounamuLeagueAwhi_Text_Pre:
-	.string "Awhi: Kia ora, {PLAYER}. …Yes. I know your name.\pI knew it before you were born, near enough. I'm a friend of your mother's.\pI'm the first wall - Whanau. Family. The foundation the other three stand on.\pThe Mob turned this Dark type into a weapon. I turned it back into what it was: a way of holding your own close.\pShow me you've found people to hold. Show me you're not still alone out there.$"
+	.string "Awhi: Kia ora, {PLAYER}. …Yes. I know your name.\pI walked you to kura when the house was loud. I loved your brother before the armour. Nearly whanau twice over - and now, at last, properly.\pI'm the first wall - Whanau. Family. The foundation the other three stand on.\pThe Mob turned this Dark type into a weapon. I turned it back into what it was: a way of holding your own close.\pShow me you've found people to hold. Show me you're not still alone out there.$"
 
 PounamuLeagueAwhi_Text_Defeat:
 	.string "…$"

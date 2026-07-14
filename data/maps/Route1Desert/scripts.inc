@@ -39,3 +39,29 @@ Route1Desert_Text_AriPost:
 	.string "itself for a while.\p"
 	.string "Route 43. The Forgotten World.\n"
 	.string "Beautiful and a bit spooky.$"
+
+@ Taha - "the side". One of two wanderers. Never explained.
+Route1Desert_EventScript_Taha::
+	lock
+	faceplayer
+	msgbox Route1Desert_Text_Taha, MSGBOX_DEFAULT
+	release
+	end
+
+Route1Desert_Text_Taha:
+	.string "Taha: Don't mind me. I walk\n"
+	.string "this road most days.\p"
+	.string "Which way's it to… ah. Doesn't\n"
+	.string "matter. Both ways are the same\l"
+	.string "road, on this one.\p"
+	.string "…I had brothers, once. We\n"
+	.string "hauled up something enormous\l"
+	.string "together, the five of us.\p"
+	.string "Biggest catch anyone ever made.\p"
+	.string "The youngest did the real work,\n"
+	.string "mind. We just carved it up.\l"
+	.string "Couldn't wait to.\p"
+	.string "You'd think a man who was there\n"
+	.string "for THAT would have something\l"
+	.string "to show for it, eh.\p"
+	.string "…Don't mind me. I walk.$"
