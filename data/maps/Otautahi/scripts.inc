@@ -35,3 +35,43 @@ Otautahi_Text_GymSign:
 	.string "OTAUTAHI GYM\nLeader: POU - braced and standing.\p“Better braced than good as new.”$"
 Otautahi_Text_CathedralSign:
 	.string "TRANSITIONAL CATHEDRAL\p“Built to last a while. Loved\nlike it'll last forever.”$"
+
+@ ------------------------------------------------------------------
+@ Hori, the Mob's least effective grunt. He wants your shoes.
+@ ------------------------------------------------------------------
+Otautahi_EventScript_Hori::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_HORI_5, Otautahi_Text_HoriIntro, Otautahi_Text_HoriDefeat, Otautahi_EventScript_HoriBeaten
+	release
+	end
+
+Otautahi_EventScript_HoriBeaten::
+	msgbox Otautahi_Text_HoriAfter, MSGBOX_DEFAULT
+	giveitem ITEM_FOCUS_SASH
+	closemessage
+	playse SE_FLEE
+	removeobject 6
+	setflag FLAG_UNUSED_0x277
+	release
+	end
+
+Otautahi_Text_HoriIntro:
+	.string "HORI'S FINAL STAND.\p"
+	.string "Everything I've got, one last\n"
+	.string "time.\p"
+	.string "Winner takes every shoe in\n"
+	.string "the building.$"
+
+Otautahi_Text_HoriDefeat:
+	.string "Take. The. Shoes.$"
+
+Otautahi_Text_HoriAfter:
+	.string "…Nah. Keep your shoes, eh.\n"
+	.string "They suit ya.\p"
+	.string "Tell you what - take me lucky\n"
+	.string "sash instead. Never done ME\l"
+	.string "any good.\p"
+	.string "If the Mob asks? You never saw\n"
+	.string "me. I'm off to find honest work.\p"
+	.string "…Maybe jandals.$"

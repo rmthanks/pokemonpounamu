@@ -200,3 +200,39 @@ Taupo_Text_TawhaiStay:
 	.string "Tawhai: The mountain has\n"
 	.string "waited this long. It can wait\l"
 	.string "for you to be ready.$"
+
+@ ------------------------------------------------------------------
+@ Hori, the Mob's least effective grunt. He wants your shoes.
+@ ------------------------------------------------------------------
+Taupo_EventScript_Hori::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_HORI_3, Taupo_Text_HoriIntro, Taupo_Text_HoriDefeat, Taupo_EventScript_HoriBeaten
+	release
+	end
+
+Taupo_EventScript_HoriBeaten::
+	msgbox Taupo_Text_HoriAfter, MSGBOX_DEFAULT
+	closemessage
+	playse SE_FLEE
+	removeobject 7
+	setflag FLAG_UNUSED_0x275
+	release
+	end
+
+Taupo_Text_HoriIntro:
+	.string "Oi! Remember me? Hori?\p"
+	.string "Me Scraggy EVOLVED. It's got\n"
+	.string "proper pants now.\p"
+	.string "One on one for your shoes,\n"
+	.string "your socks, AND your hat.$"
+
+Taupo_Text_HoriDefeat:
+	.string "Even the pants weren't enough!$"
+
+Taupo_Text_HoriAfter:
+	.string "…Hang on. You're President\n"
+	.string "Kauri's kid, eh.\p"
+	.string "…Nah. Doesn't matter whose kid\n"
+	.string "y'are. Shoes are shoes.\p"
+	.string "Next town. Bring the shoes.$"

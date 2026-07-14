@@ -1209,3 +1209,36 @@ HeretaungaTown_Text_HemiRuns:
 HeretaungaTown_Text_LeaderStays:
 	.string "It circles back to the bank,\n"
 	.string "hackles up.$"
+
+@ ------------------------------------------------------------------
+@ Hori, the Mob's least effective grunt. He wants your shoes.
+@ ------------------------------------------------------------------
+HeretaungaTown_EventScript_Hori::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_HORI_1, HeretaungaTown_Text_HoriIntro, HeretaungaTown_Text_HoriDefeat, HeretaungaTown_EventScript_HoriBeaten
+	release
+	end
+
+HeretaungaTown_EventScript_HoriBeaten::
+	msgbox HeretaungaTown_Text_HoriAfter, MSGBOX_DEFAULT
+	closemessage
+	playse SE_FLEE
+	removeobject 32
+	setflag FLAG_UNUSED_0x273
+	release
+	end
+
+HeretaungaTown_Text_HoriIntro:
+	.string "Oi! You. Yeah, you.\p"
+	.string "One on one for your shoes.$"
+
+HeretaungaTown_Text_HoriDefeat:
+	.string "Aw NAH!$"
+
+HeretaungaTown_Text_HoriAfter:
+	.string "Keep 'em. They'd pinch me toes\n"
+	.string "anyway.\p"
+	.string "You got lucky, eh. The Mob's got\n"
+	.string "HEAPS of shoes… wait.\p"
+	.string "Forget I said that.$"

@@ -227,3 +227,37 @@ AhuririCity_Text_CarverNotYet:
 	.string "No rush. Pounamu's been waiting\n"
 	.string "in those rivers a hundred years.\p"
 	.string "It'll wait for you.$"
+
+@ ------------------------------------------------------------------
+@ Hori, the Mob's least effective grunt. He wants your shoes.
+@ ------------------------------------------------------------------
+AhuririCity_EventScript_Hori::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_HORI_2, AhuririCity_Text_HoriIntro, AhuririCity_Text_HoriDefeat, AhuririCity_EventScript_HoriBeaten
+	release
+	end
+
+AhuririCity_EventScript_HoriBeaten::
+	msgbox AhuririCity_Text_HoriAfter, MSGBOX_DEFAULT
+	closemessage
+	playse SE_FLEE
+	removeobject 7
+	setflag FLAG_UNUSED_0x274
+	release
+	end
+
+AhuririCity_Text_HoriIntro:
+	.string "You AGAIN. Right. Rematch.\p"
+	.string "One on one for your shoes.\n"
+	.string "Double or nothing.\p"
+	.string "Shoes AND socks.$"
+
+AhuririCity_Text_HoriDefeat:
+	.string "Not the socks too…$"
+
+AhuririCity_Text_HoriAfter:
+	.string "The boys keep asking where me\n"
+	.string "shoe money's at.\p"
+	.string "This changes nothing. I'm in\n"
+	.string "a growth phase, me.$"

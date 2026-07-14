@@ -926,8 +926,13 @@
 #define TRAINER_RATA_POSTGAME               912
 #define TRAINER_KAURI_POSTGAME              913
 #define TRAINER_TAMA_ORCHARD                914
+#define TRAINER_HORI_1                      915
+#define TRAINER_HORI_2                      916
+#define TRAINER_HORI_3                      917
+#define TRAINER_HORI_4                      918
+#define TRAINER_HORI_5                      919
 
-#define TRAINERS_COUNT_EMERALD     915
+#define TRAINERS_COUNT_EMERALD     920
 #define MAX_TRAINERS_COUNT_EMERALD 1120
 
 #if IS_FRLG

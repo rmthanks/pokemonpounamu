@@ -247,3 +247,39 @@ Wellington_Text_StraitBlessing:
 	.string "Finish becoming whoever it is\l"
 	.string "you are.\p"
 	.string "I'll hold the strait.$"
+
+@ ------------------------------------------------------------------
+@ Hori, the Mob's least effective grunt. He wants your shoes.
+@ ------------------------------------------------------------------
+Wellington_EventScript_Hori::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_HORI_4, Wellington_Text_HoriIntro, Wellington_Text_HoriDefeat, Wellington_EventScript_HoriBeaten
+	release
+	end
+
+Wellington_EventScript_HoriBeaten::
+	msgbox Wellington_Text_HoriAfter, MSGBOX_DEFAULT
+	closemessage
+	playse SE_FLEE
+	removeobject 9
+	setflag FLAG_UNUSED_0x276
+	release
+	end
+
+Wellington_Text_HoriIntro:
+	.string "Windy, eh? Good weather for\n"
+	.string "TAKING SHOES.\p"
+	.string "No more mister one-on-one.\p"
+	.string "I'll step you and ALL your\n"
+	.string "Pokémon out for your shoes.$"
+
+Wellington_Text_HoriDefeat:
+	.string "Stepped out… by meself…$"
+
+Wellington_Text_HoriAfter:
+	.string "Every time. EVERY time.\p"
+	.string "…You're headed south, aren't ya.\n"
+	.string "Across the strait.\p"
+	.string "I'll be there. With a plan.\n"
+	.string "And a beanie.$"

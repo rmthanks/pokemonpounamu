@@ -18018,3 +18018,88 @@ Ability: Run Away
 - Howl
 - Sand Attack
 - Bite
+
+=== TRAINER_HORI_1 ===
+Name: Hori
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Scraggy
+Level: 9
+Ability: Shed Skin
+- Low Kick
+- Leer
+- Sand Attack
+- Headbutt
+
+=== TRAINER_HORI_2 ===
+Name: Hori
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Scraggy
+Level: 18
+Ability: Shed Skin
+- Headbutt
+- Low Kick
+- Payback
+- Leer
+
+=== TRAINER_HORI_3 ===
+Name: Hori
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Scrafty
+Level: 33
+Ability: Moxie
+- Headbutt
+- Brick Break
+- Payback
+- Scary Face
+
+=== TRAINER_HORI_4 ===
+Name: Hori
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer
+
+Scrafty
+Level: 42
+Ability: Moxie
+- Brick Break
+- Crunch
+- Facade
+- Scary Face
+
+=== TRAINER_HORI_5 ===
+Name: Hori
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer
+
+Scrafty @ Leftovers
+Level: 54
+Ability: Moxie
+- High Jump Kick
+- Crunch
+- Poison Jab
+- Dragon Dance
