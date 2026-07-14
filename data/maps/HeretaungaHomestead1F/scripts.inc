@@ -282,7 +282,11 @@ Homestead_Text_TamaDotDotDot:
 	.string "Tama: …$"
 
 Homestead_Text_TamaGoodOneThough:
-	.string "Tama: …It's a good one, though.$"
+	.string "Tama nods at the Poke Ball\n"
+	.string "in your hands.\p"
+	.string "Tama: …It's a good one, though.\p"
+	.string "It's the closest he'll get to\n"
+	.string "“happy birthday.”$"
 
 Homestead_Text_TamaHalfWave:
 	.string "For a second his hand comes up -\n"
