@@ -149,6 +149,16 @@ Homestead_EventScript_TamaSoftens::
 	msgbox Homestead_Text_TamaDotDotDot, MSGBOX_DEFAULT
 	msgbox Homestead_Text_TamaGoodOneThough, MSGBOX_DEFAULT
 	msgbox Homestead_Text_TamaHalfWave, MSGBOX_DEFAULT
+	@ --- Dad's second gift: the field logbook (the Pokedex + DexNav) ---
+	msgbox Homestead_Text_KauriLogbook, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message Homestead_Text_ReceivedLogbook
+	waitmessage
+	waitfanfare
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_UNUSED_0x281
+	setflag FLAG_UNUSED_0x282
+	msgbox Homestead_Text_KauriLogbook2, MSGBOX_DEFAULT
 	msgbox Homestead_Text_RataOrchardIsYours, MSGBOX_DEFAULT
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 	setflag FLAG_SYS_POKEMON_GET
@@ -300,6 +310,28 @@ Homestead_Text_TamaHalfWave:
 	.string "Then he catches himself,\n"
 	.string "and puts it away.$"
 
+Homestead_Text_KauriLogbook:
+	.string "Kauri: …Hold on. One more thing,\n"
+	.string "before your mother has you out\l"
+	.string "the door.\p"
+	.string "Every kid in this Bay gets a\n"
+	.string "starter. Not every kid gets\l"
+	.string "taught to READ the land.\p"
+	.string "This was mine. Ranger-issue,\n"
+	.string "before… well. Before.\p"
+	.string "It logs every creature you meet.\n"
+	.string "Names them. Remembers them.$"
+
+Homestead_Text_KauriLogbook2:
+	.string "Kauri: There's a SCOPE built in.\n"
+	.string "Flick it on and it'll pick up\l"
+	.string "what's hiding in the long grass -\p"
+	.string "the shy ones. The ones worth\n"
+	.string "finding.\p"
+	.string "…Fill it, {PLAYER}. All of it.\p"
+	.string "Learn this country better than\n"
+	.string "I ever bothered to.$"
+
 Homestead_Text_RataOrchardIsYours:
 	.string "Rata: Go on, you two. Some fresh air.\p"
 	.string "The orchard's yours today, {PLAYER}.\n"
@@ -423,3 +455,7 @@ Homestead_Text_AwhiHomeRetalk:
 	.string "Awhi: First challenge.\n"
 	.string "Your last climb.\p"
 	.string "I'll be waiting at the tower.$"
+
+Homestead_Text_ReceivedLogbook:
+	.string "{PLAYER} received the\n"
+	.string "POKENAV LOGBOOK!$"
