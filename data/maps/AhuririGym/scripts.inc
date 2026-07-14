@@ -4,6 +4,7 @@ AhuririGym_MapScripts::
 
 @ Tama and his two enforcers stay hidden until the usurpation scene.
 AhuririGym_OnTransition:
+	setflag FLAG_TEMP_10
 	setflag FLAG_TEMP_11
 	setflag FLAG_TEMP_12
 	setflag FLAG_TEMP_13
@@ -47,13 +48,42 @@ AhuririGym_EventScript_Kauri::
 	msgbox AhuririGym_Text_KauriYouDidnt, MSGBOX_DEFAULT
 	msgbox AhuririGym_Text_TamaYouWentSoft, MSGBOX_DEFAULT
 	msgbox AhuririGym_Text_TamaAndYou, MSGBOX_DEFAULT
-	@ --- the ambush battle: no whiteout, story continues either way ---
-	setflag B_FLAG_NO_WHITEOUT
-	trainerbattle_no_intro TRAINER_TAMA_AMBUSH, AhuririGym_Text_TamaDefeat
-	clearflag B_FLAG_NO_WHITEOUT
-	specialvar VAR_RESULT, GetBattleOutcome
-	call_if_eq VAR_RESULT, B_OUTCOME_WON, AhuririGym_EventScript_TamaBeaten
-	call_if_ne VAR_RESULT, B_OUTCOME_WON, AhuririGym_EventScript_TamaWon
+	@ --- Mum shoulders through the door: the Break happens HERE ---
+	playse SE_SLIDING_DOOR
+	msgbox AhuririGym_Text_RataArrives, MSGBOX_DEFAULT
+	clearflag FLAG_TEMP_10
+	addobject LOCALID_AHURIRI_GYM_RATA
+	turnobject LOCALID_AHURIRI_GYM_RATA, DIR_SOUTH
+	turnobject LOCALID_AHURIRI_GYM_TAMA, DIR_NORTH
+	msgbox AhuririGym_Text_BreakRata1, MSGBOX_DEFAULT
+	msgbox AhuririGym_Text_BreakTama2, MSGBOX_DEFAULT
+	msgbox AhuririGym_Text_BreakRataWithMe, MSGBOX_DEFAULT
+	closemessage
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto_if_ne VAR_RESULT, 0, AhuririGym_EventScript_BreakBattle
+	special LoadPlayerParty
+	msgbox AhuririGym_Text_BreakRataWithMe, MSGBOX_DEFAULT
+	closemessage
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto AhuririGym_EventScript_BreakBattle
+
+AhuririGym_EventScript_BreakBattle::
+	multi_2_vs_1 TRAINER_TAMA_BREAK, AhuririGym_Text_BreakTamaWinsBattle, PARTNER_RATA
+	special LoadPlayerParty
+	special HealPlayerParty
+	goto_if_eq VAR_RESULT, 1, AhuririGym_EventScript_BreakPlayerWon
+	msgbox AhuririGym_Text_BreakAfterLoss, MSGBOX_DEFAULT
+	goto AhuririGym_EventScript_BreakOutcome
+
+AhuririGym_EventScript_BreakPlayerWon::
+	msgbox AhuririGym_Text_BreakAfterWin, MSGBOX_DEFAULT
+	goto AhuririGym_EventScript_BreakOutcome
+
+AhuririGym_EventScript_BreakOutcome::
 	msgbox AhuririGym_Text_KauriLeaveThemOut, MSGBOX_DEFAULT
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, AhuririGym_EventScript_ExileM
@@ -62,13 +92,22 @@ AhuririGym_EventScript_Kauri::
 AhuririGym_EventScript_ExileM::
 	msgbox AhuririGym_Text_TamaTakeBrotherNorth, MSGBOX_DEFAULT
 AhuririGym_EventScript_ExileCommon::
+	msgbox AhuririGym_Text_BreakTamaTaunt, MSGBOX_DEFAULT
+	msgbox AhuririGym_Text_BreakWave, MSGBOX_DEFAULT
+	msgbox AhuririGym_Text_BreakRataSendaway, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special HealPlayerParty
 	msgbox AhuririGym_Text_ExileNarration, MSGBOX_DEFAULT
-	setvar VAR_POUNAMU_INTRO_STATE, 3
+	setflag FLAG_UNUSED_0x048
+	setflag FLAG_UNUSED_0x049
+	setvar VAR_POUNAMU_INTRO_STATE, 4
 	warp MAP_ROUTE2_BAY, 7, 6
 	waitstate
 	release
+	end
+
+AhuririGym_EventScript_RataIdle::
+	msgbox AhuririGym_Text_BreakRataWithMe, MSGBOX_NPC
 	end
 
 AhuririGym_EventScript_TamaBeaten::
@@ -256,3 +295,62 @@ AhuririGym_Text_ProspectPost:
 	.string "…Wait. Those eyes.\n"
 	.string "You're not… related to the boss,\l"
 	.string "are you?$"
+
+AhuririGym_Text_RataArrives:
+	.string "Someone shoulders past the\n"
+	.string "enforcers at the door.\p"
+	.string "Mum. Still in her orchard\n"
+	.string "boots. Secateurs on her belt.\p"
+	.string "She heard.$"
+
+AhuririGym_Text_BreakRata1:
+	.string "Rata: Tama. Not here.\n"
+	.string "Not like this.$"
+
+AhuririGym_Text_BreakTama2:
+	.string "Tama: Like WHAT, Mum?\p"
+	.string "Like sons picking up what\n"
+	.string "fathers drop?\p"
+	.string "You taught me gardens. He\n"
+	.string "taught me weight.\p"
+	.string "Only one lesson stuck.$"
+
+AhuririGym_Text_BreakRataWithMe:
+	.string "Rata: Marama - with me.\p"
+	.string "One time, love, we do this\n"
+	.string "together.$"
+
+AhuririGym_Text_BreakTamaWinsBattle:
+	.string "That's the whole of it, then.$"
+
+AhuririGym_Text_BreakAfterLoss:
+	.string "It wasn't close.\p"
+	.string "It was arithmetic.$"
+
+AhuririGym_Text_BreakAfterWin:
+	.string "Tama: …Hm.\p"
+	.string "Crews. Numbers. Every road out\n"
+	.string "of the Bay, mine by morning.\p"
+	.string "It changes nothing.$"
+
+AhuririGym_Text_BreakTamaTaunt:
+	.string "Tama: Run, little brother.\n"
+	.string "Run far.\p"
+	.string "You could NEVER come back.\p"
+	.string "…Remember that I said it\n"
+	.string "kindly.$"
+
+AhuririGym_Text_BreakWave:
+	.string "You raise your hand anyway.\p"
+	.string "The old wave. The orchard-gate\n"
+	.string "wave.\p"
+	.string "Tama looks at it for a long\n"
+	.string "moment.\p"
+	.string "He turns away.$"
+
+AhuririGym_Text_BreakRataSendaway:
+	.string "Rata: Go, love. North. Past the\n"
+	.string "checkpoints. Don't stop.\p"
+	.string "Not because you're weak.\p"
+	.string "Because you're the one thing\n"
+	.string "I can still save.$"

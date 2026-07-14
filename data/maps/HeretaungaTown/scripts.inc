@@ -30,8 +30,8 @@ HeretaungaTown_OnTransition_OrchardKeepHidden::
 	return
 
 HeretaungaTown_OnTransition_Break::
-	goto_if_set FLAG_UNUSED_0x048, HeretaungaTown_OnTransition_HideTama
-	goto_if_eq VAR_POUNAMU_INTRO_STATE, 3, HeretaungaTown_OnTransition_ShowTama
+	@ The Break now happens inside the Ahuriri gym coup (exile is immediate).
+	@ This object is permanently retired; script kept only for label integrity.
 	goto HeretaungaTown_OnTransition_HideTama
 
 HeretaungaTown_OnTransition_ShowTama::
