@@ -5599,8 +5599,8 @@ const struct ItemInfo gItemsInfo[] =
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_RedOrb,
-        .iconPalette = gItemIconPalette_RedOrb,
+        .iconPic = gItemIcon_MysticWater,
+        .iconPalette = gItemIconPalette_MauriKohatu,
     },
 
     [ITEM_BLUE_ORB] =
@@ -5617,8 +5617,8 @@ const struct ItemInfo gItemsInfo[] =
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_BlueOrb,
-        .iconPalette = gItemIconPalette_BlueOrb,
+        .iconPic = gItemIcon_MysticWater,
+        .iconPalette = gItemIconPalette_PounamuPendant,
     },
 
 // Mega Stones

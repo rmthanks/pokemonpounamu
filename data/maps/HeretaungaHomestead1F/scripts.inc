@@ -167,6 +167,7 @@ Homestead_EventScript_TamaSoftens::
 	waitfanfare
 	giveitem ITEM_BLUE_ORB
 	msgbox Homestead_Text_RataPendant2, MSGBOX_DEFAULT
+	msgbox Homestead_Text_TamaPendantBitter, MSGBOX_DEFAULT
 	msgbox Homestead_Text_RataOrchardIsYours, MSGBOX_DEFAULT
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 	setflag FLAG_SYS_POKEMON_GET
@@ -470,10 +471,13 @@ Homestead_Text_ReceivedLogbook:
 
 Homestead_Text_RataPendant:
 	.string "Rata: And one more. From my side.\p"
-	.string "My mum carved this. River stone,\n"
-	.string "from up the back of beyond.\p"
-	.string "She always said the same thing\n"
-	.string "when she tied it on someone.$"
+	.string "In this family, when you come of\n"
+	.string "age - when you're about to become\l"
+	.string "your own person - you're given\l"
+	.string "pounamu.\p"
+	.string "My mum carved this one.\n"
+	.string "River stone, from up the back\l"
+	.string "of beyond.$"
 
 Homestead_Text_ReceivedPendant:
 	.string "{PLAYER} received the POUNAMU PENDANT!$"
@@ -481,5 +485,18 @@ Homestead_Text_ReceivedPendant:
 Homestead_Text_RataPendant2:
 	.string "Rata: 'Wear it, and the rivers\n"
 	.string "remember you.'\p"
-	.string "…I never worked out what she\n"
-	.string "meant. Maybe you will.$"
+	.string "It's so you don't forget where\n"
+	.string "you came from. No matter how\l"
+	.string "far you go.\p"
+	.string "…I never worked out the rivers\n"
+	.string "part. Maybe you will.$"
+
+Homestead_Text_TamaPendantBitter:
+	.string "Tama: Oh. The stone.\n"
+	.string "The famous stone.\p"
+	.string "I got mine, my year.\n"
+	.string "That's ALL I got.\p"
+	.string "A rock on a string to remind me\n"
+	.string "where I come from.\p"
+	.string "As if I could forget.\p"
+	.string "…Enjoy the Pokemon, {PLAYER}.$"
