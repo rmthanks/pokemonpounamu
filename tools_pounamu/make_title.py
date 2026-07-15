@@ -24,7 +24,7 @@ side = int(len(boost)**0.5)
 boost_img = Image.fromarray(boost[:side*side].reshape(side,side,3))
 pal_src = boost_img.quantize(colors=NCOLORS, method=Image.MEDIANCUT, kmeans=25, dither=Image.Dither.NONE)
 # hybrid: flat sky (dedups tiles), dithered land (keeps tonality)
-SKY_SPLIT = 68
+SKY_SPLIT = 12
 q = im.quantize(palette=pal_src, dither=Image.Dither.NONE)
 qd = im.quantize(palette=pal_src, dither=Image.Dither.FLOYDSTEINBERG)
 q.paste(qd.crop((0,SKY_SPLIT,240,160)), (0,SKY_SPLIT))
