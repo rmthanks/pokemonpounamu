@@ -1575,7 +1575,7 @@ HeretaungaTown_Text_KoroNoCaps:
 	.string "Learned carving off my koro.\l"
 	.string "Best hands on the coast,\l"
 	.string "my nan reckons.\p"
-	.string "Bring me a BOTTLE CAP and I'll\n"
+	.string "Bring me a Bottle Cap and I'll\n"
 	.string "polish your Pokemon's weakest\l"
 	.string "facet till it shines.\p"
 	.string "A GOLD one? The whole taonga.\n"
@@ -1583,12 +1583,12 @@ HeretaungaTown_Text_KoroNoCaps:
 	.string "Aunty at the stall keeps a few.$"
 
 HeretaungaTown_Text_KoroGoldAsk:
-	.string "Cuzzy Tapeta: A GOLD BOTTLE CAP…\n"
+	.string "Cuzzy Tapeta: A Gold Bottle Cap…\n"
 	.string "The full polish, then?\l"
 	.string "All six facets, one Pokemon?$"
 
 HeretaungaTown_Text_KoroSilverAsk:
-	.string "Cuzzy Tapeta: A BOTTLE CAP.\n"
+	.string "Cuzzy Tapeta: A Bottle Cap.\n"
 	.string "I'll find the weakest facet\l"
 	.string "and polish just that one.\p"
 	.string "Shall I?$"
@@ -1639,7 +1639,7 @@ HeretaungaTown_Text_TamaExpShare1:
 	.string "Tama: …Here. Catch.$"
 
 HeretaungaTown_Text_ReceivedExpShare:
-	.string "{PLAYER} received the EXP. SHARE!$"
+	.string "{PLAYER} received the Exp. Share!$"
 
 HeretaungaTown_Text_TamaExpShare2:
 	.string "Tama: Train ALL of them.\n"
@@ -1689,13 +1689,13 @@ HeretaungaTown_Text_KoroOneShardAsk:
 	.string "off the mountains, the stone\l"
 	.string "comes with them.\p"
 	.string "Trade me one shard for a\n"
-	.string "BOTTLE CAP?$"
+	.string "Bottle Cap?$"
 
 HeretaungaTown_Text_KoroFourShardAsk:
 	.string "Cuzzy Tapeta: Four shards…\n"
 	.string "That's a whole stone's worth.\p"
 	.string "Trade all four for a GOLD\n"
-	.string "BOTTLE CAP? The full polish.$"
+	.string "Bottle Cap? The full polish.$"
 
 HeretaungaTown_Text_KoroShardTraded:
 	.string "Cuzzy Tapeta: Ka pai.\p"
@@ -1708,7 +1708,7 @@ HeretaungaTown_Text_KoroShardKeep:
 	.string "The west coast rivers hold more,\n"
 	.string "if you know where to look.\p"
 	.string "And the river fish swallow the\n"
-	.string "small stones. WHISCASH especially.\l"
+	.string "small stones. Whiscash especially.\l"
 	.string "Greedy fella. Go fishing, cuz.$"
 
 HeretaungaTown_Cuzzy_GiveMauri::
@@ -1739,7 +1739,7 @@ HeretaungaTown_Text_CuzzyMauri1:
 	.string "It just grew. Like you did.$"
 
 HeretaungaTown_Text_ReceivedMauri:
-	.string "{PLAYER} received the MAURI KOHATU!$"
+	.string "{PLAYER} received the Mauri Kohatu!$"
 
 HeretaungaTown_Text_CuzzyMauri2:
 	.string "Cuzzy Tapeta: A mauri kohatu now.\n"

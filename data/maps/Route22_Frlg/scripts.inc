@@ -256,7 +256,7 @@ Route22_Text_EarlyRivalPostBattle::
 	.string "You should quit dawdling and get a\n"
 	.string "move on!$"
 
-@ Translated in RB as "{RIVAL}: What? Why do I have 2 POKéMON? You should catch some more too!"
+@ Translated in RB as "{RIVAL}: What? Why do I have 2 Pokémon? You should catch some more too!"
 Route22_Text_RivalShouldCatchSomeMons::
 	.string "{RIVAL}“なんだ？\n"
 	.string "ポケモン　2ひきも\l"

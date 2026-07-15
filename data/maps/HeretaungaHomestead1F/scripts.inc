@@ -467,7 +467,7 @@ Homestead_Text_AwhiHomeRetalk:
 
 Homestead_Text_ReceivedLogbook:
 	.string "{PLAYER} received the\n"
-	.string "POKENAV LOGBOOK!$"
+	.string "PokéNav Logbook!$"
 
 Homestead_Text_RataPendant:
 	.string "Rata: And one more. From my side.\p"
@@ -480,7 +480,7 @@ Homestead_Text_RataPendant:
 	.string "of beyond.$"
 
 Homestead_Text_ReceivedPendant:
-	.string "{PLAYER} received the POUNAMU PENDANT!$"
+	.string "{PLAYER} received the Pounamu Pendant!$"
 
 Homestead_Text_RataPendant2:
 	.string "Rata: 'Wear it, and the rivers\n"

@@ -102,7 +102,7 @@ TaurangaGym_Text_ProspectPost:
 TaurangaGym_Text_MuaSurf:
 	.string "Mua: One more thing. The first\n"
 	.string "haul is always shared.\p"
-	.string "SURF. My brothers and I pulled\n"
+	.string "Surf. My brothers and I pulled\n"
 	.string "a whole island out of the sea\l"
 	.string "with less.\p"
 	.string "The water's yours now. Treat\n"
