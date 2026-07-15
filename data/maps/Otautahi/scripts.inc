@@ -54,8 +54,9 @@ Otautahi_EventScript_HoriBeaten::
 	removeobject 6
 	setflag FLAG_UNUSED_0x277
 	release
+	msgbox Otautahi_Text_HoriShoes, MSGBOX_DEFAULT
+	release
 	end
-
 Otautahi_Text_HoriIntro:
 	.string "HORI'S FINAL STAND.\p"
 	.string "Everything I've got, one last\n"
@@ -145,3 +146,15 @@ Otautahi_Text_PNikoDefeat:
 
 Otautahi_Text_PNikoPost:
 	.string "Rain's coming. Good for the\ngrass, good for nothing else.$"
+
+Otautahi_Text_HoriShoes:
+	.string "Hori looks at your shoes for a\n"
+	.string "long time.\p"
+	.string "Hori: …Keep them.\p"
+	.string "Was never about the shoes, eh.\p"
+	.string "You always had somewhere to\n"
+	.string "walk TO. That's the thing\l"
+	.string "I was trying to take.\p"
+	.string "…Can't step someone out of\n"
+	.string "that.\p"
+	.string "Go on. Walk.$"

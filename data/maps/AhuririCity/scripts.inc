@@ -339,3 +339,60 @@ AhuririCity_Text_PTaikaDefeat:
 
 AhuririCity_Text_PTaikaPost:
 	.string "They're biting better since\nyou showed up. Weird.$"
+
+AhuririCity_EventScript_MobAssociate::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x29E, AhuririCity_Associate_Done
+	goto_if_set FLAG_UNUSED_0x29D, AhuririCity_Associate_Waiting
+	msgbox AhuririCity_Text_AssociateAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, AhuririCity_Associate_Refused
+	setflag FLAG_UNUSED_0x29D
+	msgbox AhuririCity_Text_AssociateParcel, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_Associate_Waiting::
+	msgbox AhuririCity_Text_AssociateWaiting, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_Associate_Refused::
+	msgbox AhuririCity_Text_AssociateRefused, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_Associate_Done::
+	msgbox AhuririCity_Text_AssociateDone, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_Text_AssociateAsk:
+	.string "Well, well. The president's kid.\p"
+	.string "Listen - your old man's gym isn't\n"
+	.string "a walk-in sort of place.\l"
+	.string "Members and guests only.\p"
+	.string "Tell you what. Run one little\n"
+	.string "parcel down to the seaside villa\l"
+	.string "for me, and I'll put your name\l"
+	.string "at the door.\p"
+	.string "Just a parcel. Don't look inside.\n"
+	.string "Deal?$"
+
+AhuririCity_Text_AssociateParcel:
+	.string "Good kid.\p"
+	.string "Blue villa on the waterfront.\n"
+	.string "Man named Sully. He'll know.$"
+
+AhuririCity_Text_AssociateWaiting:
+	.string "Blue villa. Waterfront. Sully.\n"
+	.string "Don't look inside.$"
+
+AhuririCity_Text_AssociateRefused:
+	.string "Suit yourself.\p"
+	.string "Door stays shut to strangers.\n"
+	.string "Even ones with the family nose.$"
+
+AhuririCity_Text_AssociateDone:
+	.string "Name's at the door, kid.\n"
+	.string "…Welcome to the family business.$"

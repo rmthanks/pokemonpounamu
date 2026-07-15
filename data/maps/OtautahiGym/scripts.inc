@@ -14,6 +14,7 @@ OtautahiGym_EventScript_Pou::
 	waitfanfare
 	waitmessage
 	setflag FLAG_BADGE07_GET
+	msgbox OtautahiGym_Text_Sting7, MSGBOX_DEFAULT
 	msgbox OtautahiGym_Text_After, MSGBOX_DEFAULT
 	release
 	end
@@ -91,3 +92,20 @@ OtautahiGym_Text_PReubenDefeat:
 
 OtautahiGym_Text_PReubenPost:
 	.string "The League's tougher than me.\nBarely.$"
+
+OtautahiGym_Text_Sting7:
+	.string "Pou: They're recruiting here now.\n"
+	.string "My city. Rebuild kids.\p"
+	.string "Same pitch on every corner:\n"
+	.string "'Don't you want to BE somebody?'\p"
+	.string "…That's your brother's pitch.\n"
+	.string "Word for word.\p"
+	.string "He's not building a gang anymore.\n"
+	.string "He's building a belief.$"
+
+OtautahiGym_EventScript_RuleKid::
+	msgbox OtautahiGym_Text_RuleKid, MSGBOX_NPC
+	end
+
+OtautahiGym_Text_RuleKid:
+	.string "Scaffold rules: SLOWEST moves\nfirst in here.\pYour speedy team? Backwards.\pSlow and steady isn't a saying\nhere. It's the law.$"

@@ -357,6 +357,8 @@ HeretaungaTown_EventScript_Rata::
 	faceplayer
 	goto_if_set FLAG_BADGE01_GET, HeretaungaTown_EventScript_RataRetalk
 	goto_if_unset FLAG_UNUSED_0x044, HeretaungaTown_EventScript_RataQuietOrchard
+	goto_if_not_defeated TRAINER_GYM1_ADA, HeretaungaTown_Rata_MidHarvest
+	goto_if_not_defeated TRAINER_GYM1_ZARA, HeretaungaTown_Rata_MidHarvest
 	msgbox HeretaungaTown_Text_RataPreBattle, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_RATA, HeretaungaTown_Text_RataDefeat
 	msgbox HeretaungaTown_Text_RataBadgeSpeech, MSGBOX_DEFAULT
@@ -370,6 +372,8 @@ HeretaungaTown_EventScript_Rata::
 	end
 
 HeretaungaTown_EventScript_RataRetalk::
+	goto_if_set FLAG_UNUSED_0x29F, HeretaungaTown_EventScript_RataRetalkKnown
+	goto_if_set FLAG_UNUSED_0x296, HeretaungaTown_Rata_MauriOnce
 	goto_if_unset FLAG_UNUSED_0x04E, HeretaungaTown_EventScript_RataRetalkPlain
 	goto_if_set FLAG_UNUSED_0x27E, HeretaungaTown_EventScript_RataRevealDone
 	msgbox HeretaungaTown_Text_RevealWalk, MSGBOX_DEFAULT
@@ -1747,3 +1751,47 @@ HeretaungaTown_Text_CuzzyMauri2:
 	.string "you've become.\p"
 	.string "Go back up, cuz.\n"
 	.string "All the way back up.$"
+
+HeretaungaTown_Rata_MidHarvest::
+	msgbox HeretaungaTown_Text_RataMidHarvest, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_RataMidHarvest:
+	.string "Rata: Love, look at the trees -\n"
+	.string "we're mid-harvest!\p"
+	.string "Give the hands a lift first.\n"
+	.string "They're out in the rows, and\l"
+	.string "they battle better than they pick.\p"
+	.string "Help them finish, and the orchard\n"
+	.string "is all yours to fight in.$"
+
+HeretaungaTown_Text_RataMauriKnown:
+	.string "Rata: Cuzzy told me what he\n"
+	.string "found in your pendant.\p"
+	.string "What my mum put there.\p"
+	.string "…'Wear it, and the rivers\n"
+	.string "remember you.'\p"
+	.string "She wasn't being poetic.\n"
+	.string "She was giving directions.\p"
+	.string "All those years I thought she\n"
+	.string "was odd. She was a KAITIAKI,\l"
+	.string "{PLAYER}. And she chose you\l"
+	.string "before you were born.$"
+
+HeretaungaTown_Rata_MauriOnce::
+	msgbox HeretaungaTown_Text_RataMauriKnown, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x29F
+	release
+	end
+
+HeretaungaTown_EventScript_RataRetalkKnown::
+	msgbox HeretaungaTown_Text_RataKnownAfter, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_RataKnownAfter:
+	.string "Rata: Go on then, love.\n"
+	.string "The mountains are waiting.\p"
+	.string "…She'd be so proud. Both of us.\n"
+	.string "All three of us.$"

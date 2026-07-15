@@ -14,6 +14,7 @@ WhakatuGym_EventScript_Roto::
 	waitfanfare
 	waitmessage
 	setflag FLAG_BADGE06_GET
+	msgbox WhakatuGym_Text_Sting6, MSGBOX_DEFAULT
 	msgbox WhakatuGym_Text_After, MSGBOX_DEFAULT
 	release
 	end
@@ -91,3 +92,19 @@ WhakatuGym_Text_POscarDefeat:
 
 WhakatuGym_Text_POscarPost:
 	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+WhakatuGym_Text_Sting6:
+	.string "Roto: Word from home, kid.\n"
+	.string "You should hear it from a friend.\p"
+	.string "The orchard's been walled off.\n"
+	.string "Mob fences, Mob dogs.\p"
+	.string "Your mum's alright.\n"
+	.string "The trees aren't.\p"
+	.string "…I'm sorry. Keep moving.$"
+
+WhakatuGym_EventScript_RuleKid::
+	msgbox WhakatuGym_Text_RuleKid, MSGBOX_NPC
+	end
+
+WhakatuGym_Text_RuleKid:
+	.string "Sunniest city in the country -\nand in here it NEVER sets.\pFire hits like a truck in there.\pRocks and rain don't mind the sun.$"

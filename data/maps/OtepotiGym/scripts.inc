@@ -14,6 +14,7 @@ OtepotiGym_EventScript_Huka::
 	waitfanfare
 	waitmessage
 	setflag FLAG_BADGE08_GET
+	msgbox OtepotiGym_Text_Sting8, MSGBOX_DEFAULT
 	msgbox OtepotiGym_Text_After, MSGBOX_DEFAULT
 	release
 	end
@@ -91,3 +92,21 @@ OtepotiGym_Text_PTeddyDefeat:
 
 OtepotiGym_Text_PTeddyPost:
 	.string "The land remembers everyone\nwho crosses it.$"
+
+OtepotiGym_Text_Sting8:
+	.string "Huka: Eight walls. You hit\n"
+	.string "every one and came through.\p"
+	.string "…Cuzzy up in Heretaunga has been\n"
+	.string "asking after you. Says he's\l"
+	.string "finished something.\p"
+	.string "Go home first, e hoa.\n"
+	.string "THEN the League.\p"
+	.string "The south will still be cold\n"
+	.string "when you get back.$"
+
+OtepotiGym_EventScript_RuleKid::
+	msgbox OtepotiGym_Text_RuleKid, MSGBOX_NPC
+	end
+
+OtepotiGym_Text_RuleKid:
+	.string "It snows INDOORS, mate. Never\nstops. Everything not made of\lice just… wears down.\pPack healing. Pack patience.\pIt's an endurance thing.$"

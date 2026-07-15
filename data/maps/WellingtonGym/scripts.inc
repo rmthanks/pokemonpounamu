@@ -14,6 +14,7 @@ WellingtonGym_EventScript_Manu::
 	waitfanfare
 	waitmessage
 	setflag FLAG_BADGE05_GET
+	msgbox WellingtonGym_Text_Sting5, MSGBOX_DEFAULT
 	msgbox WellingtonGym_Text_After, MSGBOX_DEFAULT
 	release
 	end
@@ -121,3 +122,20 @@ WellingtonGym_Text_PMaxDefeat:
 
 WellingtonGym_Text_PMaxPost:
 	.string "The League's tougher than me.\nBarely.$"
+
+WellingtonGym_Text_Sting5:
+	.string "Manu: …Before you go.\p"
+	.string "The tower in Tamaki lit up last\n"
+	.string "night. Every floor. Nobody\l"
+	.string "rents THAT many floors.\p"
+	.string "Whatever your brother's building,\n"
+	.string "it's nearly built.\p"
+	.string "Cross the strait, e hoa.\n"
+	.string "The wind will be behind you.$"
+
+WellingtonGym_EventScript_RuleKid::
+	msgbox WellingtonGym_Text_RuleKid, MSGBOX_NPC
+	end
+
+WellingtonGym_Text_RuleKid:
+	.string "The gale blows for HER birds.\nThey move first. Always.\pPriority moves don't care about\nwind. Neither does a good wall.$"

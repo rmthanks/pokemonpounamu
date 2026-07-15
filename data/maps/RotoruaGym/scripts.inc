@@ -17,6 +17,7 @@ RotoruaGym_EventScript_Whenua::
 	waitfanfare
 	waitmessage
 	setflag FLAG_BADGE03_GET
+	msgbox RotoruaGym_Text_Sting3, MSGBOX_DEFAULT
 	msgbox RotoruaGym_Text_WhenuaAfter, MSGBOX_DEFAULT
 	release
 	end
@@ -129,3 +130,18 @@ RotoruaGym_Text_PIndieDefeat:
 
 RotoruaGym_Text_PIndiePost:
 	.string "Keep to the track and take\nyour rubbish out, eh.$"
+
+RotoruaGym_Text_Sting3:
+	.string "Whenua: …One more thing.\p"
+	.string "The ground shook last night.\n"
+	.string "Wasn't geothermal. Trucks.\p"
+	.string "The Mob moved something big\n"
+	.string "through Taupo in the dark.\p"
+	.string "Watch the Desert Road, e hoa.$"
+
+RotoruaGym_EventScript_RuleKid::
+	msgbox RotoruaGym_Text_RuleKid, MSGBOX_NPC
+	end
+
+RotoruaGym_Text_RuleKid:
+	.string "The floor BURNS, bro. Both sides,\nevery turn.\pFast fights win here. Don't try\nto outlast the ground itself.$"

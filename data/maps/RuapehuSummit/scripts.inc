@@ -21,6 +21,7 @@ RuapehuSummit_EventScript_Tama::
 	trainerbattle_no_intro TRAINER_TAMA_RUAPEHU, RuapehuSummit_Text_TamaDefeat
 	setflag FLAG_UNUSED_0x90D
 	msgbox RuapehuSummit_Text_TamaAfter, MSGBOX_DEFAULT
+	msgbox RuapehuSummit_Text_TamaPounamu, MSGBOX_DEFAULT
 	release
 	end
 
@@ -77,3 +78,17 @@ RuapehuSummit_Text_TamaAtPeace:
 	.string "cross the summit.\p"
 	.string "You raise a hand.\p"
 	.string "…He waved back this time.$"
+
+RuapehuSummit_Text_TamaPounamu:
+	.string "Tama reaches into his jacket.\p"
+	.string "On a worn cord - river stone.\n"
+	.string "Nan's carving. His year.\p"
+	.string "Tama: …Never threw it away.\p"
+	.string "Told everyone I did. Told MYSELF\n"
+	.string "I did.\p"
+	.string "Carried it up every floor of\n"
+	.string "that tower.\p"
+	.string "…Turns out you can't forget\n"
+	.string "where you come from, {PLAYER}.\p"
+	.string "You can only pretend it's\n"
+	.string "not heavy.$"

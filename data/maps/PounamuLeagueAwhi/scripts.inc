@@ -27,6 +27,8 @@ PounamuLeagueAwhi_Movement_FaceLeader:
 	step_end
 
 PounamuLeagueAwhi_EventScript_Awhi::
+	goto_if_unset FLAG_UNUSED_0x2A0, PounamuLeagueAwhi_MaybeStone
+PounamuLeagueAwhi_AfterStoneCheck::
 	msgbox PounamuLeagueAwhi_Text_Pre, MSGBOX_NPC
 	end
 
@@ -41,3 +43,20 @@ PounamuLeagueAwhi_Text_AfterBattle:
 
 PounamuLeagueAwhi_Text_Onward:
 	.string "Awhi: Go on. Toa's next - the body. He hits harder than me. They all do, up the line.\p…It's good to finally meet you properly, love. She'd be proud. She IS proud.$"
+
+PounamuLeagueAwhi_MaybeStone::
+	goto_if_unset FLAG_UNUSED_0x296, PounamuLeagueAwhi_AfterStoneCheck
+	msgbox PounamuLeagueAwhi_Text_StoneKnown, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x2A0
+	goto PounamuLeagueAwhi_AfterStoneCheck
+
+PounamuLeagueAwhi_Text_StoneKnown:
+	.string "Awhi: That stone at your neck.\p"
+	.string "…He has one too, you know.\n"
+	.string "Your brother.\p"
+	.string "Keeps it in the inside pocket.\n"
+	.string "Left side. Over the heart.\p"
+	.string "He thinks nobody knows.\p"
+	.string "…I loved him. I know where he\n"
+	.string "keeps everything he pretends\l"
+	.string "he threw away.$"

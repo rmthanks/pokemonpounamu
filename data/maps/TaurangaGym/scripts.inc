@@ -17,6 +17,7 @@ TaurangaGym_EventScript_Mua::
 	waitfanfare
 	waitmessage
 	setflag FLAG_BADGE04_GET
+	msgbox TaurangaGym_Text_Sting4, MSGBOX_DEFAULT
 	msgbox TaurangaGym_Text_MuaSurf, MSGBOX_DEFAULT
 	giveitem ITEM_HM03
 	msgbox TaurangaGym_Text_MuaAfter, MSGBOX_DEFAULT
@@ -134,3 +135,19 @@ TaurangaGym_Text_PKobyDefeat:
 
 TaurangaGym_Text_PKobyPost:
 	.string "A bad day's fishing beats a\ngood day's working.$"
+
+TaurangaGym_Text_Sting4:
+	.string "Mua: The sea's yours now.\n"
+	.string "So hear what the sea hears.\p"
+	.string "My brother in Welly says the\n"
+	.string "wind's gone wrong. Storm birds\l"
+	.string "circling the strait.\p"
+	.string "Something down there is waking\n"
+	.string "up early. Go look.$"
+
+TaurangaGym_EventScript_RuleKid::
+	msgbox TaurangaGym_Text_RuleKid, MSGBOX_NPC
+	end
+
+TaurangaGym_Text_RuleKid:
+	.string "The tide comes in on YOUR side -\nyour team fights slowed.\pBring the heavy hitters. Speed's\nno good in knee-deep water.$"

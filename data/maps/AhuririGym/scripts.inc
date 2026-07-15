@@ -17,6 +17,7 @@ AhuririGym_OnTransition:
 AhuririGym_EventScript_Kauri::
 	lock
 	faceplayer
+	goto_if_unset FLAG_UNUSED_0x29E, AhuririGym_Kauri_NoInvite
 	goto_if_set FLAG_BADGE02_GET, AhuririGym_EventScript_KauriRetalk
 	goto_if_unset FLAG_BADGE01_GET, AhuririGym_EventScript_KauriNoBadge
 	msgbox AhuririGym_Text_KauriPreBattle, MSGBOX_DEFAULT
@@ -383,3 +384,23 @@ AhuririGym_Text_PGriffDefeat:
 
 AhuririGym_Text_PGriffPost:
 	.string "The land remembers everyone\nwho crosses it.$"
+
+AhuririGym_Kauri_NoInvite::
+	msgbox AhuririGym_Text_KauriNoInvite, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririGym_Text_KauriNoInvite:
+	.string "Kauri: This is a private club,\n"
+	.string "son. Even for you.\p"
+	.string "Get yourself invited.\n"
+	.string "The boys outside can help.\p"
+	.string "…Everything in this town goes\n"
+	.string "through the boys outside.$"
+
+AhuririGym_EventScript_RuleKid::
+	msgbox AhuririGym_Text_RuleKid, MSGBOX_NPC
+	end
+
+AhuririGym_Text_RuleKid:
+	.string "In here everything's POLITE.\nMisty Terrain - no poison, no\lsleep, no cheap shots.\pScary, eh? Politeness.$"
