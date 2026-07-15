@@ -3401,10 +3401,10 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 6,
         .weight = 48,
         .description = COMPOUND_STRING(
-            "It burns its bodily fluids to create a\n"
-            "sweet-smelling poisonous gas. When its\n"
-            "enemies become disoriented from inhaling\n"
-            "the gas, it attacks them."),
+            "A living fossil, unchanged for 200\n"
+            "million years. It suns itself on warm\n"
+            "stones and remembers, in its bones,\n"
+            "the world before people came."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -3597,10 +3597,10 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 5,
         .weight = 68,
         .description = COMPOUND_STRING(
-            "Despite its adorable appearance, when it\n"
-            "gets angry and flails about, its arms and\n"
-            "legs could knock a pro wrestler sprawling.\n"
-            "It's an incredibly dangerous Pokémon."),
+            "Only females are ever seen. The pale\n"
+            "eye atop her skull reads warmth and\n"
+            "weather - and, the old people say,\n"
+            "things that have not happened yet."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
