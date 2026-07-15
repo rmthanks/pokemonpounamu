@@ -17005,7 +17005,7 @@ Level: 13
 === TRAINER_R2N_PIRI ===
 Name: Piri
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17020,7 +17020,7 @@ Level: 13
 === TRAINER_R2E_MIHI ===
 Name: Mihi
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -17035,7 +17035,7 @@ Level: 14
 === TRAINER_R2E_HEMI ===
 Name: Hemi
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17095,7 +17095,7 @@ Level: 16
 === TRAINER_R35_AROHA ===
 Name: Aroha
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -17110,7 +17110,7 @@ Level: 15
 === TRAINER_BOP_RANGI ===
 Name: Rangi
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17192,7 +17192,7 @@ Level: 25
 === TRAINER_TAURANGA_PROSPECT ===
 Name: Hoani
 Class: Sailor
-Pic: Sailor
+Pic: Sailor Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17237,7 +17237,7 @@ Level: 21
 === TRAINER_R1D_KOA ===
 Name: Koa
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17252,7 +17252,7 @@ Level: 22
 === TRAINER_R1D_ARI ===
 Name: Ari
 Class: Camper
-Pic: Camper
+Pic: Camper Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17282,7 +17282,7 @@ Level: 24
 === TRAINER_R3_RICO ===
 Name: Rico
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17297,7 +17297,7 @@ Level: 26
 === TRAINER_R3_ANA ===
 Name: Ana
 Class: Lass
-Pic: Lass
+Pic: Lass Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -17327,7 +17327,7 @@ Level: 27
 === TRAINER_R1K_RAE ===
 Name: Rae
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17342,7 +17342,7 @@ Level: 28
 === TRAINER_R6_SOL ===
 Name: Sol
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17402,7 +17402,7 @@ Level: 31
 === TRAINER_R1S_FROST ===
 Name: Frost
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18130,7 +18130,7 @@ Level: 6
 === TRAINER_ORD_AROHA ===
 Name: Aroha
 Class: Pokefan
-Pic: Pokefan F
+Pic: Pokefan F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18142,7 +18142,7 @@ Level: 6
 === TRAINER_ORD_TANE ===
 Name: Tane
 Class: School Kid
-Pic: School Kid M
+Pic: School Kid M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18154,7 +18154,7 @@ Level: 4
 === TRAINER_R2B_MARAMA ===
 Name: Marama
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18166,7 +18166,7 @@ Level: 6
 === TRAINER_R2B_MOANA ===
 Name: Moana
 Class: Lass
-Pic: Lass
+Pic: Lass Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18190,7 +18190,7 @@ Level: 9
 === TRAINER_R2B_REWI ===
 Name: Rewi
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18202,7 +18202,7 @@ Level: 7
 === TRAINER_R2B_HANA ===
 Name: Hana
 Class: Bug Catcher
-Pic: Bug Catcher
+Pic: Bug Catcher Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18214,7 +18214,7 @@ Level: 7
 === TRAINER_R2B_PIRI ===
 Name: Piri
 Class: School Kid
-Pic: School Kid M
+Pic: School Kid M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18226,7 +18226,7 @@ Level: 8
 === TRAINER_R2N_TUI ===
 Name: Tui
 Class: Pokefan
-Pic: Pokefan M
+Pic: Pokefan M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18256,7 +18256,7 @@ Level: 12
 === TRAINER_R2N_RIPEKA ===
 Name: Ripeka
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18271,7 +18271,7 @@ Level: 12
 === TRAINER_R2N_HINE ===
 Name: Hine
 Class: Lass
-Pic: Lass
+Pic: Lass Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18346,7 +18346,7 @@ Level: 11
 === TRAINER_R2E2_TIMOTI ===
 Name: Timoti
 Class: Pokefan
-Pic: Pokefan M
+Pic: Pokefan M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18361,7 +18361,7 @@ Level: 12
 === TRAINER_R2E2_HOHEPA ===
 Name: Hohepa
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18376,7 +18376,7 @@ Level: 12
 === TRAINER_R35A_ERUERA ===
 Name: Eruera
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18421,7 +18421,7 @@ Level: 12
 === TRAINER_R35A_MIHI ===
 Name: Mihi
 Class: Bug Catcher
-Pic: Bug Catcher
+Pic: Bug Catcher Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18436,7 +18436,7 @@ Level: 12
 === TRAINER_R35A_NGAIO ===
 Name: Ngaio
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18451,7 +18451,7 @@ Level: 15
 === TRAINER_R35A_RIMA ===
 Name: Rima
 Class: Expert
-Pic: Expert M
+Pic: Expert M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18466,7 +18466,7 @@ Level: 12
 === TRAINER_R35A_KAWE ===
 Name: Kawe
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18496,7 +18496,7 @@ Level: 17
 === TRAINER_R35B_ORIWA ===
 Name: Oriwa
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18541,7 +18541,7 @@ Level: 16
 === TRAINER_R35B_MERI ===
 Name: Meri
 Class: Bug Catcher
-Pic: Bug Catcher
+Pic: Bug Catcher Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18556,7 +18556,7 @@ Level: 16
 === TRAINER_R35B_RIRIA ===
 Name: Riria
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18571,7 +18571,7 @@ Level: 16
 === TRAINER_R35B_KUINI ===
 Name: Kuini
 Class: Lass
-Pic: Lass
+Pic: Lass Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18601,7 +18601,7 @@ Level: 18
 === TRAINER_RBOP_ANIKA ===
 Name: Anika
 Class: Sailor
-Pic: Sailor
+Pic: Sailor Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18616,7 +18616,7 @@ Level: 18
 === TRAINER_RBOP_BEAU ===
 Name: Beau
 Class: Lass
-Pic: Lass
+Pic: Lass Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18631,7 +18631,7 @@ Level: 16
 === TRAINER_RBOP_BLAKE ===
 Name: Blake
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18646,7 +18646,7 @@ Level: 19
 === TRAINER_RBOP_CALEB ===
 Name: Caleb
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18661,7 +18661,7 @@ Level: 19
 === TRAINER_RBOP_CHARLIE ===
 Name: Charlie
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18676,7 +18676,7 @@ Level: 17
 === TRAINER_RBOP_DYLAN ===
 Name: Dylan
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18691,7 +18691,7 @@ Level: 16
 === TRAINER_R36_ELLA ===
 Name: Ella
 Class: Bug Catcher
-Pic: Bug Catcher
+Pic: Bug Catcher Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18706,7 +18706,7 @@ Level: 18
 === TRAINER_R36_FINN ===
 Name: Finn
 Class: Camper
-Pic: Camper
+Pic: Camper Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18721,7 +18721,7 @@ Level: 17
 === TRAINER_R36_HARPER ===
 Name: Harper
 Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+Pic: Pokemon Ranger M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18736,7 +18736,7 @@ Level: 17
 === TRAINER_R36_HUNTER ===
 Name: Hunter
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18751,7 +18751,7 @@ Level: 16
 === TRAINER_R36_ISLA ===
 Name: Isla
 Class: School Kid
-Pic: School Kid M
+Pic: School Kid M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18766,7 +18766,7 @@ Level: 18
 === TRAINER_R36_JACK ===
 Name: Jack
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18841,7 +18841,7 @@ Level: 22
 === TRAINER_R5P_LUCAS ===
 Name: Lucas
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18856,7 +18856,7 @@ Level: 22
 === TRAINER_R5P_MADDIE ===
 Name: Maddie
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18871,7 +18871,7 @@ Level: 20
 === TRAINER_R5P_MASON ===
 Name: Mason
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18886,7 +18886,7 @@ Level: 21
 === TRAINER_R1DP_MIA ===
 Name: Mia
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18901,7 +18901,7 @@ Level: 24
 === TRAINER_R1DP_NATE ===
 Name: Nate
 Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+Pic: Pokemon Ranger M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18916,7 +18916,7 @@ Level: 25
 === TRAINER_R1DP_NIKKI ===
 Name: Nikki
 Class: Camper
-Pic: Camper
+Pic: Camper Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18931,7 +18931,7 @@ Level: 24
 === TRAINER_R1DP_OLIVE ===
 Name: Olive
 Class: Expert
-Pic: Expert F
+Pic: Expert F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -18946,7 +18946,7 @@ Level: 23
 === TRAINER_R1DP_OLLIE ===
 Name: Ollie
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18961,7 +18961,7 @@ Level: 23
 === TRAINER_R1DP_PAIGE ===
 Name: Paige
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -18991,7 +18991,7 @@ Level: 25
 === TRAINER_R43P_RILEY ===
 Name: Riley
 Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Pic: Pokemon Ranger F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19006,7 +19006,7 @@ Level: 25
 === TRAINER_R43P_RUBY ===
 Name: Ruby
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19021,7 +19021,7 @@ Level: 25
 === TRAINER_R43P_SAM ===
 Name: Sam
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19066,7 +19066,7 @@ Level: 25
 === TRAINER_R43P_TYLER ===
 Name: Tyler
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19081,7 +19081,7 @@ Level: 25
 === TRAINER_R43P_WILLOW ===
 Name: Willow
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19156,7 +19156,7 @@ Level: 27
 === TRAINER_R3P_DAISY ===
 Name: Daisy
 Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+Pic: Pokemon Ranger M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19171,7 +19171,7 @@ Level: 27
 === TRAINER_R3P_EMMA ===
 Name: Emma
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19186,7 +19186,7 @@ Level: 26
 === TRAINER_R3P_FLORA ===
 Name: Flora
 Class: Lass
-Pic: Lass
+Pic: Lass Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19216,7 +19216,7 @@ Level: 27
 === TRAINER_R1KP_HEATH ===
 Name: Heath
 Class: Sailor
-Pic: Sailor
+Pic: Sailor Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19231,7 +19231,7 @@ Level: 29
 === TRAINER_R1KP_IVY ===
 Name: Ivy
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19246,7 +19246,7 @@ Level: 28
 === TRAINER_R1KP_JONTY ===
 Name: Jonty
 Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Pic: Pokemon Ranger F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19261,7 +19261,7 @@ Level: 27
 === TRAINER_R1KP_KANE ===
 Name: Kane
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19276,7 +19276,7 @@ Level: 26
 === TRAINER_R1KP_LENA ===
 Name: Lena
 Class: Expert
-Pic: Expert M
+Pic: Expert M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19291,7 +19291,7 @@ Level: 26
 === TRAINER_R1KP_MILO ===
 Name: Milo
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19306,7 +19306,7 @@ Level: 26
 === TRAINER_R6P_NINA ===
 Name: Nina
 Class: Bug Catcher
-Pic: Bug Catcher
+Pic: Bug Catcher Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19321,7 +19321,7 @@ Level: 25
 === TRAINER_R6P_OTIS ===
 Name: Otis
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19336,7 +19336,7 @@ Level: 26
 === TRAINER_R6P_PIPPA ===
 Name: Pippa
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19351,7 +19351,7 @@ Level: 26
 === TRAINER_R6P_REID ===
 Name: Reid
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19396,7 +19396,7 @@ Level: 27
 === TRAINER_R6P_UNA ===
 Name: Una
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19411,7 +19411,7 @@ Level: 26
 === TRAINER_R7P_VINCE ===
 Name: Vince
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19426,7 +19426,7 @@ Level: 29
 === TRAINER_R7P_WADE ===
 Name: Wade
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19456,7 +19456,7 @@ Level: 31
 === TRAINER_R7P_YVETTE ===
 Name: Yvette
 Class: Expert
-Pic: Expert M
+Pic: Expert M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19471,7 +19471,7 @@ Level: 29
 === TRAINER_R7P_ZACH ===
 Name: Zach
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19489,7 +19489,7 @@ Level: 33
 === TRAINER_R7P_AKI ===
 Name: Aki
 Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Pic: Pokemon Ranger F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19504,7 +19504,7 @@ Level: 33
 === TRAINER_R7P_BEX ===
 Name: Bex
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19519,7 +19519,7 @@ Level: 30
 === TRAINER_R7P_CAL ===
 Name: Cal
 Class: Black Belt
-Pic: Black Belt
+Pic: Black Belt Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19552,7 +19552,7 @@ Level: 29
 === TRAINER_R7P_ELI ===
 Name: Eli
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19624,7 +19624,7 @@ Level: 34
 === TRAINER_R1SP_JOSS ===
 Name: Joss
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19672,7 +19672,7 @@ Level: 34
 === TRAINER_R1SP_MILA ===
 Name: Mila
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19720,7 +19720,7 @@ Level: 36
 === TRAINER_R5RP_PETE ===
 Name: Pete
 Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+Pic: Pokemon Ranger M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19750,7 +19750,7 @@ Level: 26
 === TRAINER_R5RP_SID ===
 Name: Sid
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19765,7 +19765,7 @@ Level: 23
 === TRAINER_R5RP_TILA ===
 Name: Tila
 Class: Camper
-Pic: Camper
+Pic: Camper Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19780,7 +19780,7 @@ Level: 24
 === TRAINER_R5RP_UMI ===
 Name: Umi
 Class: Expert
-Pic: Expert F
+Pic: Expert F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19810,7 +19810,7 @@ Level: 25
 === TRAINER_R5RP_WES ===
 Name: Wes
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19858,7 +19858,7 @@ Level: 54
 === TRAINER_RUAP_ARIKI ===
 Name: Ariki
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19873,7 +19873,7 @@ Level: 54
 === TRAINER_RUAP_HORI ===
 Name: Hori
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19891,7 +19891,7 @@ Level: 56
 === TRAINER_RUAP_KUPE ===
 Name: Kupe
 Class: Expert
-Pic: Expert F
+Pic: Expert F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19909,7 +19909,7 @@ Level: 56
 === TRAINER_TMTP_MIRIAMA ===
 Name: Miriama
 Class: Expert
-Pic: Expert M
+Pic: Expert M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19927,7 +19927,7 @@ Level: 46
 === TRAINER_TMTP_REREWA ===
 Name: Rerewa
 Class: Expert
-Pic: Expert F
+Pic: Expert F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19945,7 +19945,7 @@ Level: 48
 === TRAINER_TMTP_TAINUI ===
 Name: Tainui
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19993,7 +19993,7 @@ Level: 48
 === TRAINER_HTT_HIKA ===
 Name: Hika
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20005,7 +20005,7 @@ Level: 8
 === TRAINER_HTT_MANAIA ===
 Name: Manaia
 Class: Lass
-Pic: Lass
+Pic: Lass Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20017,7 +20017,7 @@ Level: 7
 === TRAINER_HTT_NGAIRE ===
 Name: Ngaire
 Class: School Kid
-Pic: School Kid M
+Pic: School Kid M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20029,7 +20029,7 @@ Level: 6
 === TRAINER_AHC_PAIKEA ===
 Name: Paikea
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20059,7 +20059,7 @@ Level: 14
 === TRAINER_AHC_TAIKA ===
 Name: Taika
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20074,7 +20074,7 @@ Level: 13
 === TRAINER_WRT_UENUKU ===
 Name: Uenuku
 Class: Pokefan
-Pic: Pokefan F
+Pic: Pokefan F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20119,7 +20119,7 @@ Level: 18
 === TRAINER_RTT_TOA ===
 Name: Toa
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20134,7 +20134,7 @@ Level: 21
 === TRAINER_RTT_IPO ===
 Name: Ipo
 Class: Expert
-Pic: Expert F
+Pic: Expert F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20149,7 +20149,7 @@ Level: 19
 === TRAINER_TPT_KIWA ===
 Name: Kiwa
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20164,7 +20164,7 @@ Level: 20
 === TRAINER_TPT_MARARA ===
 Name: Marara
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20179,7 +20179,7 @@ Level: 21
 === TRAINER_TPT_AMIRIA ===
 Name: Amiria
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20194,7 +20194,7 @@ Level: 22
 === TRAINER_TPT_HAKOPA ===
 Name: Hakopa
 Class: Sailor
-Pic: Sailor
+Pic: Sailor Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20224,7 +20224,7 @@ Level: 20
 === TRAINER_TGT_KEREAMA ===
 Name: Kereama
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20254,7 +20254,7 @@ Level: 19
 === TRAINER_WLT_NGAHUIA ===
 Name: Ngahuia
 Class: Guitarist
-Pic: Guitarist
+Pic: Guitarist Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20272,7 +20272,7 @@ Level: 26
 === TRAINER_WLT_OTENE ===
 Name: Otene
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20290,7 +20290,7 @@ Level: 29
 === TRAINER_WLT_PAORA ===
 Name: Paora
 Class: Gentleman
-Pic: Gentleman
+Pic: Gentleman Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20341,7 +20341,7 @@ Level: 28
 === TRAINER_WKT_WAIMARAMA ===
 Name: Waimarama
 Class: Picnicker
-Pic: Picnicker
+Pic: Picnicker Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20371,7 +20371,7 @@ Level: 28
 === TRAINER_WKT_APUTA ===
 Name: Aputa
 Class: Expert
-Pic: Expert M
+Pic: Expert M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20404,7 +20404,7 @@ Level: 32
 === TRAINER_OTT_HEMI ===
 Name: Hemi
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20422,7 +20422,7 @@ Level: 32
 === TRAINER_OTT_KIRI ===
 Name: Kiri
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20455,7 +20455,7 @@ Level: 33
 === TRAINER_OTT_NIKO ===
 Name: Niko
 Class: Pokefan
-Pic: Pokefan F
+Pic: Pokefan F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20470,7 +20470,7 @@ Level: 32
 === TRAINER_OPT_POUNAMU ===
 Name: Pounamu
 Class: Guitarist
-Pic: Guitarist
+Pic: Guitarist Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20518,7 +20518,7 @@ Level: 34
 === TRAINER_OPT_WIKI ===
 Name: Wiki
 Class: Expert
-Pic: Expert M
+Pic: Expert M Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20533,7 +20533,7 @@ Level: 37
 === TRAINER_TMK_ARIA ===
 Name: Aria
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20551,7 +20551,7 @@ Level: 48
 === TRAINER_TMK_BODHI ===
 Name: Bodhi
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20569,7 +20569,7 @@ Level: 46
 === TRAINER_TMK_CLEO ===
 Name: Cleo
 Class: Gentleman
-Pic: Gentleman
+Pic: Gentleman Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20602,7 +20602,7 @@ Level: 49
 === TRAINER_TMK_EDDIE ===
 Name: Eddie
 Class: Guitarist
-Pic: Guitarist
+Pic: Guitarist Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20620,7 +20620,7 @@ Level: 48
 === TRAINER_GYM2_FREYA ===
 Name: Freya
 Class: Lass
-Pic: Lass
+Pic: Lass Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20636,7 +20636,7 @@ Level: 13
 === TRAINER_GYM2_GRIFF ===
 Name: Griff
 Class: Gentleman
-Pic: Gentleman
+Pic: Gentleman Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20652,7 +20652,7 @@ Level: 12
 === TRAINER_GYM3_HOLLIE ===
 Name: Hollie
 Class: Hiker
-Pic: Hiker
+Pic: Hiker Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20668,7 +20668,7 @@ Level: 21
 === TRAINER_GYM3_INDIE ===
 Name: Indie
 Class: Pkmn Ranger
-Pic: Pokemon Ranger M
+Pic: Pokemon Ranger M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20684,7 +20684,7 @@ Level: 20
 === TRAINER_GYM4_JORJA ===
 Name: Jorja
 Class: Sailor
-Pic: Sailor
+Pic: Sailor Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20700,7 +20700,7 @@ Level: 22
 === TRAINER_GYM4_KOBY ===
 Name: Koby
 Class: Fisherman
-Pic: Fisherman
+Pic: Fisherman Brown
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20716,7 +20716,7 @@ Level: 22
 === TRAINER_GYM5_LARA ===
 Name: Lara
 Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Pic: Pokemon Ranger F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20763,7 +20763,7 @@ Level: 27
 === TRAINER_GYM6_OSCAR ===
 Name: Oscar
 Class: Camper
-Pic: Camper
+Pic: Camper Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20797,7 +20797,7 @@ Level: 33
 === TRAINER_GYM7_REUBEN ===
 Name: Reuben
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20843,7 +20843,7 @@ Level: 34
 === TRAINER_TWEX_URSULA ===
 Name: Ursula
 Class: Black Belt
-Pic: Black Belt
+Pic: Black Belt Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20858,7 +20858,7 @@ Level: 42
 === TRAINER_TWEX_VERA ===
 Name: Vera
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20876,7 +20876,7 @@ Level: 43
 === TRAINER_VICT_WREN ===
 Name: Wren
 Class: Cooltrainer
-Pic: Cooltrainer M
+Pic: Cooltrainer M Tan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20891,7 +20891,7 @@ Level: 42
 === TRAINER_VICT_XANTHE ===
 Name: Xanthe
 Class: Cooltrainer
-Pic: Cooltrainer F
+Pic: Cooltrainer F Brown
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20927,7 +20927,7 @@ Level: 42
 === TRAINER_GYM1_ZARA ===
 Name: Zara
 Class: Pokefan
-Pic: Pokefan F
+Pic: Pokefan F Tan
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20940,7 +20940,7 @@ Level: 8
 === TRAINER_GYM1_ADA ===
 Name: Ada
 Class: Youngster
-Pic: Youngster
+Pic: Youngster Tan
 Gender: Male
 Music: Male
 Double Battle: No

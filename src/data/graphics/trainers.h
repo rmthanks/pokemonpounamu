@@ -367,10 +367,10 @@ const u16 gTrainerPalette_LeaderGiovanniFrlg[] = INCGFX_U16("graphics/trainers/p
 const u32 gTrainerFrontPic_RocketGruntMFrlg[] = INCGFX_U32("graphics/trainers/front_pics/rocket_grunt_m_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_RocketGruntMFrlg[] = INCGFX_U16("graphics/trainers/palettes/rocket_grunt_m_frlg.pal", ".gbapal");
 
-const u32 gTrainerFrontPic_CooltrainerMFrlg[] = INCGFX_U32("graphics/trainers/front_pics/cool_trainer_m_frlg.png", ".4bpp.smol");
+const u32 gTrainerFrontPic_CoolTrainerMFrlg[] = INCGFX_U32("graphics/trainers/front_pics/cool_trainer_m_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_CooltrainerMFrlg[] = INCGFX_U16("graphics/trainers/palettes/cool_trainer_m_frlg.pal", ".gbapal");
 
-const u32 gTrainerFrontPic_CooltrainerFFrlg[] = INCGFX_U32("graphics/trainers/front_pics/cool_trainer_f_frlg.png", ".4bpp.smol");
+const u32 gTrainerFrontPic_CoolTrainerFFrlg[] = INCGFX_U32("graphics/trainers/front_pics/cool_trainer_f_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_CooltrainerFFrlg[] = INCGFX_U16("graphics/trainers/palettes/cool_trainer_f_frlg.pal", ".gbapal");
 
 const u32 gTrainerFrontPic_EliteFourLoreleiFrlg[] = INCGFX_U32("graphics/trainers/front_pics/elite_four_lorelei_frlg.png", ".4bpp.smol");
@@ -559,6 +559,47 @@ const union AnimCmd *const sBackAnims_OldManPokedude[] = {
     sAnimCmd_OldManPokedude,
     sAnim_GeneralFrame0,
 };
+
+const u16 gTrainerPalette_YoungsterTan[] = INCGFX_U16("graphics/trainers/palettes/youngster_tan.pal", ".gbapal");
+const u16 gTrainerPalette_YoungsterBrown[] = INCGFX_U16("graphics/trainers/palettes/youngster_brown.pal", ".gbapal");
+const u16 gTrainerPalette_LassTan[] = INCGFX_U16("graphics/trainers/palettes/lass_tan.pal", ".gbapal");
+const u16 gTrainerPalette_LassBrown[] = INCGFX_U16("graphics/trainers/palettes/lass_brown.pal", ".gbapal");
+const u16 gTrainerPalette_SchoolKidMTan[] = INCGFX_U16("graphics/trainers/palettes/school_kid_m_tan.pal", ".gbapal");
+const u16 gTrainerPalette_SchoolKidMBrown[] = INCGFX_U16("graphics/trainers/palettes/school_kid_m_brown.pal", ".gbapal");
+const u16 gTrainerPalette_CamperTan[] = INCGFX_U16("graphics/trainers/palettes/camper_tan.pal", ".gbapal");
+const u16 gTrainerPalette_CamperBrown[] = INCGFX_U16("graphics/trainers/palettes/camper_brown.pal", ".gbapal");
+const u16 gTrainerPalette_PicnickerTan[] = INCGFX_U16("graphics/trainers/palettes/picnicker_tan.pal", ".gbapal");
+const u16 gTrainerPalette_PicnickerBrown[] = INCGFX_U16("graphics/trainers/palettes/picnicker_brown.pal", ".gbapal");
+const u16 gTrainerPalette_HikerTan[] = INCGFX_U16("graphics/trainers/palettes/hiker_tan.pal", ".gbapal");
+const u16 gTrainerPalette_HikerBrown[] = INCGFX_U16("graphics/trainers/palettes/hiker_brown.pal", ".gbapal");
+const u16 gTrainerPalette_FishermanTan[] = INCGFX_U16("graphics/trainers/palettes/fisherman_tan.pal", ".gbapal");
+const u16 gTrainerPalette_FishermanBrown[] = INCGFX_U16("graphics/trainers/palettes/fisherman_brown.pal", ".gbapal");
+const u16 gTrainerPalette_BugCatcherTan[] = INCGFX_U16("graphics/trainers/palettes/bug_catcher_tan.pal", ".gbapal");
+const u16 gTrainerPalette_BugCatcherBrown[] = INCGFX_U16("graphics/trainers/palettes/bug_catcher_brown.pal", ".gbapal");
+const u16 gTrainerPalette_PokemonRangerMTan[] = INCGFX_U16("graphics/trainers/palettes/pokemon_ranger_m_tan.pal", ".gbapal");
+const u16 gTrainerPalette_PokemonRangerMBrown[] = INCGFX_U16("graphics/trainers/palettes/pokemon_ranger_m_brown.pal", ".gbapal");
+const u16 gTrainerPalette_PokemonRangerFTan[] = INCGFX_U16("graphics/trainers/palettes/pokemon_ranger_f_tan.pal", ".gbapal");
+const u16 gTrainerPalette_PokemonRangerFBrown[] = INCGFX_U16("graphics/trainers/palettes/pokemon_ranger_f_brown.pal", ".gbapal");
+const u16 gTrainerPalette_ExpertMTan[] = INCGFX_U16("graphics/trainers/palettes/expert_m_tan.pal", ".gbapal");
+const u16 gTrainerPalette_ExpertMBrown[] = INCGFX_U16("graphics/trainers/palettes/expert_m_brown.pal", ".gbapal");
+const u16 gTrainerPalette_ExpertFTan[] = INCGFX_U16("graphics/trainers/palettes/expert_f_tan.pal", ".gbapal");
+const u16 gTrainerPalette_ExpertFBrown[] = INCGFX_U16("graphics/trainers/palettes/expert_f_brown.pal", ".gbapal");
+const u16 gTrainerPalette_PokefanMTan[] = INCGFX_U16("graphics/trainers/palettes/pokefan_m_tan.pal", ".gbapal");
+const u16 gTrainerPalette_PokefanMBrown[] = INCGFX_U16("graphics/trainers/palettes/pokefan_m_brown.pal", ".gbapal");
+const u16 gTrainerPalette_PokefanFTan[] = INCGFX_U16("graphics/trainers/palettes/pokefan_f_tan.pal", ".gbapal");
+const u16 gTrainerPalette_PokefanFBrown[] = INCGFX_U16("graphics/trainers/palettes/pokefan_f_brown.pal", ".gbapal");
+const u16 gTrainerPalette_CooltrainerMTan[] = INCGFX_U16("graphics/trainers/palettes/cooltrainer_m_tan.pal", ".gbapal");
+const u16 gTrainerPalette_CooltrainerMBrown[] = INCGFX_U16("graphics/trainers/palettes/cooltrainer_m_brown.pal", ".gbapal");
+const u16 gTrainerPalette_CooltrainerFTan[] = INCGFX_U16("graphics/trainers/palettes/cooltrainer_f_tan.pal", ".gbapal");
+const u16 gTrainerPalette_CooltrainerFBrown[] = INCGFX_U16("graphics/trainers/palettes/cooltrainer_f_brown.pal", ".gbapal");
+const u16 gTrainerPalette_SailorTan[] = INCGFX_U16("graphics/trainers/palettes/sailor_tan.pal", ".gbapal");
+const u16 gTrainerPalette_SailorBrown[] = INCGFX_U16("graphics/trainers/palettes/sailor_brown.pal", ".gbapal");
+const u16 gTrainerPalette_BlackBeltTan[] = INCGFX_U16("graphics/trainers/palettes/black_belt_tan.pal", ".gbapal");
+const u16 gTrainerPalette_BlackBeltBrown[] = INCGFX_U16("graphics/trainers/palettes/black_belt_brown.pal", ".gbapal");
+const u16 gTrainerPalette_GuitaristTan[] = INCGFX_U16("graphics/trainers/palettes/guitarist_tan.pal", ".gbapal");
+const u16 gTrainerPalette_GuitaristBrown[] = INCGFX_U16("graphics/trainers/palettes/guitarist_brown.pal", ".gbapal");
+const u16 gTrainerPalette_GentlemanTan[] = INCGFX_U16("graphics/trainers/palettes/gentleman_tan.pal", ".gbapal");
+const u16 gTrainerPalette_GentlemanBrown[] = INCGFX_U16("graphics/trainers/palettes/gentleman_brown.pal", ".gbapal");
 
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
@@ -1092,11 +1133,11 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     },
     [TRAINER_PIC_COOLTRAINER_M_FRLG] =
     {
-        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CooltrainerMFrlg, gTrainerPalette_CooltrainerMFrlg),
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CoolTrainerMFrlg, gTrainerPalette_CooltrainerMFrlg),
     },
     [TRAINER_PIC_COOLTRAINER_F_FRLG] =
     {
-        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CooltrainerFFrlg, gTrainerPalette_CooltrainerFFrlg),
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CoolTrainerFFrlg, gTrainerPalette_CooltrainerFFrlg),
     },
     [TRAINER_PIC_ELITE_FOUR_LORELEI_FRLG] =
     {
@@ -1225,5 +1266,165 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_PAINTER_FRLG] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PainterFrlg, gTrainerPalette_PainterFrlg),
+    },
+    [TRAINER_PIC_YOUNGSTER_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Youngster, gTrainerPalette_YoungsterTan),
+    },
+    [TRAINER_PIC_YOUNGSTER_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Youngster, gTrainerPalette_YoungsterBrown),
+    },
+    [TRAINER_PIC_LASS_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lass, gTrainerPalette_LassTan),
+    },
+    [TRAINER_PIC_LASS_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lass, gTrainerPalette_LassBrown),
+    },
+    [TRAINER_PIC_SCHOOL_KID_M_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SchoolKidM, gTrainerPalette_SchoolKidMTan),
+    },
+    [TRAINER_PIC_SCHOOL_KID_M_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SchoolKidM, gTrainerPalette_SchoolKidMBrown),
+    },
+    [TRAINER_PIC_CAMPER_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Camper, gTrainerPalette_CamperTan),
+    },
+    [TRAINER_PIC_CAMPER_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Camper, gTrainerPalette_CamperBrown),
+    },
+    [TRAINER_PIC_PICNICKER_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Picnicker, gTrainerPalette_PicnickerTan),
+    },
+    [TRAINER_PIC_PICNICKER_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Picnicker, gTrainerPalette_PicnickerBrown),
+    },
+    [TRAINER_PIC_HIKER_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Hiker, gTrainerPalette_HikerTan),
+    },
+    [TRAINER_PIC_HIKER_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Hiker, gTrainerPalette_HikerBrown),
+    },
+    [TRAINER_PIC_FISHERMAN_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Fisherman, gTrainerPalette_FishermanTan),
+    },
+    [TRAINER_PIC_FISHERMAN_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Fisherman, gTrainerPalette_FishermanBrown),
+    },
+    [TRAINER_PIC_BUG_CATCHER_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_BugCatcher, gTrainerPalette_BugCatcherTan),
+    },
+    [TRAINER_PIC_BUG_CATCHER_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_BugCatcher, gTrainerPalette_BugCatcherBrown),
+    },
+    [TRAINER_PIC_POKEMON_RANGER_M_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokemonRangerM, gTrainerPalette_PokemonRangerMTan),
+    },
+    [TRAINER_PIC_POKEMON_RANGER_M_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokemonRangerM, gTrainerPalette_PokemonRangerMBrown),
+    },
+    [TRAINER_PIC_POKEMON_RANGER_F_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokemonRangerF, gTrainerPalette_PokemonRangerFTan),
+    },
+    [TRAINER_PIC_POKEMON_RANGER_F_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokemonRangerF, gTrainerPalette_PokemonRangerFBrown),
+    },
+    [TRAINER_PIC_EXPERT_M_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_ExpertM, gTrainerPalette_ExpertMTan),
+    },
+    [TRAINER_PIC_EXPERT_M_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_ExpertM, gTrainerPalette_ExpertMBrown),
+    },
+    [TRAINER_PIC_EXPERT_F_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_ExpertF, gTrainerPalette_ExpertFTan),
+    },
+    [TRAINER_PIC_EXPERT_F_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_ExpertF, gTrainerPalette_ExpertFBrown),
+    },
+    [TRAINER_PIC_POKEFAN_M_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokefanM, gTrainerPalette_PokefanMTan),
+    },
+    [TRAINER_PIC_POKEFAN_M_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokefanM, gTrainerPalette_PokefanMBrown),
+    },
+    [TRAINER_PIC_POKEFAN_F_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokefanF, gTrainerPalette_PokefanFTan),
+    },
+    [TRAINER_PIC_POKEFAN_F_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PokefanF, gTrainerPalette_PokefanFBrown),
+    },
+    [TRAINER_PIC_COOLTRAINER_M_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CoolTrainerM, gTrainerPalette_CooltrainerMTan),
+    },
+    [TRAINER_PIC_COOLTRAINER_M_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CoolTrainerM, gTrainerPalette_CooltrainerMBrown),
+    },
+    [TRAINER_PIC_COOLTRAINER_F_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CoolTrainerF, gTrainerPalette_CooltrainerFTan),
+    },
+    [TRAINER_PIC_COOLTRAINER_F_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CoolTrainerF, gTrainerPalette_CooltrainerFBrown),
+    },
+    [TRAINER_PIC_SAILOR_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Sailor, gTrainerPalette_SailorTan),
+    },
+    [TRAINER_PIC_SAILOR_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Sailor, gTrainerPalette_SailorBrown),
+    },
+    [TRAINER_PIC_BLACK_BELT_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_BlackBelt, gTrainerPalette_BlackBeltTan),
+    },
+    [TRAINER_PIC_BLACK_BELT_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_BlackBelt, gTrainerPalette_BlackBeltBrown),
+    },
+    [TRAINER_PIC_GUITARIST_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Guitarist, gTrainerPalette_GuitaristTan),
+    },
+    [TRAINER_PIC_GUITARIST_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Guitarist, gTrainerPalette_GuitaristBrown),
+    },
+    [TRAINER_PIC_GENTLEMAN_TAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Gentleman, gTrainerPalette_GentlemanTan),
+    },
+    [TRAINER_PIC_GENTLEMAN_BROWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Gentleman, gTrainerPalette_GentlemanBrown),
     },
 };
