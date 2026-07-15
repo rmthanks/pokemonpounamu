@@ -27,7 +27,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 10,
       "y": 58,
       "elevation": 3,
@@ -40,7 +40,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_TAN",
       "x": 10,
       "y": 24,
       "elevation": 3,
@@ -53,7 +53,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M_TAN",
       "x": 5,
       "y": 39,
       "elevation": 3,
@@ -66,7 +66,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F_TAN",
       "x": 11,
       "y": 7,
       "elevation": 3,
@@ -79,7 +79,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER_TAN",
       "x": 3,
       "y": 60,
       "elevation": 3,
@@ -118,7 +118,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 3,
       "y": 70,
       "elevation": 3,

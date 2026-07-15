@@ -84,7 +84,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR_BROWN",
       "x": 21,
       "y": 30,
       "elevation": 3,
@@ -136,7 +136,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M_TAN",
       "x": 48,
       "y": 19,
       "elevation": 3,

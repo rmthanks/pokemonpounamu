@@ -243,7 +243,7 @@
       "flag": "FLAG_TEMP_12"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F_TAN",
       "x": 63,
       "y": 5,
       "elevation": 3,
@@ -373,7 +373,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5_TAN",
       "x": 72,
       "y": 9,
       "elevation": 3,

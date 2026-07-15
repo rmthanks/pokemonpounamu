@@ -27,7 +27,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 10,
       "y": 60,
       "elevation": 3,
@@ -40,7 +40,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_BROWN",
       "x": 10,
       "y": 26,
       "elevation": 3,
@@ -66,7 +66,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR_BROWN",
       "x": 6,
       "y": 3,
       "elevation": 3,
@@ -92,7 +92,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 13,
       "y": 86,
       "elevation": 3,
@@ -118,7 +118,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_TAN",
       "x": 7,
       "y": 80,
       "elevation": 3,
@@ -131,7 +131,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 5,
       "y": 64,
       "elevation": 3,

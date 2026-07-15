@@ -16,7 +16,7 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3_BROWN",
       "x": 1,
       "y": 10,
       "elevation": 3,

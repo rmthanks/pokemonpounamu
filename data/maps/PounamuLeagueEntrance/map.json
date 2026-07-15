@@ -30,7 +30,7 @@
       "local_id": "LOCALID_LEAGUE_GUARD"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_3_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3_BROWN",
       "x": 4,
       "y": 3,
       "elevation": 3,
@@ -43,7 +43,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
       "x": 8,
       "y": 14,
       "elevation": 3,

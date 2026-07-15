@@ -118,7 +118,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_BROWN",
       "x": 21,
       "y": 26,
       "elevation": 3,
@@ -131,7 +131,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
       "x": 21,
       "y": 4,
       "elevation": 3,

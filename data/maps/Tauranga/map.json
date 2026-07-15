@@ -92,7 +92,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR_BROWN",
       "x": 7,
       "y": 21,
       "elevation": 3,
@@ -105,7 +105,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
       "x": 34,
       "y": 18,
       "elevation": 3,
@@ -118,7 +118,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_BROWN",
       "x": 28,
       "y": 4,
       "elevation": 3,
