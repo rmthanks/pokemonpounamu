@@ -17,6 +17,8 @@ TaurangaGym_EventScript_Mua::
 	waitfanfare
 	waitmessage
 	setflag FLAG_BADGE04_GET
+	msgbox TaurangaGym_Text_MuaSurf, MSGBOX_DEFAULT
+	giveitem ITEM_HM03
 	msgbox TaurangaGym_Text_MuaAfter, MSGBOX_DEFAULT
 	release
 	end
@@ -94,3 +96,12 @@ TaurangaGym_Text_ProspectDefeat:
 TaurangaGym_Text_ProspectPost:
 	.string "Mua's caught everything in that\n"
 	.string "ocean except a day off.$"
+
+TaurangaGym_Text_MuaSurf:
+	.string "Mua: One more thing. The first\n"
+	.string "haul is always shared.\p"
+	.string "SURF. My brothers and I pulled\n"
+	.string "a whole island out of the sea\l"
+	.string "with less.\p"
+	.string "The water's yours now. Treat\n"
+	.string "her like whanau.$"

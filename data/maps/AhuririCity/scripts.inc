@@ -261,3 +261,39 @@ AhuririCity_Text_HoriAfter:
 	.string "shoe money's at.\p"
 	.string "This changes nothing. I'm in\n"
 	.string "a growth phase, me.$"
+
+@ The wharf fisherman - the OLD ROD. (Job 12 seeds from here later.)
+AhuririCity_EventScript_WharfFisher::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x283, AhuririCity_EventScript_WharfFisherDone
+	msgbox AhuririCity_Text_WharfFisher, MSGBOX_DEFAULT
+	giveitem ITEM_OLD_ROD
+	setflag FLAG_UNUSED_0x283
+	msgbox AhuririCity_Text_WharfFisher2, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_EventScript_WharfFisherDone::
+	msgbox AhuririCity_Text_WharfFisherDone, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_Text_WharfFisher:
+	.string "Half this city's fed off that\n"
+	.string "water, one way or another.\p"
+	.string "You've got the look of a kid\n"
+	.string "who's never dropped a line.\p"
+	.string "Here. Spare rod. Old, but the\n"
+	.string "fish don't check.$"
+
+AhuririCity_Text_WharfFisher2:
+	.string "Kahawai off the wharf. Eels up\n"
+	.string "the awa. Carp EVERYWHERE -\l"
+	.string "someone let them loose and\l"
+	.string "they never left.\p"
+	.string "Same old story, eh.$"
+
+AhuririCity_Text_WharfFisherDone:
+	.string "Tight lines, kid.\p"
+	.string "Mind the reef. She's watching.$"
