@@ -50,8 +50,9 @@ Maunga_Hikurangi_Still::
 Maunga_Text_HikurangiDawn:
 	.string "The first light in the country\n"
 	.string "touches the summit stone.\p"
-	.string "The pendant at your neck hums,\n"
-	.string "faint as a held breath.$"
+	.string "The pendant at your neck\n"
+	.string "GLIMMERS - light with no sun\l"
+	.string "behind it.$"
 
 Maunga_Text_HikurangiWakes:
 	.string "Wings. Storm-wide.\p"
@@ -81,3 +82,38 @@ Maunga_Text_SummitAtPeace:
 @ text themes: Taranaki = the mountain that became its exile
 @ (the player chooses not to); Aoraki = the shrine sits BELOW
 @ the peak - you do not stand on his head.
+
+@ Drop at the FOOT of each maunga (the waharoa) - the pendant reacts.
+Maunga_Waharoa_React::
+	lockall
+	goto_if_set FLAG_UNUSED_0x296, Maunga_Waharoa_Finished
+	checkitem ITEM_BLUE_ORB
+	goto_if_eq VAR_RESULT, FALSE, Maunga_Waharoa_Silent
+	msgbox Maunga_Text_PendantStirs, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Maunga_Waharoa_Finished::
+	msgbox Maunga_Text_KohatuAnswers, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Maunga_Waharoa_Silent::
+	msgbox Maunga_Text_WaharoaQuiet, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Maunga_Text_PendantStirs:
+	.string "The pendant stirs against your\n"
+	.string "chest - warm, then warmer.\p"
+	.string "The mountain knows it's here.$"
+
+Maunga_Text_KohatuAnswers:
+	.string "The Mauri Kohatu does not stir.\n"
+	.string "It ANSWERS.\p"
+	.string "Stone calling to stone.$"
+
+Maunga_Text_WaharoaQuiet:
+	.string "A carved gateway stands at the\n"
+	.string "foot of the track.\p"
+	.string "The mountain is quiet.$"

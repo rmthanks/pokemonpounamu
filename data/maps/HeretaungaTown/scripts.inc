@@ -1713,6 +1713,7 @@ HeretaungaTown_Cuzzy_GiveMauri::
 	message HeretaungaTown_Text_ReceivedMauri
 	waitmessage
 	waitfanfare
+	removeitem ITEM_BLUE_ORB
 	giveitem ITEM_RED_ORB
 	setflag FLAG_UNUSED_0x296
 	msgbox HeretaungaTown_Text_CuzzyMauri2, MSGBOX_DEFAULT

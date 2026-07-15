@@ -159,6 +159,14 @@ Homestead_EventScript_TamaSoftens::
 	setflag FLAG_UNUSED_0x281
 	setflag FLAG_UNUSED_0x282
 	msgbox Homestead_Text_KauriLogbook2, MSGBOX_DEFAULT
+	@ --- Mum's gift: the pounamu pendant (nan's carving) ---
+	msgbox Homestead_Text_RataPendant, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message Homestead_Text_ReceivedPendant
+	waitmessage
+	waitfanfare
+	giveitem ITEM_BLUE_ORB
+	msgbox Homestead_Text_RataPendant2, MSGBOX_DEFAULT
 	msgbox Homestead_Text_RataOrchardIsYours, MSGBOX_DEFAULT
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 	setflag FLAG_SYS_POKEMON_GET
@@ -459,3 +467,19 @@ Homestead_Text_AwhiHomeRetalk:
 Homestead_Text_ReceivedLogbook:
 	.string "{PLAYER} received the\n"
 	.string "POKENAV LOGBOOK!$"
+
+Homestead_Text_RataPendant:
+	.string "Rata: And one more. From my side.\p"
+	.string "My mum carved this. River stone,\n"
+	.string "from up the back of beyond.\p"
+	.string "She always said the same thing\n"
+	.string "when she tied it on someone.$"
+
+Homestead_Text_ReceivedPendant:
+	.string "{PLAYER} received the POUNAMU PENDANT!$"
+
+Homestead_Text_RataPendant2:
+	.string "Rata: 'Wear it, and the rivers\n"
+	.string "remember you.'\p"
+	.string "…I never worked out what she\n"
+	.string "meant. Maybe you will.$"

@@ -5605,14 +5605,15 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BLUE_ORB] =
     {
-        .name = ITEM_NAME("Blue Orb"),
+        .name = ITEM_NAME("PounamuPendant"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
+        .importance = 1,
         .description = COMPOUND_STRING(
-            "A blue, glowing orb\n"
-            "said to contain an\n"
-            "ancient power."),
-        .pocket = POCKET_ITEMS,
+        "Nan's carving on a river stone.\n"
+        "It sits warm against your chest,\n"
+        "as if remembering something."),
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
