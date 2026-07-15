@@ -49,6 +49,8 @@ Route35A_Text_NikoraPost:
 Route35A_EventScript_Tawhai::
 	lock
 	faceplayer
+	checkitem ITEM_RED_ORB
+	goto_if_eq VAR_RESULT, TRUE, Route35A_Tawhai_Mauri
 	goto_if_set FLAG_UNUSED_0x278, Route35A_EventScript_TawhaiRetalk
 	msgbox Route35A_Text_TawhaiCamp, MSGBOX_DEFAULT
 	msgbox Route35A_Text_TawhaiKnowsYou, MSGBOX_DEFAULT
@@ -272,3 +274,20 @@ Route35A_Text_PKaweDefeat:
 
 Route35A_Text_PKawePost:
 	.string "Worth it. Rematch at smoko?$"
+
+Route35A_Tawhai_Mauri::
+	msgbox Route35A_Text_TawhaiMauri, MSGBOX_DEFAULT
+	release
+	end
+
+Route35A_Text_TawhaiMauri:
+	.string "Tawhai: …That stone.\p"
+	.string "I felt it before I saw it. Like\n"
+	.string "the bush going quiet before rain.\p"
+	.string "So it's you, then.\p"
+	.string "I told you once - I keep gates.\n"
+	.string "Maybe one day a gate that\l"
+	.string "matters.\p"
+	.string "…When the track up Hikurangi\n"
+	.string "opens, e hoa, it will be these\l"
+	.string "hands that open it. For you.$"

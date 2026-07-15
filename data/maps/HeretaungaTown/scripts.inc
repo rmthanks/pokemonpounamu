@@ -1479,6 +1479,9 @@ HeretaungaTown_OrchardStallMart:
 HeretaungaTown_EventScript_TrainingKoro::
 	lock
 	faceplayer
+	goto_if_set FLAG_UNUSED_0x296, HeretaungaTown_Cuzzy_AfterMauri
+	goto_if_set FLAG_BADGE08_GET, HeretaungaTown_Cuzzy_GiveMauri
+HeretaungaTown_Cuzzy_AfterMauri::
 	checkitem ITEM_STAR_PIECE, 1
 	goto_if_eq VAR_RESULT, TRUE, HeretaungaTown_Koro_Shards
 	checkitem ITEM_GOLD_BOTTLE_CAP
@@ -1703,3 +1706,42 @@ HeretaungaTown_Text_KoroShardKeep:
 	.string "And the river fish swallow the\n"
 	.string "small stones. WHISCASH especially.\l"
 	.string "Greedy fella. Go fishing, cuz.$"
+
+HeretaungaTown_Cuzzy_GiveMauri::
+	msgbox HeretaungaTown_Text_CuzzyMauri1, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message HeretaungaTown_Text_ReceivedMauri
+	waitmessage
+	waitfanfare
+	giveitem ITEM_RED_ORB
+	setflag FLAG_UNUSED_0x296
+	msgbox HeretaungaTown_Text_CuzzyMauri2, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_CuzzyMauri1:
+	.string "Cuzzy Tapeta: Eight badges, cuz.\n"
+	.string "The whole motu knows your name.\p"
+	.string "…I've been carving something.\n"
+	.string "Every shard you ever brought me,\l"
+	.string "I kept a sliver back.\p"
+	.string "River stone from every river\n"
+	.string "you crossed. All in one taonga.\p"
+	.string "It's not for trade. It never was.\n"
+	.string "It's a koha. It's yours.$"
+
+HeretaungaTown_Text_ReceivedMauri:
+	.string "{PLAYER} received the MAURI KOHATU!$"
+
+HeretaungaTown_Text_CuzzyMauri2:
+	.string "Cuzzy Tapeta: A mauri stone.\n"
+	.string "It holds the life of the rivers\l"
+	.string "it came from.\p"
+	.string "The old ones on the maunga have\n"
+	.string "slept a long time. Too long.\p"
+	.string "Carry it up. They'll know it.\n"
+	.string "They'll know YOU.\p"
+	.string "…And find the gatekeeper on the\n"
+	.string "East Cape. He's been waiting his\l"
+	.string "whole life for this. He just\l"
+	.string "doesn't know it yet.$"
