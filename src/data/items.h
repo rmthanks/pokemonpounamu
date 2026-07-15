@@ -1476,7 +1476,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("PP Up"),
     #if I_PRICE >= GEN_7
-        .price = 10000,
+        .price = 500,
     #elif I_PRICE >= GEN_2
         .price = 9800,
     #else

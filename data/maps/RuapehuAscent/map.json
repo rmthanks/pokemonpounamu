@@ -137,6 +137,22 @@
       "elevation": 3,
       "item": "ITEM_STAR_PIECE",
       "flag": "FLAG_UNUSED_0x26F"
+    },
+    {
+      "type": "hidden_item",
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x290"
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 27,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x291"
     }
   ]
 }

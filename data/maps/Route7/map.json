@@ -428,5 +428,38 @@
       "script": "Route7_EventScript_Cornered"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 10,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x286"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 52,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x287"
+    },
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 85,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x288"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x289"
+    }
+  ]
 }

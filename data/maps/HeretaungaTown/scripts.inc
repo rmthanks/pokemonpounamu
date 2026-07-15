@@ -82,6 +82,14 @@ HeretaungaTown_EventScript_OrchardPlayerWon::
 	goto HeretaungaTown_EventScript_OrchardMum
 
 HeretaungaTown_EventScript_OrchardMum::
+	msgbox HeretaungaTown_Text_TamaExpShare1, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message HeretaungaTown_Text_ReceivedExpShare
+	waitmessage
+	waitfanfare
+	giveitem ITEM_EXP_SHARE
+	setflag FLAG_UNUSED_0x285
+	msgbox HeretaungaTown_Text_TamaExpShare2, MSGBOX_DEFAULT
 	removeobject 24
 	setflag FLAG_UNUSED_0x027
 	delay 16
@@ -1471,6 +1479,8 @@ HeretaungaTown_OrchardStallMart:
 HeretaungaTown_EventScript_TrainingKoro::
 	lock
 	faceplayer
+	checkitem ITEM_STAR_PIECE, 1
+	goto_if_eq VAR_RESULT, TRUE, HeretaungaTown_Koro_Shards
 	checkitem ITEM_GOLD_BOTTLE_CAP
 	goto_if_eq VAR_RESULT, TRUE, HeretaungaTown_Koro_Gold
 	checkitem ITEM_BOTTLE_CAP
@@ -1615,3 +1625,76 @@ HeretaungaTown_Text_ShareKidTurnedOff:
 HeretaungaTown_Text_ShareKidTurnedOn:
 	.string "Whanau style! Everyone eats!\n"
 	.string "That's how you grow a team.$"
+
+HeretaungaTown_Text_TamaExpShare1:
+	.string "Tama: …Here. Catch.$"
+
+HeretaungaTown_Text_ReceivedExpShare:
+	.string "{PLAYER} received the EXP. SHARE!$"
+
+HeretaungaTown_Text_TamaExpShare2:
+	.string "Tama: Train ALL of them.\n"
+	.string "Not just your favourite.\p"
+	.string "Get strong, {PLAYER}.\p"
+	.string "…I'll need you at your best\n"
+	.string "one day. You'll see.$"
+
+HeretaungaTown_Koro_Shards::
+	checkitem ITEM_STAR_PIECE, 4
+	goto_if_eq VAR_RESULT, TRUE, HeretaungaTown_Koro_FourShards
+	msgbox HeretaungaTown_Text_KoroOneShardAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_Koro_ShardKeep
+	removeitem ITEM_STAR_PIECE, 1
+	giveitem ITEM_BOTTLE_CAP
+	msgbox HeretaungaTown_Text_KoroShardTraded, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Koro_FourShards::
+	msgbox HeretaungaTown_Text_KoroFourShardAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_Koro_OneInstead
+	removeitem ITEM_STAR_PIECE, 4
+	giveitem ITEM_GOLD_BOTTLE_CAP
+	msgbox HeretaungaTown_Text_KoroShardTraded, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Koro_OneInstead::
+	msgbox HeretaungaTown_Text_KoroOneShardAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_Koro_ShardKeep
+	removeitem ITEM_STAR_PIECE, 1
+	giveitem ITEM_BOTTLE_CAP
+	msgbox HeretaungaTown_Text_KoroShardTraded, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Koro_ShardKeep::
+	msgbox HeretaungaTown_Text_KoroShardKeep, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_KoroOneShardAsk:
+	.string "Koro Tapeta: …E hoa. That's\n"
+	.string "POUNAMU in your pocket.\p"
+	.string "Where the rivers come down\n"
+	.string "off the mountains, the stone\l"
+	.string "comes with them.\p"
+	.string "Trade me one shard for a\n"
+	.string "BOTTLE CAP?$"
+
+HeretaungaTown_Text_KoroFourShardAsk:
+	.string "Koro Tapeta: Four shards…\n"
+	.string "That's a whole stone's worth.\p"
+	.string "Trade all four for a GOLD\n"
+	.string "BOTTLE CAP? The full polish.$"
+
+HeretaungaTown_Text_KoroShardTraded:
+	.string "Koro Tapeta: Ka pai.\p"
+	.string "The old trade: greenstone for\n"
+	.string "craft. Some things don't change.$"
+
+HeretaungaTown_Text_KoroShardKeep:
+	.string "Koro Tapeta: Keep it close, then.\n"
+	.string "Pounamu chooses when it moves.\p"
+	.string "The west coast rivers hold more,\n"
+	.string "if you know where to look.$"

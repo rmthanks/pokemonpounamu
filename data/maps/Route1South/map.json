@@ -185,5 +185,22 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 42,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x28A"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 70,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x28B"
+    }
+  ]
 }
