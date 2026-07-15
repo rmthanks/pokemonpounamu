@@ -55,7 +55,7 @@
       "local_id": "LOCALID_R2_GRUNT2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 7,
       "y": 8,
       "elevation": 3,
@@ -95,7 +95,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
       "x": 10,
       "y": 23,
       "elevation": 3,

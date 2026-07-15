@@ -92,7 +92,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 33,
       "y": 26,
       "elevation": 3,
@@ -118,7 +118,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
       "x": 21,
       "y": 30,
       "elevation": 3,
@@ -131,7 +131,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_3_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
       "x": 21,
       "y": 25,
       "elevation": 3,

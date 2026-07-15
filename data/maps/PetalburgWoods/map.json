@@ -122,7 +122,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 7,
       "y": 32,
       "elevation": 3,
@@ -135,7 +135,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 4,
       "y": 14,
       "elevation": 3,

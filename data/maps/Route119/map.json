@@ -66,7 +66,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 12,
       "y": 123,
       "elevation": 3,
@@ -131,7 +131,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 35,
       "y": 83,
       "elevation": 4,
@@ -536,7 +536,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
       "x": 32,
       "y": 15,
       "elevation": 3,

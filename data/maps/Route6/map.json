@@ -27,7 +27,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 10,
       "y": 60,
       "elevation": 3,
@@ -53,7 +53,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 3,
       "y": 54,
       "elevation": 3,
@@ -79,7 +79,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 10,
       "y": 12,
       "elevation": 3,

@@ -30,7 +30,7 @@
       "local_id": "LOCALID_TAURANGA_GYM_MUA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 9,
       "y": 16,
       "elevation": 3,
@@ -43,7 +43,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR_BROWN",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 7,
       "y": 8,
       "elevation": 3,
@@ -56,7 +56,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_TAN",
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
       "x": 4,
       "y": 4,
       "elevation": 3,
