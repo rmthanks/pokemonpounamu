@@ -17148,7 +17148,7 @@ Starting Status: Sea Of Fire Player / Sea Of Fire Opponent
 Mudbray
 Level: 19
 
-Numel
+Sandygast
 Level: 20
 
 Marshtomp
@@ -17163,7 +17163,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Sizzlipede
 Level: 19
 
 Slugma
@@ -17215,7 +17215,7 @@ AI: Check Bad Move
 Slugma
 Level: 20
 
-Numel
+Sizzlipede
 Level: 20
 
 === TRAINER_R5_ERU ===
@@ -17242,7 +17242,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machop
+Timburr
 Level: 21
 
 Mudbray
@@ -17257,10 +17257,10 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Sizzlipede
 Level: 21
 
-Sandshrew
+Mudbray
 Level: 22
 
 === TRAINER_R43_WAI ===
@@ -17290,7 +17290,7 @@ AI: Check Bad Move
 Mightyena
 Level: 25
 
-Machoke
+Gurdurr
 Level: 26
 
 === TRAINER_R3_ANA ===
@@ -17332,7 +17332,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machoke
+Gurdurr
 Level: 27
 
 Graveler
@@ -17347,7 +17347,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machoke
+Gurdurr
 Level: 28
 
 Flaaffy
@@ -17380,7 +17380,7 @@ AI: Check Bad Move
 Lairon
 Level: 30
 
-Machoke
+Gurdurr
 Level: 31
 
 === TRAINER_R7_RANGI ===
@@ -17441,7 +17441,7 @@ AI: Basic Trainer
 Slugma
 Level: 27
 
-Camerupt
+Centiskorch
 Level: 28
 
 Magcargo
@@ -17456,7 +17456,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Sizzlipede
 Level: 27
 
 Slugma
@@ -17491,7 +17491,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machoke
+Gurdurr
 Level: 31
 
 Lairon
@@ -17591,7 +17591,7 @@ Level: 46
 Umbreon
 Level: 47
 
-Houndoom
+Sharpedo
 Level: 47
 
 Honchkrow
@@ -17619,7 +17619,7 @@ Level: 49
 Poliwrath
 Level: 50
 
-Machamp
+Crabominable
 Level: 51
 
 === TRAINER_WHETU ===
@@ -17739,7 +17739,7 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Houndoom
+Sharpedo
 Level: 43
 
 Perrserker
@@ -18028,7 +18028,7 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Machop
+Timburr
 Level: 9
 Ability: Shed Skin
 
@@ -18041,7 +18041,7 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Machop
+Timburr
 Level: 18
 Ability: Shed Skin
 
@@ -18054,7 +18054,7 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Machoke
+Gurdurr
 Level: 33
 Ability: Moxie
 
@@ -18067,7 +18067,7 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Machoke
+Gurdurr
 Level: 42
 Ability: Moxie
 
@@ -18080,6 +18080,6 @@ Music: Aqua
 Double Battle: No
 AI: Smart Trainer
 
-Machamp @ Leftovers
+Conkeldurr @ Leftovers
 Level: 54
 Ability: Moxie
