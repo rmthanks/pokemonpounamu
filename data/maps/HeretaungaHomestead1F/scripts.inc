@@ -488,6 +488,8 @@ Homestead_Text_RataPendant2:
 	.string "It's so you don't forget where\n"
 	.string "you came from. No matter how\l"
 	.string "far you go.\p"
+	.string "It carries the mana of your\n"
+	.string "family with you.\p"
 	.string "…I never worked out the rivers\n"
 	.string "part. Maybe you will.$"
 
