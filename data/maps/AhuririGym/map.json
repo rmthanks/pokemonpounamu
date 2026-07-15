@@ -85,7 +85,7 @@
       "local_id": "LOCALID_AHURIRI_GYM_GRUNT_B"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "graphics_id": "OBJ_EVENT_GFX_MOM_BROWN",
       "x": 4,
       "y": 4,
       "elevation": 3,
@@ -99,7 +99,7 @@
       "local_id": "LOCALID_AHURIRI_GYM_RATA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_TAN",
       "x": 2,
       "y": 7,
       "elevation": 3,
@@ -112,7 +112,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_BROWN",
       "x": 8,
       "y": 10,
       "elevation": 3,

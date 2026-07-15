@@ -129,7 +129,7 @@ Rotorua_EventScript_PToa::
 	end
 
 Rotorua_Text_PToaIntro:
-	.string "Toa: I've tramped every track in\nthis region. Fight me.$"
+	.string "Tuku: I've tramped every track in\nthis region. Fight me.$"
 
 Rotorua_Text_PToaDefeat:
 	.string "Blisters AND a loss. Ka pai.$"

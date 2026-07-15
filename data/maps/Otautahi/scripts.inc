@@ -82,7 +82,7 @@ Otautahi_EventScript_PEru::
 	end
 
 Otautahi_Text_PEruIntro:
-	.string "Eru: You've got badges. I've got\nstandards. Let's see.$"
+	.string "Epa: You've got badges. I've got\nstandards. Let's see.$"
 
 Otautahi_Text_PEruDefeat:
 	.string "Standards met.$"
@@ -96,7 +96,7 @@ Otautahi_EventScript_PHemi::
 	end
 
 Otautahi_Text_PHemiIntro:
-	.string "Hemi: Kia ora! Great day for it, eh?\nBattle before the weather turns?$"
+	.string "Huri: Kia ora! Great day for it, eh?\nBattle before the weather turns?$"
 
 Otautahi_Text_PHemiDefeat:
 	.string "The forecast said nothing\nabout you.$"
@@ -110,7 +110,7 @@ Otautahi_EventScript_PKiri::
 	end
 
 Otautahi_Text_PKiriIntro:
-	.string "Kiri: You've got badges. I've got\nstandards. Let's see.$"
+	.string "Kura: You've got badges. I've got\nstandards. Let's see.$"
 
 Otautahi_Text_PKiriDefeat:
 	.string "Standards met.$"

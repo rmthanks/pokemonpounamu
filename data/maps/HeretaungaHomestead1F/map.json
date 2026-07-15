@@ -16,7 +16,7 @@
   "connections": [],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "graphics_id": "OBJ_EVENT_GFX_MOM_BROWN",
       "x": 3,
       "y": 3,
       "elevation": 3,
@@ -44,7 +44,7 @@
       "local_id": "LOCALID_HOMESTEAD_KAURI"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M_BROWN",
       "x": 5,
       "y": 8,
       "elevation": 3,
@@ -58,7 +58,7 @@
       "local_id": "LOCALID_HOMESTEAD_TAMA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_BROWN",
       "x": 6,
       "y": 7,
       "elevation": 3,

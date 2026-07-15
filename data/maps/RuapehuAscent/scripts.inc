@@ -63,7 +63,7 @@ RuapehuAscent_EventScript_PHori::
 	end
 
 RuapehuAscent_Text_PHoriIntro:
-	.string "Hori: Kia ora! Great day for it, eh?\nBattle before the weather turns?$"
+	.string "Heta: Kia ora! Great day for it, eh?\nBattle before the weather turns?$"
 
 RuapehuAscent_Text_PHoriDefeat:
 	.string "The forecast said nothing\nabout you.$"

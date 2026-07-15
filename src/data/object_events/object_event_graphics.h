@@ -633,3 +633,12 @@ const u16 gObjectEventPic_PidgeyOld[] = INCGFX_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_ClefairyOld[] = INCGFX_U16("graphics/object_events/pics/pokemon_old/clefairy.png", ".4bpp", "-mwidth 2 -mheight 2");
 
 #endif // IS_FRLG
+
+const u16 gObjectEventPal_Npc1Tan[] = INCGFX_U16("graphics/object_events/palettes/npc_1_tan.pal", ".gbapal");
+const u16 gObjectEventPal_Npc1Brown[] = INCGFX_U16("graphics/object_events/palettes/npc_1_brown.pal", ".gbapal");
+const u16 gObjectEventPal_Npc2Tan[] = INCGFX_U16("graphics/object_events/palettes/npc_2_tan.pal", ".gbapal");
+const u16 gObjectEventPal_Npc2Brown[] = INCGFX_U16("graphics/object_events/palettes/npc_2_brown.pal", ".gbapal");
+const u16 gObjectEventPal_Npc3Tan[] = INCGFX_U16("graphics/object_events/palettes/npc_3_tan.pal", ".gbapal");
+const u16 gObjectEventPal_Npc3Brown[] = INCGFX_U16("graphics/object_events/palettes/npc_3_brown.pal", ".gbapal");
+const u16 gObjectEventPal_Npc4Tan[] = INCGFX_U16("graphics/object_events/palettes/npc_4_tan.pal", ".gbapal");
+const u16 gObjectEventPal_Npc4Brown[] = INCGFX_U16("graphics/object_events/palettes/npc_4_brown.pal", ".gbapal");

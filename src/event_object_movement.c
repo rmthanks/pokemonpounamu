@@ -496,6 +496,14 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #include "data/object_events/object_event_graphics_info_followers.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
+    {gObjectEventPal_Npc1Tan, OBJ_EVENT_PAL_TAG_NPC_1_TAN},
+    {gObjectEventPal_Npc1Brown, OBJ_EVENT_PAL_TAG_NPC_1_BROWN},
+    {gObjectEventPal_Npc2Tan, OBJ_EVENT_PAL_TAG_NPC_2_TAN},
+    {gObjectEventPal_Npc2Brown, OBJ_EVENT_PAL_TAG_NPC_2_BROWN},
+    {gObjectEventPal_Npc3Tan, OBJ_EVENT_PAL_TAG_NPC_3_TAN},
+    {gObjectEventPal_Npc3Brown, OBJ_EVENT_PAL_TAG_NPC_3_BROWN},
+    {gObjectEventPal_Npc4Tan, OBJ_EVENT_PAL_TAG_NPC_4_TAN},
+    {gObjectEventPal_Npc4Brown, OBJ_EVENT_PAL_TAG_NPC_4_BROWN},
     {gObjectEventPal_Npc1,                  OBJ_EVENT_PAL_TAG_NPC_1},
     {gObjectEventPal_Npc2,                  OBJ_EVENT_PAL_TAG_NPC_2},
     {gObjectEventPal_Npc3,                  OBJ_EVENT_PAL_TAG_NPC_3},

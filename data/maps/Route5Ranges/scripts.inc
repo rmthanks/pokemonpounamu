@@ -66,7 +66,7 @@ Route5Ranges_EventScript_PRata::
 	end
 
 Route5Ranges_Text_PRataIntro:
-	.string "Rata: This is protected land.\nProve you respect it.$"
+	.string "Reka: This is protected land.\nProve you respect it.$"
 
 Route5Ranges_Text_PRataDefeat:
 	.string "You fight like you care.$"

@@ -55,7 +55,7 @@
       "local_id": "LOCALID_R2_GRUNT2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M_BROWN",
       "x": 7,
       "y": 8,
       "elevation": 3,
@@ -69,7 +69,7 @@
       "local_id": "LOCALID_R2_TAMA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_BROWN",
       "x": 8,
       "y": 15,
       "elevation": 3,
@@ -82,7 +82,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_BROWN",
       "x": 2,
       "y": 11,
       "elevation": 3,
@@ -108,7 +108,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER_BROWN",
       "x": 8,
       "y": 4,
       "elevation": 3,
@@ -121,7 +121,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_BROWN",
       "x": 4,
       "y": 17,
       "elevation": 3,
@@ -134,7 +134,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M_BROWN",
       "x": 13,
       "y": 12,
       "elevation": 3,

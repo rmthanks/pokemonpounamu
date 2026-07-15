@@ -1,3 +1,51 @@
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YoungsterTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YoungsterBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LassTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LassBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SchoolKidMTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SchoolKidMBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CamperTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CamperBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PicnickerTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PicnickerBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HikerTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HikerBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FishermanTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FishermanBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcherTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcherBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man5Tan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man5Brown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman5Tan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman5Brown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertMTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertMBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertFTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertFBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanMTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanMBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanFTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanFBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man3Tan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man3Brown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman3Tan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman3Brown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SailorTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SailorBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBeltTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBeltBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boy2Tan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boy2Brown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GentlemanTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GentlemanBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MomTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MomBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman2Tan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman2Brown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ManiacTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ManiacBrown;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiacTan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiacBrown;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -801,4 +849,52 @@ const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[
     [MAUVILLE_MAN_GIDDY]       = &gObjectEventGraphicsInfo_Giddy,
     [MAUVILLE_MAN_UNUSED1]     = &gObjectEventGraphicsInfo_UnusedMauvilleOldMan1,
     [MAUVILLE_MAN_UNUSED2]     = &gObjectEventGraphicsInfo_UnusedMauvilleOldMan2,
+    [OBJ_EVENT_GFX_YOUNGSTER_TAN] = &gObjectEventGraphicsInfo_YoungsterTan,
+    [OBJ_EVENT_GFX_YOUNGSTER_BROWN] = &gObjectEventGraphicsInfo_YoungsterBrown,
+    [OBJ_EVENT_GFX_LASS_TAN] = &gObjectEventGraphicsInfo_LassTan,
+    [OBJ_EVENT_GFX_LASS_BROWN] = &gObjectEventGraphicsInfo_LassBrown,
+    [OBJ_EVENT_GFX_SCHOOL_KID_M_TAN] = &gObjectEventGraphicsInfo_SchoolKidMTan,
+    [OBJ_EVENT_GFX_SCHOOL_KID_M_BROWN] = &gObjectEventGraphicsInfo_SchoolKidMBrown,
+    [OBJ_EVENT_GFX_CAMPER_TAN] = &gObjectEventGraphicsInfo_CamperTan,
+    [OBJ_EVENT_GFX_CAMPER_BROWN] = &gObjectEventGraphicsInfo_CamperBrown,
+    [OBJ_EVENT_GFX_PICNICKER_TAN] = &gObjectEventGraphicsInfo_PicnickerTan,
+    [OBJ_EVENT_GFX_PICNICKER_BROWN] = &gObjectEventGraphicsInfo_PicnickerBrown,
+    [OBJ_EVENT_GFX_HIKER_TAN] = &gObjectEventGraphicsInfo_HikerTan,
+    [OBJ_EVENT_GFX_HIKER_BROWN] = &gObjectEventGraphicsInfo_HikerBrown,
+    [OBJ_EVENT_GFX_FISHERMAN_TAN] = &gObjectEventGraphicsInfo_FishermanTan,
+    [OBJ_EVENT_GFX_FISHERMAN_BROWN] = &gObjectEventGraphicsInfo_FishermanBrown,
+    [OBJ_EVENT_GFX_BUG_CATCHER_TAN] = &gObjectEventGraphicsInfo_BugCatcherTan,
+    [OBJ_EVENT_GFX_BUG_CATCHER_BROWN] = &gObjectEventGraphicsInfo_BugCatcherBrown,
+    [OBJ_EVENT_GFX_MAN_5_TAN] = &gObjectEventGraphicsInfo_Man5Tan,
+    [OBJ_EVENT_GFX_MAN_5_BROWN] = &gObjectEventGraphicsInfo_Man5Brown,
+    [OBJ_EVENT_GFX_WOMAN_5_TAN] = &gObjectEventGraphicsInfo_Woman5Tan,
+    [OBJ_EVENT_GFX_WOMAN_5_BROWN] = &gObjectEventGraphicsInfo_Woman5Brown,
+    [OBJ_EVENT_GFX_EXPERT_M_TAN] = &gObjectEventGraphicsInfo_ExpertMTan,
+    [OBJ_EVENT_GFX_EXPERT_M_BROWN] = &gObjectEventGraphicsInfo_ExpertMBrown,
+    [OBJ_EVENT_GFX_EXPERT_F_TAN] = &gObjectEventGraphicsInfo_ExpertFTan,
+    [OBJ_EVENT_GFX_EXPERT_F_BROWN] = &gObjectEventGraphicsInfo_ExpertFBrown,
+    [OBJ_EVENT_GFX_POKEFAN_M_TAN] = &gObjectEventGraphicsInfo_PokefanMTan,
+    [OBJ_EVENT_GFX_POKEFAN_M_BROWN] = &gObjectEventGraphicsInfo_PokefanMBrown,
+    [OBJ_EVENT_GFX_POKEFAN_F_TAN] = &gObjectEventGraphicsInfo_PokefanFTan,
+    [OBJ_EVENT_GFX_POKEFAN_F_BROWN] = &gObjectEventGraphicsInfo_PokefanFBrown,
+    [OBJ_EVENT_GFX_MAN_3_TAN] = &gObjectEventGraphicsInfo_Man3Tan,
+    [OBJ_EVENT_GFX_MAN_3_BROWN] = &gObjectEventGraphicsInfo_Man3Brown,
+    [OBJ_EVENT_GFX_WOMAN_3_TAN] = &gObjectEventGraphicsInfo_Woman3Tan,
+    [OBJ_EVENT_GFX_WOMAN_3_BROWN] = &gObjectEventGraphicsInfo_Woman3Brown,
+    [OBJ_EVENT_GFX_SAILOR_TAN] = &gObjectEventGraphicsInfo_SailorTan,
+    [OBJ_EVENT_GFX_SAILOR_BROWN] = &gObjectEventGraphicsInfo_SailorBrown,
+    [OBJ_EVENT_GFX_BLACK_BELT_TAN] = &gObjectEventGraphicsInfo_BlackBeltTan,
+    [OBJ_EVENT_GFX_BLACK_BELT_BROWN] = &gObjectEventGraphicsInfo_BlackBeltBrown,
+    [OBJ_EVENT_GFX_BOY_2_TAN] = &gObjectEventGraphicsInfo_Boy2Tan,
+    [OBJ_EVENT_GFX_BOY_2_BROWN] = &gObjectEventGraphicsInfo_Boy2Brown,
+    [OBJ_EVENT_GFX_GENTLEMAN_TAN] = &gObjectEventGraphicsInfo_GentlemanTan,
+    [OBJ_EVENT_GFX_GENTLEMAN_BROWN] = &gObjectEventGraphicsInfo_GentlemanBrown,
+    [OBJ_EVENT_GFX_MOM_TAN] = &gObjectEventGraphicsInfo_MomTan,
+    [OBJ_EVENT_GFX_MOM_BROWN] = &gObjectEventGraphicsInfo_MomBrown,
+    [OBJ_EVENT_GFX_WOMAN_2_TAN] = &gObjectEventGraphicsInfo_Woman2Tan,
+    [OBJ_EVENT_GFX_WOMAN_2_BROWN] = &gObjectEventGraphicsInfo_Woman2Brown,
+    [OBJ_EVENT_GFX_MANIAC_TAN] = &gObjectEventGraphicsInfo_ManiacTan,
+    [OBJ_EVENT_GFX_MANIAC_BROWN] = &gObjectEventGraphicsInfo_ManiacBrown,
+    [OBJ_EVENT_GFX_HEX_MANIAC_TAN] = &gObjectEventGraphicsInfo_HexManiacTan,
+    [OBJ_EVENT_GFX_HEX_MANIAC_BROWN] = &gObjectEventGraphicsInfo_HexManiacBrown,
 };

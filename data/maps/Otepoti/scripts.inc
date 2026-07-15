@@ -180,7 +180,7 @@ Otepoti_EventScript_PPounamu::
 	end
 
 Otepoti_Text_PPounamuIntro:
-	.string "Pounamu: I've been training out here\nALL morning!$"
+	.string "Puna: I've been training out here\nALL morning!$"
 
 Otepoti_Text_PPounamuDefeat:
 	.string "Okay, MOST of the morning.$"
@@ -194,7 +194,7 @@ Otepoti_EventScript_PRangi::
 	end
 
 Otepoti_Text_PRangiIntro:
-	.string "Rangi: I've been training out here\nALL morning!$"
+	.string "Rewa: I've been training out here\nALL morning!$"
 
 Otepoti_Text_PRangiDefeat:
 	.string "Okay, MOST of the morning.$"

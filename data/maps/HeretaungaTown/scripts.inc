@@ -1366,7 +1366,7 @@ HeretaungaTown_EventScript_PHika::
 	end
 
 HeretaungaTown_Text_PHikaIntro:
-	.string "Hika: I've been training out here\nALL morning!$"
+	.string "Hui: I've been training out here\nALL morning!$"
 
 HeretaungaTown_Text_PHikaDefeat:
 	.string "Okay, MOST of the morning.$"

@@ -106,7 +106,7 @@ TeMataTrack_EventScript_PWhetu::
 	end
 
 TeMataTrack_Text_PWhetuIntro:
-	.string "Whetu: Kaitiaki of this stretch.\nShow me your manners.$"
+	.string "Waru: Kaitiaki of this stretch.\nShow me your manners.$"
 
 TeMataTrack_Text_PWhetuDefeat:
 	.string "Manners AND muscle. Ka pai.$"
