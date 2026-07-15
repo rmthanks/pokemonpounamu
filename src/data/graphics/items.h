@@ -1251,6 +1251,8 @@ const u16 gItemIconPalette_Charcoal[] = INCGFX_U16("graphics/items/icon_palettes
 
 const u32 gItemIcon_MysticWater[] = INCGFX_U32("graphics/items/icons/mystic_water.png", ".4bpp.smol");
 const u16 gItemIconPalette_MysticWater[] = INCGFX_U16("graphics/items/icon_palettes/mystic_water.pal", ".gbapal");
+const u16 gItemIconPalette_PounamuPendant[] = INCGFX_U16("graphics/items/icon_palettes/pounamu_pendant.pal", ".gbapal");
+const u16 gItemIconPalette_MauriKohatu[] = INCGFX_U16("graphics/items/icon_palettes/mauri_kohatu.pal", ".gbapal");
 
 const u32 gItemIcon_Magnet[] = INCGFX_U32("graphics/items/icons/magnet.png", ".4bpp.smol");
 const u16 gItemIconPalette_Magnet[] = INCGFX_U16("graphics/items/icon_palettes/magnet.pal", ".gbapal");
@@ -2112,6 +2114,3 @@ const u16 gItemIconPalette_SwapSnack[] = INCGFX_U16("graphics/items/icon_palette
 
 const u32 gItemIcon_TwiceSpicedRadish[] = INCGFX_U32("graphics/items/icons/twice_spiced_radish.png", ".4bpp.smol");
 const u16 gItemIconPalette_TwiceSpicedRadish[] = INCGFX_U16("graphics/items/icon_palettes/twice_spiced_radish.pal", ".gbapal");
-
-const u16 gItemIconPalette_PounamuPendant[] = INCGFX_U16("graphics/items/icon_palettes/pounamu_pendant.pal", ".gbapal");
-const u16 gItemIconPalette_MauriKohatu[] = INCGFX_U16("graphics/items/icon_palettes/mauri_kohatu.pal", ".gbapal");
