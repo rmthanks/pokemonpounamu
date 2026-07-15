@@ -742,15 +742,19 @@ void CB2_InitTitleScreen(void)
         if (!UpdatePaletteFade())
         {
             StartPokemonLogoShine(SHINE_MODE_SINGLE_NO_BG_COLOR);
-            ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
             SetMainCallback2(MainCB2);
         }
         break;
     }
 }
 
+static u16 sPounamuMistDrift = 0;
+
 static void MainCB2(void)
 {
+    // Pounamu: mist drifts slowly right-to-left across the dawn, continuously
+    sPounamuMistDrift++;
+    SetGpuReg(REG_OFFSET_BG1HOFS, sPounamuMistDrift >> 3);
     RunTasks();
     AnimateSprites();
     BuildOamBuffer();
