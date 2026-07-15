@@ -1198,6 +1198,8 @@ extern const u32 gItemIcon_Charcoal[];
 extern const u16 gItemIconPalette_Charcoal[];
 extern const u32 gItemIcon_MysticWater[];
 extern const u16 gItemIconPalette_MysticWater[];
+extern const u16 gItemIconPalette_PounamuPendant[];
+extern const u16 gItemIconPalette_MauriKohatu[];
 extern const u32 gItemIcon_Magnet[];
 extern const u16 gItemIconPalette_Magnet[];
 extern const u32 gItemIcon_MiracleSeed[];
