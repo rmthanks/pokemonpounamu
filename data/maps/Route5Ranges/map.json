@@ -166,7 +166,7 @@
       "y": 11,
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
-      "flag": "FLAG_UNUSED_0x28E"
+      "flag": "FLAG_UNUSED_0x93D"
     },
     {
       "type": "hidden_item",
@@ -174,7 +174,7 @@
       "y": 4,
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
-      "flag": "FLAG_UNUSED_0x28F"
+      "flag": "FLAG_UNUSED_0x93E"
     }
   ]
 }

@@ -435,7 +435,7 @@
       "y": 29,
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
-      "flag": "FLAG_UNUSED_0x286"
+      "flag": "FLAG_UNUSED_0x935"
     },
     {
       "type": "hidden_item",
@@ -443,7 +443,7 @@
       "y": 52,
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
-      "flag": "FLAG_UNUSED_0x287"
+      "flag": "FLAG_UNUSED_0x936"
     },
     {
       "type": "hidden_item",
@@ -451,7 +451,7 @@
       "y": 85,
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
-      "flag": "FLAG_UNUSED_0x288"
+      "flag": "FLAG_UNUSED_0x937"
     },
     {
       "type": "hidden_item",
@@ -459,7 +459,7 @@
       "y": 7,
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
-      "flag": "FLAG_UNUSED_0x289"
+      "flag": "FLAG_UNUSED_0x938"
     }
   ]
 }

@@ -1564,8 +1564,10 @@ HeretaungaTown_Text_StallAuntyBye:
 	.string "they'll grow true. Haere ra!$"
 
 HeretaungaTown_Text_KoroNoCaps:
-	.string "Koro Tapeta: See these hands?\n"
-	.string "Sixty years polishing pounamu.\p"
+	.string "Cuzzy Tapeta: See these hands?\n"
+	.string "Learned carving off my koro.\l"
+	.string "Best hands on the coast,\l"
+	.string "my nan reckons.\p"
 	.string "Bring me a BOTTLE CAP and I'll\n"
 	.string "polish your Pokemon's weakest\l"
 	.string "facet till it shines.\p"
@@ -1574,34 +1576,34 @@ HeretaungaTown_Text_KoroNoCaps:
 	.string "Aunty at the stall keeps a few.$"
 
 HeretaungaTown_Text_KoroGoldAsk:
-	.string "Koro Tapeta: A GOLD BOTTLE CAP…\n"
+	.string "Cuzzy Tapeta: A GOLD BOTTLE CAP…\n"
 	.string "The full polish, then?\l"
 	.string "All six facets, one Pokemon?$"
 
 HeretaungaTown_Text_KoroSilverAsk:
-	.string "Koro Tapeta: A BOTTLE CAP.\n"
+	.string "Cuzzy Tapeta: A BOTTLE CAP.\n"
 	.string "I'll find the weakest facet\l"
 	.string "and polish just that one.\p"
 	.string "Shall I?$"
 
 HeretaungaTown_Text_KoroDoneAll:
-	.string "Koro Tapeta: …There.\p"
+	.string "Cuzzy Tapeta: …There.\p"
 	.string "Every facet catches the light\n"
 	.string "now. A taonga finished.$"
 
 HeretaungaTown_Text_KoroDoneOne:
-	.string "Koro Tapeta: …There.\p"
+	.string "Cuzzy Tapeta: …There.\p"
 	.string "The dullest facet shines now.\n"
 	.string "Bring another cap for the next.$"
 
 HeretaungaTown_Text_KoroAlready:
-	.string "Koro Tapeta: This one already\n"
+	.string "Cuzzy Tapeta: This one already\n"
 	.string "shines from every angle, e hoa.\p"
 	.string "Keep your cap. Nothing left\n"
 	.string "for these old hands to do.$"
 
 HeretaungaTown_Text_KoroCancel:
-	.string "Koro Tapeta: Another day, then.\n"
+	.string "Cuzzy Tapeta: Another day, then.\n"
 	.string "The stone waits. Stones are\l"
 	.string "good at that.$"
 
@@ -1674,7 +1676,7 @@ HeretaungaTown_Koro_ShardKeep::
 	end
 
 HeretaungaTown_Text_KoroOneShardAsk:
-	.string "Koro Tapeta: …E hoa. That's\n"
+	.string "Cuzzy Tapeta: …E hoa. That's\n"
 	.string "POUNAMU in your pocket.\p"
 	.string "Where the rivers come down\n"
 	.string "off the mountains, the stone\l"
@@ -1683,18 +1685,21 @@ HeretaungaTown_Text_KoroOneShardAsk:
 	.string "BOTTLE CAP?$"
 
 HeretaungaTown_Text_KoroFourShardAsk:
-	.string "Koro Tapeta: Four shards…\n"
+	.string "Cuzzy Tapeta: Four shards…\n"
 	.string "That's a whole stone's worth.\p"
 	.string "Trade all four for a GOLD\n"
 	.string "BOTTLE CAP? The full polish.$"
 
 HeretaungaTown_Text_KoroShardTraded:
-	.string "Koro Tapeta: Ka pai.\p"
+	.string "Cuzzy Tapeta: Ka pai.\p"
 	.string "The old trade: greenstone for\n"
 	.string "craft. Some things don't change.$"
 
 HeretaungaTown_Text_KoroShardKeep:
-	.string "Koro Tapeta: Keep it close, then.\n"
+	.string "Cuzzy Tapeta: Keep it close, then.\n"
 	.string "Pounamu chooses when it moves.\p"
 	.string "The west coast rivers hold more,\n"
-	.string "if you know where to look.$"
+	.string "if you know where to look.\p"
+	.string "And the river fish swallow the\n"
+	.string "small stones. WHISCASH especially.\l"
+	.string "Greedy fella. Go fishing, cuz.$"
