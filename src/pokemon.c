@@ -5604,7 +5604,16 @@ void SetWildMonHeldItem(void)
             }
             else
             {
-                if (gSpeciesInfo[species].itemCommon == gSpeciesInfo[species].itemRare && gSpeciesInfo[species].itemCommon != ITEM_NONE)
+                // Pounamu: the west-coast rivers carry greenstone - river fish hold shards half the time
+                if ((species == SPECIES_BARBOACH || species == SPECIES_WHISCASH)
+                 && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE7_POUNAMU)
+                 && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE7_POUNAMU)
+                 && rnd < 50)
+                {
+                    u16 pounamuShard = ITEM_STAR_PIECE;
+                    SetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_HELD_ITEM, &pounamuShard);
+                }
+                else if (gSpeciesInfo[species].itemCommon == gSpeciesInfo[species].itemRare && gSpeciesInfo[species].itemCommon != ITEM_NONE)
                 {
                     // Both held items are the same, 100% chance to hold item
                     SetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_HELD_ITEM, &gSpeciesInfo[species].itemCommon);
