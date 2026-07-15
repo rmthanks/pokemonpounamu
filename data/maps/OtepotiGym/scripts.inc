@@ -37,7 +37,8 @@ OtepotiGym_Text_NoBadge:
 	.string "Huka: Not yet, challenger.\nEarn your way down the island first.\pCome back with the badge before mine.$"
 
 OtepotiGym_Text_Pre:
-	.string "Huka: The end of the road, and the end of the country.\pSouth of me there's only the ice and the birds and the long dark.\pEight badges means you've walked the whole motu, top to bottom.\pProve you didn't just pass through. Prove you FELT it.$"
+	.string "Huka: The end of the road, and the end of the country.\pSouth of me there's only the ice and the birds and the long dark.\pEight badges means you've walked the whole motu, top to bottom.\pProve you didn't just pass through. Prove you FELT it.\p"
+	.string "It's snowing indoors. It won't\nstop. Last one standing keeps\ltheir warmth.$"
 
 OtepotiGym_Text_Defeat:
 	.string "…Cold enough to see clearly now?$"

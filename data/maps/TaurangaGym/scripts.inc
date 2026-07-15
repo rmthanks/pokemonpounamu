@@ -54,7 +54,8 @@ TaurangaGym_Text_MuaPreBattle:
 	.string "…Me, I just fish.\p"
 	.string "Every day, out past the break,\n"
 	.string "since before your parents met.\p"
-	.string "Let's see if you can land ME.$"
+	.string "Let's see if you can land ME.\p"
+	.string "The tide's coming in on your side\nof the sand. Your Pokemon fight\lslowed until it turns.$"
 
 TaurangaGym_Text_MuaDefeat:
 	.string "…Well.\p"

@@ -53,7 +53,8 @@ RotoruaGym_Text_WhenuaPreBattle:
 	.string "that never stopped beating.\p"
 	.string "I train what the land gives me.\n"
 	.string "Mud. Steam. Patience.\p"
-	.string "Show me what the road gave YOU.$"
+	.string "Show me what the road gave YOU.\p"
+	.string "The ground here is hot enough to\ncook on. It burns your side and\lmine, every single turn.$"
 
 RotoruaGym_Text_WhenuaDefeat:
 	.string "…Ha!\p"

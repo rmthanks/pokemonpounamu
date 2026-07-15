@@ -17177,6 +17177,7 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
+Starting Status: Swamp Player
 AI: Basic Trainer
 
 Pelipper
@@ -17507,17 +17508,23 @@ Items: Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Snorunt
-Level: 35
-
-Glalie
+Froslass (F)
 Level: 36
 
-Sealeo
+Glalie
 Level: 37
 
-Walrein
-Level: 39
+Eiscue
+Level: 37
+
+Weavile (F)
+Level: 38
+
+Lapras
+Level: 38
+
+Walrein @ Leftovers
+Level: 40
 
 === TRAINER_OTEPOTI_PROSPECT ===
 Name: Bree
@@ -17543,7 +17550,7 @@ Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Starting Status: Tailwind Player / Tailwind Opponent
+Starting Status: Tailwind Opponent
 
 Ducklett
 Level: 26

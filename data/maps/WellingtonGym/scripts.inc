@@ -48,7 +48,8 @@ WellingtonGym_Text_Pre:
 	.string "you further than your legs ever\l"
 	.string "could.\p"
 	.string "My birds learned that.\n"
-	.string "Let's see if you have.$"
+	.string "Let's see if you have.\p"
+	.string "The gale blows for my birds.\nThey move first. Every turn.$"
 
 WellingtonGym_Text_Defeat:
 	.string "…Caught the updraft, did you.$"

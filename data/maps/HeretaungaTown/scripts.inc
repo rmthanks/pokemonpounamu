@@ -414,7 +414,8 @@ HeretaungaTown_Text_RataPreBattle:
 	.string "before you were born.\p"
 	.string "Show me what you and your little\n"
 	.string "one have learned between\l"
-	.string "the rows.$"
+	.string "the rows.\p"
+	.string "We fight on living ground, love.\nIt feeds everything rooted in it.$"
 
 HeretaungaTown_Text_RataDefeat:
 	.string "…Oh.\p"

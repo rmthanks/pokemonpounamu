@@ -171,7 +171,8 @@ AhuririGym_Text_KauriPreBattle:
 	.string "Fairy-type, they call it.\n"
 	.string "Harmless, they reckon.\p"
 	.string "Soft things, eh?\n"
-	.string "…Soft things hide the teeth.$"
+	.string "…Soft things hide the teeth.\p"
+	.string "House rules: nobody plays dirty.\nNo poison. No sleep. We're civil here.$"
 
 AhuririGym_Text_KauriDefeat:
 	.string "…There it is.\p"

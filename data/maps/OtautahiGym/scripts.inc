@@ -37,7 +37,8 @@ OtautahiGym_Text_NoBadge:
 	.string "Pou: Not yet, challenger.\nEarn your way down the island first.\pCome back with the badge before mine.$"
 
 OtautahiGym_Text_Pre:
-	.string "Pou: This city fell down once. All of it, near enough.\pWe rebuilt with steel and stubbornness and a lot of road cones.\pMy team's the same. Bent, tested, standing.\pShow me you can stand too.$"
+	.string "Pou: This city fell down once. All of it, near enough.\pWe rebuilt with steel and stubbornness and a lot of road cones.\pMy team's the same. Bent, tested, standing.\pShow me you can stand too.\p"
+	.string "Scaffold rules in here:\nthe slowest moves first.$"
 
 OtautahiGym_Text_Defeat:
 	.string "…Still standing. Good.$"

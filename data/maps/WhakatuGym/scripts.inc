@@ -37,7 +37,8 @@ WhakatuGym_Text_NoBadge:
 	.string "Roto: Not yet, challenger.\nEarn your way down the island first.\pCome back with the badge before mine.$"
 
 WhakatuGym_Text_Pre:
-	.string "Roto: Sunniest city in the country, and I keep it warmer still.\pMy brother Maui slowed the sun so folk had time to live.\pMe? I just make sure they're never cold doing it.\pWarm up, challenger!$"
+	.string "Roto: Sunniest city in the country, and I keep it warmer still.\pMy brother Maui slowed the sun so folk had time to live.\pMe? I just make sure they're never cold doing it.\pWarm up, challenger!\p"
+	.string "My brother snared the sun once.\nIn here, I never let it set.\lHarsh sunlight, all battle.$"
 
 WhakatuGym_Text_Defeat:
 	.string "…Hot enough for you?$"
