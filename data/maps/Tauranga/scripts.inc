@@ -72,3 +72,45 @@ Tauranga_Text_MauaoSign:
 	.string "MAUAO\p"
 	.string "“He stands where the tide left\n"
 	.string "him.” Track opens another day.$"
+
+Tauranga_EventScript_PIrirangi::
+	trainerbattle_single TRAINER_TGT_IRIRANGI, Tauranga_Text_PIrirangiIntro, Tauranga_Text_PIrirangiDefeat
+	msgbox Tauranga_Text_PIrirangiPost, MSGBOX_AUTOCLOSE
+	end
+
+Tauranga_Text_PIrirangiIntro:
+	.string "Irirangi: The one that got away was\nTHIS big. Like my Pokemon.$"
+
+Tauranga_Text_PIrirangiDefeat:
+	.string "Also got away on me.$"
+
+Tauranga_Text_PIrirangiPost:
+	.string "Tide's turning. Good luck out\nthere.$"
+
+Tauranga_EventScript_PKereama::
+	trainerbattle_single TRAINER_TGT_KEREAMA, Tauranga_Text_PKereamaIntro, Tauranga_Text_PKereamaDefeat
+	msgbox Tauranga_Text_PKereamaPost, MSGBOX_AUTOCLOSE
+	end
+
+Tauranga_Text_PKereamaIntro:
+	.string "Kereama: The one that got away was\nTHIS big. Like my Pokemon.$"
+
+Tauranga_Text_PKereamaDefeat:
+	.string "Also got away on me.$"
+
+Tauranga_Text_PKereamaPost:
+	.string "Tide's turning. Good luck out\nthere.$"
+
+Tauranga_EventScript_PMereana::
+	trainerbattle_single TRAINER_TGT_MEREANA, Tauranga_Text_PMereanaIntro, Tauranga_Text_PMereanaDefeat
+	msgbox Tauranga_Text_PMereanaPost, MSGBOX_AUTOCLOSE
+	end
+
+Tauranga_Text_PMereanaIntro:
+	.string "Mereana: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+Tauranga_Text_PMereanaDefeat:
+	.string "You can have the sammie.$"
+
+Tauranga_Text_PMereanaPost:
+	.string "Worth it. Rematch at smoko?$"

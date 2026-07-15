@@ -102,3 +102,31 @@ Wairoa_Text_AwhiAfter:
 	.string "first - watch for the camp at\l"
 	.string "the foothills.\p"
 	.string "I'll find you.$"
+
+Wairoa_EventScript_PUenuku::
+	trainerbattle_single TRAINER_WRT_UENUKU, Wairoa_Text_PUenukuIntro, Wairoa_Text_PUenukuDefeat
+	msgbox Wairoa_Text_PUenukuPost, MSGBOX_AUTOCLOSE
+	end
+
+Wairoa_Text_PUenukuIntro:
+	.string "Uenuku: Between milkings. You've got\nten minutes. Go.$"
+
+Wairoa_Text_PUenukuDefeat:
+	.string "Back to the shed, then.$"
+
+Wairoa_Text_PUenukuPost:
+	.string "Rain's coming. Good for the\ngrass, good for nothing else.$"
+
+Wairoa_EventScript_PWero::
+	trainerbattle_single TRAINER_WRT_WERO, Wairoa_Text_PWeroIntro, Wairoa_Text_PWeroDefeat
+	msgbox Wairoa_Text_PWeroPost, MSGBOX_AUTOCLOSE
+	end
+
+Wairoa_Text_PWeroIntro:
+	.string "Wero: Patience. That's fishing.\nAlso that's battling.$"
+
+Wairoa_Text_PWeroDefeat:
+	.string "I bit too early.$"
+
+Wairoa_Text_PWeroPost:
+	.string "A bad day's fishing beats a\ngood day's working.$"

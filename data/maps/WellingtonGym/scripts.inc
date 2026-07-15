@@ -93,3 +93,31 @@ WellingtonGym_Text_ProspectPost:
 	.string "On a bad day the wind here knocks\n"
 	.string "grown adults flat.\p"
 	.string "We call it 'a bit fresh.'$"
+
+WellingtonGym_EventScript_PLara::
+	trainerbattle_single TRAINER_GYM5_LARA, WellingtonGym_Text_PLaraIntro, WellingtonGym_Text_PLaraDefeat
+	msgbox WellingtonGym_Text_PLaraPost, MSGBOX_AUTOCLOSE
+	end
+
+WellingtonGym_Text_PLaraIntro:
+	.string "Lara: Kaitiaki of this stretch.\nShow me your manners.$"
+
+WellingtonGym_Text_PLaraDefeat:
+	.string "Manners AND muscle. Ka pai.$"
+
+WellingtonGym_Text_PLaraPost:
+	.string "Leave it better than you\nfound it.$"
+
+WellingtonGym_EventScript_PMax::
+	trainerbattle_single TRAINER_GYM5_MAX, WellingtonGym_Text_PMaxIntro, WellingtonGym_Text_PMaxDefeat
+	msgbox WellingtonGym_Text_PMaxPost, MSGBOX_AUTOCLOSE
+	end
+
+WellingtonGym_Text_PMaxIntro:
+	.string "Max: You've got badges. I've got\nstandards. Let's see.$"
+
+WellingtonGym_Text_PMaxDefeat:
+	.string "Standards met.$"
+
+WellingtonGym_Text_PMaxPost:
+	.string "The League's tougher than me.\nBarely.$"

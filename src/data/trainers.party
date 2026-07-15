@@ -18090,3 +18090,2862 @@ AI: Smart Trainer
 Conkeldurr @ Leftovers
 Level: 54
 Ability: Moxie
+
+=== TRAINER_ORD_WIREMU ===
+Name: Wiremu
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Caterpie
+Level: 4
+
+=== TRAINER_ORD_ANAHERA ===
+Name: Anahera
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pidgey
+Level: 4
+
+=== TRAINER_ORD_MERE ===
+Name: Mere
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pidgey
+Level: 6
+
+=== TRAINER_ORD_AROHA ===
+Name: Aroha
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Cherubi
+Level: 6
+
+=== TRAINER_ORD_TANE ===
+Name: Tane
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Caterpie
+Level: 4
+
+=== TRAINER_R2B_MARAMA ===
+Name: Marama
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 6
+
+=== TRAINER_R2B_MOANA ===
+Name: Moana
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Weedle
+Level: 7
+
+=== TRAINER_R2B_KAHU ===
+Name: Kahu
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Hoppip
+Level: 9
+
+=== TRAINER_R2B_REWI ===
+Name: Rewi
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Hoppip
+Level: 7
+
+=== TRAINER_R2B_HANA ===
+Name: Hana
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 7
+
+=== TRAINER_R2B_PIRI ===
+Name: Piri
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 8
+
+=== TRAINER_R2N_TUI ===
+Name: Tui
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Bunnelby
+Level: 12
+
+Combee
+Level: 9
+
+=== TRAINER_R2N_MIRO ===
+Name: Miro
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Mareep
+Level: 12
+
+Bunnelby
+Level: 12
+
+=== TRAINER_R2N_RIPEKA ===
+Name: Ripeka
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Hoppip
+Level: 9
+
+Bunnelby
+Level: 12
+
+=== TRAINER_R2N_HINE ===
+Name: Hine
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Ralts
+Level: 9
+
+Combee
+Level: 11
+
+=== TRAINER_R2N_IHAIA ===
+Name: Ihaia
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Hoppip
+Level: 11
+
+Combee
+Level: 12
+
+=== TRAINER_R2E2_MATIU ===
+Name: Matiu
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 12
+
+Skiploom
+Level: 11
+
+=== TRAINER_R2E2_PETERA ===
+Name: Petera
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Skiploom
+Level: 12
+
+Wingull
+Level: 12
+
+=== TRAINER_R2E2_RAWIRI ===
+Name: Rawiri
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Mareep
+Level: 12
+
+Poochyena
+Level: 11
+
+=== TRAINER_R2E2_TIMOTI ===
+Name: Timoti
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Morelull
+Level: 13
+
+Mareep
+Level: 12
+
+=== TRAINER_R2E2_HOHEPA ===
+Name: Hohepa
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Flaaffy
+Level: 13
+
+Flaaffy
+Level: 12
+
+=== TRAINER_R35A_ERUERA ===
+Name: Eruera
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Zubat
+Level: 11
+
+Salandit
+Level: 13
+
+=== TRAINER_R35A_HIRINI ===
+Name: Hirini
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pinsir
+Level: 12
+
+Chatot
+Level: 13
+
+=== TRAINER_R35A_WETINI ===
+Name: Wetini
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Tranquill
+Level: 11
+
+Taillow
+Level: 12
+
+=== TRAINER_R35A_MIHI ===
+Name: Mihi
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Salandit
+Level: 12
+
+Hoothoot
+Level: 12
+
+=== TRAINER_R35A_NGAIO ===
+Name: Ngaio
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Tranquill
+Level: 15
+
+Salandit
+Level: 15
+
+=== TRAINER_R35A_RIMA ===
+Name: Rima
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Chatot
+Level: 13
+
+Taillow
+Level: 12
+
+=== TRAINER_R35A_KAWE ===
+Name: Kawe
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Chatot
+Level: 13
+
+Taillow
+Level: 12
+
+=== TRAINER_R35B_HUHANA ===
+Name: Huhana
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Taillow
+Level: 15
+
+Pinsir
+Level: 17
+
+=== TRAINER_R35B_ORIWA ===
+Name: Oriwa
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Tranquill
+Level: 15
+
+Taillow
+Level: 16
+
+=== TRAINER_R35B_PETI ===
+Name: Peti
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Tranquill
+Level: 14
+
+Chatot
+Level: 17
+
+=== TRAINER_R35B_RUTA ===
+Name: Ruta
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pinsir
+Level: 17
+
+Salandit
+Level: 16
+
+=== TRAINER_R35B_MERI ===
+Name: Meri
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pinsir
+Level: 14
+
+Zubat
+Level: 16
+
+=== TRAINER_R35B_RIRIA ===
+Name: Riria
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Taillow
+Level: 15
+
+Chatot
+Level: 16
+
+=== TRAINER_R35B_KUINI ===
+Name: Kuini
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Taillow
+Level: 17
+
+Tranquill
+Level: 15
+
+=== TRAINER_RBOP_PARE ===
+Name: Pare
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Cramorant
+Level: 16
+
+Wattrel
+Level: 18
+
+=== TRAINER_RBOP_ANIKA ===
+Name: Anika
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Shellder
+Level: 16
+
+Wattrel
+Level: 18
+
+=== TRAINER_RBOP_BEAU ===
+Name: Beau
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 18
+
+Cramorant
+Level: 16
+
+=== TRAINER_RBOP_BLAKE ===
+Name: Blake
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pyukumuku
+Level: 16
+
+Shellder
+Level: 19
+
+=== TRAINER_RBOP_CALEB ===
+Name: Caleb
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Taillow
+Level: 17
+
+Shellder
+Level: 19
+
+=== TRAINER_RBOP_CHARLIE ===
+Name: Charlie
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 18
+
+Taillow
+Level: 17
+
+=== TRAINER_RBOP_DYLAN ===
+Name: Dylan
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wattrel
+Level: 16
+
+Cramorant
+Level: 16
+
+=== TRAINER_R36_ELLA ===
+Name: Ella
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staravia
+Level: 18
+
+Hoothoot
+Level: 18
+
+=== TRAINER_R36_FINN ===
+Name: Finn
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Fomantis
+Level: 17
+
+Komala
+Level: 17
+
+=== TRAINER_R36_HARPER ===
+Name: Harper
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Fomantis
+Level: 18
+
+Shroomish
+Level: 17
+
+=== TRAINER_R36_HUNTER ===
+Name: Hunter
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Staravia
+Level: 15
+
+Starly
+Level: 16
+
+=== TRAINER_R36_ISLA ===
+Name: Isla
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Hoothoot
+Level: 17
+
+Starly
+Level: 18
+
+=== TRAINER_R36_JACK ===
+Name: Jack
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staravia
+Level: 15
+
+Morelull
+Level: 17
+
+=== TRAINER_R5P_JAKE ===
+Name: Jake
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Togedemaru
+Level: 19
+
+Sizzlipede
+Level: 21
+
+=== TRAINER_R5P_JESS ===
+Name: Jess
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magcargo
+Level: 22
+
+Slugma
+Level: 23
+
+=== TRAINER_R5P_KAYLA ===
+Name: Kayla
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magcargo
+Level: 19
+
+Magcargo
+Level: 21
+
+=== TRAINER_R5P_LIAM ===
+Name: Liam
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Geodude
+Level: 19
+
+Koffing
+Level: 22
+
+=== TRAINER_R5P_LUCAS ===
+Name: Lucas
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Koffing
+Level: 22
+
+Geodude
+Level: 22
+
+=== TRAINER_R5P_MADDIE ===
+Name: Maddie
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Koffing
+Level: 23
+
+Geodude
+Level: 20
+
+=== TRAINER_R5P_MASON ===
+Name: Mason
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Slugma
+Level: 21
+
+Graveler
+Level: 21
+
+=== TRAINER_R1DP_MIA ===
+Name: Mia
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Mudsdale
+Level: 22
+
+Larvitar
+Level: 24
+
+=== TRAINER_R1DP_NATE ===
+Name: Nate
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Doduo
+Level: 25
+
+Doduo
+Level: 25
+
+=== TRAINER_R1DP_NIKKI ===
+Name: Nikki
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Doduo
+Level: 23
+
+Sandygast
+Level: 24
+
+=== TRAINER_R1DP_OLIVE ===
+Name: Olive
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Dodrio
+Level: 25
+
+Mudbray
+Level: 23
+
+=== TRAINER_R1DP_OLLIE ===
+Name: Ollie
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sandygast
+Level: 24
+
+Larvitar
+Level: 23
+
+=== TRAINER_R1DP_PAIGE ===
+Name: Paige
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sandygast
+Level: 23
+
+Dodrio
+Level: 25
+
+=== TRAINER_R1DP_QUINN ===
+Name: Quinn
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Mudsdale
+Level: 25
+
+Larvitar
+Level: 25
+
+=== TRAINER_R43P_RILEY ===
+Name: Riley
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Misdreavus
+Level: 24
+
+Misdreavus
+Level: 25
+
+=== TRAINER_R43P_RUBY ===
+Name: Ruby
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Hoothoot
+Level: 23
+
+Shroomish
+Level: 25
+
+=== TRAINER_R43P_SAM ===
+Name: Sam
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Phantump
+Level: 25
+
+Gastly
+Level: 24
+
+=== TRAINER_R43P_SOPHIE ===
+Name: Sophie
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pumpkaboo
+Level: 23
+
+Gastly
+Level: 24
+
+=== TRAINER_R43P_THOMAS ===
+Name: Thomas
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Misdreavus
+Level: 22
+
+Pumpkaboo
+Level: 25
+
+=== TRAINER_R43P_TYLER ===
+Name: Tyler
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pumpkaboo
+Level: 23
+
+Phantump
+Level: 25
+
+=== TRAINER_R43P_WILLOW ===
+Name: Willow
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Shroomish
+Level: 23
+
+Pumpkaboo
+Level: 22
+
+=== TRAINER_R3P_ZOE ===
+Name: Zoe
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rockruff
+Level: 24
+
+Taillow
+Level: 25
+
+=== TRAINER_R3P_ASHLEY ===
+Name: Ashley
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Tauros
+Level: 24
+
+Tauros
+Level: 27
+
+=== TRAINER_R3P_BELLA ===
+Name: Bella
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Jumpluff
+Level: 26
+
+Jumpluff
+Level: 24
+
+=== TRAINER_R3P_CODY ===
+Name: Cody
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Miltank
+Level: 25
+
+Rockruff
+Level: 27
+
+=== TRAINER_R3P_DAISY ===
+Name: Daisy
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Miltank
+Level: 25
+
+Taillow
+Level: 27
+
+=== TRAINER_R3P_EMMA ===
+Name: Emma
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Tauros
+Level: 25
+
+Jumpluff
+Level: 26
+
+=== TRAINER_R3P_FLORA ===
+Name: Flora
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Miltank
+Level: 27
+
+Kirlia
+Level: 25
+
+=== TRAINER_R1KP_GUS ===
+Name: Gus
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pelipper
+Level: 28
+
+Ampharos
+Level: 27
+
+=== TRAINER_R1KP_HEATH ===
+Name: Heath
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pelipper
+Level: 28
+
+Swanna
+Level: 29
+
+=== TRAINER_R1KP_IVY ===
+Name: Ivy
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Kirlia
+Level: 29
+
+Raticate
+Level: 28
+
+=== TRAINER_R1KP_JONTY ===
+Name: Jonty
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Ampharos
+Level: 27
+
+Kirlia
+Level: 27
+
+=== TRAINER_R1KP_KANE ===
+Name: Kane
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Flaaffy
+Level: 29
+
+Stantler
+Level: 26
+
+=== TRAINER_R1KP_LENA ===
+Name: Lena
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Raticate
+Level: 28
+
+Ampharos
+Level: 26
+
+=== TRAINER_R1KP_MILO ===
+Name: Milo
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Flaaffy
+Level: 27
+
+Stantler
+Level: 26
+
+=== TRAINER_R6P_NINA ===
+Name: Nina
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Vespiquen
+Level: 26
+
+Whimsicott
+Level: 25
+
+=== TRAINER_R6P_OTIS ===
+Name: Otis
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Vespiquen
+Level: 27
+
+Cottonee
+Level: 26
+
+=== TRAINER_R6P_PIPPA ===
+Name: Pippa
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Vespiquen
+Level: 27
+
+Whimsicott
+Level: 26
+
+=== TRAINER_R6P_REID ===
+Name: Reid
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Venomoth
+Level: 26
+
+Whimsicott
+Level: 28
+
+=== TRAINER_R6P_STELLA ===
+Name: Stella
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Venomoth
+Level: 25
+
+Cottonee
+Level: 28
+
+=== TRAINER_R6P_TROY ===
+Name: Troy
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Lilligant
+Level: 28
+
+Venomoth
+Level: 27
+
+=== TRAINER_R6P_UNA ===
+Name: Una
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Vespiquen
+Level: 27
+
+Venonat
+Level: 26
+
+=== TRAINER_R7P_VINCE ===
+Name: Vince
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Piloswine
+Level: 33
+
+Bergmite
+Level: 29
+
+=== TRAINER_R7P_WADE ===
+Name: Wade
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Stantler
+Level: 33
+
+Murkrow
+Level: 30
+
+=== TRAINER_R7P_XIMENA ===
+Name: Ximena
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Lairon
+Level: 31
+
+Bergmite
+Level: 31
+
+=== TRAINER_R7P_YVETTE ===
+Name: Yvette
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Stantler
+Level: 29
+
+Sneasel
+Level: 29
+
+=== TRAINER_R7P_ZACH ===
+Name: Zach
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Skarmory
+Level: 32
+
+Lairon
+Level: 31
+
+Piloswine
+Level: 33
+
+=== TRAINER_R7P_AKI ===
+Name: Aki
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Stantler
+Level: 29
+
+Piloswine
+Level: 33
+
+=== TRAINER_R7P_BEX ===
+Name: Bex
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Sneasel
+Level: 29
+
+Stantler
+Level: 30
+
+=== TRAINER_R7P_CAL ===
+Name: Cal
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sneasel
+Level: 33
+
+Piloswine
+Level: 32
+
+=== TRAINER_R7P_DEE ===
+Name: Dee
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Skarmory
+Level: 29
+
+Lairon
+Level: 30
+
+Piloswine
+Level: 29
+
+=== TRAINER_R7P_ELI ===
+Name: Eli
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Lairon
+Level: 32
+
+Skarmory
+Level: 29
+
+Murkrow
+Level: 33
+
+=== TRAINER_R1SP_FAYE ===
+Name: Faye
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sealeo
+Level: 36
+
+Dubwool
+Level: 36
+
+Wooloo
+Level: 35
+
+=== TRAINER_R1SP_GIL ===
+Name: Gil
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Crabrawler
+Level: 35
+
+Glalie
+Level: 36
+
+Sealeo
+Level: 34
+
+=== TRAINER_R1SP_IKE ===
+Name: Ike
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Spheal
+Level: 34
+
+Sealeo
+Level: 33
+
+Snorunt
+Level: 34
+
+=== TRAINER_R1SP_JOSS ===
+Name: Joss
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wooloo
+Level: 34
+
+Snorunt
+Level: 33
+
+=== TRAINER_R1SP_KEA ===
+Name: Kea
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Eiscue
+Level: 34
+
+Sneasel
+Level: 36
+
+=== TRAINER_R1SP_LEVI ===
+Name: Levi
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Snorunt
+Level: 34
+
+Glalie
+Level: 35
+
+Eiscue
+Level: 34
+
+=== TRAINER_R1SP_MILA ===
+Name: Mila
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Snorunt
+Level: 33
+
+Eiscue
+Level: 36
+
+Sneasel
+Level: 33
+
+=== TRAINER_R1SP_NED ===
+Name: Ned
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wooloo
+Level: 36
+
+Sneasel
+Level: 34
+
+=== TRAINER_R1SP_ORLA ===
+Name: Orla
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Dubwool
+Level: 35
+
+Eiscue
+Level: 36
+
+=== TRAINER_R5RP_PETE ===
+Name: Pete
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Noctowl
+Level: 26
+
+Furret
+Level: 24
+
+=== TRAINER_R5RP_RATA ===
+Name: Rata
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pinsir
+Level: 26
+
+Komala
+Level: 26
+
+=== TRAINER_R5RP_SID ===
+Name: Sid
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Furret
+Level: 24
+
+Komala
+Level: 23
+
+=== TRAINER_R5RP_TILA ===
+Name: Tila
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pinsir
+Level: 25
+
+Pinsir
+Level: 24
+
+=== TRAINER_R5RP_UMI ===
+Name: Umi
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pinsir
+Level: 25
+
+Sentret
+Level: 24
+
+=== TRAINER_R5RP_VADA ===
+Name: Vada
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Breloom
+Level: 25
+
+Furret
+Level: 25
+
+=== TRAINER_R5RP_WES ===
+Name: Wes
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sentret
+Level: 25
+
+Ferroseed
+Level: 24
+
+=== TRAINER_RUAP_YAZ ===
+Name: Yaz
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Mamoswine
+Level: 57
+
+Piloswine
+Level: 54
+
+=== TRAINER_RUAP_ZEB ===
+Name: Zeb
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Mamoswine
+Level: 53
+
+Avalugg
+Level: 53
+
+Centiskorch
+Level: 54
+
+=== TRAINER_RUAP_ARIKI ===
+Name: Ariki
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Centiskorch
+Level: 55
+
+Centiskorch
+Level: 54
+
+=== TRAINER_RUAP_HORI ===
+Name: Hori
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Avalugg
+Level: 54
+
+Skarmory
+Level: 56
+
+Avalugg
+Level: 56
+
+=== TRAINER_RUAP_KUPE ===
+Name: Kupe
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Centiskorch
+Level: 54
+
+Glalie
+Level: 56
+
+Glalie
+Level: 56
+
+=== TRAINER_TMTP_MIRIAMA ===
+Name: Miriama
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Solrock
+Level: 46
+
+Skarmory
+Level: 46
+
+Wyrdeer
+Level: 46
+
+=== TRAINER_TMTP_REREWA ===
+Name: Rerewa
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Lunatone
+Level: 49
+
+Wyrdeer
+Level: 50
+
+Lycanroc
+Level: 48
+
+=== TRAINER_TMTP_TAINUI ===
+Name: Tainui
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Skarmory
+Level: 49
+
+Solrock
+Level: 49
+
+Lunatone
+Level: 46
+
+=== TRAINER_TMTP_WAKA ===
+Name: Waka
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pupitar
+Level: 50
+
+Lycanroc
+Level: 47
+
+=== TRAINER_TMTP_WHETU ===
+Name: Whetu
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Skarmory
+Level: 47
+
+Trevenant
+Level: 48
+
+=== TRAINER_HTT_HIKA ===
+Name: Hika
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Cherubi
+Level: 8
+
+=== TRAINER_HTT_MANAIA ===
+Name: Manaia
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pidgey
+Level: 7
+
+=== TRAINER_HTT_NGAIRE ===
+Name: Ngaire
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Hoppip
+Level: 6
+
+=== TRAINER_AHC_PAIKEA ===
+Name: Paikea
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wingull
+Level: 13
+
+Snubbull
+Level: 15
+
+=== TRAINER_AHC_RONGO ===
+Name: Rongo
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Barboach
+Level: 14
+
+Snubbull
+Level: 14
+
+=== TRAINER_AHC_TAIKA ===
+Name: Taika
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Barboach
+Level: 15
+
+Barboach
+Level: 13
+
+=== TRAINER_WRT_UENUKU ===
+Name: Uenuku
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Morelull
+Level: 16
+
+Morelull
+Level: 13
+
+=== TRAINER_WRT_WERO ===
+Name: Wero
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Mareep
+Level: 15
+
+Mareep
+Level: 13
+
+=== TRAINER_RTT_HANA3 ===
+Name: Hana3
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Koffing
+Level: 18
+
+Slugma
+Level: 18
+
+=== TRAINER_RTT_TOA ===
+Name: Toa
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sizzlipede
+Level: 19
+
+Slugma
+Level: 21
+
+=== TRAINER_RTT_IPO ===
+Name: Ipo
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Slugma
+Level: 19
+
+Koffing
+Level: 19
+
+=== TRAINER_TPT_KIWA ===
+Name: Kiwa
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Psyduck
+Level: 22
+
+Poliwhirl
+Level: 20
+
+=== TRAINER_TPT_MARARA ===
+Name: Marara
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Tynamo
+Level: 20
+
+Ducklett
+Level: 21
+
+=== TRAINER_TPT_AMIRIA ===
+Name: Amiria
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Ducklett
+Level: 21
+
+Psyduck
+Level: 22
+
+=== TRAINER_TPT_HAKOPA ===
+Name: Hakopa
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Ducklett
+Level: 24
+
+Psyduck
+Level: 22
+
+=== TRAINER_TGT_IRIRANGI ===
+Name: Irirangi
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Cramorant
+Level: 18
+
+Cramorant
+Level: 20
+
+=== TRAINER_TGT_KEREAMA ===
+Name: Kereama
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Shellder
+Level: 19
+
+Cramorant
+Level: 19
+
+=== TRAINER_TGT_MEREANA ===
+Name: Mereana
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Shellder
+Level: 19
+
+Krabby
+Level: 19
+
+=== TRAINER_WLT_NGAHUIA ===
+Name: Ngahuia
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Venonat
+Level: 29
+
+Kirlia
+Level: 29
+
+Swanna
+Level: 26
+
+=== TRAINER_WLT_OTENE ===
+Name: Otene
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Venonat
+Level: 26
+
+Kirlia
+Level: 26
+
+Ducklett
+Level: 29
+
+=== TRAINER_WLT_PAORA ===
+Name: Paora
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wattrel
+Level: 28
+
+Venonat
+Level: 30
+
+Kirlia
+Level: 30
+
+=== TRAINER_WLT_RANGIMARIE ===
+Name: Rangimarie
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Venonat
+Level: 30
+
+Wattrel
+Level: 27
+
+Venonat
+Level: 27
+
+=== TRAINER_WLT_TAMATI ===
+Name: Tamati
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Swanna
+Level: 27
+
+Venonat
+Level: 28
+
+=== TRAINER_WKT_WAIMARAMA ===
+Name: Waimarama
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Ferroseed
+Level: 29
+
+Cottonee
+Level: 31
+
+=== TRAINER_WKT_WHINA ===
+Name: Whina
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Petilil
+Level: 31
+
+Cottonee
+Level: 28
+
+=== TRAINER_WKT_APUTA ===
+Name: Aputa
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Ferroseed
+Level: 29
+
+Petilil
+Level: 30
+
+=== TRAINER_OTT_ERU ===
+Name: Eru
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Timburr
+Level: 31
+
+Magnemite
+Level: 33
+
+Magnemite
+Level: 32
+
+=== TRAINER_OTT_HEMI ===
+Name: Hemi
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magnemite
+Level: 32
+
+Aron
+Level: 34
+
+Ferroseed
+Level: 32
+
+=== TRAINER_OTT_KIRI ===
+Name: Kiri
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Aron
+Level: 33
+
+Magnemite
+Level: 32
+
+=== TRAINER_OTT_MAHINA ===
+Name: Mahina
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Gurdurr
+Level: 34
+
+Timburr
+Level: 33
+
+Aron
+Level: 33
+
+=== TRAINER_OTT_NIKO ===
+Name: Niko
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Aron
+Level: 32
+
+Magnemite
+Level: 32
+
+=== TRAINER_OPT_POUNAMU ===
+Name: Pounamu
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sneasel
+Level: 35
+
+Crabrawler
+Level: 36
+
+=== TRAINER_OPT_RANGI ===
+Name: Rangi
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sneasel
+Level: 36
+
+Snorunt
+Level: 37
+
+Snorunt
+Level: 36
+
+=== TRAINER_OPT_TIA ===
+Name: Tia
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Snorunt
+Level: 34
+
+Wooloo
+Level: 34
+
+=== TRAINER_OPT_WIKI ===
+Name: Wiki
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Eiscue
+Level: 36
+
+Sneasel
+Level: 37
+
+=== TRAINER_TMK_ARIA ===
+Name: Aria
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Honchkrow
+Level: 48
+
+Garbodor
+Level: 46
+
+Raticate
+Level: 48
+
+=== TRAINER_TMK_BODHI ===
+Name: Bodhi
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Perrserker
+Level: 46
+
+Garbodor
+Level: 45
+
+Perrserker
+Level: 46
+
+=== TRAINER_TMK_CLEO ===
+Name: Cleo
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Honchkrow
+Level: 45
+
+Crawdaunt
+Level: 45
+
+=== TRAINER_TMK_DARCY ===
+Name: Darcy
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Perrserker
+Level: 46
+
+Perrserker
+Level: 46
+
+Perrserker
+Level: 49
+
+=== TRAINER_TMK_EDDIE ===
+Name: Eddie
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Garbodor
+Level: 49
+
+Malamar
+Level: 47
+
+Raticate
+Level: 48
+
+=== TRAINER_GYM2_FREYA ===
+Name: Freya
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+Starting Status: Misty Terrain
+AI: Check Bad Move
+
+Cottonee
+Level: 13
+
+Snubbull
+Level: 13
+
+=== TRAINER_GYM2_GRIFF ===
+Name: Griff
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Misty Terrain
+AI: Check Bad Move
+
+Ralts
+Level: 12
+
+Cottonee
+Level: 12
+
+=== TRAINER_GYM3_HOLLIE ===
+Name: Hollie
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Sea Of Fire Player / Sea Of Fire Opponent
+AI: Check Bad Move
+
+Wooper
+Level: 20
+
+Sandygast
+Level: 21
+
+=== TRAINER_GYM3_INDIE ===
+Name: Indie
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Sea Of Fire Player / Sea Of Fire Opponent
+AI: Check Bad Move
+
+Sandygast
+Level: 21
+
+Wooper
+Level: 20
+
+=== TRAINER_GYM4_JORJA ===
+Name: Jorja
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Swamp Player
+AI: Check Bad Move
+
+Wingull
+Level: 24
+
+Wingull
+Level: 22
+
+=== TRAINER_GYM4_KOBY ===
+Name: Koby
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Swamp Player
+AI: Check Bad Move
+
+Wingull
+Level: 23
+
+Krabby
+Level: 22
+
+=== TRAINER_GYM5_LARA ===
+Name: Lara
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+Starting Status: Tailwind Opponent
+AI: Check Bad Move
+
+Taillow
+Level: 25
+
+Taillow
+Level: 27
+
+=== TRAINER_GYM5_MAX ===
+Name: Max
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Tailwind Opponent
+AI: Check Bad Move
+
+Taillow
+Level: 25
+
+Ducklett
+Level: 26
+
+=== TRAINER_GYM6_NELL ===
+Name: Nell
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Slugma
+Level: 27
+
+Magcargo
+Level: 27
+
+=== TRAINER_GYM6_OSCAR ===
+Name: Oscar
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Slugma
+Level: 28
+
+Slugma
+Level: 29
+
+=== TRAINER_GYM7_POPPY ===
+Name: Poppy
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Trick Room
+AI: Check Bad Move
+
+Ferroseed
+Level: 31
+
+Ferroseed
+Level: 32
+
+Bronzor
+Level: 33
+
+=== TRAINER_GYM7_REUBEN ===
+Name: Reuben
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+Starting Status: Trick Room
+AI: Check Bad Move
+
+Bronzor
+Level: 31
+
+Bronzor
+Level: 32
+
+=== TRAINER_GYM8_SADIE ===
+Name: Sadie
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Spheal
+Level: 34
+
+Snom
+Level: 34
+
+=== TRAINER_GYM8_TEDDY ===
+Name: Teddy
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Bergmite
+Level: 35
+
+Spheal
+Level: 34
+
+=== TRAINER_TWEX_URSULA ===
+Name: Ursula
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Honchkrow
+Level: 43
+
+Gurdurr
+Level: 42
+
+=== TRAINER_TWEX_VERA ===
+Name: Vera
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Honchkrow
+Level: 45
+
+Raticate
+Level: 43
+
+Gurdurr
+Level: 43
+
+=== TRAINER_VICT_WREN ===
+Name: Wren
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Weavile
+Level: 44
+
+Whimsicott
+Level: 42
+
+=== TRAINER_VICT_XANTHE ===
+Name: Xanthe
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Weavile
+Level: 44
+
+Weavile
+Level: 43
+
+Trevenant
+Level: 44
+
+=== TRAINER_VICT_YUSUF ===
+Name: Yusuf
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Weavile
+Level: 44
+
+Gyarados
+Level: 45
+
+Whimsicott
+Level: 42
+
+=== TRAINER_GYM1_ZARA ===
+Name: Zara
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+Starting Status: Grassy Terrain
+AI: Check Bad Move
+
+Cherubi
+Level: 8
+
+=== TRAINER_GYM1_ADA ===
+Name: Ada
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+Starting Status: Grassy Terrain
+AI: Check Bad Move
+
+Combee
+Level: 9

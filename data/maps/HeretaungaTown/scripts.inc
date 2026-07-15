@@ -1359,3 +1359,73 @@ HeretaungaTown_Text_RevealAfter:
 	.string "back. Slowly. Same as all of\l"
 	.string "us.\p"
 	.string "Kettle's on, love.$"
+
+HeretaungaTown_EventScript_PHika::
+	trainerbattle_single TRAINER_HTT_HIKA, HeretaungaTown_Text_PHikaIntro, HeretaungaTown_Text_PHikaDefeat
+	msgbox HeretaungaTown_Text_PHikaPost, MSGBOX_AUTOCLOSE
+	end
+
+HeretaungaTown_Text_PHikaIntro:
+	.string "Hika: I've been training out here\nALL morning!$"
+
+HeretaungaTown_Text_PHikaDefeat:
+	.string "Okay, MOST of the morning.$"
+
+HeretaungaTown_Text_PHikaPost:
+	.string "Don't tell my nan I lost.$"
+
+HeretaungaTown_EventScript_PManaia::
+	trainerbattle_single TRAINER_HTT_MANAIA, HeretaungaTown_Text_PManaiaIntro, HeretaungaTown_Text_PManaiaDefeat
+	msgbox HeretaungaTown_Text_PManaiaPost, MSGBOX_AUTOCLOSE
+	end
+
+HeretaungaTown_Text_PManaiaIntro:
+	.string "Manaia: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+HeretaungaTown_Text_PManaiaDefeat:
+	.string "Aw, heck!$"
+
+HeretaungaTown_Text_PManaiaPost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+HeretaungaTown_EventScript_PNgaire::
+	trainerbattle_single TRAINER_HTT_NGAIRE, HeretaungaTown_Text_PNgaireIntro, HeretaungaTown_Text_PNgaireDefeat
+	msgbox HeretaungaTown_Text_PNgairePost, MSGBOX_AUTOCLOSE
+	end
+
+HeretaungaTown_Text_PNgaireIntro:
+	.string "Ngaire: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+HeretaungaTown_Text_PNgaireDefeat:
+	.string "Aw, heck!$"
+
+HeretaungaTown_Text_PNgairePost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+HeretaungaTown_EventScript_PZara::
+	trainerbattle_single TRAINER_GYM1_ZARA, HeretaungaTown_Text_PZaraIntro, HeretaungaTown_Text_PZaraDefeat
+	msgbox HeretaungaTown_Text_PZaraPost, MSGBOX_AUTOCLOSE
+	end
+
+HeretaungaTown_Text_PZaraIntro:
+	.string "Zara: Between milkings. You've got\nten minutes. Go.$"
+
+HeretaungaTown_Text_PZaraDefeat:
+	.string "Back to the shed, then.$"
+
+HeretaungaTown_Text_PZaraPost:
+	.string "Rain's coming. Good for the\ngrass, good for nothing else.$"
+
+HeretaungaTown_EventScript_PAda::
+	trainerbattle_single TRAINER_GYM1_ADA, HeretaungaTown_Text_PAdaIntro, HeretaungaTown_Text_PAdaDefeat
+	msgbox HeretaungaTown_Text_PAdaPost, MSGBOX_AUTOCLOSE
+	end
+
+HeretaungaTown_Text_PAdaIntro:
+	.string "Ada: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+HeretaungaTown_Text_PAdaDefeat:
+	.string "You can have the sammie.$"
+
+HeretaungaTown_Text_PAdaPost:
+	.string "Worth it. Rematch at smoko?$"

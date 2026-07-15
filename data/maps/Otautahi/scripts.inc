@@ -75,3 +75,73 @@ Otautahi_Text_HoriAfter:
 	.string "If the Mob asks? You never saw\n"
 	.string "me. I'm off to find honest work.\p"
 	.string "…Maybe jandals.$"
+
+Otautahi_EventScript_PEru::
+	trainerbattle_single TRAINER_OTT_ERU, Otautahi_Text_PEruIntro, Otautahi_Text_PEruDefeat
+	msgbox Otautahi_Text_PEruPost, MSGBOX_AUTOCLOSE
+	end
+
+Otautahi_Text_PEruIntro:
+	.string "Eru: You've got badges. I've got\nstandards. Let's see.$"
+
+Otautahi_Text_PEruDefeat:
+	.string "Standards met.$"
+
+Otautahi_Text_PEruPost:
+	.string "The League's tougher than me.\nBarely.$"
+
+Otautahi_EventScript_PHemi::
+	trainerbattle_single TRAINER_OTT_HEMI, Otautahi_Text_PHemiIntro, Otautahi_Text_PHemiDefeat
+	msgbox Otautahi_Text_PHemiPost, MSGBOX_AUTOCLOSE
+	end
+
+Otautahi_Text_PHemiIntro:
+	.string "Hemi: Kia ora! Great day for it, eh?\nBattle before the weather turns?$"
+
+Otautahi_Text_PHemiDefeat:
+	.string "The forecast said nothing\nabout you.$"
+
+Otautahi_Text_PHemiPost:
+	.string "Southerly's coming. Take care\nup the track.$"
+
+Otautahi_EventScript_PKiri::
+	trainerbattle_single TRAINER_OTT_KIRI, Otautahi_Text_PKiriIntro, Otautahi_Text_PKiriDefeat
+	msgbox Otautahi_Text_PKiriPost, MSGBOX_AUTOCLOSE
+	end
+
+Otautahi_Text_PKiriIntro:
+	.string "Kiri: You've got badges. I've got\nstandards. Let's see.$"
+
+Otautahi_Text_PKiriDefeat:
+	.string "Standards met.$"
+
+Otautahi_Text_PKiriPost:
+	.string "The League's tougher than me.\nBarely.$"
+
+Otautahi_EventScript_PMahina::
+	trainerbattle_single TRAINER_OTT_MAHINA, Otautahi_Text_PMahinaIntro, Otautahi_Text_PMahinaDefeat
+	msgbox Otautahi_Text_PMahinaPost, MSGBOX_AUTOCLOSE
+	end
+
+Otautahi_Text_PMahinaIntro:
+	.string "Mahina: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+Otautahi_Text_PMahinaDefeat:
+	.string "Aw, heck!$"
+
+Otautahi_Text_PMahinaPost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+Otautahi_EventScript_PNiko::
+	trainerbattle_single TRAINER_OTT_NIKO, Otautahi_Text_PNikoIntro, Otautahi_Text_PNikoDefeat
+	msgbox Otautahi_Text_PNikoPost, MSGBOX_AUTOCLOSE
+	end
+
+Otautahi_Text_PNikoIntro:
+	.string "Niko: Between milkings. You've got\nten minutes. Go.$"
+
+Otautahi_Text_PNikoDefeat:
+	.string "Back to the shed, then.$"
+
+Otautahi_Text_PNikoPost:
+	.string "Rain's coming. Good for the\ngrass, good for nothing else.$"

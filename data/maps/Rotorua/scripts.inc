@@ -108,3 +108,45 @@ Rotorua_Text_AwhiAfter:
 	.string "Awhi: The mud pools are good\n"
 	.string "for thinking.\p"
 	.string "Not so good for answers.$"
+
+Rotorua_EventScript_PHana3::
+	trainerbattle_single TRAINER_RTT_HANA3, Rotorua_Text_PHana3Intro, Rotorua_Text_PHana3Defeat
+	msgbox Rotorua_Text_PHana3Post, MSGBOX_AUTOCLOSE
+	end
+
+Rotorua_Text_PHana3Intro:
+	.string "Hana3: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+Rotorua_Text_PHana3Defeat:
+	.string "You can have the sammie.$"
+
+Rotorua_Text_PHana3Post:
+	.string "Worth it. Rematch at smoko?$"
+
+Rotorua_EventScript_PToa::
+	trainerbattle_single TRAINER_RTT_TOA, Rotorua_Text_PToaIntro, Rotorua_Text_PToaDefeat
+	msgbox Rotorua_Text_PToaPost, MSGBOX_AUTOCLOSE
+	end
+
+Rotorua_Text_PToaIntro:
+	.string "Toa: I've tramped every track in\nthis region. Fight me.$"
+
+Rotorua_Text_PToaDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+Rotorua_Text_PToaPost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Rotorua_EventScript_PIpo::
+	trainerbattle_single TRAINER_RTT_IPO, Rotorua_Text_PIpoIntro, Rotorua_Text_PIpoDefeat
+	msgbox Rotorua_Text_PIpoPost, MSGBOX_AUTOCLOSE
+	end
+
+Rotorua_Text_PIpoIntro:
+	.string "Ipo: My mokopuna says I'm out of\ndate. Let's test that.$"
+
+Rotorua_Text_PIpoDefeat:
+	.string "Tell no one.$"
+
+Rotorua_Text_PIpoPost:
+	.string "Old tricks are just good\ntricks that lasted.$"

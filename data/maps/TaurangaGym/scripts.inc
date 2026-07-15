@@ -106,3 +106,31 @@ TaurangaGym_Text_MuaSurf:
 	.string "with less.\p"
 	.string "The water's yours now. Treat\n"
 	.string "her like whanau.$"
+
+TaurangaGym_EventScript_PJorja::
+	trainerbattle_single TRAINER_GYM4_JORJA, TaurangaGym_Text_PJorjaIntro, TaurangaGym_Text_PJorjaDefeat
+	msgbox TaurangaGym_Text_PJorjaPost, MSGBOX_AUTOCLOSE
+	end
+
+TaurangaGym_Text_PJorjaIntro:
+	.string "Jorja: The one that got away was\nTHIS big. Like my Pokemon.$"
+
+TaurangaGym_Text_PJorjaDefeat:
+	.string "Also got away on me.$"
+
+TaurangaGym_Text_PJorjaPost:
+	.string "Tide's turning. Good luck out\nthere.$"
+
+TaurangaGym_EventScript_PKoby::
+	trainerbattle_single TRAINER_GYM4_KOBY, TaurangaGym_Text_PKobyIntro, TaurangaGym_Text_PKobyDefeat
+	msgbox TaurangaGym_Text_PKobyPost, MSGBOX_AUTOCLOSE
+	end
+
+TaurangaGym_Text_PKobyIntro:
+	.string "Koby: Patience. That's fishing.\nAlso that's battling.$"
+
+TaurangaGym_Text_PKobyDefeat:
+	.string "I bit too early.$"
+
+TaurangaGym_Text_PKobyPost:
+	.string "A bad day's fishing beats a\ngood day's working.$"

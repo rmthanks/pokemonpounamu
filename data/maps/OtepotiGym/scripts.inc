@@ -63,3 +63,31 @@ OtepotiGym_Text_ProspectDefeat:
 
 OtepotiGym_Text_ProspectPost:
 	.string "Huka came here from up north too, they say. The cold suited her. Or she suited it.$"
+
+OtepotiGym_EventScript_PSadie::
+	trainerbattle_single TRAINER_GYM8_SADIE, OtepotiGym_Text_PSadieIntro, OtepotiGym_Text_PSadieDefeat
+	msgbox OtepotiGym_Text_PSadiePost, MSGBOX_AUTOCLOSE
+	end
+
+OtepotiGym_Text_PSadieIntro:
+	.string "Sadie: You've got badges. I've got\nstandards. Let's see.$"
+
+OtepotiGym_Text_PSadieDefeat:
+	.string "Standards met.$"
+
+OtepotiGym_Text_PSadiePost:
+	.string "The League's tougher than me.\nBarely.$"
+
+OtepotiGym_EventScript_PTeddy::
+	trainerbattle_single TRAINER_GYM8_TEDDY, OtepotiGym_Text_PTeddyIntro, OtepotiGym_Text_PTeddyDefeat
+	msgbox OtepotiGym_Text_PTeddyPost, MSGBOX_AUTOCLOSE
+	end
+
+OtepotiGym_Text_PTeddyIntro:
+	.string "Teddy: Sixty years I've watched this\nland. Show me something new.$"
+
+OtepotiGym_Text_PTeddyDefeat:
+	.string "…That was new.$"
+
+OtepotiGym_Text_PTeddyPost:
+	.string "The land remembers everyone\nwho crosses it.$"

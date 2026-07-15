@@ -296,3 +296,73 @@ Wellington_Text_HoOhCrossing:
 	.string "Gone before you can name it.\p"
 	.string "The water it crossed keeps\n"
 	.string "glittering a while.$"
+
+Wellington_EventScript_PNgahuia::
+	trainerbattle_single TRAINER_WLT_NGAHUIA, Wellington_Text_PNgahuiaIntro, Wellington_Text_PNgahuiaDefeat
+	msgbox Wellington_Text_PNgahuiaPost, MSGBOX_AUTOCLOSE
+	end
+
+Wellington_Text_PNgahuiaIntro:
+	.string "Ngahuia: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+Wellington_Text_PNgahuiaDefeat:
+	.string "Aw, heck!$"
+
+Wellington_Text_PNgahuiaPost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+Wellington_EventScript_POtene::
+	trainerbattle_single TRAINER_WLT_OTENE, Wellington_Text_POteneIntro, Wellington_Text_POteneDefeat
+	msgbox Wellington_Text_POtenePost, MSGBOX_AUTOCLOSE
+	end
+
+Wellington_Text_POteneIntro:
+	.string "Otene: I train where the weather's\nworst. Makes us honest.$"
+
+Wellington_Text_POteneDefeat:
+	.string "Honestly beaten.$"
+
+Wellington_Text_POtenePost:
+	.string "Strength is showing up in\nthe rain.$"
+
+Wellington_EventScript_PPaora::
+	trainerbattle_single TRAINER_WLT_PAORA, Wellington_Text_PPaoraIntro, Wellington_Text_PPaoraDefeat
+	msgbox Wellington_Text_PPaoraPost, MSGBOX_AUTOCLOSE
+	end
+
+Wellington_Text_PPaoraIntro:
+	.string "Paora: My mokopuna says I'm out of\ndate. Let's test that.$"
+
+Wellington_Text_PPaoraDefeat:
+	.string "Tell no one.$"
+
+Wellington_Text_PPaoraPost:
+	.string "Old tricks are just good\ntricks that lasted.$"
+
+Wellington_EventScript_PRangimarie::
+	trainerbattle_single TRAINER_WLT_RANGIMARIE, Wellington_Text_PRangimarieIntro, Wellington_Text_PRangimarieDefeat
+	msgbox Wellington_Text_PRangimariePost, MSGBOX_AUTOCLOSE
+	end
+
+Wellington_Text_PRangimarieIntro:
+	.string "Rangimarie: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+Wellington_Text_PRangimarieDefeat:
+	.string "Aw, heck!$"
+
+Wellington_Text_PRangimariePost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+Wellington_EventScript_PTamati::
+	trainerbattle_single TRAINER_WLT_TAMATI, Wellington_Text_PTamatiIntro, Wellington_Text_PTamatiDefeat
+	msgbox Wellington_Text_PTamatiPost, MSGBOX_AUTOCLOSE
+	end
+
+Wellington_Text_PTamatiIntro:
+	.string "Tamati: This is protected land.\nProve you respect it.$"
+
+Wellington_Text_PTamatiDefeat:
+	.string "You fight like you care.$"
+
+Wellington_Text_PTamatiPost:
+	.string "The birds come back when\nthe stoats go. Remember that.$"

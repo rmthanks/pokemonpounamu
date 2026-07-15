@@ -173,3 +173,59 @@ Otepoti_Text_Awhi2:
 	.string "be there when it ends.\p"
 	.string "Even if the him I love ended\n"
 	.string "years ago.$"
+
+Otepoti_EventScript_PPounamu::
+	trainerbattle_single TRAINER_OPT_POUNAMU, Otepoti_Text_PPounamuIntro, Otepoti_Text_PPounamuDefeat
+	msgbox Otepoti_Text_PPounamuPost, MSGBOX_AUTOCLOSE
+	end
+
+Otepoti_Text_PPounamuIntro:
+	.string "Pounamu: I've been training out here\nALL morning!$"
+
+Otepoti_Text_PPounamuDefeat:
+	.string "Okay, MOST of the morning.$"
+
+Otepoti_Text_PPounamuPost:
+	.string "Don't tell my nan I lost.$"
+
+Otepoti_EventScript_PRangi::
+	trainerbattle_single TRAINER_OPT_RANGI, Otepoti_Text_PRangiIntro, Otepoti_Text_PRangiDefeat
+	msgbox Otepoti_Text_PRangiPost, MSGBOX_AUTOCLOSE
+	end
+
+Otepoti_Text_PRangiIntro:
+	.string "Rangi: I've been training out here\nALL morning!$"
+
+Otepoti_Text_PRangiDefeat:
+	.string "Okay, MOST of the morning.$"
+
+Otepoti_Text_PRangiPost:
+	.string "Don't tell my nan I lost.$"
+
+Otepoti_EventScript_PTia::
+	trainerbattle_single TRAINER_OPT_TIA, Otepoti_Text_PTiaIntro, Otepoti_Text_PTiaDefeat
+	msgbox Otepoti_Text_PTiaPost, MSGBOX_AUTOCLOSE
+	end
+
+Otepoti_Text_PTiaIntro:
+	.string "Tia: You've got badges. I've got\nstandards. Let's see.$"
+
+Otepoti_Text_PTiaDefeat:
+	.string "Standards met.$"
+
+Otepoti_Text_PTiaPost:
+	.string "The League's tougher than me.\nBarely.$"
+
+Otepoti_EventScript_PWiki::
+	trainerbattle_single TRAINER_OPT_WIKI, Otepoti_Text_PWikiIntro, Otepoti_Text_PWikiDefeat
+	msgbox Otepoti_Text_PWikiPost, MSGBOX_AUTOCLOSE
+	end
+
+Otepoti_Text_PWikiIntro:
+	.string "Wiki: My mokopuna says I'm out of\ndate. Let's test that.$"
+
+Otepoti_Text_PWikiDefeat:
+	.string "Tell no one.$"
+
+Otepoti_Text_PWikiPost:
+	.string "Old tricks are just good\ntricks that lasted.$"

@@ -208,3 +208,143 @@ Route7_Text_TawhaiThanks:
 	.string "And when you next see a gate -\p"
 	.string "think of me. I'll be keeping\n"
 	.string "one somewhere.$"
+
+Route7_EventScript_PVince::
+	trainerbattle_single TRAINER_R7P_VINCE, Route7_Text_PVinceIntro, Route7_Text_PVinceDefeat
+	msgbox Route7_Text_PVincePost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PVinceIntro:
+	.string "Vince: I've tramped every track in\nthis region. Fight me.$"
+
+Route7_Text_PVinceDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+Route7_Text_PVincePost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Route7_EventScript_PWade::
+	trainerbattle_single TRAINER_R7P_WADE, Route7_Text_PWadeIntro, Route7_Text_PWadeDefeat
+	msgbox Route7_Text_PWadePost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PWadeIntro:
+	.string "Wade: I've tramped every track in\nthis region. Fight me.$"
+
+Route7_Text_PWadeDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+Route7_Text_PWadePost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Route7_EventScript_PXimena::
+	trainerbattle_single TRAINER_R7P_XIMENA, Route7_Text_PXimenaIntro, Route7_Text_PXimenaDefeat
+	msgbox Route7_Text_PXimenaPost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PXimenaIntro:
+	.string "Ximena: Shortcut? There's no shortcut.\nThere's only the long way.$"
+
+Route7_Text_PXimenaDefeat:
+	.string "You earned the view.$"
+
+Route7_Text_PXimenaPost:
+	.string "One more ridge. There's always\none more ridge.$"
+
+Route7_EventScript_PYvette::
+	trainerbattle_single TRAINER_R7P_YVETTE, Route7_Text_PYvetteIntro, Route7_Text_PYvetteDefeat
+	msgbox Route7_Text_PYvettePost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PYvetteIntro:
+	.string "Yvette: Sixty years I've watched this\nland. Show me something new.$"
+
+Route7_Text_PYvetteDefeat:
+	.string "…That was new.$"
+
+Route7_Text_PYvettePost:
+	.string "The land remembers everyone\nwho crosses it.$"
+
+Route7_EventScript_PZach::
+	trainerbattle_single TRAINER_R7P_ZACH, Route7_Text_PZachIntro, Route7_Text_PZachDefeat
+	msgbox Route7_Text_PZachPost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PZachIntro:
+	.string "Zach: I train where the weather's\nworst. Makes us honest.$"
+
+Route7_Text_PZachDefeat:
+	.string "Honestly beaten.$"
+
+Route7_Text_PZachPost:
+	.string "Strength is showing up in\nthe rain.$"
+
+Route7_EventScript_PAki::
+	trainerbattle_single TRAINER_R7P_AKI, Route7_Text_PAkiIntro, Route7_Text_PAkiDefeat
+	msgbox Route7_Text_PAkiPost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PAkiIntro:
+	.string "Aki: DOC ranger. Checking traps.\nAnd checking trainers.$"
+
+Route7_Text_PAkiDefeat:
+	.string "Pest-free AND beaten.$"
+
+Route7_Text_PAkiPost:
+	.string "Keep to the track and take\nyour rubbish out, eh.$"
+
+Route7_EventScript_PBex::
+	trainerbattle_single TRAINER_R7P_BEX, Route7_Text_PBexIntro, Route7_Text_PBexDefeat
+	msgbox Route7_Text_PBexPost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PBexIntro:
+	.string "Bex: Shortcut? There's no shortcut.\nThere's only the long way.$"
+
+Route7_Text_PBexDefeat:
+	.string "You earned the view.$"
+
+Route7_Text_PBexPost:
+	.string "One more ridge. There's always\none more ridge.$"
+
+Route7_EventScript_PCal::
+	trainerbattle_single TRAINER_R7P_CAL, Route7_Text_PCalIntro, Route7_Text_PCalDefeat
+	msgbox Route7_Text_PCalPost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PCalIntro:
+	.string "Cal: I train where the weather's\nworst. Makes us honest.$"
+
+Route7_Text_PCalDefeat:
+	.string "Honestly beaten.$"
+
+Route7_Text_PCalPost:
+	.string "Strength is showing up in\nthe rain.$"
+
+Route7_EventScript_PDee::
+	trainerbattle_single TRAINER_R7P_DEE, Route7_Text_PDeeIntro, Route7_Text_PDeeDefeat
+	msgbox Route7_Text_PDeePost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PDeeIntro:
+	.string "Dee: My mokopuna says I'm out of\ndate. Let's test that.$"
+
+Route7_Text_PDeeDefeat:
+	.string "Tell no one.$"
+
+Route7_Text_PDeePost:
+	.string "Old tricks are just good\ntricks that lasted.$"
+
+Route7_EventScript_PEli::
+	trainerbattle_single TRAINER_R7P_ELI, Route7_Text_PEliIntro, Route7_Text_PEliDefeat
+	msgbox Route7_Text_PEliPost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_Text_PEliIntro:
+	.string "Eli: I train where the weather's\nworst. Makes us honest.$"
+
+Route7_Text_PEliDefeat:
+	.string "Honestly beaten.$"
+
+Route7_Text_PEliPost:
+	.string "Strength is showing up in\nthe rain.$"

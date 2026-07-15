@@ -101,3 +101,31 @@ RotoruaGym_Text_ProspectPost:
 	.string "lies.\p"
 	.string "She also says my Slugma sleeps\n"
 	.string "in her good pool. Also true.$"
+
+RotoruaGym_EventScript_PHollie::
+	trainerbattle_single TRAINER_GYM3_HOLLIE, RotoruaGym_Text_PHollieIntro, RotoruaGym_Text_PHollieDefeat
+	msgbox RotoruaGym_Text_PHolliePost, MSGBOX_AUTOCLOSE
+	end
+
+RotoruaGym_Text_PHollieIntro:
+	.string "Hollie: Kia ora! Great day for it, eh?\nBattle before the weather turns?$"
+
+RotoruaGym_Text_PHollieDefeat:
+	.string "The forecast said nothing\nabout you.$"
+
+RotoruaGym_Text_PHolliePost:
+	.string "Southerly's coming. Take care\nup the track.$"
+
+RotoruaGym_EventScript_PIndie::
+	trainerbattle_single TRAINER_GYM3_INDIE, RotoruaGym_Text_PIndieIntro, RotoruaGym_Text_PIndieDefeat
+	msgbox RotoruaGym_Text_PIndiePost, MSGBOX_AUTOCLOSE
+	end
+
+RotoruaGym_Text_PIndieIntro:
+	.string "Indie: DOC ranger. Checking traps.\nAnd checking trainers.$"
+
+RotoruaGym_Text_PIndieDefeat:
+	.string "Pest-free AND beaten.$"
+
+RotoruaGym_Text_PIndiePost:
+	.string "Keep to the track and take\nyour rubbish out, eh.$"

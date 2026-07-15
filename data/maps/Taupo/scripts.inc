@@ -322,3 +322,59 @@ Taupo_Text_BondShore:
 	.string "anybody.\p"
 	.string "…Whatever you're carrying,\n"
 	.string "kid - carry it careful.$"
+
+Taupo_EventScript_PKiwa::
+	trainerbattle_single TRAINER_TPT_KIWA, Taupo_Text_PKiwaIntro, Taupo_Text_PKiwaDefeat
+	msgbox Taupo_Text_PKiwaPost, MSGBOX_AUTOCLOSE
+	end
+
+Taupo_Text_PKiwaIntro:
+	.string "Kiwa: Shh! You'll scare the fish!\n…Too late. Battle.$"
+
+Taupo_Text_PKiwaDefeat:
+	.string "Snapped my line AND my streak.$"
+
+Taupo_Text_PKiwaPost:
+	.string "They're biting better since\nyou showed up. Weird.$"
+
+Taupo_EventScript_PMarara::
+	trainerbattle_single TRAINER_TPT_MARARA, Taupo_Text_PMararaIntro, Taupo_Text_PMararaDefeat
+	msgbox Taupo_Text_PMararaPost, MSGBOX_AUTOCLOSE
+	end
+
+Taupo_Text_PMararaIntro:
+	.string "Marara: The one that got away was\nTHIS big. Like my Pokemon.$"
+
+Taupo_Text_PMararaDefeat:
+	.string "Also got away on me.$"
+
+Taupo_Text_PMararaPost:
+	.string "Tide's turning. Good luck out\nthere.$"
+
+Taupo_EventScript_PAmiria::
+	trainerbattle_single TRAINER_TPT_AMIRIA, Taupo_Text_PAmiriaIntro, Taupo_Text_PAmiriaDefeat
+	msgbox Taupo_Text_PAmiriaPost, MSGBOX_AUTOCLOSE
+	end
+
+Taupo_Text_PAmiriaIntro:
+	.string "Amiria: I've tramped every track in\nthis region. Fight me.$"
+
+Taupo_Text_PAmiriaDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+Taupo_Text_PAmiriaPost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Taupo_EventScript_PHakopa::
+	trainerbattle_single TRAINER_TPT_HAKOPA, Taupo_Text_PHakopaIntro, Taupo_Text_PHakopaDefeat
+	msgbox Taupo_Text_PHakopaPost, MSGBOX_AUTOCLOSE
+	end
+
+Taupo_Text_PHakopaIntro:
+	.string "Hakopa: The one that got away was\nTHIS big. Like my Pokemon.$"
+
+Taupo_Text_PHakopaDefeat:
+	.string "Also got away on me.$"
+
+Taupo_Text_PHakopaPost:
+	.string "Tide's turning. Good luck out\nthere.$"

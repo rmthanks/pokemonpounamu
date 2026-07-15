@@ -64,3 +64,73 @@ OrchardRoad_Text_WiremuPost:
 	.string "Ahuriri now. Mob fellas.\p"
 	.string "Nobody goes up the coast without\n"
 	.string "a nod from the president.$"
+
+OrchardRoad_EventScript_PWiremu::
+	trainerbattle_single TRAINER_ORD_WIREMU, OrchardRoad_Text_PWiremuIntro, OrchardRoad_Text_PWiremuDefeat
+	msgbox OrchardRoad_Text_PWiremuPost, MSGBOX_AUTOCLOSE
+	end
+
+OrchardRoad_Text_PWiremuIntro:
+	.string "Wiremu: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+OrchardRoad_Text_PWiremuDefeat:
+	.string "You can have the sammie.$"
+
+OrchardRoad_Text_PWiremuPost:
+	.string "Worth it. Rematch at smoko?$"
+
+OrchardRoad_EventScript_PAnahera::
+	trainerbattle_single TRAINER_ORD_ANAHERA, OrchardRoad_Text_PAnaheraIntro, OrchardRoad_Text_PAnaheraDefeat
+	msgbox OrchardRoad_Text_PAnaheraPost, MSGBOX_AUTOCLOSE
+	end
+
+OrchardRoad_Text_PAnaheraIntro:
+	.string "Anahera: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+OrchardRoad_Text_PAnaheraDefeat:
+	.string "Aw, heck!$"
+
+OrchardRoad_Text_PAnaheraPost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+OrchardRoad_EventScript_PMere::
+	trainerbattle_single TRAINER_ORD_MERE, OrchardRoad_Text_PMereIntro, OrchardRoad_Text_PMereDefeat
+	msgbox OrchardRoad_Text_PMerePost, MSGBOX_AUTOCLOSE
+	end
+
+OrchardRoad_Text_PMereIntro:
+	.string "Mere: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+OrchardRoad_Text_PMereDefeat:
+	.string "You can have the sammie.$"
+
+OrchardRoad_Text_PMerePost:
+	.string "Worth it. Rematch at smoko?$"
+
+OrchardRoad_EventScript_PAroha::
+	trainerbattle_single TRAINER_ORD_AROHA, OrchardRoad_Text_PArohaIntro, OrchardRoad_Text_PArohaDefeat
+	msgbox OrchardRoad_Text_PArohaPost, MSGBOX_AUTOCLOSE
+	end
+
+OrchardRoad_Text_PArohaIntro:
+	.string "Aroha: These paddocks don't run\nthemselves, but the dog helps.$"
+
+OrchardRoad_Text_PArohaDefeat:
+	.string "The dog's still the best\nworker here.$"
+
+OrchardRoad_Text_PArohaPost:
+	.string "Gates SHUT behind you,\nthanks.$"
+
+OrchardRoad_EventScript_PTane::
+	trainerbattle_single TRAINER_ORD_TANE, OrchardRoad_Text_PTaneIntro, OrchardRoad_Text_PTaneDefeat
+	msgbox OrchardRoad_Text_PTanePost, MSGBOX_AUTOCLOSE
+	end
+
+OrchardRoad_Text_PTaneIntro:
+	.string "Tane: I've been training out here\nALL morning!$"
+
+OrchardRoad_Text_PTaneDefeat:
+	.string "Okay, MOST of the morning.$"
+
+OrchardRoad_Text_PTanePost:
+	.string "Don't tell my nan I lost.$"

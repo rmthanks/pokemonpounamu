@@ -138,3 +138,87 @@ Route2Bay_Text_LugiaSurfaces:
 	.string "you -\p"
 	.string "and slides back under, going\n"
 	.string "north, the way you must.$"
+
+Route2Bay_EventScript_PMarama::
+	trainerbattle_single TRAINER_R2B_MARAMA, Route2Bay_Text_PMaramaIntro, Route2Bay_Text_PMaramaDefeat
+	msgbox Route2Bay_Text_PMaramaPost, MSGBOX_AUTOCLOSE
+	end
+
+Route2Bay_Text_PMaramaIntro:
+	.string "Marama: I've been training out here\nALL morning!$"
+
+Route2Bay_Text_PMaramaDefeat:
+	.string "Okay, MOST of the morning.$"
+
+Route2Bay_Text_PMaramaPost:
+	.string "Don't tell my nan I lost.$"
+
+Route2Bay_EventScript_PMoana::
+	trainerbattle_single TRAINER_R2B_MOANA, Route2Bay_Text_PMoanaIntro, Route2Bay_Text_PMoanaDefeat
+	msgbox Route2Bay_Text_PMoanaPost, MSGBOX_AUTOCLOSE
+	end
+
+Route2Bay_Text_PMoanaIntro:
+	.string "Moana: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+Route2Bay_Text_PMoanaDefeat:
+	.string "You can have the sammie.$"
+
+Route2Bay_Text_PMoanaPost:
+	.string "Worth it. Rematch at smoko?$"
+
+Route2Bay_EventScript_PKahu::
+	trainerbattle_single TRAINER_R2B_KAHU, Route2Bay_Text_PKahuIntro, Route2Bay_Text_PKahuDefeat
+	msgbox Route2Bay_Text_PKahuPost, MSGBOX_AUTOCLOSE
+	end
+
+Route2Bay_Text_PKahuIntro:
+	.string "Kahu: The one that got away was\nTHIS big. Like my Pokemon.$"
+
+Route2Bay_Text_PKahuDefeat:
+	.string "Also got away on me.$"
+
+Route2Bay_Text_PKahuPost:
+	.string "Tide's turning. Good luck out\nthere.$"
+
+Route2Bay_EventScript_PRewi::
+	trainerbattle_single TRAINER_R2B_REWI, Route2Bay_Text_PRewiIntro, Route2Bay_Text_PRewiDefeat
+	msgbox Route2Bay_Text_PRewiPost, MSGBOX_AUTOCLOSE
+	end
+
+Route2Bay_Text_PRewiIntro:
+	.string "Rewi: I've tramped every track in\nthis region. Fight me.$"
+
+Route2Bay_Text_PRewiDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+Route2Bay_Text_PRewiPost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Route2Bay_EventScript_PHana::
+	trainerbattle_single TRAINER_R2B_HANA, Route2Bay_Text_PHanaIntro, Route2Bay_Text_PHanaDefeat
+	msgbox Route2Bay_Text_PHanaPost, MSGBOX_AUTOCLOSE
+	end
+
+Route2Bay_Text_PHanaIntro:
+	.string "Hana: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+Route2Bay_Text_PHanaDefeat:
+	.string "You can have the sammie.$"
+
+Route2Bay_Text_PHanaPost:
+	.string "Worth it. Rematch at smoko?$"
+
+Route2Bay_EventScript_PPiri::
+	trainerbattle_single TRAINER_R2B_PIRI, Route2Bay_Text_PPiriIntro, Route2Bay_Text_PPiriDefeat
+	msgbox Route2Bay_Text_PPiriPost, MSGBOX_AUTOCLOSE
+	end
+
+Route2Bay_Text_PPiriIntro:
+	.string "Piri: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+Route2Bay_Text_PPiriDefeat:
+	.string "Aw, heck!$"
+
+Route2Bay_Text_PPiriPost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"

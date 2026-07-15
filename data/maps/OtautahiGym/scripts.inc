@@ -63,3 +63,31 @@ OtautahiGym_Text_ProspectDefeat:
 
 OtautahiGym_Text_ProspectPost:
 	.string "Every building here has a story about the quake. Pou says the gym is one of them.$"
+
+OtautahiGym_EventScript_PPoppy::
+	trainerbattle_single TRAINER_GYM7_POPPY, OtautahiGym_Text_PPoppyIntro, OtautahiGym_Text_PPoppyDefeat
+	msgbox OtautahiGym_Text_PPoppyPost, MSGBOX_AUTOCLOSE
+	end
+
+OtautahiGym_Text_PPoppyIntro:
+	.string "Poppy: I train where the weather's\nworst. Makes us honest.$"
+
+OtautahiGym_Text_PPoppyDefeat:
+	.string "Honestly beaten.$"
+
+OtautahiGym_Text_PPoppyPost:
+	.string "Strength is showing up in\nthe rain.$"
+
+OtautahiGym_EventScript_PReuben::
+	trainerbattle_single TRAINER_GYM7_REUBEN, OtautahiGym_Text_PReubenIntro, OtautahiGym_Text_PReubenDefeat
+	msgbox OtautahiGym_Text_PReubenPost, MSGBOX_AUTOCLOSE
+	end
+
+OtautahiGym_Text_PReubenIntro:
+	.string "Reuben: You've got badges. I've got\nstandards. Let's see.$"
+
+OtautahiGym_Text_PReubenDefeat:
+	.string "Standards met.$"
+
+OtautahiGym_Text_PReubenPost:
+	.string "The League's tougher than me.\nBarely.$"

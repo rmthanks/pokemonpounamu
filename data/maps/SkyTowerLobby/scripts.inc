@@ -54,3 +54,31 @@ SkyTowerLobby_Text_LiftOpen:
 	.string "The lift doors stand open.\p"
 	.string "Above you: the whole tower,\n"
 	.string "and everything it took.$"
+
+SkyTowerLobby_EventScript_PUrsula::
+	trainerbattle_single TRAINER_TWEX_URSULA, SkyTowerLobby_Text_PUrsulaIntro, SkyTowerLobby_Text_PUrsulaDefeat
+	msgbox SkyTowerLobby_Text_PUrsulaPost, MSGBOX_AUTOCLOSE
+	end
+
+SkyTowerLobby_Text_PUrsulaIntro:
+	.string "Ursula: You've got badges. I've got\nstandards. Let's see.$"
+
+SkyTowerLobby_Text_PUrsulaDefeat:
+	.string "Standards met.$"
+
+SkyTowerLobby_Text_PUrsulaPost:
+	.string "The League's tougher than me.\nBarely.$"
+
+SkyTowerLobby_EventScript_PVera::
+	trainerbattle_single TRAINER_TWEX_VERA, SkyTowerLobby_Text_PVeraIntro, SkyTowerLobby_Text_PVeraDefeat
+	msgbox SkyTowerLobby_Text_PVeraPost, MSGBOX_AUTOCLOSE
+	end
+
+SkyTowerLobby_Text_PVeraIntro:
+	.string "Vera: You've got badges. I've got\nstandards. Let's see.$"
+
+SkyTowerLobby_Text_PVeraDefeat:
+	.string "Standards met.$"
+
+SkyTowerLobby_Text_PVeraPost:
+	.string "The League's tougher than me.\nBarely.$"

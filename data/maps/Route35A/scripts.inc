@@ -174,3 +174,101 @@ Route35A_Text_TawhaiPostTower:
 	.string "Don't you carry it like a\n"
 	.string "weight, e hoa. Carry it like\l"
 	.string "a light.$"
+
+Route35A_EventScript_PEruera::
+	trainerbattle_single TRAINER_R35A_ERUERA, Route35A_Text_PErueraIntro, Route35A_Text_PErueraDefeat
+	msgbox Route35A_Text_PErueraPost, MSGBOX_AUTOCLOSE
+	end
+
+Route35A_Text_PErueraIntro:
+	.string "Eruera: Shortcut? There's no shortcut.\nThere's only the long way.$"
+
+Route35A_Text_PErueraDefeat:
+	.string "You earned the view.$"
+
+Route35A_Text_PErueraPost:
+	.string "One more ridge. There's always\none more ridge.$"
+
+Route35A_EventScript_PHirini::
+	trainerbattle_single TRAINER_R35A_HIRINI, Route35A_Text_PHiriniIntro, Route35A_Text_PHiriniDefeat
+	msgbox Route35A_Text_PHiriniPost, MSGBOX_AUTOCLOSE
+	end
+
+Route35A_Text_PHiriniIntro:
+	.string "Hirini: I've tramped every track in\nthis region. Fight me.$"
+
+Route35A_Text_PHiriniDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+Route35A_Text_PHiriniPost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Route35A_EventScript_PWetini::
+	trainerbattle_single TRAINER_R35A_WETINI, Route35A_Text_PWetiniIntro, Route35A_Text_PWetiniDefeat
+	msgbox Route35A_Text_PWetiniPost, MSGBOX_AUTOCLOSE
+	end
+
+Route35A_Text_PWetiniIntro:
+	.string "Wetini: DOC ranger. Checking traps.\nAnd checking trainers.$"
+
+Route35A_Text_PWetiniDefeat:
+	.string "Pest-free AND beaten.$"
+
+Route35A_Text_PWetiniPost:
+	.string "Keep to the track and take\nyour rubbish out, eh.$"
+
+Route35A_EventScript_PMihi::
+	trainerbattle_single TRAINER_R35A_MIHI, Route35A_Text_PMihiIntro, Route35A_Text_PMihiDefeat
+	msgbox Route35A_Text_PMihiPost, MSGBOX_AUTOCLOSE
+	end
+
+Route35A_Text_PMihiIntro:
+	.string "Mihi: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+Route35A_Text_PMihiDefeat:
+	.string "You can have the sammie.$"
+
+Route35A_Text_PMihiPost:
+	.string "Worth it. Rematch at smoko?$"
+
+Route35A_EventScript_PNgaio::
+	trainerbattle_single TRAINER_R35A_NGAIO, Route35A_Text_PNgaioIntro, Route35A_Text_PNgaioDefeat
+	msgbox Route35A_Text_PNgaioPost, MSGBOX_AUTOCLOSE
+	end
+
+Route35A_Text_PNgaioIntro:
+	.string "Ngaio: Shortcut? There's no shortcut.\nThere's only the long way.$"
+
+Route35A_Text_PNgaioDefeat:
+	.string "You earned the view.$"
+
+Route35A_Text_PNgaioPost:
+	.string "One more ridge. There's always\none more ridge.$"
+
+Route35A_EventScript_PRima::
+	trainerbattle_single TRAINER_R35A_RIMA, Route35A_Text_PRimaIntro, Route35A_Text_PRimaDefeat
+	msgbox Route35A_Text_PRimaPost, MSGBOX_AUTOCLOSE
+	end
+
+Route35A_Text_PRimaIntro:
+	.string "Rima: Sixty years I've watched this\nland. Show me something new.$"
+
+Route35A_Text_PRimaDefeat:
+	.string "…That was new.$"
+
+Route35A_Text_PRimaPost:
+	.string "The land remembers everyone\nwho crosses it.$"
+
+Route35A_EventScript_PKawe::
+	trainerbattle_single TRAINER_R35A_KAWE, Route35A_Text_PKaweIntro, Route35A_Text_PKaweDefeat
+	msgbox Route35A_Text_PKawePost, MSGBOX_AUTOCLOSE
+	end
+
+Route35A_Text_PKaweIntro:
+	.string "Kawe: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+Route35A_Text_PKaweDefeat:
+	.string "You can have the sammie.$"
+
+Route35A_Text_PKawePost:
+	.string "Worth it. Rematch at smoko?$"

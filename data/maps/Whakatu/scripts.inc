@@ -69,3 +69,45 @@ Whakatu_Text_AwhiAfter:
 	.string "Awhi: Go get the cold badges\n"
 	.string "done, kid.\p"
 	.string "I'll be… around.$"
+
+Whakatu_EventScript_PWaimarama::
+	trainerbattle_single TRAINER_WKT_WAIMARAMA, Whakatu_Text_PWaimaramaIntro, Whakatu_Text_PWaimaramaDefeat
+	msgbox Whakatu_Text_PWaimaramaPost, MSGBOX_AUTOCLOSE
+	end
+
+Whakatu_Text_PWaimaramaIntro:
+	.string "Waimarama: I've tramped every track in\nthis region. Fight me.$"
+
+Whakatu_Text_PWaimaramaDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+Whakatu_Text_PWaimaramaPost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Whakatu_EventScript_PWhina::
+	trainerbattle_single TRAINER_WKT_WHINA, Whakatu_Text_PWhinaIntro, Whakatu_Text_PWhinaDefeat
+	msgbox Whakatu_Text_PWhinaPost, MSGBOX_AUTOCLOSE
+	end
+
+Whakatu_Text_PWhinaIntro:
+	.string "Whina: Between milkings. You've got\nten minutes. Go.$"
+
+Whakatu_Text_PWhinaDefeat:
+	.string "Back to the shed, then.$"
+
+Whakatu_Text_PWhinaPost:
+	.string "Rain's coming. Good for the\ngrass, good for nothing else.$"
+
+Whakatu_EventScript_PAputa::
+	trainerbattle_single TRAINER_WKT_APUTA, Whakatu_Text_PAputaIntro, Whakatu_Text_PAputaDefeat
+	msgbox Whakatu_Text_PAputaPost, MSGBOX_AUTOCLOSE
+	end
+
+Whakatu_Text_PAputaIntro:
+	.string "Aputa: My mokopuna says I'm out of\ndate. Let's test that.$"
+
+Whakatu_Text_PAputaDefeat:
+	.string "Tell no one.$"
+
+Whakatu_Text_PAputaPost:
+	.string "Old tricks are just good\ntricks that lasted.$"

@@ -297,3 +297,45 @@ AhuririCity_Text_WharfFisher2:
 AhuririCity_Text_WharfFisherDone:
 	.string "Tight lines, kid.\p"
 	.string "Mind the reef. She's watching.$"
+
+AhuririCity_EventScript_PPaikea::
+	trainerbattle_single TRAINER_AHC_PAIKEA, AhuririCity_Text_PPaikeaIntro, AhuririCity_Text_PPaikeaDefeat
+	msgbox AhuririCity_Text_PPaikeaPost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririCity_Text_PPaikeaIntro:
+	.string "Paikea: Oi! You walked into my line\nof sight. Them's the rules!$"
+
+AhuririCity_Text_PPaikeaDefeat:
+	.string "Aw, heck!$"
+
+AhuririCity_Text_PPaikeaPost:
+	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+AhuririCity_EventScript_PRongo::
+	trainerbattle_single TRAINER_AHC_RONGO, AhuririCity_Text_PRongoIntro, AhuririCity_Text_PRongoDefeat
+	msgbox AhuririCity_Text_PRongoPost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririCity_Text_PRongoIntro:
+	.string "Rongo: My mokopuna says I'm out of\ndate. Let's test that.$"
+
+AhuririCity_Text_PRongoDefeat:
+	.string "Tell no one.$"
+
+AhuririCity_Text_PRongoPost:
+	.string "Old tricks are just good\ntricks that lasted.$"
+
+AhuririCity_EventScript_PTaika::
+	trainerbattle_single TRAINER_AHC_TAIKA, AhuririCity_Text_PTaikaIntro, AhuririCity_Text_PTaikaDefeat
+	msgbox AhuririCity_Text_PTaikaPost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririCity_Text_PTaikaIntro:
+	.string "Taika: Shh! You'll scare the fish!\n…Too late. Battle.$"
+
+AhuririCity_Text_PTaikaDefeat:
+	.string "Snapped my line AND my streak.$"
+
+AhuririCity_Text_PTaikaPost:
+	.string "They're biting better since\nyou showed up. Weird.$"

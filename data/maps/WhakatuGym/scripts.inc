@@ -63,3 +63,31 @@ WhakatuGym_Text_ProspectDefeat:
 
 WhakatuGym_Text_ProspectPost:
 	.string "Roto says a Fire gym in the coldest island is a promise. Someone has to hold the warm.$"
+
+WhakatuGym_EventScript_PNell::
+	trainerbattle_single TRAINER_GYM6_NELL, WhakatuGym_Text_PNellIntro, WhakatuGym_Text_PNellDefeat
+	msgbox WhakatuGym_Text_PNellPost, MSGBOX_AUTOCLOSE
+	end
+
+WhakatuGym_Text_PNellIntro:
+	.string "Nell: Sixty years I've watched this\nland. Show me something new.$"
+
+WhakatuGym_Text_PNellDefeat:
+	.string "…That was new.$"
+
+WhakatuGym_Text_PNellPost:
+	.string "The land remembers everyone\nwho crosses it.$"
+
+WhakatuGym_EventScript_POscar::
+	trainerbattle_single TRAINER_GYM6_OSCAR, WhakatuGym_Text_POscarIntro, WhakatuGym_Text_POscarDefeat
+	msgbox WhakatuGym_Text_POscarPost, MSGBOX_AUTOCLOSE
+	end
+
+WhakatuGym_Text_POscarIntro:
+	.string "Oscar: I've tramped every track in\nthis region. Fight me.$"
+
+WhakatuGym_Text_POscarDefeat:
+	.string "Blisters AND a loss. Ka pai.$"
+
+WhakatuGym_Text_POscarPost:
+	.string "The huts are full this weekend.\nBook ahead, e hoa.$"

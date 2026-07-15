@@ -355,3 +355,31 @@ AhuririGym_Text_BreakRataSendaway:
 	.string "Not because you're weak.\p"
 	.string "Because you're the one thing\n"
 	.string "I can still save.$"
+
+AhuririGym_EventScript_PFreya::
+	trainerbattle_single TRAINER_GYM2_FREYA, AhuririGym_Text_PFreyaIntro, AhuririGym_Text_PFreyaDefeat
+	msgbox AhuririGym_Text_PFreyaPost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririGym_Text_PFreyaIntro:
+	.string "Freya: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+
+AhuririGym_Text_PFreyaDefeat:
+	.string "You can have the sammie.$"
+
+AhuririGym_Text_PFreyaPost:
+	.string "Worth it. Rematch at smoko?$"
+
+AhuririGym_EventScript_PGriff::
+	trainerbattle_single TRAINER_GYM2_GRIFF, AhuririGym_Text_PGriffIntro, AhuririGym_Text_PGriffDefeat
+	msgbox AhuririGym_Text_PGriffPost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririGym_Text_PGriffIntro:
+	.string "Griff: Sixty years I've watched this\nland. Show me something new.$"
+
+AhuririGym_Text_PGriffDefeat:
+	.string "…That was new.$"
+
+AhuririGym_Text_PGriffPost:
+	.string "The land remembers everyone\nwho crosses it.$"
