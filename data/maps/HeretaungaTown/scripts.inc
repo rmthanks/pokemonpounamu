@@ -1429,3 +1429,189 @@ HeretaungaTown_Text_PAdaDefeat:
 
 HeretaungaTown_Text_PAdaPost:
 	.string "Worth it. Rematch at smoko?$"
+
+HeretaungaTown_EventScript_StallAunty::
+	lock
+	faceplayer
+	msgbox HeretaungaTown_Text_StallAunty, MSGBOX_DEFAULT
+	pokemart HeretaungaTown_OrchardStallMart
+	msgbox HeretaungaTown_Text_StallAuntyBye, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+HeretaungaTown_OrchardStallMart:
+	.2byte ITEM_POMEG_BERRY
+	.2byte ITEM_KELPSY_BERRY
+	.2byte ITEM_QUALOT_BERRY
+	.2byte ITEM_HONDEW_BERRY
+	.2byte ITEM_GREPA_BERRY
+	.2byte ITEM_TAMATO_BERRY
+	.2byte ITEM_HP_UP
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_IRON
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_ZINC
+	.2byte ITEM_CARBOS
+	.2byte ITEM_POWER_WEIGHT
+	.2byte ITEM_POWER_BRACER
+	.2byte ITEM_POWER_BELT
+	.2byte ITEM_POWER_LENS
+	.2byte ITEM_POWER_BAND
+	.2byte ITEM_POWER_ANKLET
+	.2byte ITEM_ABILITY_CAPSULE
+	.2byte ITEM_ABILITY_PATCH
+	.2byte ITEM_BOTTLE_CAP
+	.2byte ITEM_GOLD_BOTTLE_CAP
+	.2byte ITEM_EXP_CANDY_M
+	.2byte ITEM_EXP_CANDY_L
+	.2byte ITEM_RARE_CANDY
+	pokemartlistend
+
+HeretaungaTown_EventScript_TrainingKoro::
+	lock
+	faceplayer
+	checkitem ITEM_GOLD_BOTTLE_CAP
+	goto_if_eq VAR_RESULT, TRUE, HeretaungaTown_Koro_Gold
+	checkitem ITEM_BOTTLE_CAP
+	goto_if_eq VAR_RESULT, TRUE, HeretaungaTown_Koro_Silver
+	msgbox HeretaungaTown_Text_KoroNoCaps, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Koro_Gold::
+	msgbox HeretaungaTown_Text_KoroGoldAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_Koro_Silver
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, HeretaungaTown_Koro_Cancel
+	setvar VAR_0x8005, 1
+	special HyperTrainChosenMon
+	goto_if_eq VAR_RESULT, FALSE, HeretaungaTown_Koro_Already
+	removeitem ITEM_GOLD_BOTTLE_CAP
+	msgbox HeretaungaTown_Text_KoroDoneAll, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Koro_Silver::
+	checkitem ITEM_BOTTLE_CAP
+	goto_if_eq VAR_RESULT, FALSE, HeretaungaTown_Koro_Cancel
+	msgbox HeretaungaTown_Text_KoroSilverAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_Koro_Cancel
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, HeretaungaTown_Koro_Cancel
+	setvar VAR_0x8005, 0
+	special HyperTrainChosenMon
+	goto_if_eq VAR_RESULT, FALSE, HeretaungaTown_Koro_Already
+	removeitem ITEM_BOTTLE_CAP
+	msgbox HeretaungaTown_Text_KoroDoneOne, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Koro_Already::
+	msgbox HeretaungaTown_Text_KoroAlready, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Koro_Cancel::
+	msgbox HeretaungaTown_Text_KoroCancel, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EventScript_ShareKid::
+	lock
+	faceplayer
+	goto_if_unset FLAG_UNUSED_0x285, HeretaungaTown_ShareKid_Off
+	msgbox HeretaungaTown_Text_ShareKidOnAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_ShareKid_Done
+	clearflag FLAG_UNUSED_0x285
+	msgbox HeretaungaTown_Text_ShareKidTurnedOff, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_ShareKid_Off::
+	msgbox HeretaungaTown_Text_ShareKidOffAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_ShareKid_Done
+	setflag FLAG_UNUSED_0x285
+	msgbox HeretaungaTown_Text_ShareKidTurnedOn, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_ShareKid_Done::
+	release
+	end
+
+HeretaungaTown_Text_StallAunty:
+	.string "Aunty Hera: Kia ora, love!\n"
+	.string "The orchard stall - berries that\l"
+	.string "unlearn bad training, tonics that\l"
+	.string "build it right, and a few rare\l"
+	.string "treats from the packhouse.$"
+
+HeretaungaTown_Text_StallAuntyBye:
+	.string "Aunty Hera: Feed them well and\n"
+	.string "they'll grow true. Haere ra!$"
+
+HeretaungaTown_Text_KoroNoCaps:
+	.string "Koro Tapeta: See these hands?\n"
+	.string "Sixty years polishing pounamu.\p"
+	.string "Bring me a BOTTLE CAP and I'll\n"
+	.string "polish your Pokemon's weakest\l"
+	.string "facet till it shines.\p"
+	.string "A GOLD one? The whole taonga.\n"
+	.string "All six facets.\p"
+	.string "Aunty at the stall keeps a few.$"
+
+HeretaungaTown_Text_KoroGoldAsk:
+	.string "Koro Tapeta: A GOLD BOTTLE CAP…\n"
+	.string "The full polish, then?\l"
+	.string "All six facets, one Pokemon?$"
+
+HeretaungaTown_Text_KoroSilverAsk:
+	.string "Koro Tapeta: A BOTTLE CAP.\n"
+	.string "I'll find the weakest facet\l"
+	.string "and polish just that one.\p"
+	.string "Shall I?$"
+
+HeretaungaTown_Text_KoroDoneAll:
+	.string "Koro Tapeta: …There.\p"
+	.string "Every facet catches the light\n"
+	.string "now. A taonga finished.$"
+
+HeretaungaTown_Text_KoroDoneOne:
+	.string "Koro Tapeta: …There.\p"
+	.string "The dullest facet shines now.\n"
+	.string "Bring another cap for the next.$"
+
+HeretaungaTown_Text_KoroAlready:
+	.string "Koro Tapeta: This one already\n"
+	.string "shines from every angle, e hoa.\p"
+	.string "Keep your cap. Nothing left\n"
+	.string "for these old hands to do.$"
+
+HeretaungaTown_Text_KoroCancel:
+	.string "Koro Tapeta: Another day, then.\n"
+	.string "The stone waits. Stones are\l"
+	.string "good at that.$"
+
+HeretaungaTown_Text_ShareKidOnAsk:
+	.string "Everyone in the whanau shares\n"
+	.string "the kai right now - the whole\l"
+	.string "team grows from every battle!\p"
+	.string "Want them to eat separately\n"
+	.string "instead?$"
+
+HeretaungaTown_Text_ShareKidOffAsk:
+	.string "Right now only the ones who\n"
+	.string "fight get fed - old style!\p"
+	.string "Want the whole whanau to share\n"
+	.string "the kai again?$"
+
+HeretaungaTown_Text_ShareKidTurnedOff:
+	.string "Old style! Only workers eat!\n"
+	.string "Nan would approve.$"
+
+HeretaungaTown_Text_ShareKidTurnedOn:
+	.string "Whanau style! Everyone eats!\n"
+	.string "That's how you grow a team.$"

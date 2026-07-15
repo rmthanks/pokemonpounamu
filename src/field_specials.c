@@ -5779,3 +5779,38 @@ bool8 CheckAddCoins(void)
     else
         return TRUE;
 }
+
+void HyperTrainChosenMon(void)
+{
+    static const u8 sIvIds[NUM_STATS] = {MON_DATA_HP_IV, MON_DATA_ATK_IV, MON_DATA_DEF_IV, MON_DATA_SPEED_IV, MON_DATA_SPATK_IV, MON_DATA_SPDEF_IV};
+    static const u8 sHtIds[NUM_STATS] = {MON_DATA_HYPER_TRAINED_HP, MON_DATA_HYPER_TRAINED_ATK, MON_DATA_HYPER_TRAINED_DEF, MON_DATA_HYPER_TRAINED_SPEED, MON_DATA_HYPER_TRAINED_SPATK, MON_DATA_HYPER_TRAINED_SPDEF};
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
+    u32 i;
+    bool8 val = TRUE;
+    gSpecialVar_Result = FALSE;
+
+    if (gSpecialVar_0x8005 == 1) // Gold Bottle Cap: all six facets
+    {
+        for (i = 0; i < NUM_STATS; i++)
+        {
+            if (!GetMonData(mon, sHtIds[i], NULL) && GetMonData(mon, sIvIds[i], NULL) < MAX_PER_STAT_IVS)
+                gSpecialVar_Result = TRUE;
+            SetMonData(mon, sHtIds[i], &val);
+        }
+    }
+    else // Bottle Cap: polish the weakest facet
+    {
+        u32 lowest = 0, lowestIv = 32;
+        for (i = 0; i < NUM_STATS; i++)
+        {
+            u32 iv = GetMonData(mon, sHtIds[i], NULL) ? MAX_PER_STAT_IVS : GetMonData(mon, sIvIds[i], NULL);
+            if (iv < lowestIv) { lowestIv = iv; lowest = i; }
+        }
+        if (lowestIv < MAX_PER_STAT_IVS)
+        {
+            SetMonData(mon, sHtIds[lowest], &val);
+            gSpecialVar_Result = TRUE;
+        }
+    }
+    CalculateMonStats(mon);
+}
