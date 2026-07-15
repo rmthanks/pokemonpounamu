@@ -5814,3 +5814,34 @@ void HyperTrainChosenMon(void)
     }
     CalculateMonStats(mon);
 }
+
+static const u16 sPounamuJobFlags[] = {
+    FLAG_UNUSED_0x04B, // Reading the Bay
+    FLAG_UNUSED_0x02F, // Kids of the Pond
+    FLAG_UNUSED_0x02D, // Pania's Reef
+    FLAG_UNUSED_0x2A1, // Mud-Pool Bath (Rotorua)
+    FLAG_UNUSED_0x2A2, // Skimming Stones (Taupo)
+    FLAG_UNUSED_0x2A3, // The Paddle-Out (Tauranga)
+    FLAG_UNUSED_0x2A4, // Zealandia Night Count (Wellington)
+    FLAG_UNUSED_0x2A5, // Centre of the Motu (Whakatu)
+    FLAG_UNUSED_0x2A6, // Rebuild Volunteer (Otautahi)
+    FLAG_UNUSED_0x2A7, // The Steepest Street (Otepoti)
+    FLAG_UNUSED_0x2A8, // The Thieving Pack (Lewis Pass)
+    FLAG_UNUSED_0x29E, // The Parcel (Ahuriri)
+};
+
+void CountPounamuJobs(void)
+{
+    u32 i, n = 0;
+    for (i = 0; i < ARRAY_COUNT(sPounamuJobFlags); i++)
+        if (FlagGet(sPounamuJobFlags[i])) n++;
+    gSpecialVar_Result = n;
+}
+
+void CountPounamuTrainersBeaten(void)
+{
+    u32 i, n = 0;
+    for (i = 1; i < 1107; i++)
+        if (FlagGet(TRAINER_FLAGS_START + i)) n++;
+    gSpecialVar_Result = n;
+}

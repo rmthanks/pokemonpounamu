@@ -229,3 +229,28 @@ Otepoti_Text_PWikiDefeat:
 
 Otepoti_Text_PWikiPost:
 	.string "Old tricks are just good\ntricks that lasted.$"
+
+Otepoti_EventScript_OPJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A7, Otepoti_EventScript_OPJOB_Done
+	msgbox Otepoti_Text_OPJOBAsk, MSGBOX_DEFAULT
+	msgbox Otepoti_Text_OPJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_CARBOS
+	setflag FLAG_UNUSED_0x2A7
+	release
+	end
+
+Otepoti_EventScript_OPJOB_Done::
+	msgbox Otepoti_Text_OPJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Otepoti_Text_OPJOBAsk:
+	.string "Scarfie: Steepest street in the\nWORLD, that one. We time runs\lup it for chips.\pYou look quick. Go touch the top\lfence and back - GO!\p…Yeah okay I didn't time it.\lBut you went. Respect.$"
+
+Otepoti_Text_OPJOBThanks:
+	.string "Scarfie: Chips are on me.\nWell. Chips are this. Same thing.$"
+
+Otepoti_Text_OPJOBAfter:
+	.string "Ka pai. The board's been told.$"

@@ -111,3 +111,28 @@ Whakatu_Text_PAputaDefeat:
 
 Whakatu_Text_PAputaPost:
 	.string "Old tricks are just good\ntricks that lasted.$"
+
+Whakatu_EventScript_WKJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A5, Whakatu_EventScript_WKJOB_Done
+	msgbox Whakatu_Text_WKJOBAsk, MSGBOX_DEFAULT
+	msgbox Whakatu_Text_WKJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_ZINC
+	setflag FLAG_UNUSED_0x2A5
+	release
+	end
+
+Whakatu_EventScript_WKJOB_Done::
+	msgbox Whakatu_Text_WKJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Whakatu_Text_WKJOBAsk:
+	.string "Hiker: They say the exact centre\nof the country sits up that hill.\pI've measured it four times and\lgot four answers.\pStand here a moment - I need a\lsecond witness for attempt five.$"
+
+Whakatu_Text_WKJOBThanks:
+	.string "Hiker: …There! Witnessed!\nDead centre. Probably.\pHave this - carrying it was\nthrowing off my compass.$"
+
+Whakatu_Text_WKJOBAfter:
+	.string "Ka pai. The board's been told.$"

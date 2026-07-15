@@ -158,3 +158,50 @@ Otautahi_Text_HoriShoes:
 	.string "…Can't step someone out of\n"
 	.string "that.\p"
 	.string "Go on. Walk.$"
+
+Otautahi_EventScript_OTJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A6, Otautahi_EventScript_OTJOB_Done
+	msgbox Otautahi_Text_OTJOBAsk, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Otautahi_EventScript_OTJOB_Cancel
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_TIMBURR, Otautahi_EventScript_OTJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_GURDURR, Otautahi_EventScript_OTJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_CONKELDURR, Otautahi_EventScript_OTJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_MACHAMP, Otautahi_EventScript_OTJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_AGGRON, Otautahi_EventScript_OTJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_GOLEM, Otautahi_EventScript_OTJOB_Good
+	msgbox Otautahi_Text_OTJOBWrong, MSGBOX_DEFAULT
+	release
+	end
+
+Otautahi_EventScript_OTJOB_Good::
+	msgbox Otautahi_Text_OTJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_PROTEIN, 2
+	setflag FLAG_UNUSED_0x2A6
+	release
+	end
+
+Otautahi_EventScript_OTJOB_Cancel::
+	release
+	end
+
+Otautahi_EventScript_OTJOB_Done::
+	msgbox Otautahi_Text_OTJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Otautahi_Text_OTJOBAsk:
+	.string "Foreman: Rebuild crew's short\nhands today.\pShow me something that can lift\land you've done your bit -\lthe crane trusts what I trust.$"
+
+Otautahi_Text_OTJOBThanks:
+	.string "Foreman: THAT'S a worker.\nBeam's up. City's taller.\pDouble rations. You earned them.$"
+
+Otautahi_Text_OTJOBWrong:
+	.string "Foreman: Heart's right, arms\naren't. Bring muscle.$"
+
+Otautahi_Text_OTJOBAfter:
+	.string "Ka pai. The board's been told.$"

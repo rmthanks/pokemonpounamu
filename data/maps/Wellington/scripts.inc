@@ -366,3 +366,50 @@ Wellington_Text_PTamatiDefeat:
 
 Wellington_Text_PTamatiPost:
 	.string "The birds come back when\nthe stoats go. Remember that.$"
+
+Wellington_EventScript_WLJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A4, Wellington_EventScript_WLJOB_Done
+	msgbox Wellington_Text_WLJOBAsk, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Wellington_EventScript_WLJOB_Cancel
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_HOOTHOOT, Wellington_EventScript_WLJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_NOCTOWL, Wellington_EventScript_WLJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_ZUBAT, Wellington_EventScript_WLJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_GOLBAT, Wellington_EventScript_WLJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_CROBAT, Wellington_EventScript_WLJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_MURKROW, Wellington_EventScript_WLJOB_Good
+	msgbox Wellington_Text_WLJOBWrong, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_EventScript_WLJOB_Good::
+	msgbox Wellington_Text_WLJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_MOON_STONE
+	setflag FLAG_UNUSED_0x2A4
+	release
+	end
+
+Wellington_EventScript_WLJOB_Cancel::
+	release
+	end
+
+Wellington_EventScript_WLJOB_Done::
+	msgbox Wellington_Text_WLJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_Text_WLJOBAsk:
+	.string "Warden: Night survey for the\nsanctuary - we count what flies\lafter dark.\pShow me a night-flier and\lyou're on the count.$"
+
+Wellington_Text_WLJOBThanks:
+	.string "Warden: Logged! The night shift\nthanks you.\pFound this on a survey. Moths\nlove it. You have it.$"
+
+Wellington_Text_WLJOBWrong:
+	.string "Warden: That one sleeps at\nnight, surely.$"
+
+Wellington_Text_WLJOBAfter:
+	.string "Ka pai. The board's been told.$"

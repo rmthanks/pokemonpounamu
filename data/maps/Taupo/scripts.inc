@@ -378,3 +378,46 @@ Taupo_Text_PHakopaDefeat:
 
 Taupo_Text_PHakopaPost:
 	.string "Tide's turning. Good luck out\nthere.$"
+
+Taupo_EventScript_TPJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A2, Taupo_EventScript_TPJOB_Done
+	msgbox Taupo_Text_TPJOBAsk, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Taupo_EventScript_TPJOB_Cancel
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_MAGIKARP, Taupo_EventScript_TPJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_GYARADOS, Taupo_EventScript_TPJOB_Good
+	msgbox Taupo_Text_TPJOBWrong, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_EventScript_TPJOB_Good::
+	msgbox Taupo_Text_TPJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_NUGGET
+	setflag FLAG_UNUSED_0x2A2
+	release
+	end
+
+Taupo_EventScript_TPJOB_Cancel::
+	release
+	end
+
+Taupo_EventScript_TPJOB_Done::
+	msgbox Taupo_Text_TPJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Taupo_Text_TPJOBAsk:
+	.string "Kid: My koro could skim a stone\nEIGHT bounces. I got two.\pThey reckon a MAGIKARP skims\nbest of all. You got one? Show\lme! I gotta see it!$"
+
+Taupo_Text_TPJOBThanks:
+	.string "Kid: WHOA. Look at it WOBBLE.\pKoro left this shiny rock. You\nhave it - I got what I needed.$"
+
+Taupo_Text_TPJOBWrong:
+	.string "Kid: Nah. That one would sink.$"
+
+Taupo_Text_TPJOBAfter:
+	.string "Ka pai. The board's been told.$"

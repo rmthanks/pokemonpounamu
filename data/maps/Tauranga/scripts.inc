@@ -114,3 +114,50 @@ Tauranga_Text_PMereanaDefeat:
 
 Tauranga_Text_PMereanaPost:
 	.string "Worth it. Rematch at smoko?$"
+
+Tauranga_EventScript_TGJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A3, Tauranga_EventScript_TGJOB_Done
+	msgbox Tauranga_Text_TGJOBAsk, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Tauranga_EventScript_TGJOB_Cancel
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_KRABBY, Tauranga_EventScript_TGJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_KINGLER, Tauranga_EventScript_TGJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_WINGULL, Tauranga_EventScript_TGJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_PELIPPER, Tauranga_EventScript_TGJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_CRAMORANT, Tauranga_EventScript_TGJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_WAILMER, Tauranga_EventScript_TGJOB_Good
+	msgbox Tauranga_Text_TGJOBWrong, MSGBOX_DEFAULT
+	release
+	end
+
+Tauranga_EventScript_TGJOB_Good::
+	msgbox Tauranga_Text_TGJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_PEARL, 2
+	setflag FLAG_UNUSED_0x2A3
+	release
+	end
+
+Tauranga_EventScript_TGJOB_Cancel::
+	release
+	end
+
+Tauranga_EventScript_TGJOB_Done::
+	msgbox Tauranga_Text_TGJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Tauranga_Text_TGJOBAsk:
+	.string "Surfer: Paddle-out at dawn for\nold Manu of the bay - every\lboard on the water.\pBring something that swims and\lyou're welcome in the circle.$"
+
+Tauranga_Text_TGJOBThanks:
+	.string "Surfer: Yeah, the sea knows\nthat one. Circle's complete.\pThese wash up after. Take two.$"
+
+Tauranga_Text_TGJOBWrong:
+	.string "Surfer: Needs to love the salt,\neh. Try again.$"
+
+Tauranga_Text_TGJOBAfter:
+	.string "Ka pai. The board's been told.$"

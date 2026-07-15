@@ -150,3 +150,46 @@ Rotorua_Text_PIpoDefeat:
 
 Rotorua_Text_PIpoPost:
 	.string "Old tricks are just good\ntricks that lasted.$"
+
+Rotorua_EventScript_RTJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A1, Rotorua_EventScript_RTJOB_Done
+	msgbox Rotorua_Text_RTJOBAsk, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Rotorua_EventScript_RTJOB_Cancel
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_SLUGMA, Rotorua_EventScript_RTJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_MAGCARGO, Rotorua_EventScript_RTJOB_Good
+	msgbox Rotorua_Text_RTJOBWrong, MSGBOX_DEFAULT
+	release
+	end
+
+Rotorua_EventScript_RTJOB_Good::
+	msgbox Rotorua_Text_RTJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_MOOMOO_MILK, 3
+	setflag FLAG_UNUSED_0x2A1
+	release
+	end
+
+Rotorua_EventScript_RTJOB_Cancel::
+	release
+	end
+
+Rotorua_EventScript_RTJOB_Done::
+	msgbox Rotorua_Text_RTJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Rotorua_Text_RTJOBAsk:
+	.string "Kuia Rina: The mud pools miss\ntheir Slugma - the spraying\lscared them off the banks.\pShow me one safe in your care\land I'll believe the pools will\lbe alright.$"
+
+Rotorua_Text_RTJOBThanks:
+	.string "Kuia Rina: Aue, there it is!\nWarm as the earth itself.\pThe pools will call them home.$"
+
+Rotorua_Text_RTJOBWrong:
+	.string "Kuia Rina: That's not a mud\ndweller, dear.$"
+
+Rotorua_Text_RTJOBAfter:
+	.string "Ka pai. The board's been told.$"

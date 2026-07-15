@@ -348,3 +348,30 @@ Route7_Text_PEliDefeat:
 
 Route7_Text_PEliPost:
 	.string "Strength is showing up in\nthe rain.$"
+
+Route7_EventScript_R7JOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2A8, Route7_EventScript_R7JOB_Done
+	msgbox Route7_Text_R7JOBAsk, MSGBOX_DEFAULT
+	setwildbattle SPECIES_SNEASEL, 32
+	dowildbattle
+	msgbox Route7_Text_R7JOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_LEFTOVERS
+	setflag FLAG_UNUSED_0x2A8
+	release
+	end
+
+Route7_EventScript_R7JOB_Done::
+	msgbox Route7_Text_R7JOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Route7_Text_R7JOBAsk:
+	.string "Tramper: Something's been raiding\nthe packs along the pass -\lquick, clever, LAUGHING at us.\pThere - behind you!$"
+
+Route7_Text_R7JOBThanks:
+	.string "Tramper: You got it! My lunch is\navenged.\pFound this in the nest, barely\nnibbled. All yours.$"
+
+Route7_Text_R7JOBAfter:
+	.string "Tramper: Quiet on the pass now.\nBliss.$"
