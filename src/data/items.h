@@ -5590,13 +5590,12 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Mauri Kohatu"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
+        .importance = 1,
         .description = COMPOUND_STRING(
-        "A mauri stone carved from river
-"
-        "pounamu. Near it, the sleeping
-"
+        "A mauri stone carved from river\n"
+        "pounamu. Near it, the sleeping\n"
         "guardians of the maunga stir."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
