@@ -285,7 +285,7 @@ Route7_EventScript_PAki::
 	end
 
 Route7_Text_PAkiIntro:
-	.string "Aki: DOC ranger. Checking traps.\nAnd checking trainers.$"
+	.string "Maia: DOC ranger. Checking traps.\nAnd checking trainers.$"
 
 Route7_Text_PAkiDefeat:
 	.string "Pest-free AND beaten.$"

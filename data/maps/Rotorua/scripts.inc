@@ -115,7 +115,7 @@ Rotorua_EventScript_PHana3::
 	end
 
 Rotorua_Text_PHana3Intro:
-	.string "Hana3: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+	.string "Kahurangi: Bet you can't beat me.\nDouble or nothing on my lunch!$"
 
 Rotorua_Text_PHana3Defeat:
 	.string "You can have the sammie.$"
@@ -143,7 +143,7 @@ Rotorua_EventScript_PIpo::
 	end
 
 Rotorua_Text_PIpoIntro:
-	.string "Ipo: My mokopuna says I'm out of\ndate. Let's test that.$"
+	.string "Marata: My mokopuna says I'm out of\ndate. Let's test that.$"
 
 Rotorua_Text_PIpoDefeat:
 	.string "Tell no one.$"

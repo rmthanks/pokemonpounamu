@@ -104,7 +104,7 @@ Whakatu_EventScript_PAputa::
 	end
 
 Whakatu_Text_PAputaIntro:
-	.string "Aputa: My mokopuna says I'm out of\ndate. Let's test that.$"
+	.string "None: My mokopuna says I'm out of\ndate. Let's test that.$"
 
 Whakatu_Text_PAputaDefeat:
 	.string "Tell no one.$"

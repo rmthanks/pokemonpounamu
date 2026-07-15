@@ -265,7 +265,7 @@ Route35A_EventScript_PKawe::
 	end
 
 Route35A_Text_PKaweIntro:
-	.string "Kawe: Bet you can't beat me.\nDouble or nothing on my lunch!$"
+	.string "Hone: Bet you can't beat me.\nDouble or nothing on my lunch!$"
 
 Route35A_Text_PKaweDefeat:
 	.string "You can have the sammie.$"

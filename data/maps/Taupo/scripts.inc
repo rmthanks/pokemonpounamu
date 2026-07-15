@@ -343,7 +343,7 @@ Taupo_EventScript_PMarara::
 	end
 
 Taupo_Text_PMararaIntro:
-	.string "Marara: The one that got away was\nTHIS big. Like my Pokemon.$"
+	.string "Hamuera: The one that got away was\nTHIS big. Like my Pokemon.$"
 
 Taupo_Text_PMararaDefeat:
 	.string "Also got away on me.$"

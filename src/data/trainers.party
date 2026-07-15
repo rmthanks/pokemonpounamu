@@ -18464,7 +18464,7 @@ Taillow
 Level: 12
 
 === TRAINER_R35A_KAWE ===
-Name: Kawe
+Name: Hone
 Class: Youngster
 Pic: Youngster Tan
 Gender: Male
@@ -19487,7 +19487,7 @@ Piloswine
 Level: 33
 
 === TRAINER_R7P_AKI ===
-Name: Aki
+Name: Maia
 Class: Pkmn Ranger
 Pic: Pokemon Ranger F Tan
 Gender: Female
@@ -19637,7 +19637,7 @@ Snorunt
 Level: 33
 
 === TRAINER_R1SP_KEA ===
-Name: Kea
+Name: Atarangi
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
@@ -19733,7 +19733,7 @@ Furret
 Level: 24
 
 === TRAINER_R5RP_RATA ===
-Name: Reka
+Name: Hinemoa
 Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
@@ -19763,7 +19763,7 @@ Komala
 Level: 23
 
 === TRAINER_R5RP_TILA ===
-Name: Tila
+Name: Tipene
 Class: Camper
 Pic: Camper Brown
 Gender: Male
@@ -19778,7 +19778,7 @@ Pinsir
 Level: 24
 
 === TRAINER_R5RP_UMI ===
-Name: Umi
+Name: Roimata
 Class: Expert
 Pic: Expert F Brown
 Gender: Female
@@ -19793,7 +19793,7 @@ Sentret
 Level: 24
 
 === TRAINER_R5RP_VADA ===
-Name: Vada
+Name: Mikaere
 Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
@@ -19889,7 +19889,7 @@ Avalugg
 Level: 56
 
 === TRAINER_RUAP_KUPE ===
-Name: Kupe
+Name: Makareta
 Class: Expert
 Pic: Expert F Tan
 Gender: Female
@@ -19925,7 +19925,7 @@ Wyrdeer
 Level: 46
 
 === TRAINER_TMTP_REREWA ===
-Name: Rerewa
+Name: Hariata
 Class: Expert
 Pic: Expert F Tan
 Gender: Female
@@ -19943,7 +19943,7 @@ Lycanroc
 Level: 48
 
 === TRAINER_TMTP_TAINUI ===
-Name: Tainui
+Name: Manaaki
 Class: Cooltrainer
 Pic: Cooltrainer M Brown
 Gender: Male
@@ -19961,7 +19961,7 @@ Lunatone
 Level: 46
 
 === TRAINER_TMTP_WAKA ===
-Name: Waka
+Name: Ataahua
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
@@ -19976,7 +19976,7 @@ Lycanroc
 Level: 47
 
 === TRAINER_TMTP_WHETU ===
-Name: Waru
+Name: Materoa
 Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
@@ -19991,7 +19991,7 @@ Trevenant
 Level: 48
 
 === TRAINER_HTT_HIKA ===
-Name: Hui
+Name: Ropata
 Class: Youngster
 Pic: Youngster Tan
 Gender: Male
@@ -20027,7 +20027,7 @@ Hoppip
 Level: 6
 
 === TRAINER_AHC_PAIKEA ===
-Name: Paikea
+Name: Tamihana
 Class: Youngster
 Pic: Youngster Tan
 Gender: Male
@@ -20042,7 +20042,7 @@ Snubbull
 Level: 15
 
 === TRAINER_AHC_RONGO ===
-Name: Rongo
+Name: Himiona
 Class: Gentleman
 Pic: Gentleman
 Gender: Male
@@ -20072,7 +20072,7 @@ Barboach
 Level: 13
 
 === TRAINER_WRT_UENUKU ===
-Name: Uenuku
+Name: Akenehi
 Class: Pokefan
 Pic: Pokefan F Brown
 Gender: Female
@@ -20087,7 +20087,7 @@ Morelull
 Level: 13
 
 === TRAINER_WRT_WERO ===
-Name: Wero
+Name: Panapa
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -20102,7 +20102,7 @@ Mareep
 Level: 13
 
 === TRAINER_RTT_HANA3 ===
-Name: Hana3
+Name: Kahurangi
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -20117,7 +20117,7 @@ Slugma
 Level: 18
 
 === TRAINER_RTT_TOA ===
-Name: Tuku
+Name: Werahiko
 Class: Hiker
 Pic: Hiker Tan
 Gender: Male
@@ -20132,7 +20132,7 @@ Slugma
 Level: 21
 
 === TRAINER_RTT_IPO ===
-Name: Ipo
+Name: Marata
 Class: Expert
 Pic: Expert F Brown
 Gender: Female
@@ -20162,7 +20162,7 @@ Poliwhirl
 Level: 20
 
 === TRAINER_TPT_MARARA ===
-Name: Marara
+Name: Hamuera
 Class: Fisherman
 Pic: Fisherman Brown
 Gender: Male
@@ -20369,7 +20369,7 @@ Cottonee
 Level: 28
 
 === TRAINER_WKT_APUTA ===
-Name: Aputa
+Name: Ihaka
 Class: Expert
 Pic: Expert M Brown
 Gender: Male
@@ -20384,7 +20384,7 @@ Petilil
 Level: 30
 
 === TRAINER_OTT_ERU ===
-Name: Epa
+Name: Noa
 Class: Black Belt
 Pic: Black Belt
 Gender: Male
@@ -20402,7 +20402,7 @@ Magnemite
 Level: 32
 
 === TRAINER_OTT_HEMI ===
-Name: Huri
+Name: Rikihana
 Class: Hiker
 Pic: Hiker Brown
 Gender: Male

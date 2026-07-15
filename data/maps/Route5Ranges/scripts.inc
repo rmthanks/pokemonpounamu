@@ -94,7 +94,7 @@ Route5Ranges_EventScript_PTila::
 	end
 
 Route5Ranges_Text_PTilaIntro:
-	.string "Tila: Shortcut? There's no shortcut.\nThere's only the long way.$"
+	.string "Tipene: Shortcut? There's no shortcut.\nThere's only the long way.$"
 
 Route5Ranges_Text_PTilaDefeat:
 	.string "You earned the view.$"
@@ -108,7 +108,7 @@ Route5Ranges_EventScript_PUmi::
 	end
 
 Route5Ranges_Text_PUmiIntro:
-	.string "Umi: Sixty years I've watched this\nland. Show me something new.$"
+	.string "Roimata: Sixty years I've watched this\nland. Show me something new.$"
 
 Route5Ranges_Text_PUmiDefeat:
 	.string "…That was new.$"
@@ -122,7 +122,7 @@ Route5Ranges_EventScript_PVada::
 	end
 
 Route5Ranges_Text_PVadaIntro:
-	.string "Vada: I've been training out here\nALL morning!$"
+	.string "Mikaere: I've been training out here\nALL morning!$"
 
 Route5Ranges_Text_PVadaDefeat:
 	.string "Okay, MOST of the morning.$"

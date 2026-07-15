@@ -77,7 +77,7 @@ RuapehuAscent_EventScript_PKupe::
 	end
 
 RuapehuAscent_Text_PKupeIntro:
-	.string "Kupe: Sixty years I've watched this\nland. Show me something new.$"
+	.string "Makareta: Sixty years I've watched this\nland. Show me something new.$"
 
 RuapehuAscent_Text_PKupeDefeat:
 	.string "…That was new.$"

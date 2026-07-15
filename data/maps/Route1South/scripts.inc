@@ -116,7 +116,7 @@ Route1South_EventScript_PKea::
 	end
 
 Route1South_Text_PKeaIntro:
-	.string "Kea: I train where the weather's\nworst. Makes us honest.$"
+	.string "Atarangi: I train where the weather's\nworst. Makes us honest.$"
 
 Route1South_Text_PKeaDefeat:
 	.string "Honestly beaten.$"

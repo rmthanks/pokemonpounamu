@@ -109,7 +109,7 @@ Wairoa_EventScript_PUenuku::
 	end
 
 Wairoa_Text_PUenukuIntro:
-	.string "Uenuku: Between milkings. You've got\nten minutes. Go.$"
+	.string "Akenehi: Between milkings. You've got\nten minutes. Go.$"
 
 Wairoa_Text_PUenukuDefeat:
 	.string "Back to the shed, then.$"
@@ -123,7 +123,7 @@ Wairoa_EventScript_PWero::
 	end
 
 Wairoa_Text_PWeroIntro:
-	.string "Wero: Patience. That's fishing.\nAlso that's battling.$"
+	.string "Panapa: Patience. That's fishing.\nAlso that's battling.$"
 
 Wairoa_Text_PWeroDefeat:
 	.string "I bit too early.$"

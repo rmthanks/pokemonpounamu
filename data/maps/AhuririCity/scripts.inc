@@ -304,7 +304,7 @@ AhuririCity_EventScript_PPaikea::
 	end
 
 AhuririCity_Text_PPaikeaIntro:
-	.string "Paikea: Oi! You walked into my line\nof sight. Them's the rules!$"
+	.string "Tamihana: Oi! You walked into my line\nof sight. Them's the rules!$"
 
 AhuririCity_Text_PPaikeaDefeat:
 	.string "Aw, heck!$"
@@ -318,7 +318,7 @@ AhuririCity_EventScript_PRongo::
 	end
 
 AhuririCity_Text_PRongoIntro:
-	.string "Rongo: My mokopuna says I'm out of\ndate. Let's test that.$"
+	.string "Himiona: My mokopuna says I'm out of\ndate. Let's test that.$"
 
 AhuririCity_Text_PRongoDefeat:
 	.string "Tell no one.$"

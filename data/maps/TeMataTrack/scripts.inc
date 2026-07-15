@@ -64,7 +64,7 @@ TeMataTrack_EventScript_PRerewa::
 	end
 
 TeMataTrack_Text_PRerewaIntro:
-	.string "Rerewa: My mokopuna says I'm out of\ndate. Let's test that.$"
+	.string "Hariata: My mokopuna says I'm out of\ndate. Let's test that.$"
 
 TeMataTrack_Text_PRerewaDefeat:
 	.string "Tell no one.$"
@@ -78,7 +78,7 @@ TeMataTrack_EventScript_PTainui::
 	end
 
 TeMataTrack_Text_PTainuiIntro:
-	.string "Tainui: You've got badges. I've got\nstandards. Let's see.$"
+	.string "Manaaki: You've got badges. I've got\nstandards. Let's see.$"
 
 TeMataTrack_Text_PTainuiDefeat:
 	.string "Standards met.$"
@@ -92,7 +92,7 @@ TeMataTrack_EventScript_PWaka::
 	end
 
 TeMataTrack_Text_PWakaIntro:
-	.string "Waka: I train where the weather's\nworst. Makes us honest.$"
+	.string "Ataahua: I train where the weather's\nworst. Makes us honest.$"
 
 TeMataTrack_Text_PWakaDefeat:
 	.string "Honestly beaten.$"
