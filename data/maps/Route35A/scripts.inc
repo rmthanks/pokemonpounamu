@@ -281,13 +281,13 @@ Route35A_Tawhai_Mauri::
 	end
 
 Route35A_Text_TawhaiMauri:
-	.string "Tawhai: …That stone.\p"
+	.string "Tawhai: …The stone's finished.\p"
 	.string "I felt it before I saw it. Like\n"
 	.string "the bush going quiet before rain.\p"
-	.string "So it's you, then.\p"
-	.string "I told you once - I keep gates.\n"
-	.string "Maybe one day a gate that\l"
-	.string "matters.\p"
-	.string "…When the track up Hikurangi\n"
-	.string "opens, e hoa, it will be these\l"
-	.string "hands that open it. For you.$"
+	.string "The one you woke up there will\n"
+	.string "be waiting. It watched you climb\l"
+	.string "as a kid with a wound.\p"
+	.string "Now it wants the person who\n"
+	.string "came back down.\p"
+	.string "The gate is open, e hoa.\n"
+	.string "It was always going to be you.$"
