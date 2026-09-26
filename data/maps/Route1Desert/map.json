@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_TAUPO",
-      "offset": -5,
+      "offset": -6,
       "direction": "up"
     },
     {

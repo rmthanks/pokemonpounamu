@@ -58,6 +58,11 @@ TESTS = {
     'ht_garden': T('MAP_HERETAUNGA_TOWN', 21, 26, 'run 200\nshot a\n'),
     'ht_orchard': T('MAP_HERETAUNGA_TOWN', 44, 23, 'run 200\nshot a\n'),
     'ht_north': T('MAP_HERETAUNGA_TOWN', 29, 3, 'run 200\nshot a\n'),
+    'ex_r35a': T('MAP_ROUTE35_A', 7, 3, 'run 200\nshot a\n'),
+    'ex_ahuriri': T('MAP_AHURIRI_CITY', 8, 33, 'run 200\nshot a\n'),
+    'ex_route36': T('MAP_ROUTE36', 2, 8, 'run 200\nshot a\n'),
+    'ex_wellington': T('MAP_WELLINGTON', 7, 3, 'run 200\nshot a\n'),
+    'ex_taupo_s': T('MAP_TAUPO', 24, 20, 'run 120\nshot a\nhold DOWN 48\nrun 60\nshot b\nhold DOWN 64\nrun 60\nshot c\n'),
     'durie': T('MAP_WHANGANUI', 16, 3, 'tap UP\nsteps A 12 s\nrun 60\nsteps A 4 t\n'),
 }
 
