@@ -44,3 +44,10 @@ Known contributing artists (per the thread; confirm per-folder on import):
 - NOTE: both conversions are AI-generated images. Fine for personal/playtest builds, but
   PokeCommunity prohibits AI-generated assets in released fan games - replace with
   hand-made art (or hand-pixel the photos) before any public release there.
+
+## Heretaunga Clock Tower (26 Sept 2026)
+- Metatiles 0x290-0x299 in the Petalburg tileset (2x5, the tower in Heretaunga's square):
+  PLACEHOLDER pixel art drawn in code by Claude (tools_pounamu/mapsynth/make_clock_tower.py),
+  after the real 1935 Sidney Chaplin tower. It is AI-made, so rule 3 applies: replace with
+  hand-drawn art before any public release. Everything else on the rebuilt map is vanilla
+  Emerald tiles (Rongokako's terraces use the Route 119 ridge tiles).

@@ -79,11 +79,19 @@ class AutoTiler:
     def tile_at(self, sketch, x, y, rnd):
         H, W = len(sketch), len(sketch[0])
         k = sketch[y][x]
-        base = self.tiers.get(k, k)
+        base = k
+        while base in self.tiers:          # a tier draws with its root class's tiles
+            base = self.tiers[base]
         if base in self.texture:
             opts = self.freq[base]
             return rnd.choices(list(opts), weights=list(opts.values()))[0]
-        higher = {t for t, b in self.tiers.items() if b == k}
+        def above(t):                      # every tier stacked on top of t
+            out = set()
+            for u, b in self.tiers.items():
+                if b == t:
+                    out |= {u} | above(u)
+            return out
+        higher = above(k)
         def same(dx, dy):
             nx, ny = x+dx, y+dy
             if not (0 <= nx < W and 0 <= ny < H):

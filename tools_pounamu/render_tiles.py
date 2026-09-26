@@ -34,6 +34,7 @@ TILESET_DIRS = {
     'gTileset_Sootopolis': 'data/tilesets/secondary/sootopolis',
     'gTileset_EverGrande': 'data/tilesets/secondary/ever_grande',
     'gTileset_Verdanturf': 'data/tilesets/secondary/verdanturf',
+    'gTileset_Facility': 'data/tilesets/secondary/facility',
 }
 
 NUM_PALS_PRIMARY = 6      # primary tileset owns palettes 0-5

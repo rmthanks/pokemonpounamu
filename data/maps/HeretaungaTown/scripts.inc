@@ -289,13 +289,13 @@ HeretaungaTown_EventScript_TeMataGateOpen::
 	release
 	end
 
-@ The waharoa itself. Post-game, stepping east opens the first ascent.
+@ The waharoa itself, in the gap in Rongokako's ridge. Post-game, stepping south opens the first ascent.
 HeretaungaTown_EventScript_TeMataTrackEntry::
 	lockall
 	goto_if_set FLAG_UNUSED_0x025, HeretaungaTown_EventScript_TeMataTrackGo
 	msgbox HeretaungaTown_Text_TeMataTrackClosed, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, HeretaungaTown_Movement_StepBackWest
+	applymovement OBJ_EVENT_ID_PLAYER, HeretaungaTown_Movement_StepBackNorth
 	waitmovement 0
 	releaseall
 	end
@@ -306,8 +306,8 @@ HeretaungaTown_EventScript_TeMataTrackGo::
 	waitstate
 	end
 
-HeretaungaTown_Movement_StepBackWest:
-	walk_left
+HeretaungaTown_Movement_StepBackNorth:
+	walk_up
 	step_end
 
 HeretaungaTown_Text_TeMataGate:
@@ -1979,3 +1979,26 @@ HeretaungaTown_Text_SLIPJOBAfter:
 	.string "flat again. Flat like a held\l"
 	.string "breath. I'll keep watching.$"
 
+
+@ The Clock Tower in the square (Sept 2026 rebuild). Tower art is placeholder.
+HeretaungaTown_EventScript_ClockTower::
+	msgbox HeretaungaTown_Text_ClockTower, MSGBOX_SIGN
+	end
+
+HeretaungaTown_Text_ClockTower:
+	.string "HERETAUNGA CLOCK TOWER, 1935\p"
+	.string "Built after the 1931 quake\n"
+	.string "wrecked the town centre.\p"
+	.string "Its chimes were dug out of the\n"
+	.string "rubble of the old Post Office\l"
+	.string "tower, and they still ring.$"
+
+@ Rohe-specific: Ryan to review the wording.
+HeretaungaTown_EventScript_TeMataSign::
+	msgbox HeretaungaTown_Text_TeMataSign, MSGBOX_SIGN
+	end
+
+HeretaungaTown_Text_TeMataSign:
+	.string "TE MATA O RONGOKAKO\p"
+	.string "Te Mata Track: up and over\n"
+	.string "the sleeping giant's ridge.$"
