@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE1_DESERT",
-      "offset": 0,
+      "offset": -11,
       "direction": "up"
     },
     {

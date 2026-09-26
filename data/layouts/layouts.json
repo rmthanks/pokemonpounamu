@@ -9528,10 +9528,10 @@
     {
       "id": "LAYOUT_ROUTE1_DESERT",
       "name": "Route1Desert_Layout",
-      "width": 16,
-      "height": 90,
+      "width": 40,
+      "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Route1Desert/border.bin",
       "blockdata_filepath": "data/layouts/Route1Desert/map.bin",
       "layout_version": "emerald"

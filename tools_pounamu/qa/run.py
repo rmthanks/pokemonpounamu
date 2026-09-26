@@ -42,6 +42,10 @@ TESTS = {
     'deco_start': T('MAP_AHURIRI_CITY', 18, 18, 'tap UP\nsteps A 14 s\nrun 60\nsteps A 3 t\n'),
     'deco_painter': T('MAP_AHURIRI_GALLERY', 12, 5, 'tap UP\nsteps A 5 s\nrun 60\nsteps A 3 t\n', deco=1),
     'deco_finish': T('MAP_AHURIRI_CITY', 18, 18, 'tap UP\nsteps A 12 s\nrun 60\nsteps A 3 t\n', deco=4),
+    'taupo_south': T('MAP_TAUPO', 13, 21, 'shot a0\nhold RIGHT 20\nrun 20\nshot a1\nhold DOWN 60\nrun 30\nshot a2\nhold DOWN 60\nrun 90\nshot a3\nhold DOWN 120\nrun 60\nshot a4\n'),
+    'desert_enter': T('MAP_TAUPO', 23, 20, 'shot a0\nhold DOWN 16\nrun 10\nshot a1\nhold DOWN 16\nrun 10\nshot a2\nhold DOWN 32\nrun 60\nshot a3\nhold DOWN 48\nrun 20\nshot a4\nhold DOWN 64\nrun 20\nshot a5\n'),
+    'desert_exit': T('MAP_ROUTE1_DESERT', 18, 72, 'shot b0\nhold DOWN 48\nrun 20\nshot b1\nhold DOWN 48\nrun 60\nshot b2\nhold DOWN 32\nrun 20\nshot b3\n'),
+    'desert_mid': T('MAP_ROUTE1_DESERT', 20, 44, 'shot c0\nhold UP 40\nrun 30\nshot c1\n'),
     'durie': T('MAP_WHANGANUI', 16, 3, 'tap UP\nsteps A 12 s\nrun 60\nsteps A 4 t\n'),
 }
 

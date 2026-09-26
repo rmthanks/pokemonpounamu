@@ -27,6 +27,13 @@ TILESET_DIRS = {
     'gTileset_Fortree': 'data/tilesets/secondary/fortree',
     'gTileset_Pacifidlog': 'data/tilesets/secondary/pacifidlog',
     'gTileset_Fallarbor': 'data/tilesets/secondary/fallarbor',
+    'gTileset_Lavaridge': 'data/tilesets/secondary/lavaridge',
+    'gTileset_Dewford': 'data/tilesets/secondary/dewford',
+    'gTileset_Slateport': 'data/tilesets/secondary/slateport',
+    'gTileset_Mossdeep': 'data/tilesets/secondary/mossdeep',
+    'gTileset_Sootopolis': 'data/tilesets/secondary/sootopolis',
+    'gTileset_EverGrande': 'data/tilesets/secondary/ever_grande',
+    'gTileset_Verdanturf': 'data/tilesets/secondary/verdanturf',
 }
 
 NUM_PALS_PRIMARY = 6      # primary tileset owns palettes 0-5

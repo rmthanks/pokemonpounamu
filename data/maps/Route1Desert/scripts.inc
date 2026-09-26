@@ -238,3 +238,24 @@ Route1Desert_Text_KaseyPost:
 	.string "anyone. I'm starting to see the\l"
 	.string "appeal.$"
 
+
+@ ---- Desert Road signs (map rebuild, 2026-09-26) ----
+Route1Desert_EventScript_SignNorth::
+	msgbox Route1Desert_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route1Desert_EventScript_SignSouth::
+	msgbox Route1Desert_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route1Desert_Text_SignNorth:
+	.string "STATE HIGHWAY 1 - DESERT ROAD\n"
+	.string "Rangipo Desert.\p"
+	.string "Road may close without warning:\n"
+	.string "snow, ash, and wild horses.$"
+
+Route1Desert_Text_SignSouth:
+	.string "NZ ARMY - WAIOURU TRAINING AREA\p"
+	.string "Keep to the road. Do not touch\n"
+	.string "military objects. Tussock is\l"
+	.string "home to wild Pokemon.$"
