@@ -52,6 +52,12 @@ TESTS = {
     'life_rotorua': T('MAP_ROTORUA', 20, 20, 'run 240\nshot r0\nhold LEFT 32\nrun 120\nshot r1\n', party=['SLUGMA']),
     'life_south': T('MAP_ROUTE1_SOUTH', 8, 30, 'run 240\nshot s0\nhold DOWN 32\nrun 200\nshot s1\n', party=['SNORUNT']),
     'life_route5': T('MAP_ROUTE5_POUNAMU', 8, 30, 'run 240\nshot f0\nhold DOWN 32\nrun 200\nshot f1\n', party=['SLUGMA']),
+    'ht_pc': T('MAP_HERETAUNGA_TOWN', 22, 13, 'run 200\nshot a\n'),
+    'ht_ne': T('MAP_HERETAUNGA_TOWN', 50, 15, 'run 200\nshot a\n'),
+    'ht_pond': T('MAP_HERETAUNGA_TOWN', 9, 27, 'run 200\nshot a\n'),
+    'ht_garden': T('MAP_HERETAUNGA_TOWN', 21, 26, 'run 200\nshot a\n'),
+    'ht_orchard': T('MAP_HERETAUNGA_TOWN', 44, 23, 'run 200\nshot a\n'),
+    'ht_north': T('MAP_HERETAUNGA_TOWN', 29, 3, 'run 200\nshot a\n'),
     'durie': T('MAP_WHANGANUI', 16, 3, 'tap UP\nsteps A 12 s\nrun 60\nsteps A 4 t\n'),
 }
 
