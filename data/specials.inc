@@ -641,4 +641,6 @@ gSpecials::
 	def_special CheckAddCoins
 	def_special HyperTrainChosenMon
 	def_special CountPounamuJobs
+	def_special ScriptPartyMonHasType
+	def_special ScriptCheckStepsWalked
 	def_special CountPounamuTrainersBeaten

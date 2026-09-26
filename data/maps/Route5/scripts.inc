@@ -137,3 +137,57 @@ Route5_Text_PMasonDefeat:
 
 Route5_Text_PMasonPost:
 	.string "Southerly's coming. Take care\nup the track.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 18: The Sprig at the Rock - leave green for safe passage; done FLAG_UNUSED_0x290
+@ Rohe-specific (Te Arawa) - kept deliberately light; flagged for Ryan's review.
+Route5_EventScript_ROCKJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x290, Route5_RockJob_Done
+	msgbox Route5_Text_RockJobAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route5_RockJob_No
+	msgbox Route5_Text_RockJobLeave, MSGBOX_DEFAULT
+	msgbox Route5_Text_RockJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_BIG_ROOT
+	goto_if_eq VAR_RESULT, FALSE, Route5_RockJob_Full
+	setflag FLAG_UNUSED_0x290
+Route5_RockJob_Full::
+	release
+	end
+
+Route5_RockJob_No::
+	msgbox Route5_Text_RockJobNo, MSGBOX_DEFAULT
+	release
+	end
+
+Route5_RockJob_Done::
+	msgbox Route5_Text_RockJobAfter, MSGBOX_DEFAULT
+	release
+	end
+Route5_Text_RockJobAsk:
+	.string "This is Hatupatu's rock. He hid\n"
+	.string "inside it once, and it kept him\l"
+	.string "safe.\p"
+	.string "Travellers leave a sprig of\n"
+	.string "green here as they pass. For\l"
+	.string "him, and for a safe road. Will\l"
+	.string "you?$"
+Route5_Text_RockJobLeave:
+	.string "You pick a sprig of manuka from\n"
+	.string "the roadside and lay it at the\l"
+	.string "foot of the rock.$"
+Route5_Text_RockJobThanks:
+	.string "Ka pai. The road will remember\n"
+	.string "you did that, even if you\l"
+	.string "forget.\p"
+	.string "My moko found this by the rock.\n"
+	.string "I think it was meant for\l"
+	.string "someone travelling.$"
+Route5_Text_RockJobNo:
+	.string "No pressure, dear. The rock has\n"
+	.string "kept people safe a long time\l"
+	.string "without asking.$"
+Route5_Text_RockJobAfter:
+	.string "Haere ra. Safe road ahead.$"
+

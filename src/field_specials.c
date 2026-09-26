@@ -5828,6 +5828,31 @@ static const u16 sPounamuJobFlags[] = {
     FLAG_UNUSED_0x2A7, // The Steepest Street (Otepoti)
     FLAG_UNUSED_0x2A8, // The Thieving Pack (Lewis Pass)
     FLAG_UNUSED_0x29E, // The Parcel (Ahuriri)
+    FLAG_UNUSED_0x272, // The Pounamu Trail: all 12 shards carved (job 08)
+    FLAG_UNUSED_0x286, // Deco Deliveries (Ahuriri)
+    FLAG_UNUSED_0x287, // The Wharf Rats (Ahuriri)
+    FLAG_UNUSED_0x288, // Hooks and Lines (Ahuriri)
+    FLAG_UNUSED_0x289, // Eggs in the Shelterbelt (Heretaunga)
+    FLAG_UNUSED_0x28A, // The Slip Watch (Heretaunga)
+    FLAG_UNUSED_0x28B, // A Light That Walks (Wairoa)
+    FLAG_UNUSED_0x28C, // Hikurangi First Light (Route 35A)
+    FLAG_UNUSED_0x28D, // The Weta in the Smoko Room (Opotiki)
+    FLAG_UNUSED_0x28E, // Mauao at Dawn (Tauranga)
+    FLAG_UNUSED_0x28F, // Pohutu at Dusk (Rotorua)
+    FLAG_UNUSED_0x290, // The Sprig at Hatupatu's Rock (Route 5)
+    FLAG_UNUSED_0x291, // The Desert Road Convoy
+    FLAG_UNUSED_0x292, // The Wind Wand (Ngamotu)
+    FLAG_UNUSED_0x293, // The River Mail (Whanganui)
+    FLAG_UNUSED_0x294, // Durie Hill (Whanganui)
+    FLAG_UNUSED_0x295, // The Beehive Petition (Wellington)
+    FLAG_UNUSED_0x298, // The MetService Forecaster (Wellington)
+    FLAG_UNUSED_0x299, // Te Araroa (Wellington)
+    FLAG_UNUSED_0x29B, // The Picton Stowaway (Waitohi)
+    FLAG_UNUSED_0x29C, // The Cathedral Concert (Otautahi)
+    FLAG_UNUSED_0x2AE, // The Lost Luggage (Otepoti)
+    FLAG_UNUSED_0x2AF, // The Paua Count (Otepoti)
+    FLAG_UNUSED_0x2B0, // The Track Master (Lewis Pass)
+    FLAG_UNUSED_0x2B1, // The Harbour Watch Log (Tamaki)
 };
 
 void CountPounamuJobs(void)
@@ -5835,13 +5860,36 @@ void CountPounamuJobs(void)
     u32 i, n = 0;
     for (i = 0; i < ARRAY_COUNT(sPounamuJobFlags); i++)
         if (FlagGet(sPounamuJobFlags[i])) n++;
+    if (VarGet(VAR_POUNAMU_PACK_STATE) >= 4) // Job 06: Shadows at the Gate
+        n++;
     gSpecialVar_Result = n;
+}
+
+// Pounamu jobs: does the party mon picked with ChoosePartyMon (VAR_0x8004)
+// carry the type in VAR_0x8005? Eggs never count.
+bool8 ScriptPartyMonHasType(void)
+{
+    enum Species species;
+
+    if (gSpecialVar_0x8004 >= PARTY_SIZE)
+        return FALSE;
+    species = GetMonData(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8004], MON_DATA_SPECIES_OR_EGG, NULL);
+    if (species == SPECIES_NONE || species == SPECIES_EGG)
+        return FALSE;
+    return GetSpeciesType(species, 0) == gSpecialVar_0x8005
+        || GetSpeciesType(species, 1) == gSpecialVar_0x8005;
+}
+
+// Pounamu jobs: has the player walked at least VAR_0x8005 hundred steps?
+bool8 ScriptCheckStepsWalked(void)
+{
+    return GetGameStat(GAME_STAT_STEPS) >= (u32)gSpecialVar_0x8005 * 100;
 }
 
 void CountPounamuTrainersBeaten(void)
 {
     u32 i, n = 0;
-    for (i = 1; i < 1107; i++)
+    for (i = 1; i < TRAINERS_COUNT; i++)
         if (FlagGet(TRAINER_FLAGS_START + i)) n++;
     gSpecialVar_Result = n;
 }

@@ -275,6 +275,17 @@ AhuririCity_EventScript_WharfFisher::
 	end
 
 AhuririCity_EventScript_WharfFisherDone::
+	goto_if_set FLAG_UNUSED_0x288, AhuririCity_EventScript_WharfFisherAllDone
+	goto_if_unset FLAG_UNUSED_0x287, AhuririCity_EventScript_WharfFisherRats
+	goto AhuririCity_EventScript_HooksJob
+	end
+
+AhuririCity_EventScript_WharfFisherRats::
+	msgbox AhuririCity_Text_WharfFisherRats, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_EventScript_WharfFisherAllDone::
 	msgbox AhuririCity_Text_WharfFisherDone, MSGBOX_DEFAULT
 	release
 	end
@@ -396,3 +407,199 @@ AhuririCity_Text_AssociateRefused:
 AhuririCity_Text_AssociateDone:
 	.string "Name's at the door, kid.\n"
 	.string "…Welcome to the family business.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 09: Deco Deliveries - three posies, three addresses, one table
+@ state VAR_POUNAMU_DECO_STATE: 0 none, 1 gallery, 2 nurse, 3 socialite, 4 back to Kiri; done FLAG_UNUSED_0x286
+AhuririCity_EventScript_DecoJob::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x286, AhuririCity_DecoJob_Done
+	goto_if_eq VAR_POUNAMU_DECO_STATE, 4, AhuririCity_DecoJob_Finish
+	goto_if_ge VAR_POUNAMU_DECO_STATE, 1, AhuririCity_DecoJob_Reminder
+	msgbox AhuririCity_Text_DecoLady, MSGBOX_DEFAULT
+	msgbox AhuririCity_Text_DecoJobAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, AhuririCity_DecoJob_No
+	setvar VAR_POUNAMU_DECO_STATE, 1
+	msgbox AhuririCity_Text_DecoJobGo, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_DecoJob_No::
+	msgbox AhuririCity_Text_DecoJobNo, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_DecoJob_Reminder::
+	msgbox AhuririCity_Text_DecoJobReminder, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_DecoJob_Finish::
+	msgbox AhuririCity_Text_DecoJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_SUN_STONE
+	goto_if_eq VAR_RESULT, FALSE, AhuririCity_DecoJob_Full
+	setflag FLAG_UNUSED_0x286
+	release
+	end
+
+AhuririCity_DecoJob_Full::
+	release
+	end
+
+AhuririCity_DecoJob_Done::
+	msgbox AhuririCity_Text_DecoJobAfter, MSGBOX_DEFAULT
+	release
+	end
+AhuririCity_Text_DecoJobAsk:
+	.string "Kiri: I do the flowers for half\n"
+	.string "the Deco quarter. Three posies,\l"
+	.string "three addresses, and my knees\l"
+	.string "have retired.\p"
+	.string "Run them round for me, love?$"
+AhuririCity_Text_DecoJobGo:
+	.string "Kiri: Bless you. First the\n"
+	.string "gallery painter, then the nurse\l"
+	.string "by the sea, then the lady in\l"
+	.string "the Quarter.\p"
+	.string "In that order. The last one's\n"
+	.string "fussy about being last.$"
+AhuririCity_Text_DecoJobNo:
+	.string "Kiri: Fair enough. The flowers\n"
+	.string "will keep. My knees won't.$"
+AhuririCity_Text_DecoJobReminder:
+	.string "Kiri: Gallery, then the nurse\n"
+	.string "by the sea, then the Quarter.\l"
+	.string "Off you pop.$"
+AhuririCity_Text_DecoJobThanks:
+	.string "Kiri: All three delivered? And\n"
+	.string "she didn't send the last lot\l"
+	.string "back? Well, I never.\p"
+	.string "Here. It's no sunburst window,\n"
+	.string "but it's the closest thing I\l"
+	.string "own. Take it.$"
+AhuririCity_Text_DecoJobAfter:
+	.string "Kiri: Everything in this town\n"
+	.string "was rebuilt at once, so it all\l"
+	.string "matches. People too, if you're\l"
+	.string "not careful.$"
+
+@ Job 11: The Wharf Rats - the crew hogging the end of the wharf; done FLAG_UNUSED_0x287
+AhuririCity_EventScript_Jayden::
+	trainerbattle_single TRAINER_WHARF_JAYDEN, AhuririCity_Text_JaydenIntro, AhuririCity_Text_JaydenDefeat
+	msgbox AhuririCity_Text_JaydenPost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririCity_EventScript_Skye::
+	trainerbattle_single TRAINER_WHARF_SKYE, AhuririCity_Text_SkyeIntro, AhuririCity_Text_SkyeDefeat
+	msgbox AhuririCity_Text_SkyePost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririCity_EventScript_Brax::
+	trainerbattle_single TRAINER_WHARF_BRAX, AhuririCity_Text_BraxIntro, AhuririCity_Text_BraxDefeat, AhuririCity_EventScript_BraxBeaten
+	msgbox AhuririCity_Text_BraxPost, MSGBOX_AUTOCLOSE
+	end
+
+AhuririCity_EventScript_BraxBeaten::
+	setflag FLAG_UNUSED_0x287
+	msgbox AhuririCity_Text_BraxPost, MSGBOX_DEFAULT
+	release
+	end
+AhuririCity_Text_JaydenIntro:
+	.string "End of the wharf's ours. Toll's\n"
+	.string "one battle. Pay up.$"
+AhuririCity_Text_JaydenDefeat:
+	.string "Aw, come on.$"
+AhuririCity_Text_JaydenPost:
+	.string "Brax says the Mob'll take us on\n"
+	.string "when we're sixteen. That's\l"
+	.string "basically a job offer.$"
+AhuririCity_Text_SkyeIntro:
+	.string "You fishing? Nobody fishes here\n"
+	.string "without asking the Rats.$"
+AhuririCity_Text_SkyeDefeat:
+	.string "Okay, okay. You asked.$"
+AhuririCity_Text_SkyePost:
+	.string "My Rattata came off a container\n"
+	.string "ship. So did my dad, sort of.$"
+AhuririCity_Text_BraxIntro:
+	.string "Brax: Wharf Rats run this end,\n"
+	.string "bro. Fishermen pay in bait,\l"
+	.string "tourists pay in chips.\p"
+	.string "You look like you pay in\n"
+	.string "battles.$"
+AhuririCity_Text_BraxDefeat:
+	.string "Brax: ...Right. The wharf's\n"
+	.string "free again. Don't tell anyone\l"
+	.string "it was a kid who did it.$"
+AhuririCity_Text_BraxPost:
+	.string "Brax: The old fella with the\n"
+	.string "rods can have his spot back.\l"
+	.string "We'll find another end of\l"
+	.string "something.$"
+
+@ Job 12: Hooks and Lines - show the fisherman something off the wharf; done FLAG_UNUSED_0x288
+AhuririCity_EventScript_HooksJob::
+	msgbox AhuririCity_Text_HooksAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, AhuririCity_Hooks_No
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, AhuririCity_Hooks_No
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_BARBOACH, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_WHISCASH, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_CORPHISH, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_CRAWDAUNT, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_STUNFISK_GALAR, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_CORSOLA_GALAR, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_CURSOLA, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_WAILMER, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_WAILORD, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_MAGIKARP, AhuririCity_Hooks_Good
+	goto_if_eq VAR_RESULT, SPECIES_GYARADOS, AhuririCity_Hooks_Good
+	msgbox AhuririCity_Text_HooksWrong, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_Hooks_Good::
+	msgbox AhuririCity_Text_HooksThanks, MSGBOX_DEFAULT
+	giveitem ITEM_DIVE_BALL, 3
+	goto_if_eq VAR_RESULT, FALSE, AhuririCity_Hooks_Full
+	setflag FLAG_UNUSED_0x288
+	release
+	end
+
+AhuririCity_Hooks_No::
+	msgbox AhuririCity_Text_HooksNo, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririCity_Hooks_Full::
+	release
+	end
+AhuririCity_Text_WharfFisherRats:
+	.string "Can't get to the end of the\n"
+	.string "wharf for those Wharf Rats.\l"
+	.string "Kids with Rattata and big\l"
+	.string "opinions.\p"
+	.string "Somebody ought to have a word.\n"
+	.string "A battling sort of word.$"
+AhuririCity_Text_HooksAsk:
+	.string "You shifted the Rats! Good on\n"
+	.string "you. Now, did that rod get wet\l"
+	.string "yet?\p"
+	.string "Show us something you hooked\n"
+	.string "off this harbour.$"
+AhuririCity_Text_HooksWrong:
+	.string "Nah, that never came out of the\n"
+	.string "harbour. I know every fish in\l"
+	.string "it by first name.$"
+AhuririCity_Text_HooksThanks:
+	.string "Look at that! Proper harbour\n"
+	.string "stock.\p"
+	.string "Take these. They're for going\n"
+	.string "deeper than a rod can.$"
+AhuririCity_Text_HooksNo:
+	.string "No rush. The fish have been\n"
+	.string "here longer than both of us.$"
+

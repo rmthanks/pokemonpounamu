@@ -163,3 +163,78 @@ Route1Desert_Text_PQuinnDefeat:
 
 Route1Desert_Text_PQuinnPost:
 	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 23: The Desert Road Convoy - clear the Mob toll so the stock truck can pass; done FLAG_UNUSED_0x291
+Route1Desert_EventScript_CONVOYJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x291, Route1Desert_ConvoyJob_Done
+	goto_if_not_defeated TRAINER_DESERT_TOLL_DEAN, Route1Desert_ConvoyJob_Blocked
+	goto_if_not_defeated TRAINER_DESERT_TOLL_KASEY, Route1Desert_ConvoyJob_Blocked
+	msgbox Route1Desert_Text_ConvoyJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_MAX_POTION, 2
+	goto_if_eq VAR_RESULT, FALSE, Route1Desert_ConvoyJob_Full
+	setflag FLAG_UNUSED_0x291
+Route1Desert_ConvoyJob_Full::
+	release
+	end
+
+Route1Desert_ConvoyJob_Blocked::
+	msgbox Route1Desert_Text_ConvoyJobBlocked, MSGBOX_DEFAULT
+	release
+	end
+
+Route1Desert_ConvoyJob_Done::
+	msgbox Route1Desert_Text_ConvoyJobAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Route1Desert_EventScript_TollDean::
+	trainerbattle_single TRAINER_DESERT_TOLL_DEAN, Route1Desert_Text_DeanIntro, Route1Desert_Text_DeanDefeat
+	msgbox Route1Desert_Text_DeanPost, MSGBOX_AUTOCLOSE
+	end
+
+Route1Desert_EventScript_TollKasey::
+	trainerbattle_single TRAINER_DESERT_TOLL_KASEY, Route1Desert_Text_KaseyIntro, Route1Desert_Text_KaseyDefeat
+	msgbox Route1Desert_Text_KaseyPost, MSGBOX_AUTOCLOSE
+	end
+Route1Desert_Text_ConvoyJobBlocked:
+	.string "Trucker: Got a truck of stock\n"
+	.string "bound for Waiouru and two Mob\l"
+	.string "tollies wanting a cut to let me\l"
+	.string "through.\p"
+	.string "Some road. Some tax. If you can\n"
+	.string "talk to them in a language they\l"
+	.string "understand, I'd be grateful.$"
+Route1Desert_Text_ConvoyJobThanks:
+	.string "Trucker: Road's clear! The\n"
+	.string "sheep thank you. Well, they\l"
+	.string "don't, but I do.\p"
+	.string "Take these. The Desert Road\n"
+	.string "eats people who don't carry\l"
+	.string "spares.$"
+Route1Desert_Text_ConvoyJobAfter:
+	.string "Trucker: Forty years on this\n"
+	.string "road. Snow in summer, sun in\l"
+	.string "winter, Mob in between.$"
+Route1Desert_Text_DeanIntro:
+	.string "Road toll. Not the government\n"
+	.string "kind. Ours is quicker.$"
+Route1Desert_Text_DeanDefeat:
+	.string "Fine. Waived. This once.$"
+Route1Desert_Text_DeanPost:
+	.string "The President doesn't know we\n"
+	.string "run this one. Keep it that way,\l"
+	.string "eh?$"
+Route1Desert_Text_KaseyIntro:
+	.string "Everyone pays on the Desert\n"
+	.string "Road. Pay in battles, pay in\l"
+	.string "bruises.$"
+Route1Desert_Text_KaseyDefeat:
+	.string "Okay, you've paid.$"
+Route1Desert_Text_KaseyPost:
+	.string "Wild horses out here don't pay\n"
+	.string "anyone. I'm starting to see the\l"
+	.string "appeal.$"
+

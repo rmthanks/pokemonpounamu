@@ -19,7 +19,14 @@ AhuririGallery_Text_Curator:
 AhuririGallery_EventScript_Painter::
 	lock
 	faceplayer
+	goto_if_eq VAR_POUNAMU_DECO_STATE, 1, AhuririGallery_EventScript_PainterPosy
 	msgbox AhuririGallery_Text_Painter, MSGBOX_DEFAULT
+	release
+	end
+
+AhuririGallery_EventScript_PainterPosy::
+	msgbox AhuririGallery_Text_PainterPosy, MSGBOX_DEFAULT
+	setvar VAR_POUNAMU_DECO_STATE, 2
 	release
 	end
 
@@ -27,4 +34,11 @@ AhuririGallery_Text_Painter:
 	.string "I paint the same sea every\n"
 	.string "day, and it has never once\l"
 	.string "been the same sea.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+AhuririGallery_Text_PainterPosy:
+	.string "Flowers from Kiri? For me?\p"
+	.string "...She knows I'll paint them\n"
+	.string "instead of putting them in\l"
+	.string "water. She always knows.$"
 

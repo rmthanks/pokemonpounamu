@@ -375,3 +375,41 @@ Route7_Text_R7JOBThanks:
 
 Route7_Text_R7JOBAfter:
 	.string "Tramper: Quiet on the pass now.\nBliss.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 43: The Track Master - the ranger who has walked every Great Walk; done FLAG_UNUSED_0x2B0
+Route7_EventScript_TrackMaster::
+	trainerbattle_single TRAINER_TRACK_MASTER_HEATHER, Route7_Text_HeatherIntro, Route7_Text_HeatherDefeat, Route7_EventScript_HeatherBeaten
+	msgbox Route7_Text_HeatherPost, MSGBOX_AUTOCLOSE
+	end
+
+Route7_EventScript_HeatherBeaten::
+	msgbox Route7_Text_HeatherReward, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_CAPSULE
+	goto_if_eq VAR_RESULT, FALSE, Route7_Heather_Full
+	setflag FLAG_UNUSED_0x2B0
+Route7_Heather_Full::
+	release
+	end
+Route7_Text_HeatherIntro:
+	.string "Heather: DOC ranger. I've\n"
+	.string "walked every Great Walk in the\l"
+	.string "motu, twice, and the Milford\l"
+	.string "Track three times.\p"
+	.string "I only battle people who've\n"
+	.string "walked further than their gym\l"
+	.string "badges. Let's find out.$"
+Route7_Text_HeatherDefeat:
+	.string "Heather: Well walked.$"
+Route7_Text_HeatherReward:
+	.string "Heather: You've got legs and a\n"
+	.string "head. Rare combination on the\l"
+	.string "passes.\p"
+	.string "Take this. It changes how a\n"
+	.string "Pokemon carries itself. So do\l"
+	.string "long roads.$"
+Route7_Text_HeatherPost:
+	.string "Heather: The kea stole my lunch\n"
+	.string "again. Twice this week. They're\l"
+	.string "smarter than the walkers.$"
+

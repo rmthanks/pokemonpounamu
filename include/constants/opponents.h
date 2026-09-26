@@ -1119,8 +1119,14 @@
 #define TRAINER_VICT_YUSUF                  1104
 #define TRAINER_GYM1_ZARA                   1105
 #define TRAINER_GYM1_ADA                    1106
+#define TRAINER_WHARF_JAYDEN                1107
+#define TRAINER_WHARF_SKYE                  1108
+#define TRAINER_WHARF_BRAX                  1109
+#define TRAINER_DESERT_TOLL_DEAN            1110
+#define TRAINER_DESERT_TOLL_KASEY           1111
+#define TRAINER_TRACK_MASTER_HEATHER        1112
 
-#define TRAINERS_COUNT_EMERALD     1107
+#define TRAINERS_COUNT_EMERALD     1113
 #define MAX_TRAINERS_COUNT_EMERALD 1120
 
 #if IS_FRLG

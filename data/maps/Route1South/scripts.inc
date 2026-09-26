@@ -179,3 +179,19 @@ Route1South_Text_POrlaDefeat:
 
 Route1South_Text_POrlaPost:
 	.string "The League's tougher than me.\nBarely.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 41: The Lost Luggage - the suitcase that fell off the train
+Route1South_EventScript_Suitcase::
+	lock
+	msgbox Route1South_Text_Suitcase, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x4BA
+	removeobject VAR_LAST_TALKED
+	release
+	end
+Route1South_Text_Suitcase:
+	.string "A battered suitcase, tagged for\n"
+	.string "the Dunedin railway station.\p"
+	.string "{PLAYER} picked it up to hand\n"
+	.string "in at Otepoti.$"
+

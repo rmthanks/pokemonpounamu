@@ -20949,3 +20949,102 @@ AI: Check Bad Move
 
 Combee
 Level: 9
+
+=== TRAINER_WHARF_JAYDEN ===
+Name: Jayden
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Rattata-Alola
+Level: 10
+
+Wingull
+Level: 10
+
+=== TRAINER_WHARF_SKYE ===
+Name: Skye
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Rattata-Alola
+Level: 11
+
+Corphish
+Level: 11
+
+=== TRAINER_WHARF_BRAX ===
+Name: Brax
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Rattata-Alola
+Level: 12
+
+Poochyena
+Level: 12
+
+Corphish
+Level: 13
+
+=== TRAINER_DESERT_TOLL_DEAN ===
+Name: Dean
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Koffing
+Level: 23
+
+Mightyena
+Level: 24
+
+=== TRAINER_DESERT_TOLL_KASEY ===
+Name: Kasey
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Mudbray
+Level: 24
+
+Sandygast
+Level: 25
+
+=== TRAINER_TRACK_MASTER_HEATHER ===
+Name: Heather
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Stantler
+Level: 35
+
+Skarmory
+Level: 36
+
+Sliggoo
+Level: 36
+
+Weavile
+Level: 37

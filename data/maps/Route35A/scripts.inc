@@ -291,3 +291,75 @@ Route35A_Text_TawhaiMauri:
 	.string "came back down.\p"
 	.string "The gate is open, e hoa.\n"
 	.string "It was always going to be you.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 16: Hikurangi First Light - be on the ridge at dawn; done FLAG_UNUSED_0x28C
+Route35A_EventScript_DAWNJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x28C, Route35A_DawnJob_Done
+	gettimeofday
+	goto_if_ne VAR_0x8000, 0, Route35A_DawnJob_NotYet
+	msgbox Route35A_Text_DawnJobAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route35A_DawnJob_No
+	fadescreen FADE_TO_WHITE
+	playse SE_M_REFLECT
+	msgbox Route35A_Text_DawnJobShot, MSGBOX_DEFAULT
+	fadescreen FADE_FROM_WHITE
+	msgbox Route35A_Text_DawnJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_RARE_CANDY
+	goto_if_eq VAR_RESULT, FALSE, Route35A_DawnJob_Full
+	setflag FLAG_UNUSED_0x28C
+	release
+	end
+
+Route35A_DawnJob_NotYet::
+	msgbox Route35A_Text_DawnJobNotYet, MSGBOX_DEFAULT
+	release
+	end
+
+Route35A_DawnJob_No::
+	msgbox Route35A_Text_DawnJobNo, MSGBOX_DEFAULT
+	release
+	end
+
+Route35A_DawnJob_Full::
+	release
+	end
+
+Route35A_DawnJob_Done::
+	msgbox Route35A_Text_DawnJobAfter, MSGBOX_DEFAULT
+	release
+	end
+Route35A_Text_DawnJobNotYet:
+	.string "Hikurangi is the first maunga\n"
+	.string "in the world to see the sun\l"
+	.string "each day. I'm here to\l"
+	.string "photograph it.\p"
+	.string "Come back at first light, in\n"
+	.string "the morning. I want you and\l"
+	.string "your partner in the frame.$"
+Route35A_Text_DawnJobAsk:
+	.string "Here it comes! First light on\n"
+	.string "Hikurangi. Quick, stand on the\l"
+	.string "ridge with your Pokemon!$"
+Route35A_Text_DawnJobShot:
+	.string "The sun comes up over the sea\n"
+	.string "and touches the maunga before\l"
+	.string "anything else in the world.\p"
+	.string "Click.$"
+Route35A_Text_DawnJobNo:
+	.string "Suit yourself. The sun will\n"
+	.string "rise either way. It's generous\l"
+	.string "like that.$"
+Route35A_Text_DawnJobThanks:
+	.string "Got it. You'll be the first\n"
+	.string "people in the world on film\l"
+	.string "today.\p"
+	.string "Take this. You earned an early\n"
+	.string "start.$"
+Route35A_Text_DawnJobAfter:
+	.string "I'll send the print to the\n"
+	.string "Turanga museum. First faces of\l"
+	.string "the day. Has a ring to it.$"
+

@@ -4,6 +4,14 @@ WellingtonWindFlat_MapScripts::
 WellingtonWindFlat_EventScript_Barista::
 	lock
 	faceplayer
+	goto_if_unset FLAG_UNUSED_0x4B6, WellingtonWindFlat_Barista_Normal
+	goto_if_set FLAG_UNUSED_0x4B8, WellingtonWindFlat_Barista_Normal
+	msgbox WellingtonWindFlat_Text_BaristaSign, MSGBOX_DEFAULT
+	setflag FLAG_UNUSED_0x4B8
+	release
+	end
+
+WellingtonWindFlat_Barista_Normal::
 	goto_if_set FLAG_UNUSED_0x03A, WellingtonWindFlat_EventScript_Barista_Done
 	msgbox WellingtonWindFlat_Text_Barista, MSGBOX_DEFAULT
 	giveitem ITEM_ULTRA_BALL, 2
@@ -28,4 +36,12 @@ WellingtonWindFlat_Text_Barista:
 WellingtonWindFlat_Text_Barista_After:
 	.string "Southerly tomorrow. You'll\n"
 	.string "hear it before you feel it.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+WellingtonWindFlat_Text_BaristaSign:
+	.string "A crossing outside the Beehive?\n"
+	.string "I'd sign that twice.\p"
+	.string "Half my customers are MPs and\n"
+	.string "none of them look before they\l"
+	.string "step off a kerb.$"
 

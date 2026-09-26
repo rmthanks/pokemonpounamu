@@ -254,3 +254,116 @@ Otepoti_Text_OPJOBThanks:
 
 Otepoti_Text_OPJOBAfter:
 	.string "Ka pai. The board's been told.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 41: The Lost Luggage - hand the suitcase to the station porter; done FLAG_UNUSED_0x2AE
+Otepoti_EventScript_LUGGAGEJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2AE, Otepoti_LuggageJob_Done
+	goto_if_unset FLAG_UNUSED_0x4BA, Otepoti_LuggageJob_Lost
+	msgbox Otepoti_Text_LuggageJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_BIG_NUGGET
+	goto_if_eq VAR_RESULT, FALSE, Otepoti_LuggageJob_Full
+	setflag FLAG_UNUSED_0x2AE
+Otepoti_LuggageJob_Full::
+	release
+	end
+
+Otepoti_LuggageJob_Lost::
+	msgbox Otepoti_Text_LuggageJobLost, MSGBOX_DEFAULT
+	release
+	end
+
+Otepoti_LuggageJob_Done::
+	msgbox Otepoti_Text_LuggageJobAfter, MSGBOX_DEFAULT
+	release
+	end
+Otepoti_Text_LuggageJobLost:
+	.string "Porter at the old railway\n"
+	.string "station. Fanciest station in\l"
+	.string "the country, and we still lose\l"
+	.string "things.\p"
+	.string "A suitcase bounced off the\n"
+	.string "excursion train up the line. If\l"
+	.string "you're walking the road north,\l"
+	.string "keep an eye out.$"
+Otepoti_Text_LuggageJobThanks:
+	.string "That's the one! Mrs Galbraith\n"
+	.string "will be thrilled. It's her good\l"
+	.string "cardigans.\p"
+	.string "She said to give the finder\n"
+	.string "this. She's very generous about\l"
+	.string "cardigans.$"
+Otepoti_Text_LuggageJobAfter:
+	.string "The station's over a hundred\n"
+	.string "years old. Everything else here\l"
+	.string "is students. It's a balance.$"
+
+Otepoti_EventScript_PAUAJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x2AF, Otepoti_PAUAJOB_Done
+	msgbox Otepoti_Text_PAUAJOBAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Otepoti_PAUAJOB_No
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Otepoti_PAUAJOB_No
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_SHELLDER, Otepoti_PAUAJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_CLOYSTER, Otepoti_PAUAJOB_Good
+	msgbox Otepoti_Text_PAUAJOBWrong, MSGBOX_DEFAULT
+	release
+	end
+
+Otepoti_PAUAJOB_Good::
+	msgbox Otepoti_Text_PAUAJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_BIG_PEARL
+	goto_if_eq VAR_RESULT, FALSE, Otepoti_PAUAJOB_Full
+	setflag FLAG_UNUSED_0x2AF
+	release
+	end
+
+Otepoti_PAUAJOB_No::
+	msgbox Otepoti_Text_PAUAJOBNo, MSGBOX_DEFAULT
+	release
+	end
+
+Otepoti_PAUAJOB_Full::
+	release
+	end
+
+Otepoti_PAUAJOB_Done::
+	msgbox Otepoti_Text_PAUAJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Otepoti_Text_PAUAJOBAsk:
+	.string "Diver: I count paua for the\n"
+	.string "fisheries lot. Numbers are down\l"
+	.string "round here.\p"
+	.string "Seen a healthy one on your\n"
+	.string "travels? Show me and cheer an\l"
+	.string "old diver up.$"
+
+Otepoti_Text_PAUAJOBNo:
+	.string "Diver: No worries. I'll keep\n"
+	.string "counting. Somebody has to.$"
+
+Otepoti_Text_PAUAJOBWrong:
+	.string "Diver: That's no paua, mate.\n"
+	.string "Paua shine blue and green\l"
+	.string "inside, like the sea at night.$"
+
+Otepoti_Text_PAUAJOBThanks:
+	.string "Diver: Now THAT is a healthy\n"
+	.string "paua. Good shell, good colour.\p"
+	.string "Found this one in a rock pool\n"
+	.string "last winter. You have it. Give\l"
+	.string "my count a bit of hope.$"
+
+Otepoti_Text_PAUAJOBAfter:
+	.string "Diver: One healthy paua. It's a\n"
+	.string "start. Everything is, down\l"
+	.string "here.$"
+

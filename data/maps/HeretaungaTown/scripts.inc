@@ -248,7 +248,24 @@ HeretaungaTown_Text_TeMataBoyPostQuake:
 	.string "eh. Like a made bed.$"
 
 HeretaungaTown_EventScript_OrchardWorker::
-	msgbox HeretaungaTown_Text_OrchardWorker, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x289, HeretaungaTown_EggJob_Done
+	goto_if_set FLAG_UNUSED_0x4B0, HeretaungaTown_EggJob_Check
+	msgbox HeretaungaTown_Text_OrchardWorker, MSGBOX_DEFAULT
+	msgbox HeretaungaTown_Text_EggJobAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_EggJob_No
+	giveegg SPECIES_HOOTHOOT
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, HeretaungaTown_EggJob_NoRoom
+	setflag FLAG_UNUSED_0x4B0
+	playfanfare MUS_OBTAIN_ITEM
+	message HeretaungaTown_Text_EggReceived
+	waitmessage
+	waitfanfare
+	waitbuttonpress
+	closemessage
+	msgbox HeretaungaTown_Text_EggJobGo, MSGBOX_DEFAULT
+	release
 	end
 
 HeretaungaTown_Text_OrchardWorker:
@@ -1795,3 +1812,170 @@ HeretaungaTown_Text_RataKnownAfter:
 	.string "The mountains are waiting.\p"
 	.string "…She'd be so proud. Both of us.\n"
 	.string "All three of us.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 13: Eggs in the Shelterbelt - hatch the ruru and bring it back; done FLAG_UNUSED_0x289
+HeretaungaTown_EggJob_Check::
+	msgbox HeretaungaTown_Text_EggJobCheck, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_EggJob_Wait
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, HeretaungaTown_EggJob_Wait
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_HOOTHOOT, HeretaungaTown_EggJob_Good
+	goto_if_eq VAR_RESULT, SPECIES_NOCTOWL, HeretaungaTown_EggJob_Good
+	goto_if_eq VAR_RESULT, SPECIES_EGG, HeretaungaTown_EggJob_StillEgg
+	msgbox HeretaungaTown_Text_EggJobWrong, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EggJob_StillEgg::
+	msgbox HeretaungaTown_Text_EggJobStillEgg, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EggJob_Good::
+	msgbox HeretaungaTown_Text_EggJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_SITRUS_BERRY, 3
+	goto_if_eq VAR_RESULT, FALSE, HeretaungaTown_EggJob_Full
+	setflag FLAG_UNUSED_0x289
+	release
+	end
+
+HeretaungaTown_EggJob_Full::
+HeretaungaTown_EggJob_Wait::
+	msgbox HeretaungaTown_Text_EggJobWait, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EggJob_No::
+	msgbox HeretaungaTown_Text_EggJobNo, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EggJob_NoRoom::
+	msgbox HeretaungaTown_Text_EggJobNoRoom, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_EggJob_Done::
+	msgbox HeretaungaTown_Text_EggJobAfter, MSGBOX_DEFAULT
+	release
+	end
+HeretaungaTown_Text_EggJobAsk:
+	.string "Oh, and one more thing. We took\n"
+	.string "down the old pine in the\l"
+	.string "shelterbelt, and there was a\l"
+	.string "ruru nest in it.\p"
+	.string "Mum and Dad bird never came\n"
+	.string "back. One egg left. Would you\l"
+	.string "keep it warm for me?$"
+HeretaungaTown_Text_EggReceived:
+	.string "{PLAYER} received an Egg!$"
+
+HeretaungaTown_Text_EggJobGo:
+	.string "Keep it close and keep walking.\n"
+	.string "Eggs like a bit of road under\l"
+	.string "them.\p"
+	.string "Bring the wee one back to show\n"
+	.string "me when it hatches, eh?$"
+HeretaungaTown_Text_EggJobNo:
+	.string "No worries. It's a big ask,\n"
+	.string "being somebody's mum.$"
+HeretaungaTown_Text_EggJobNoRoom:
+	.string "Your hands are full, eh? Make\n"
+	.string "some room and come see me.$"
+HeretaungaTown_Text_EggJobCheck:
+	.string "How's our ruru getting on?\n"
+	.string "Hatched yet? Show us!$"
+HeretaungaTown_Text_EggJobStillEgg:
+	.string "Still an egg! Give it more\n"
+	.string "road. They hatch in their own\l"
+	.string "time, same as us.$"
+HeretaungaTown_Text_EggJobWrong:
+	.string "That's a fine Pokemon, but it's\n"
+	.string "not our ruru.$"
+HeretaungaTown_Text_EggJobWait:
+	.string "Whenever you're ready. The\n"
+	.string "shelterbelt's not going\l"
+	.string "anywhere.$"
+HeretaungaTown_Text_EggJobThanks:
+	.string "Look at those eyes! Morepork,\n"
+	.string "morepork. That's the sound of\l"
+	.string "the orchard at night, that is.\p"
+	.string "You did right by it. Here,\n"
+	.string "something for the road.$"
+HeretaungaTown_Text_EggJobAfter:
+	.string "We planted a new pine where the\n"
+	.string "old one was. Every nest\l"
+	.string "deserves a second go.$"
+
+HeretaungaTown_EventScript_SLIPJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x28A, HeretaungaTown_SLIPJOB_Done
+	msgbox HeretaungaTown_Text_SLIPJOBAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HeretaungaTown_SLIPJOB_No
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, HeretaungaTown_SLIPJOB_No
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_BUNNELBY, HeretaungaTown_SLIPJOB_Good
+	goto_if_eq VAR_RESULT, SPECIES_DIGGERSBY, HeretaungaTown_SLIPJOB_Good
+	msgbox HeretaungaTown_Text_SLIPJOBWrong, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_SLIPJOB_Good::
+	msgbox HeretaungaTown_Text_SLIPJOBThanks, MSGBOX_DEFAULT
+	giveitem ITEM_SOFT_SAND
+	goto_if_eq VAR_RESULT, FALSE, HeretaungaTown_SLIPJOB_Full
+	setflag FLAG_UNUSED_0x28A
+	release
+	end
+
+HeretaungaTown_SLIPJOB_No::
+	msgbox HeretaungaTown_Text_SLIPJOBNo, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_SLIPJOB_Full::
+	release
+	end
+
+HeretaungaTown_SLIPJOB_Done::
+	msgbox HeretaungaTown_Text_SLIPJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+HeretaungaTown_Text_SLIPJOBAsk:
+	.string "Dr Hollis: I monitor slips on\n"
+	.string "the ridge for the council. The\l"
+	.string "sensors say Te Mata has been...\l"
+	.string "creaking.\p"
+	.string "Nobody hears the ground like a\n"
+	.string "burrower. Would you show me\l"
+	.string "one?$"
+
+HeretaungaTown_Text_SLIPJOBNo:
+	.string "Dr Hollis: Fair. I'll go back\n"
+	.string "to my sensors. They also don't\l"
+	.string "listen to me.$"
+
+HeretaungaTown_Text_SLIPJOBWrong:
+	.string "Dr Hollis: Lovely, but that one\n"
+	.string "lives on top of the ground. I\l"
+	.string "need a digger.$"
+
+HeretaungaTown_Text_SLIPJOBThanks:
+	.string "Dr Hollis: See its ears twitch?\n"
+	.string "It's listening straight down.\p"
+	.string "...It's not scared. It's\n"
+	.string "waiting. That's worse, somehow.\l"
+	.string "Take this, and thank you.$"
+
+HeretaungaTown_Text_SLIPJOBAfter:
+	.string "Dr Hollis: The readings are\n"
+	.string "flat again. Flat like a held\l"
+	.string "breath. I'll keep watching.$"
+

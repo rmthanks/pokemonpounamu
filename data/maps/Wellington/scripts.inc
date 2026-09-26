@@ -18,11 +18,90 @@ Wellington_EventScript_GymKid::
 	msgbox Wellington_Text_GymKid, MSGBOX_NPC
 	end
 Wellington_EventScript_BeehiveMan::
-	msgbox Wellington_Text_BeehiveMan, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x295, Wellington_PetitionJob_Done
+	goto_if_set FLAG_UNUSED_0x4B6, Wellington_PetitionJob_Check
+	msgbox Wellington_Text_BeehiveMan, MSGBOX_DEFAULT
+	msgbox Wellington_Text_PetitionJobAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Wellington_PetitionJob_No
+	setflag FLAG_UNUSED_0x4B6
+	msgbox Wellington_Text_PetitionJobGo, MSGBOX_DEFAULT
+	release
 	end
 Wellington_EventScript_WindWoman::
-	msgbox Wellington_Text_WindWoman, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x298, Wellington_METJOB_Done
+	msgbox Wellington_Text_METJOBAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Wellington_METJOB_No
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, Wellington_METJOB_No
+	setvar VAR_0x8005, TYPE_FLYING
+	specialvar VAR_RESULT, ScriptPartyMonHasType
+	goto_if_eq VAR_RESULT, TRUE, Wellington_METJOB_Good
+	msgbox Wellington_Text_METJOBWrong, MSGBOX_DEFAULT
+	release
 	end
+
+Wellington_METJOB_Good::
+	msgbox Wellington_Text_METJOBThanks, MSGBOX_DEFAULT
+	givemon SPECIES_CASTFORM, 25
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Wellington_METJOB_Full
+	playfanfare MUS_OBTAIN_ITEM
+	message gText_Pounamu_ReceivedCastform
+	waitmessage
+	waitfanfare
+	waitbuttonpress
+	closemessage
+	setflag FLAG_UNUSED_0x298
+	release
+	end
+
+Wellington_METJOB_No::
+	msgbox Wellington_Text_METJOBNo, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_METJOB_Full::
+	release
+	end
+
+Wellington_METJOB_Done::
+	msgbox Wellington_Text_METJOBAfter, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_Text_METJOBAsk:
+	.string "You can't lean on the wind\n"
+	.string "here, exactly. I forecast it,\l"
+	.string "up at MetService on the hill.\p"
+	.string "The birds always know before my\n"
+	.string "models do. Show me a flier, and\l"
+	.string "let me see which way it faces?$"
+
+Wellington_Text_METJOBNo:
+	.string "But you can trust the wind to\n"
+	.string "catch you. Usually.$"
+
+Wellington_Text_METJOBWrong:
+	.string "That one doesn't read the sky.\n"
+	.string "I need something with wings.$"
+
+Wellington_Text_METJOBThanks:
+	.string "Nose into the southerly. Change\n"
+	.string "by tonight, then. Better than\l"
+	.string "my model.\p"
+	.string "We raise these at MetService.\n"
+	.string "This one's been itching to see\l"
+	.string "more weather than Wellington.\l"
+	.string "Take it.$"
+
+Wellington_Text_METJOBAfter:
+	.string "My forecast now has a footnote:\n"
+	.string "“consult a bird”. The boss\l"
+	.string "thinks I'm joking.$"
 Wellington_EventScript_FerryMan::
 	msgbox Wellington_Text_FerryMan, MSGBOX_NPC
 	end
@@ -413,3 +492,113 @@ Wellington_Text_WLJOBWrong:
 
 Wellington_Text_WLJOBAfter:
 	.string "Ka pai. The board's been told.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 27: The Beehive Petition - three signatures for a crossing; done FLAG_UNUSED_0x295
+Wellington_PetitionJob_Check::
+	goto_if_unset FLAG_UNUSED_0x4B7, Wellington_PetitionJob_NotYet
+	goto_if_unset FLAG_UNUSED_0x4B8, Wellington_PetitionJob_NotYet
+	goto_if_unset FLAG_UNUSED_0x4B9, Wellington_PetitionJob_NotYet
+	msgbox Wellington_Text_PetitionJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_PP_UP
+	goto_if_eq VAR_RESULT, FALSE, Wellington_PetitionJob_Full
+	setflag FLAG_UNUSED_0x295
+Wellington_PetitionJob_Full::
+	release
+	end
+
+Wellington_PetitionJob_No::
+	msgbox Wellington_Text_PetitionJobNo, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_PetitionJob_NotYet::
+	msgbox Wellington_Text_PetitionJobNotYet, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_PetitionJob_Done::
+	msgbox Wellington_Text_PetitionJobAfter, MSGBOX_DEFAULT
+	release
+	end
+Wellington_Text_PetitionJobAsk:
+	.string "I'm petitioning for a\n"
+	.string "pedestrian crossing outside the\l"
+	.string "Beehive. The people who make\l"
+	.string "the rules keep jaywalking.\p"
+	.string "I need three signatures from\n"
+	.string "real Wellingtonians. Will you\l"
+	.string "collect them?$"
+Wellington_Text_PetitionJobGo:
+	.string "Try the house by the cable car,\n"
+	.string "the cafe flat, and the\l"
+	.string "students. Wellingtonians love a\l"
+	.string "petition almost as much as a\l"
+	.string "complaint.$"
+Wellington_Text_PetitionJobNo:
+	.string "Fair. Democracy is exhausting.\n"
+	.string "That's how you know it works.$"
+Wellington_Text_PetitionJobNotYet:
+	.string "Still short a signature or two.\n"
+	.string "Cable car house, cafe flat,\l"
+	.string "students. Go on.$"
+Wellington_Text_PetitionJobThanks:
+	.string "Three signatures! That's more\n"
+	.string "than the last three petitions\l"
+	.string "put together.\p"
+	.string "It'll go in the pile. The pile\n"
+	.string "is very important. Here, for\l"
+	.string "your trouble.$"
+Wellington_Text_PetitionJobAfter:
+	.string "They've agreed to “consider a\n"
+	.string "review of the crossing\l"
+	.string "process”. In Wellington that's\l"
+	.string "basically a yes.$"
+
+gText_Pounamu_ReceivedCastform:
+	.string "{PLAYER} received Castform!$"
+
+@ Job 33: Te Araroa - 15,000 steps on the motu; done FLAG_UNUSED_0x299
+Wellington_EventScript_TRAMPJOB::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x299, Wellington_TrampJob_Done
+	setvar VAR_0x8005, 150
+	specialvar VAR_RESULT, ScriptCheckStepsWalked
+	goto_if_eq VAR_RESULT, FALSE, Wellington_TrampJob_NotYet
+	msgbox Wellington_Text_TrampJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_EXP_CANDY_L, 2
+	goto_if_eq VAR_RESULT, FALSE, Wellington_TrampJob_Full
+	setflag FLAG_UNUSED_0x299
+Wellington_TrampJob_Full::
+	release
+	end
+
+Wellington_TrampJob_NotYet::
+	msgbox Wellington_Text_TrampJobNotYet, MSGBOX_DEFAULT
+	release
+	end
+
+Wellington_TrampJob_Done::
+	msgbox Wellington_Text_TrampJobAfter, MSGBOX_DEFAULT
+	release
+	end
+Wellington_Text_TrampJobNotYet:
+	.string "Walking Te Araroa. Cape Reinga\n"
+	.string "to Bluff, one foot at a time.\l"
+	.string "I'm about halfway.\p"
+	.string "Let's see your boots. Hmm, not\n"
+	.string "enough road in them yet. Come\l"
+	.string "back when you've walked 15,000\l"
+	.string "steps across the motu.$"
+Wellington_Text_TrampJobThanks:
+	.string "Let's see your boots. Oh, now\n"
+	.string "THOSE have some road in them.\l"
+	.string "15,000 steps at least.\p"
+	.string "You're a tramper, whether you\n"
+	.string "meant to be or not. Here, trail\l"
+	.string "food. Well, trail candy.$"
+Wellington_Text_TrampJobAfter:
+	.string "See you in Bluff, maybe. Or\n"
+	.string "maybe I'll just keep walking.$"
+

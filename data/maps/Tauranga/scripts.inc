@@ -6,7 +6,23 @@ Tauranga_EventScript_GymKid::
 	end
 
 Tauranga_EventScript_MauaoMan::
-	msgbox Tauranga_Text_MauaoMan, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x28E, Tauranga_MauaoJob_Done
+	msgbox Tauranga_Text_MauaoMan, MSGBOX_DEFAULT
+	gettimeofday
+	goto_if_ne VAR_0x8000, 0, Tauranga_MauaoJob_NotYet
+	msgbox Tauranga_Text_MauaoJobAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Tauranga_MauaoJob_No
+	fadescreen FADE_TO_BLACK
+	msgbox Tauranga_Text_MauaoJobClimb, MSGBOX_DEFAULT
+	fadescreen FADE_FROM_BLACK
+	msgbox Tauranga_Text_MauaoJobThanks, MSGBOX_DEFAULT
+	giveitem ITEM_DAWN_STONE
+	goto_if_eq VAR_RESULT, FALSE, Tauranga_MauaoJob_Full
+	setflag FLAG_UNUSED_0x28E
+Tauranga_MauaoJob_Full::
+	release
 	end
 
 Tauranga_EventScript_StreetWoman::
@@ -161,3 +177,50 @@ Tauranga_Text_TGJOBWrong:
 
 Tauranga_Text_TGJOBAfter:
 	.string "Ka pai. The board's been told.$"
+
+@ ---- Mission batch S2 (2026-09-26) ----
+@ Job 21: Mauao at Dawn - walk the old man up for the sunrise; done FLAG_UNUSED_0x28E
+Tauranga_MauaoJob_NotYet::
+	msgbox Tauranga_Text_MauaoJobNotYet, MSGBOX_DEFAULT
+	release
+	end
+
+Tauranga_MauaoJob_No::
+	msgbox Tauranga_Text_MauaoJobNo, MSGBOX_DEFAULT
+	release
+	end
+
+Tauranga_MauaoJob_Done::
+	msgbox Tauranga_Text_MauaoJobAfter, MSGBOX_DEFAULT
+	release
+	end
+Tauranga_Text_MauaoJobNotYet:
+	.string "I walk up him every morning to\n"
+	.string "see the dawn he missed. My legs\l"
+	.string "aren't what they were.\p"
+	.string "If you're about at first light,\n"
+	.string "come find me. I'd like the\l"
+	.string "company.$"
+Tauranga_Text_MauaoJobAsk:
+	.string "It's nearly dawn. Walk up with\n"
+	.string "me? Slowly, mind.$"
+Tauranga_Text_MauaoJobClimb:
+	.string "You climb together, one slow\n"
+	.string "switchback at a time.\p"
+	.string "At the summit the sun lifts out\n"
+	.string "of the sea, and the whole\l"
+	.string "harbour turns gold.$"
+Tauranga_Text_MauaoJobThanks:
+	.string "There. He never got to see it,\n"
+	.string "so we see it for him.\p"
+	.string "Take this. It's the colour of\n"
+	.string "the first light, near enough.$"
+Tauranga_Text_MauaoJobNo:
+	.string "Another morning, then. He's\n"
+	.string "been waiting a long while. He\l"
+	.string "can wait one more.$"
+Tauranga_Text_MauaoJobAfter:
+	.string "Same sunrise every morning, and\n"
+	.string "never once the same. Thanks for\l"
+	.string "the walk.$"
+
