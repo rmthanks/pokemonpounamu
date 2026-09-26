@@ -46,6 +46,12 @@ TESTS = {
     'desert_enter': T('MAP_TAUPO', 23, 20, 'shot a0\nhold DOWN 16\nrun 10\nshot a1\nhold DOWN 16\nrun 10\nshot a2\nhold DOWN 32\nrun 60\nshot a3\nhold DOWN 48\nrun 20\nshot a4\nhold DOWN 64\nrun 20\nshot a5\n'),
     'desert_exit': T('MAP_ROUTE1_DESERT', 18, 72, 'shot b0\nhold DOWN 48\nrun 20\nshot b1\nhold DOWN 48\nrun 60\nshot b2\nhold DOWN 32\nrun 20\nshot b3\n'),
     'desert_mid': T('MAP_ROUTE1_DESERT', 20, 44, 'shot c0\nhold UP 40\nrun 30\nshot c1\n'),
+    'life_desert': T('MAP_ROUTE1_DESERT', 14, 29, 'run 240\nshot d0\nhold LEFT 24\nrun 200\nshot d1\nhold DOWN 24\nrun 200\nshot d2\nrun 300\nshot d3\n', party=['MUDBRAY']),
+    'life_heretaunga': T('MAP_HERETAUNGA_TOWN', 44, 29, 'run 200\nshot h0\nhold UP 40\nrun 120\nshot h1\nhold LEFT 40\nrun 120\nshot h2\n', party=['COMBEE']),
+    'life_bush': T('MAP_ROUTE35_B', 8, 20, 'run 240\nshot e0\nhold DOWN 32\nrun 200\nshot e1\n', party=['HOOTHOOT']),
+    'life_rotorua': T('MAP_ROTORUA', 20, 20, 'run 240\nshot r0\nhold LEFT 32\nrun 120\nshot r1\n', party=['SLUGMA']),
+    'life_south': T('MAP_ROUTE1_SOUTH', 8, 30, 'run 240\nshot s0\nhold DOWN 32\nrun 200\nshot s1\n', party=['SNORUNT']),
+    'life_route5': T('MAP_ROUTE5_POUNAMU', 8, 30, 'run 240\nshot f0\nhold DOWN 32\nrun 200\nshot f1\n', party=['SLUGMA']),
     'durie': T('MAP_WHANGANUI', 16, 3, 'tap UP\nsteps A 12 s\nrun 60\nsteps A 4 t\n'),
 }
 
