@@ -140,6 +140,9 @@ TESTS = {
     'tn_wairoa_n': T('MAP_WAIROA', 11, 3, 'run 60\nshot a\nhold UP 80\nrun 40\nshot b\n'),
     'tn_turanga_s': T('MAP_TURANGA', 13, 22, 'run 60\nshot a\nhold DOWN 80\nrun 40\nshot b\n'),
     'tn_strait': T('MAP_WELLINGTON', 21, 31, 'run 60\nshot a\nhold UP 32\nrun 30\nshot b\ntap A\nrun 90\nshot c\n'),
+    'tn_temata_gate': T('MAP_HERETAUNGA_TOWN', 38, 45, 'run 60\nshot a\nhold DOWN 32\nrun 60\nshot b\nmash A 6 20\nrun 60\nshot c\n', intro=4),
+    'tn_look_whakatu': T('MAP_WHAKATU', 15, 13, 'run 60\nshot a\nhold RIGHT 96\nrun 20\nshot b\nhold LEFT 192\nhold DOWN 128\nrun 20\nshot c\n'),
+    'tn_look_otautahi': T('MAP_OTAUTAHI', 19, 15, 'run 60\nshot a\nhold DOWN 96\nrun 20\nshot b\nhold RIGHT 160\nrun 20\nshot c\n'),
 }
 
 def main(name):
