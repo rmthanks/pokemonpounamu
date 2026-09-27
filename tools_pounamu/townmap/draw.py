@@ -3,8 +3,9 @@
 
 Emerald's own palette and look: striped sea, a dark-green rim on every coast, hills in
 lighter greens, roads as orange bands one cell wide, blue orbs for towns and red orbs for
-the cities. The coastlines are NZ's, drawn by hand on the fly grid around the towns and
-roads in layout.py (so a fly point always sits on its town).
+the cities. The coastline is NZ's real one (geo.py: Natural Earth, turned so Te Rerenga
+Wairua is top right and Rakiura bottom left); towns, roads, lakes and peaks sit where they
+really are (layout.py), so a fly point always sits on its town.
 
   python3 tools_pounamu/townmap/draw.py            # preview PNGs into tools_pounamu/townmap/out
   python3 tools_pounamu/townmap/draw.py --write    # also write graphics/pokenav/region_map/map.*"""
@@ -13,7 +14,8 @@ from PIL import Image, ImageDraw
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-from layout import TOWNS, PLACES, ROADS, SEA_LANES
+from layout import TOWNS, PLACES, ROADS, ROAD_LINES, SEA_LANES, LAKE_GEO, PEAKS
+import geo
 
 # Emerald's region map palette (BG palettes 7-8: colour index 112 + n)
 PAL = [(0, 0, 0), (156, 213, 255), (164, 180, 255), (123, 180, 213), (74, 156, 230), (41, 131, 230),
@@ -34,38 +36,6 @@ BLUE_ORB = ["C D W W W W D C", "D W 115 115 119 119 L D", "W 115 W W 115 119 121
 RED_ORB = [r.replace('115', 'r1').replace('119', 'r2').replace('121', 'r3') for r in BLUE_ORB]
 ORB_CODES = {'W': 129, 'D': 140, 'L': 139, 'r1': 135, 'r2': 136, 'r3': 138}
 
-# coastlines in grid-cell units (x right, y down; cell (c, r) covers [c, c+1) x [r, r+1))
-NORTH = [(12.0, 0.25), (12.6, 0.05), (13.0, 0.05), (13.4, 0.5), (14.1, 0.75), (14.6, 1.1), (15.0, 1.45),
-         (15.4, 1.55), (15.7, 1.75), (16.3, 1.7), (16.8, 1.2), (17.1, 0.5), (17.45, 0.3), (17.7, 0.6),
-         (17.8, 1.2), (18.2, 1.55), (19.2, 1.6), (20.1, 1.55), (21.0, 1.75), (22.0, 1.85), (22.9, 1.75),
-         (23.8, 1.5), (24.8, 1.25), (25.8, 1.1), (26.55, 1.25), (26.9, 1.75), (26.75, 2.5), (26.45, 3.3),
-         (26.3, 4.1), (26.7, 4.55), (26.6, 4.95), (26.0, 5.05), (25.5, 5.35), (25.3, 5.9), (25.2, 6.5),
-         (25.4, 7.0), (25.85, 7.35), (25.4, 7.8), (25.0, 8.5), (24.5, 9.2), (23.5, 9.8), (22.4, 10.3),
-         (21.3, 10.75), (20.5, 11.15), (19.9, 11.0), (19.3, 10.85), (18.7, 11.2), (18.2, 11.35),
-         (17.6, 11.3), (17.1, 11.05), (17.0, 10.3), (17.05, 9.9), (16.8, 9.35), (16.3, 9.1), (15.6, 8.95),
-         (15.0, 8.65), (14.4, 8.2), (14.35, 7.6), (14.6, 7.0), (15.0, 6.6), (15.4, 6.15), (15.5, 5.5),
-         (15.25, 4.9), (15.2, 4.2), (15.15, 3.5), (15.0, 3.0), (14.6, 2.6), (14.0, 2.1), (13.5, 1.6),
-         (13.0, 1.1), (12.5, 0.7), (12.1, 0.45)]
-SOUTH = [(9.4, 8.35), (10.4, 8.3), (10.0, 8.55), (10.6, 8.75), (11.2, 8.7), (11.6, 9.1), (12.1, 9.45),
-         (12.6, 9.25), (13.1, 9.1), (13.6, 9.3), (14.2, 9.35), (14.8, 9.5), (15.3, 9.9), (15.3, 10.6),
-         (15.05, 11.2), (15.1, 11.7), (15.5, 11.95), (15.45, 12.4), (15.1, 12.6), (15.05, 13.2),
-         (14.8, 13.8), (14.2, 14.1), (13.2, 14.15), (12.0, 14.25), (10.8, 14.35), (9.6, 14.1), (8.6, 13.95),
-         (7.4, 13.9), (6.3, 13.75), (5.1, 13.5), (4.2, 13.1), (3.7, 12.5), (3.9, 11.8), (4.6, 11.25),
-         (5.6, 10.8), (6.8, 10.35), (7.8, 9.95), (8.6, 9.45), (9.0, 9.0), (9.3, 8.6)]
-ISLANDS = [
-    [(7.0, 14.45), (7.6, 14.35), (8.2, 14.45), (8.45, 14.7), (8.1, 14.97), (7.3, 14.97), (6.9, 14.75)],  # Rakiura
-    [(16.65, 0.75), (17.0, 0.6), (17.15, 0.95), (16.85, 1.15)],                  # Aotea (Great Barrier)
-    [(23.5, 0.85), (23.8, 0.85), (23.8, 1.1), (23.5, 1.1)],                      # Whakaari
-    [(16.45, 9.55), (16.7, 9.45), (16.75, 9.85), (16.5, 9.9)],                   # Kapiti
-]
-LAKES = [((19.5, 6.45), (0.42, 0.4)),       # Taupo
-         ((19.55, 4.35), (0.22, 0.2)),      # Rotorua
-         ((7.4, 12.6), (0.18, 0.3)),        # Wakatipu
-         ((9.1, 11.9), (0.16, 0.26))]       # Pukaki
-PEAKS = [(19.5, 8.6, 'big'),                # Ruapehu
-         (15.35, 7.7, 'big'),               # Taranaki
-         (10.2, 9.9, 'small'), (9.4, 10.45, 'small'), (8.5, 11.05, 'big'),      # the Southern Alps,
-         (7.5, 11.5, 'small'), (6.6, 12.0, 'small')]                           # Aoraki in the middle
 W, H = 240, 160
 BIG_PEAK = ['...W...', '..WWL..', '.WWLLD.', '.LLLDDD', 'LLLLDDD']
 SMALL_PEAK = ['..W..', '.WLL.', 'LLLDD']
@@ -83,6 +53,22 @@ def inside(poly, x, y):
         if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
             c = not c
     return c
+
+
+def lake_polys():
+    """each lake as an ellipse drawn on the real map (half-axes in km, the long axis at `tilt`
+    degrees from east), projected like the coast"""
+    out = []
+    for (lat, lon), (a, b), tilt in LAKE_GEO:
+        t = math.radians(tilt)
+        ring = []
+        for i in range(24):
+            u = 2 * math.pi * i / 24
+            dx = a * math.cos(u) * math.cos(t) - b * math.sin(u) * math.sin(t)     # km east
+            dy = a * math.cos(u) * math.sin(t) + b * math.sin(u) * math.cos(t)     # km north
+            ring.append(px(*geo.proj(lat + dy / 111.3, lon + dx / (111.3 * math.cos(math.radians(lat))))))
+        out.append(ring)
+    return out
 
 
 def noise_field(seed=1998):
@@ -108,14 +94,13 @@ def noise_field(seed=1998):
 
 
 def draw():
-    polys = [[px(x, y) for x, y in p] for p in [NORTH, SOUTH] + ISLANDS]
+    polys = [[px(x, y) for x, y in p] for p in geo.coast_polys()]
     land = [[any(inside(p, x + 0.5, y + 0.5) for p in polys) for x in range(W)] for y in range(H)]
     lakes = [[False] * W for _ in range(H)]
-    for (cx, cy), (rx, ry) in LAKES:
-        X, Y = px(cx, cy)
+    for lake in lake_polys():
         for y in range(H):
             for x in range(W):
-                if ((x + 0.5 - X) / (rx * 8)) ** 2 + ((y + 0.5 - Y) / (ry * 8)) ** 2 <= 1:
+                if land[y][x] and inside(lake, x + 0.5, y + 0.5):
                     lakes[y][x] = True
     # distance from the sea (the rim, then the lowlands, then the hills)
     INF = 99
@@ -166,8 +151,32 @@ def draw():
                     0 <= y + dy < H and 0 <= x + dx < W and lakes[y + dy][x + dx]
                     for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))):
                 img[y][x] = G1
+    # roads: the real highways, a yellow line with an orange edge; the Interislander dashed
+    def stroke(points, radius, colour, dash=None, land_only=False):
+        step = 0.25
+        dist = 0.0
+        for (x0, y0), (x1, y1) in zip(points, points[1:]):
+            X0, Y0 = px(x0, y0); X1, Y1 = px(x1, y1)
+            n = max(1, int(math.hypot(X1 - X0, Y1 - Y0) / step))
+            for i in range(n + 1):
+                X, Y = X0 + (X1 - X0) * i / n, Y0 + (Y1 - Y0) * i / n
+                dist += step
+                if dash and (dist // dash) % 2:
+                    continue
+                r = int(math.ceil(radius))
+                for yy in range(int(Y) - r, int(Y) + r + 1):
+                    for xx in range(int(X) - r, int(X) + r + 1):
+                        if 0 <= xx < W and 0 <= yy < H and (xx + 0.5 - X) ** 2 + (yy + 0.5 - Y) ** 2 <= radius ** 2:
+                            if not land_only or land[yy][xx]:
+                                img[yy][xx] = colour(xx, yy) if callable(colour) else colour
+    for pts in ROAD_LINES.values():
+        stroke(pts, 1.6, 134)
+    for pts in ROAD_LINES.values():
+        stroke(pts, 0.75, 133)
+    for pts in SEA_LANES:
+        stroke(pts, 0.6, lambda x, y: 129 if not land[y][x] else 133, dash=2.0)
     # mountains: snow on top, lit from the left
-    for (cx, cy, size) in PEAKS:
+    for ((cx, cy), size) in PEAKS:
         X, Y = px(cx, cy)
         spr = BIG_PEAK if size == 'big' else SMALL_PEAK
         hgt, wid = len(spr), len(spr[0])
@@ -176,20 +185,8 @@ def draw():
                 x, y = int(X) - wid // 2 + dx, int(Y) - hgt + 1 + dy
                 if ch != '.' and 0 <= x < W and 0 <= y < H and land[y][x]:
                     img[y][x] = {'W': SNOW, 'L': ROCK, 'D': ROCK_D}[ch]
-    # roads: an orange band over the land's own shading, one cell wide
-    for rd in ROADS.values():
-        for (c, r) in rd['cells']:
-            X0, Y0 = px(c, r)
-            for y in range(Y0, Y0 + 8):
-                for x in range(X0, X0 + 8):
-                    v = img[y][x]
-                    img[y][x] = ROAD.get(v, 135 if v not in (SEA_A, SEA_B) else ROAD[G2])
-    for lane in SEA_LANES:
-        for (c, r) in lane:
-            X0, Y0 = px(c, r)
-            for y in range(Y0, Y0 + 8):
-                for x in range(X0, X0 + 8):
-                    img[y][x] = LANE_A if y % 2 == 0 else LANE_B
+    # a compass rose in the Tasman: north is up and to the right on this map
+    compass(img, px(2.6, 2.4))
     # the orbs
     for t in TOWNS.values():
         c, r = t['cell']
@@ -201,6 +198,41 @@ def draw():
                     continue
                 img[Y0 + dy][X0 + dx] = ORB_CODES.get(code) or int(code)
     return img, land
+
+
+N_GLYPH = ['X..X', 'XX.X', 'X.XX', 'X..X', 'X..X']
+
+
+def compass(img, centre):
+    """a small compass rose: the north needle red, pointing where north is on this map"""
+    cx, cy = centre
+    t = math.radians(geo.TILT)
+    n = (math.sin(t), -math.cos(t))            # north, on screen
+    e = (math.cos(t), math.sin(t))             # east
+    def tri(tip, half, colour, length):
+        # a needle from the centre: points within `half` px of the centre line, out to `length`
+        for y in range(int(cy) - 14, int(cy) + 15):
+            for x in range(int(cx) - 14, int(cx) + 15):
+                dx, dy = x + 0.5 - cx, y + 0.5 - cy
+                along = dx * tip[0] + dy * tip[1]
+                across = abs(-dx * tip[1] + dy * tip[0])
+                if 0 <= along <= length and across <= half * (1 - along / length) + 0.35:
+                    img[y][x] = colour
+    for y in range(int(cy) - 10, int(cy) + 11):          # the ring
+        for x in range(int(cx) - 10, int(cx) + 11):
+            d = math.hypot(x + 0.5 - cx, y + 0.5 - cy)
+            if 6.4 <= d <= 7.4:
+                img[y][x] = 118
+    tri((e[0], e[1]), 1.6, 139, 6.0)                     # east and west, grey
+    tri((-e[0], -e[1]), 1.6, 139, 6.0)
+    tri((-n[0], -n[1]), 2.0, 129, 8.0)                   # south, white
+    tri(n, 2.0, 137, 10.0)                                # north, red
+    img[int(cy)][int(cx)] = 140
+    gx, gy = int(cx + n[0] * 13) - 2, int(cy + n[1] * 13) - 2
+    for dy, row in enumerate(N_GLYPH):
+        for dx, ch in enumerate(row):
+            if ch == 'X':
+                img[gy + dy][gx + dx] = 129
 
 
 def to_png(img, path, scale=1, grid=False):
