@@ -68,6 +68,17 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_TAMAKI_MAKAURAU",
+      "name": "TamakiMakaurau_Layout",
+      "width": 88,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/TamakiMakaurau/border.bin",
+      "blockdata_filepath": "data/layouts/TamakiMakaurau/map.bin",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_MOSSDEEP_CITY",
       "name": "MossdeepCity_Layout",
       "width": 80,

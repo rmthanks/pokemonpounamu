@@ -54,6 +54,8 @@ STAMPS = {
     # ---- Ever Grande
     'eg.league':     ('EverGrandeCity', 13, 0, 11, 6, [(5, 5)], None),   # the Pokemon League
     'eg.steps':      ('EverGrandeCity', 14, 6, 9, 4, [], None),           # the stair and plinths before it
+    # ---- Lilycove
+    'lily.house':    ('LilycoveCity', 35, 3, 4, 4, [(1, 3)], None),
     # ---- Lavaridge
     'lav.spring':    ('LavaridgeTown', 2, 2, 6, 5, [], None),     # hot spring in its rock rim; way in at (4,0)
     'lav.sandbath':  ('LavaridgeTown', 2, 7, 6, 4, [], None),     # the hot sand bath (against rock on its west)

@@ -172,7 +172,7 @@ Wellington_EventScript_TamakiFerry::
 	msgbox Wellington_Text_TamakiFerry, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Wellington_EventScript_TamakiFerryNo
 	closemessage
-	warp MAP_TAMAKI_MAKAURAU, 53, 33
+	warp MAP_TAMAKI_MAKAURAU, 61, 39
 	waitstate
 	end
 

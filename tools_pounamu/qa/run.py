@@ -131,6 +131,7 @@ TESTS = {
     'tn_wellington': T('MAP_WELLINGTON', 23, 3, 'run 60\nhold UP 64\nrun 30\nshot a\nhold DOWN 64\nhold DOWN 176\nhold LEFT 96\nhold UP 16\nrun 150\nshot b\nhold DOWN 16\nrun 150\nhold RIGHT 160\nhold UP 16\nrun 150\nshot c\nhold DOWN 16\nrun 150\nhold RIGHT 144\nhold UP 32\nrun 150\nshot d\nhold DOWN 16\nrun 150\nhold DOWN 32\nhold LEFT 384\nhold DOWN 176\nhold LEFT 48\nhold UP 16\nrun 150\nshot e\nhold DOWN 16\nrun 150\nhold RIGHT 48\nhold DOWN 16\nhold RIGHT 48\nhold UP 16\nrun 150\nshot f\nhold DOWN 16\nrun 150\nhold LEFT 48\nhold DOWN 144\nhold RIGHT 48\nhold UP 16\nrun 150\nshot g\nhold DOWN 16\nrun 150\nhold RIGHT 48\nhold UP 96\nhold RIGHT 48\nhold UP 32\nrun 200\nshot h\n'),
     'tn_ferry': T('MAP_WELLINGTON', 21, 28, 'run 60\nhold UP 16\nrun 200\nshot a\nhold DOWN 16\nrun 200\nshot b\n'),
     'tn_beehive': T('MAP_WELLINGTON', 38, 13, 'run 60\nhold UP 16\nrun 200\nshot a\nhold DOWN 16\nrun 200\nshot b\n'),
+    'tn_tamaki': T('MAP_TAMAKI_MAKAURAU', 9, 23, 'run 60\nshot a\nhold UP 16\nrun 200\nshot b\nhold DOWN 16\nrun 200\nshot c\nhold RIGHT 64\nrun 20\nshot d\n'),
 }
 
 def main(name):

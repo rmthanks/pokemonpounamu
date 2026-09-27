@@ -733,6 +733,24 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "HeretaungaTown_EventScript_Watchers"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 48,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "HeretaungaTown_EventScript_TeMataTrackEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 48,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "HeretaungaTown_EventScript_TeMataTrackEntry"
     }
   ],
   "bg_events": [
