@@ -277,6 +277,24 @@ def build(spec):
     probs = [p for side, p in probs]
     if probs:
         errors += fail('flaws the player can see past the edges', probs)
+    # ...and what each neighbour sees of us: it draws our edge with ITS tileset, so any of
+    # our secondary tiles in its view is garbage there (checked with our new cells)
+    real_load = cv.load_map
+    ours = dict(real_load(name))
+    ours.update(W=r.W, H=r.H, cells=r.cells, secondary=tileset)
+    cv.load_map = lambda f: ours if f == name else real_load(f)
+    try:
+        for d, nf, off in conns:
+            n = real_load(nf)
+            back = [(c['direction'], rk.folder_of(c['map']) if c['map'] != mj['id'] else name,
+                     -off if c['map'] == mj['id'] else c['offset']) for c in (n['json'].get('connections') or [])]
+            nprobs, _, _ = cv.edge_problems(n['W'], n['H'], n['cells'], n['border'], back, n['secondary'],
+                                            lambda x, y, n=n: rk.cell_walkable(n['cells'][y * n['W'] + x]), water=water)
+            nprobs = [p for side, p in nprobs if name in p]
+            if nprobs:
+                errors += fail(f'{nf} sees our tiles in its tileset', nprobs)
+    finally:
+        cv.load_map = real_load
 
     # ---- preview
     os.makedirs(OUT, exist_ok=True)
