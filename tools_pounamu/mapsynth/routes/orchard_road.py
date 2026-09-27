@@ -7,6 +7,8 @@ from build import build
 SPEC = dict(
     folder='OrchardRoad', layout='LAYOUT_ORCHARD_ROAD', weather='WEATHER_SUNNY_CLOUDS',
     conns={'MAP_AHURIRI_CITY': 8, 'MAP_HERETAUNGA_TOWN': -14},
+    # the two path cells on the south edge match Heretaunga's path across the seam
+    fixed={(14, 47): 0x3120, (15, 47): 0x3122},
     rows=[
         #0         1         2         3
         #01234567890123456789012345678901

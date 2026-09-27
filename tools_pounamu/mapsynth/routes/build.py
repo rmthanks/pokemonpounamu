@@ -56,6 +56,9 @@ def build(spec):
     if shapes:
         errors += fail('shapes the tiles cannot draw', shapes)
     r.render(seed=spec.get('seed', 1))
+    # single cells set by hand after drawing, e.g. a seam matched to the next map: {(x, y): value}
+    for (x, y), v in spec.get('fixed', {}).items():
+        r.cells[y * r.W + x] = v
     bad = rk.check_trees(r)
     if bad:
         errors += fail('broken trees', bad)
