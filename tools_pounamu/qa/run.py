@@ -125,6 +125,7 @@ TESTS = {
     'tn_whanganui': T('MAP_WHANGANUI', 14, 8, 'run 60\nshot a\nhold DOWN 48\nrun 20\nshot b\n'),
     'tn_waitohi': T('MAP_WAITOHI', 12, 12, 'run 60\nshot a\nhold RIGHT 48\nrun 20\nshot b\n'),
     'tn_turanga_pc': T('MAP_TURANGA', 4, 8, 'run 60\nhold UP 40\nrun 90\nshot a\nhold DOWN 40\nrun 90\nshot b\n'),
+    'surf35a': T('MAP_ROUTE35_A', 38, 16, 'run 60\ntap RIGHT\nrun 10\ntap A\nrun 60\ntap A\nrun 40\nmash A 6 20\nrun 200\nshot a\nhold RIGHT 16\nhold UP 400\nrun 30\nshot b\nhold DOWN 400\nrun 30\nshot c\n', party=[]),
     'r2n_lake': T('MAP_ROUTE2_NORTH', 18, 17, 'run 60\nshot a\nhold DOWN 160\nrun 30\nshot b\n'),
 }
 
