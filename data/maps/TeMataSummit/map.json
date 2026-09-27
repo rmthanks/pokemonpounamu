@@ -52,7 +52,26 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "TeMataSummit_EventScript_Descend"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "TeMataSummit_EventScript_Descend"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

@@ -84,3 +84,10 @@ TeMataSummit_Text_Pou:
 	.string "He is not gone. He is lying\l"
 	.string "down. Walk softly on the\l"
 	.string "rangatira's back.”$"
+
+@ The way back down: the summit's warp spots are plain grass (no warp tile), so the step
+@ below them walks you onto the head of the track.
+TeMataSummit_EventScript_Descend::
+	warp MAP_TE_MATA_TRACK, 19, 11
+	waitstate
+	end

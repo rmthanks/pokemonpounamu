@@ -58,14 +58,14 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 17,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_SKY_TOWER_MID",
       "dest_warp_id": "0"
     },
     {
       "x": 6,
-      "y": 17,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_SKY_TOWER_MID",
       "dest_warp_id": "0"

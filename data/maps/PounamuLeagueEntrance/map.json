@@ -72,14 +72,14 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 17,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_OTEPOTI",
       "dest_warp_id": "3"
     },
     {
       "x": 6,
-      "y": 17,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_OTEPOTI",
       "dest_warp_id": "3"
