@@ -159,9 +159,10 @@ def main():
         entry.update(id=NEW_ID, name=NEW_NAME, width=NW, height=NH,
                      border_filepath='data/layouts/TamakiMakaurau/border.bin',
                      blockdata_filepath='data/layouts/TamakiMakaurau/map.bin')
-        i = next(i for i, l in enumerate(lj['layouts']) if l.get('id') == mj['layout'])
         txt = open(lp).read()
-        # insert textually after the Lilycove entry so the file's formatting stays as it is
+        # copy the Lilycove entry's text (so the file's formatting stays as it is) and put the
+        # copy at the END of the list: a save stores its map's layout index, so a layout
+        # inserted mid-list shifts every index after it and continued saves load the wrong map
         anchor = txt.index(f'"id": "{mj["layout"]}"')
         start = txt.rindex('{', 0, anchor)
         end = txt.index('}', anchor) + 1
@@ -171,7 +172,8 @@ def main():
         nb = nb.replace(f'"width": {W}', f'"width": {NW}').replace(f'"height": {H}', f'"height": {NH}')
         nb = nb.replace(src['border_filepath'], 'data/layouts/TamakiMakaurau/border.bin')
         nb = nb.replace(src['blockdata_filepath'], 'data/layouts/TamakiMakaurau/map.bin')
-        txt = txt[:end] + ',\n    ' + nb + txt[end:]
+        last = txt.rindex('}', 0, txt.rindex(']'))
+        txt = txt[:last + 1] + ',\n    ' + nb + txt[last + 1:]
         open(lp, 'w').write(txt)
 
     # ---- move every event with the map

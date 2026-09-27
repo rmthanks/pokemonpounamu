@@ -614,10 +614,10 @@
     "BattlePyramidSquare16",
     "UnionRoom",
     "TamakiMakaurau",
-    "TamakiPokemonCenter1F",
     "SkyTowerLobby",
     "SkyTowerMid",
-    "SkyTowerTop"
+    "SkyTowerTop",
+    "TamakiPokemonCenter1F"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Northwest",

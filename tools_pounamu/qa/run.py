@@ -146,6 +146,11 @@ TESTS = {
     'it_orchard': T('MAP_ORCHARD_ROAD', 26, 39, 'tap RIGHT\nrun 20\nshot a\ntap A\nrun 90\nshot b\ntap A\nrun 60\nshot c\ntap A\nrun 60\nshot d\n'),
     'it_desert': T('MAP_ROUTE1_DESERT', 34, 51, 'tap DOWN\nrun 20\nshot a\ntap A\nrun 90\nshot b\ntap A\nrun 60\nshot c\ntap A\nrun 60\nshot d\n'),
     'it_route7': T('MAP_ROUTE7_POUNAMU', 6, 3, 'tap UP\nrun 20\nshot a\ntap A\nrun 90\nshot b\ntap A\nrun 60\nshot c\ntap A\nrun 60\nshot d\n'),
+    'nt_wellington': T('MAP_WELLINGTON', 17, 14, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
+    'nt_rotorua': T('MAP_ROTORUA', 7, 14, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
+    'nt_otepoti': T('MAP_OTEPOTI', 5, 14, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
+    'nt_turanga': T('MAP_TURANGA', 5, 7, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
+    'nt_tauranga': T('MAP_TAURANGA', 7, 16, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
 }
 
 def main(name):
