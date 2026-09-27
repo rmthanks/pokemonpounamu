@@ -9594,8 +9594,8 @@
     {
       "id": "LAYOUT_WAITOHI",
       "name": "Waitohi_Layout",
-      "width": 22,
-      "height": 18,
+      "width": 24,
+      "height": 22,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Waitohi/border.bin",

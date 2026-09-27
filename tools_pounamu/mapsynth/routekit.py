@@ -686,7 +686,7 @@ def lint_shapes(r):
             if c == 'L' and C(x, y + 1) not in ('.', ',', 'P', '*', 'p'):
                 out.append(f'ledge at ({x},{y}) lands on {C(x, y + 1)!r}')
             if c == 'W':
-                if C(x, y + 1) not in ('W', '.'):
+                if C(x, y + 1) not in ('W', '.') and not (y == H - 1 and getattr(r, 'pond_open_bottom', False)):
                     out.append(f'pond at ({x},{y}) needs grass below it for the shore')
             if c == 'R':
                 k = r.lev[y][x]

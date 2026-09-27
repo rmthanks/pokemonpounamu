@@ -111,6 +111,7 @@ def build(spec):
     r = rk.from_ascii(name, spec['rows'], '')
     r.pond_open_top = set(spec.get('pond_open_top', ()))
     r.fixed_class = spec.get('fixed_class', 'X')
+    r.pond_open_bottom = spec.get('pond_open_bottom', False)     # water running on into the map below
     errors = 0
     print(f'{name}: {r.W}x{r.H} drawn with {tileset}')
     if r.snap_warnings:

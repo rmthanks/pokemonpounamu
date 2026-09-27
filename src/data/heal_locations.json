@@ -433,8 +433,8 @@
     {
       "id": "HEAL_LOCATION_WAITOHI",
       "map": "MAP_WAITOHI",
-      "x": 3,
-      "y": 9,
+      "x": 10,
+      "y": 17,
       "respawn_map": "MAP_WAITOHI_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_WAITOHI_NURSE"
     },
