@@ -36,8 +36,8 @@ SPEC = dict(
         "SSSSSSSSSSSSSBBBBB..PP..............TTTTTTTTTTTT",
         "SSSSSSSSSSSSSSBkBBB.PP,,,,,,..c.......TTTTTTTTTT",  # 20
         "SSSSSSSSSSSSSSBBBBB.PP,,,,,,..........TTTTTTTTTT",
-        "SS......SSSSSSBBBBB.PP,,,,,,..........TTTTTTTTTT",
-        "SS......SSSSSSBBBBB.PP,,,,,,..........TTTTTTTTTT",
+        "SS______SSSSSSBBBBB.PP,,,,,,..........TTTTTTTTTT",
+        "SS______SSSSSSBBBBB.PP,,,,,,..........TTTTTTTTTT",
         "SSTTTTTTSSSSSSBBBBB.PP............e...TTTTTTTTTT",
         "SSTTTTTTSSSSSSBBBBB.PP................TTTTTTTTTT",  # 25
         "SSTTTTTTSSSSBBBBB...PP....,,,,,,,,......TTTTTTTT",
@@ -70,8 +70,8 @@ SPEC = dict(
         "SSSSSSSSSSBBBBBB....PPPPPPP.........TTTTTTTTTTTT",
         "SSSSSSSSSSBBBBBB.........PP.........TTTTTTTTTTTT",
         "SSSSSSSSSSBBBBBB.........PP.........TTTTTTTTTTTT",  # 55
-        "..........TTBBBB.........PP.,,,,..TTTTTTTTTTTTTT",
-        "..........TTBBBB.........PP.,,,,..TTTTTTTTTTTTTT",
+        "__________TTBBBB.........PP.,,,,..TTTTTTTTTTTTTT",
+        "__________TTBBBB.........PP.,,,,..TTTTTTTTTTTTTT",
         "TTTTTTTTTTTTBBBB.......s.PP.,,,,..TTTTTTTTTTTTTT",
         "TTTTTTTTTTTTBBBB.........PP.,,,,..TTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTT",  # 60

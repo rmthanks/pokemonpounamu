@@ -12,24 +12,24 @@ SPEC = dict(
     folder='Route6', layout='LAYOUT_ROUTE6', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
     conns={'MAP_WAITOHI': 10, 'MAP_WHAKATU': 16},
-    pond_open_top=list(range(24, 32)),
+    pond_open_top=list(range(24, 30)),
     rows=[
         #0         1         2         3         4
         #01234567890123456789012345678901234567890123
-        "TTTTTTTTTTTTTTTT.PP.TTTTWWWWWWWWTTTTTTTTTTTT",  # 0
-        "TTTTTTTTTTTTTTTT.PP.TTTTWWWWWWWWTTTTTTTTTTTT",
-        "TTTTTTTTTT.......PP...TTWWWWWWWWTT..TTTTTTTT",
-        "TTTTTTTTTT.....s.PP...TTWWWWWWWWTT..TTTTTTTT",
-        "TTTTTTTTTT.......PP...TTWWWWWWWWTT..TTTTTTTT",
-        "TTTTTTTTTT.......PP...TTWWWWWWWWTT..TTTTTTTT",  # 5
-        "TTTTTTTT.........PP...TTWWWWWWWWTT..TTTTTTTT",
-        "TTTTTTTT.........PP...TTWWWWWWWWTT..TTTTTTTT",
-        "TTTTTTTT..,,,,,,.PP.a.TTWWWWWWWWTT....TTTTTT",
-        "TTTTTTTT..,,,,,,.PP...TTWWWWWWWWTT....TTTTTT",
-        "TTTTTTTT..,,,,,,.PP...TTWWWWWWWWTT....TTTTTT",  # 10
-        "TTTTTTTT..,,,,,,.PP...TTWWWWWWWWTT....TTTTTT",
-        "TTTTTT...........PP...TTWWWWWWWWTT....TTTTTT",
-        "TTTTTT...........PP...TTWWWWWWWWTT....TTTTTT",
+        "TTTTTTTTTTTTTTTT.PP.TTTTWWWWWWTTTTTTTTTTTTTT",  # 0
+        "TTTTTTTTTTTTTTTT.PP.TTTTWWWWWWTTTTTTTTTTTTTT",
+        "TTTTTTTTTT.......PP...TTWWWWWWTTTT..TTTTTTTT",
+        "TTTTTTTTTT.....s.PP...TTWWWWWWTTTT..TTTTTTTT",
+        "TTTTTTTTTT.......PP...TTWWWWWWTTTT..TTTTTTTT",
+        "TTTTTTTTTT.......PP...TTWWWWWWTTTT..TTTTTTTT",  # 5
+        "TTTTTTTT.........PP...TTWWWWWWTTTT..TTTTTTTT",
+        "TTTTTTTT.........PP...TTWWWWWWTTTT..TTTTTTTT",
+        "TTTTTTTT..,,,,,,.PP.a.TTWWWWWWTTTT....TTTTTT",
+        "TTTTTTTT..,,,,,,.PP...TTWWWWWWTTTT....TTTTTT",
+        "TTTTTTTT..,,,,,,.PP...TTWWWWWWTTTT....TTTTTT",  # 10
+        "TTTTTTTT..,,,,,,.PP...TTWWWWWWTTTT....TTTTTT",
+        "TTTTTT...........PP...TTWWWWWWTTTT....TTTTTT",
+        "TTTTTT...........PP...TTWWWWWWTTTT....TTTTTT",
         "TTTTTT........b..PP.................TTTTTTTT",
         "TTTTTT...........PP.................TTTTTTTT",  # 15
         "TTTTTT........**.PP.................TTTTTTTT",

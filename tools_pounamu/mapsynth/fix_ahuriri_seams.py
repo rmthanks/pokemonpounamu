@@ -73,7 +73,7 @@ strip = []
 for y in range(44):
     row = '..'                                         # x34-35: the promenade, kept as it is
     row += 'TT' if y < 2 or y >= 40 else 'BB'          # x36-37
-    row += 'S' * 8 if y < 40 else '.' * 8 if y < 42 else 'T' * 8   # x38-45: sea, shore grass, bush
+    row += 'S' * 8 if y < 40 else '_' * 8 if y < 42 else 'T' * 8   # x38-45: sea, shore grass (solid), bush
     strip.append(row)
 sr = rk.from_ascii('AhuririParade', strip)
 for y in range(44):

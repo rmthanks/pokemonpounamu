@@ -119,6 +119,12 @@ TESTS = {
     'r1s_top': T('MAP_ROUTE1_SOUTH', 23, 3, 'run 60\nshot a\nhold UP 80\nrun 30\nshot b\n'),
     'r1s_coast': T('MAP_ROUTE1_SOUTH', 36, 44, 'run 60\nshot a\n'),
     'r1s_bottom': T('MAP_ROUTE1_SOUTH', 27, 67, 'run 60\nshot a\nhold DOWN 80\nrun 30\nshot b\n'),
+    'tn_turanga': T('MAP_TURANGA', 20, 12, 'run 60\nshot a\nhold RIGHT 48\nrun 20\nshot b\nhold UP 64\nrun 20\nshot c\n'),
+    'tn_taupo': T('MAP_TAUPO', 16, 14, 'run 60\nshot a\nhold DOWN 32\nrun 20\nshot b\n'),
+    'tn_ngamotu': T('MAP_NGAMOTU', 22, 14, 'run 60\nshot a\nhold DOWN 48\nrun 20\nshot b\n'),
+    'tn_whanganui': T('MAP_WHANGANUI', 14, 8, 'run 60\nshot a\nhold DOWN 48\nrun 20\nshot b\n'),
+    'tn_waitohi': T('MAP_WAITOHI', 12, 12, 'run 60\nshot a\nhold RIGHT 48\nrun 20\nshot b\n'),
+    'tn_turanga_pc': T('MAP_TURANGA', 4, 8, 'run 60\nhold UP 40\nrun 90\nshot a\nhold DOWN 40\nrun 90\nshot b\n'),
     'r2n_lake': T('MAP_ROUTE2_NORTH', 18, 17, 'run 60\nshot a\nhold DOWN 160\nrun 30\nshot b\n'),
 }
 

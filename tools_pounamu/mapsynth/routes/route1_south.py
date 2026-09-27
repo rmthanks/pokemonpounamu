@@ -72,8 +72,8 @@ SPEC = dict(
         "TTTTTTTTTTTT...............PP.....BBBBBBSSSSSSSS",  # 55
         "TTTTTTTTTTTT..,,,,,,,,.....PP.....BBBBBBSSSSSSSS",
         "TTTTTTTTTTTT..,,,,,,,,.....PP.....BBBBBBSSSSSSSS",
-        "TTTTTTTTTTTTTT,,,,,,,,.....PP.....BBBBTT........",
-        "TTTTTTTTTTTTTT,,,,,,,,.....PP.....BBBBTT........",
+        "TTTTTTTTTTTTTT,,,,,,,,.....PP.....BBBBTT________",
+        "TTTTTTTTTTTTTT,,,,,,,,.....PP.....BBBBTT________",
         "TTTTTTTTTTTTTT..n..........PP.....BBBBTTTTTTTTTT",  # 60
         "TTTTTTTTTTTTTT.............PP.....BBBBTTTTTTTTTT",
         "TTTTTTTTTTTTTT........TT...PP.,,TTTTTTTTTTTTTTTT",

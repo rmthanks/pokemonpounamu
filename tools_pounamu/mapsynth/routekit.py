@@ -61,6 +61,7 @@ COAST = dict(open=0x170, s=0x189, sw_in=0x188, se_in=0x18A, e=0x190, w=0x192, ne
 SEA_ROCK = [0x150, 0x151, 0x158, 0x159]     # 2x2 boulder standing in the sea
 
 COL = 0x400
+SURF_MARGIN = 7        # columns of sea at the east/west edge that can't be surfed (see render)
 
 
 def _attrs():
@@ -148,6 +149,7 @@ class Route:
         self.fix = {}
         self.notes = []
         self.boulders = set()
+        self.solid = set()              # cells drawn as their class but with collision
         self.pond_open_top = set()      # columns where a pond carries on from the map above
 
     # -- primitives
@@ -358,6 +360,18 @@ class Route:
         for (x, y) in self.boulders:                          # rocks out in the water (Route 103/104)
             k = (1 if (x - 1, y) in self.boulders else 0) + (2 if (x, y - 1) in self.boulders else 0)
             cells[y * W + x] = val(SEA_ROCK[k])
+        # the far sea: the map's side border is forest, so a surfer who got within a screen of
+        # the east or west edge would see trees standing in the water. The last seven columns
+        # of open sea on those sides can't be surfed (the camera shows seven either side).
+        for y in range(H):
+            for side, xs in ((0, range(0, SURF_MARGIN)), (W - 1, range(W - SURF_MARGIN, W))):
+                if self.cls[y][side] != 'S':
+                    continue                      # the sea doesn't reach this edge on this row
+                for x in xs:
+                    if self.cls[y][x] == 'S' and (x, y) not in self.boulders:
+                        cells[y * W + x] |= COL
+        for (x, y) in self.solid:
+            cells[y * W + x] |= COL
         self.cells = cells
         return cells
 
@@ -585,7 +599,7 @@ def preview(route, path, scale=1, events=None):
 
 # ---------------------------------------------------------------- hand-drawn routes
 PALE = [0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA, 0x1E0, 0x1E1, 0x1E2]
-TERRAIN = set('.,PWLRQ*TpSsBO')
+TERRAIN = set('.,PWLRQ*TpSsBO_')
 
 
 def from_ascii(name, rows, markers=''):
@@ -633,6 +647,8 @@ def from_ascii(name, rows, markers=''):
                 r.marks.setdefault('s', []).append((x, y))
             elif ch == 'O':                       # a 2x2 boulder standing in the sea
                 r.cls[y][x] = 'S'; r.boulders.add((x, y))
+            elif ch == '_':                       # grass nobody may stand on (a shore behind the sea)
+                r.cls[y][x] = '.'; r.solid.add((x, y))
             elif ch in TERRAIN:
                 r.cls[y][x] = ch
             else:

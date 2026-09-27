@@ -117,6 +117,13 @@ for _ in range(400):
     if all(g[y + dy][x + dx] == '.' for dx in (-1, 0, 1) for dy in (-1, 0, 1)) and rnd.random() < 0.06:
         g[y][x] = 'o'
 
+# ash strips that run out to a side edge (there's nothing connected there) end in a
+# boulder, so no path leads into the border (audit, Sept 2026)
+for y in range(SEAM, H - SEAM):
+    for x in (0, W - 1):
+        if g[y][x] == '.':
+            g[y][x] = 'o'
+
 # --- snap forest to the 2x2 tree lattice ------------------------------------
 for by in range(0, H, 2):
     for bx in range(0, W, 2):
@@ -233,10 +240,10 @@ def write():
                                 'player_facing_dir': 'BG_EVENT_PLAYER_FACING_ANY',
                                 'script': f'Route1Desert_EventScript_Sign{which.title()}'})
     for cn in mj['connections']:
-        if cn['map'] == 'MAP_TAUPO': cn['offset'] = -5
-        if cn['map'] == 'MAP_ROUTE43_POUNAMU': cn['offset'] = 11
+        if cn['map'] == 'MAP_TAUPO': cn['offset'] = -6
+        if cn['map'] == 'MAP_ROUTE43_POUNAMU': cn['offset'] = -2      # Route 43 rebuilt, Sept 2026
     open(mp, 'w').write(json.dumps(mj, indent=2, ensure_ascii=False) + '\n')
-    for other, target, off in (('Taupo', 'MAP_ROUTE1_DESERT', 5), ('Route43', 'MAP_ROUTE1_DESERT', -11)):
+    for other, target, off in (('Taupo', 'MAP_ROUTE1_DESERT', 6), ('Route43', 'MAP_ROUTE1_DESERT', 2)):
         p = os.path.join(ROOT, f'data/maps/{other}/map.json'); j = json.load(open(p))
         for cn in j['connections']:
             if cn['map'] == target: cn['offset'] = off
