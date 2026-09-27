@@ -418,7 +418,7 @@
       "id": "HEAL_LOCATION_WHANGANUI",
       "map": "MAP_WHANGANUI",
       "x": 3,
-      "y": 7,
+      "y": 8,
       "respawn_map": "MAP_WHANGANUI_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_WHANGANUI_NURSE"
     },
