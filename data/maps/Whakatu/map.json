@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE6_POUNAMU",
-      "offset": -16,
+      "offset": -8,
       "direction": "up"
     },
     {
@@ -28,8 +28,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 12,
-      "y": 13,
+      "x": 15,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -41,10 +41,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 23,
-      "y": 12,
+      "x": 21,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -54,8 +54,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
-      "x": 26,
-      "y": 20,
+      "x": 6,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -67,8 +67,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 10,
-      "y": 18,
+      "x": 14,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -80,8 +80,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 14,
-      "y": 15,
+      "x": 17,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -93,10 +93,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 29,
-      "y": 7,
+      "x": 27,
+      "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -106,10 +106,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 2,
-      "y": 19,
+      "x": 5,
+      "y": 23,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -119,8 +119,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 20,
-      "y": 11,
+      "x": 18,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -132,7 +132,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 4,
+      "x": 6,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -146,36 +146,36 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 11,
+      "x": 5,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_WHAKATU_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 11,
+      "x": 11,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_WHAKATU_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 23,
-      "y": 11,
+      "x": 22,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_WHAKATU_GYM",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
-      "y": 20,
+      "x": 12,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_WHAKATU_SUN_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 20,
+      "x": 18,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_WHAKATU_BOULDER_HOUSE",
       "dest_warp_id": "0"
@@ -184,20 +184,20 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "sign",
-      "x": 21,
-      "y": 11,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Whakatu_EventScript_GymSign"
-    },
-    {
       "type": "hidden_item",
       "x": 23,
       "y": 23,
       "elevation": 3,
       "item": "ITEM_STAR_PIECE",
       "flag": "FLAG_UNUSED_0x26E"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Whakatu_EventScript_GymSign"
     }
   ]
 }

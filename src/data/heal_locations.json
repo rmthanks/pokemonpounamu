@@ -441,8 +441,8 @@
     {
       "id": "HEAL_LOCATION_WHAKATU",
       "map": "MAP_WHAKATU",
-      "x": 6,
-      "y": 12,
+      "x": 5,
+      "y": 11,
       "respawn_map": "MAP_WHAKATU_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_WHAKATU_NURSE"
     },
