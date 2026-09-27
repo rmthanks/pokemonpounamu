@@ -140,6 +140,9 @@ def build(spec):
                 fronts[ws[i]] = (x + dx, y + dy + 1)
     for i, xy in spec.get('warps', {}).items():
         warps[i] = tuple(xy)
+    # single fixed cells (orchard planters and the like): {(x, y): value}
+    for (x, y), v in spec.get('fixed', {}).items():
+        r.cls[y][x] = '#'; r.fix[(x, y)] = v
     # signs are fixed sign posts
     for sx, sy, _ in spec.get('signs', []):
         r.cls[sy][sx] = '#'; r.fix[(sx, sy)] = rk.val(rk.SIGN)

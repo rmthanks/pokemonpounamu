@@ -377,8 +377,8 @@
     {
       "id": "HEAL_LOCATION_OPOTIKI",
       "map": "MAP_OPOTIKI",
-      "x": 3,
-      "y": 7,
+      "x": 15,
+      "y": 8,
       "respawn_map": "MAP_OPOTIKI_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_OPOTIKI_NURSE"
     },

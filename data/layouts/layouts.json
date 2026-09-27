@@ -9451,8 +9451,8 @@
     {
       "id": "LAYOUT_OPOTIKI",
       "name": "Opotiki_Layout",
-      "width": 20,
-      "height": 16,
+      "width": 24,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Opotiki/border.bin",
