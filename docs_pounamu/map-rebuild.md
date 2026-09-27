@@ -36,6 +36,10 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
   Potions and Poke Balls on Orchard Road up to Max Revives and PP Ups on Route 1 South, Rare
   Candies on Routes 5 and 7 (seed_items.py; flags 0x4BB-0x4DF, 0x493-0x49D).
 
+- **The town map (Fly map), redrawn (Mon 28 Sept, late morning):** Aotearoa in Emerald's
+  region-map style filling the screen, every town and road on it, and Fly wired to Pounamu's
+  towns (it pointed at Hoenn). See "Town map" below.
+
 ## Game-breaking things found and fixed tonight
 - **Old saves would have loaded the wrong map.** Tamaki's new layout had gone into layouts.json
   mid-list and its Pokemon Center in front of the Sky Tower floors, shifting 811 layout indices
@@ -86,6 +90,26 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
   warp on a warp tile, valid target), check_save_compat.py (layouts and maps only ever appended). QA in the emulator with tools_pounamu/qa (never commit with
   the hooks on: `python3 tools_pounamu/qa/qa_hooks.py off`, `grep -rn POUNAMU_QA src` empty).
 
+## Town map (tools_pounamu/townmap)
+- **layout.py** is the source of truth: each town's cell (red orb = gym town or city, blue =
+  town), each road's cells in order, landmarks (Te Mata, Ruapehu, Piopiotahi), the Cook
+  Strait sea lane. Move a town here and it moves everywhere.
+- **draw.py** draws the art from it (Emerald's palette: striped sea, dark-green coast rim,
+  greens by elevation noise, orange road bands over the land's shading, vanilla orb pixels,
+  lakes, snow peaks) and packs it: Fly map as an 8bpp affine BG (64x64 byte tilemap, <=256
+  tiles), the Pokedex area map as the same picture on a 32x32 16-bit tilemap.
+  `--write` updates graphics/pokenav/region_map/map.* and graphics/pokedex/region_map.* and
+  the -num_tiles counts in src/region_map.c.
+- **apply.py** writes region_map_sections.json (positions; Tamaki = MAPSEC_OLDALE_TOWN,
+  Piopiotahi = MAPSEC_ROUTE_130), region_map_layout.h (cursor names per cell),
+  pounamu_map_cells.h (per-map cells: the player's head goes by map, not section, and moves
+  along long roads), the League rooms -> Otepoti's section, HEAL_LOCATION_HERETAUNGA_TOWN,
+  the fly table in region_map.c, and `setflag FLAG_VISITED_*` in every town's ON_TRANSITION.
+- **Fly rules (region_map.c PounamuTownFlyType):** a town is flyable once visited, or once
+  the story is past it (badge 3/5/6/7/8, the Sky Tower for Tamaki) so old saves work;
+  Heretaunga and Ahuriri are shut from the coup (VAR_POUNAMU_INTRO_STATE >= 4) until the
+  Sky Tower is done (FLAG_UNUSED_0x907). QA: fly_map, fly_exile, fly_route43, fly_south.
+
 ## Hard rules learned
 1. **Seams:** a connected map is drawn with the *current* map's tileset. Anything within ~8
    columns / 6 rows of a gap, on either side, must be General tiles if the tilesets differ.
@@ -125,6 +149,10 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
 - Audit flags that are not flaws: Tamaki's vanilla staggered trees and a whole sea boulder at
   its east edge; Taupo Lake Isle (vanilla Southern Island trees); Heretaunga's bottom edge
   (the track trigger stops you first); the Ruapehu/Te Mata maps' vanilla edges.
+- **Fly and the road home (design call):** no HM02 is given anywhere; Fly comes only from a
+  Pokemon that learns it (Flapple at 40, with badge 6). On foot the exile checkpoints (Route 2
+  Bay, Route 5 Ranges) never lift, so after the Sky Tower the homecoming is reachable only by
+  flying home. Decide how the Bay unseals (and whether to give HM02).
 - Sea encounter tables on the six new seas are placeholders (species Pounamu already uses on
   its coasts) until the dex's coastal lines are designed.
 - A save made OUTDOORS on a rebuilt town or route continues at the same coordinates on the new
