@@ -120,7 +120,7 @@
       "x": 20,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_TAMAKI_APARTMENTS_LOBBY",
+      "dest_map": "MAP_TAMAKI_STUDIO_FLAT",
       "dest_warp_id": "0"
     },
     {
@@ -162,7 +162,7 @@
       "x": 32,
       "y": 20,
       "elevation": 0,
-      "dest_map": "MAP_TAMAKI_STUDIO_FLAT",
+      "dest_map": "MAP_TAMAKI_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {

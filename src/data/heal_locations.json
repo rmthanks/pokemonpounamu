@@ -461,6 +461,14 @@
       "y": 14,
       "respawn_map": "MAP_OTEPOTI_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_OTEPOTI_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_TAMAKI_MAKAURAU",
+      "map": "MAP_TAMAKI_MAKAURAU",
+      "x": 32,
+      "y": 21,
+      "respawn_map": "MAP_TAMAKI_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_TAMAKI_NURSE"
     }
   ]
 }

@@ -266,6 +266,7 @@ gStdScripts_End::
 	.include "data/maps/TaupoLakeIsle/scripts.inc"
 	.include "data/maps/Piopiotahi/scripts.inc"
 	.include "data/maps/TamakiMakaurau/scripts.inc"
+	.include "data/maps/TamakiPokemonCenter1F/scripts.inc"
 	.include "data/maps/SkyTowerLobby/scripts.inc"
 	.include "data/maps/SkyTowerMid/scripts.inc"
 	.include "data/maps/SkyTowerTop/scripts.inc"
