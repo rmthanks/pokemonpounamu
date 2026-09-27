@@ -1,5 +1,10 @@
 Tauranga_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Tauranga_OnTransition_Visited
 	.byte 0
+
+Tauranga_OnTransition_Visited:
+	setflag FLAG_VISITED_MAUVILLE_CITY
+	end
 
 Tauranga_EventScript_GymKid::
 	msgbox Tauranga_Text_GymKid, MSGBOX_NPC

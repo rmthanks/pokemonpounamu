@@ -1,5 +1,10 @@
 TamakiMakaurau_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, TamakiMakaurau_OnTransition_Visited
 	.byte 0
+
+TamakiMakaurau_OnTransition_Visited:
+	setflag FLAG_VISITED_OLDALE_TOWN
+	end
 
 TamakiMakaurau_EventScript_FerryHome::
 	lock

@@ -3,6 +3,7 @@ Wellington_MapScripts::
 	.byte 0
 
 Wellington_OnTransition::
+	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	call_if_set FLAG_BADGE05_GET, Wellington_EventScript_FerryManAside
 	goto_if_set FLAG_UNUSED_0x04A, Wellington_OnTransition_HideStrait
 	goto_if_set FLAG_BADGE05_GET, Wellington_OnTransition_ShowStrait

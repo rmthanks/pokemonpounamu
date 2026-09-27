@@ -1,5 +1,10 @@
 Opotiki_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Opotiki_OnTransition_Visited
 	.byte 0
+
+Opotiki_OnTransition_Visited:
+	setflag FLAG_VISITED_SLATEPORT_CITY
+	end
 
 Opotiki_EventScript_WharfOldMan::
 	msgbox Opotiki_Text_WharfOldMan, MSGBOX_NPC

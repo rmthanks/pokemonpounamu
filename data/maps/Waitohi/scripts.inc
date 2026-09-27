@@ -1,5 +1,10 @@
 Waitohi_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Waitohi_OnTransition_Visited
 	.byte 0
+
+Waitohi_OnTransition_Visited:
+	setflag FLAG_VISITED_EVER_GRANDE_CITY
+	end
 Waitohi_EventScript_Ferryman::
 	msgbox Waitohi_Text_Ferryman, MSGBOX_NPC
 	end

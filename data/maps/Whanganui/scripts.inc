@@ -1,5 +1,10 @@
 Whanganui_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Whanganui_OnTransition_Visited
 	.byte 0
+
+Whanganui_OnTransition_Visited:
+	setflag FLAG_VISITED_PACIFIDLOG_TOWN
+	end
 Whanganui_EventScript_RiverMan::
 	lock
 	faceplayer

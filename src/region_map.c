@@ -92,6 +92,8 @@ static void RegionMap_SetBG2XAndBG2Y(s16 x, s16 y);
 static void InitMapBasedOnPlayerLocation(void);
 static void RegionMap_InitializeStateBasedOnSSTidalLocation(void);
 static u8 GetMapsecType(mapsec_u16_t mapSecId);
+static void SetPounamuPlayerCell(void);
+static u8 PounamuTownFlyType(mapsec_u16_t mapSecId, u16 flag);
 static mapsec_u16_t CorrectSpecialMapSecId_Internal(mapsec_u16_t mapSecId);
 static mapsec_u16_t GetTerraOrMarineCaveMapSecId(void);
 static void GetMarineCaveCoords(u16 *x, u16 *y);
@@ -121,7 +123,7 @@ static const u16 sRegionMapCursorPal[] = INCGFX_U16("graphics/pokenav/region_map
 static const u32 sRegionMapCursorSmallGfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/cursor_small.png", ".4bpp.smol");
 static const u32 sRegionMapCursorLargeGfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/cursor_large.png", ".4bpp.smol");
 static const u16 sRegionMapBg_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map.pal", ".gbapal");
-static const u32 sRegionMapBg_GfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/map.png", ".8bpp.smol", "-num_tiles 103 -Wnum_tiles");
+static const u32 sRegionMapBg_GfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/map.png", ".8bpp.smol", "-num_tiles 186 -Wnum_tiles");
 static const u32 sRegionMapBg_TilemapLZ[] = INCGFX_U32("graphics/pokenav/region_map/map.bin", ".smolTM");
 static const u16 sRegionMapPlayerIcon_BrendanPal[] = INCGFX_U16("graphics/pokenav/region_map/brendan_icon.png", ".gbapal");
 static const u8 sRegionMapPlayerIcon_BrendanGfx[] = INCGFX_U8("graphics/pokenav/region_map/brendan_icon.png", ".4bpp");
@@ -138,6 +140,7 @@ static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCGFX_U8("graphics/pokenav/reg
 #include "data/region_map/region_map_layout_sevii45.h"
 #include "data/region_map/region_map_layout_sevii67.h"
 #include "data/region_map/region_map_entries.h"
+#include "data/region_map/pounamu_map_cells.h"
 
 static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
 {
@@ -294,7 +297,7 @@ static const u16 sFlyTargetIcons_Pal[] = INCGFX_U16("graphics/pokenav/region_map
 static const u32 sFlyTargetIcons_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/fly_target_icons.png", ".4bpp.smol");
 
 static const u16 ALIGNED(4) sPokedexAreaMap_Pal[] = INCGFX_U16("graphics/pokedex/region_map.pal", ".gbapal");
-static const u32 sPokedexAreaMap_Gfx[] = INCGFX_U32("graphics/pokedex/region_map.png", ".8bpp.smol", "-num_tiles 232 -Wnum_tiles");
+static const u32 sPokedexAreaMap_Gfx[] = INCGFX_U32("graphics/pokedex/region_map.png", ".8bpp.smol", "-num_tiles 186 -Wnum_tiles");
 static const u32 sPokedexAreaMap_Tilemap[] = INCGFX_U32("graphics/pokedex/region_map.bin", ".smolTM");
 
 static const u16 ALIGNED(4) sPokedexAreaMapKanto_Pal[] = INCGFX_U16("graphics/pokedex/region_map_kanto.pal", ".gbapal");
@@ -381,22 +384,22 @@ const struct RegionMapInfo gRegionMapInfos[] =
 
 static const u8 sMapHealLocations[][3] =
 {
-    [MAPSEC_LITTLEROOT_TOWN] = {MAP_GROUP(MAP_LITTLEROOT_TOWN), MAP_NUM(MAP_LITTLEROOT_TOWN), HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F},
-    [MAPSEC_OLDALE_TOWN] = {MAP_GROUP(MAP_OLDALE_TOWN), MAP_NUM(MAP_OLDALE_TOWN), HEAL_LOCATION_OLDALE_TOWN},
-    [MAPSEC_DEWFORD_TOWN] = {MAP_GROUP(MAP_DEWFORD_TOWN), MAP_NUM(MAP_DEWFORD_TOWN), HEAL_LOCATION_DEWFORD_TOWN},
-    [MAPSEC_LAVARIDGE_TOWN] = {MAP_GROUP(MAP_LAVARIDGE_TOWN), MAP_NUM(MAP_LAVARIDGE_TOWN), HEAL_LOCATION_LAVARIDGE_TOWN},
-    [MAPSEC_FALLARBOR_TOWN] = {MAP_GROUP(MAP_FALLARBOR_TOWN), MAP_NUM(MAP_FALLARBOR_TOWN), HEAL_LOCATION_FALLARBOR_TOWN},
-    [MAPSEC_VERDANTURF_TOWN] = {MAP_GROUP(MAP_VERDANTURF_TOWN), MAP_NUM(MAP_VERDANTURF_TOWN), HEAL_LOCATION_VERDANTURF_TOWN},
-    [MAPSEC_PACIFIDLOG_TOWN] = {MAP_GROUP(MAP_PACIFIDLOG_TOWN), MAP_NUM(MAP_PACIFIDLOG_TOWN), HEAL_LOCATION_PACIFIDLOG_TOWN},
-    [MAPSEC_PETALBURG_CITY] = {MAP_GROUP(MAP_PETALBURG_CITY), MAP_NUM(MAP_PETALBURG_CITY), HEAL_LOCATION_PETALBURG_CITY},
-    [MAPSEC_SLATEPORT_CITY] = {MAP_GROUP(MAP_SLATEPORT_CITY), MAP_NUM(MAP_SLATEPORT_CITY), HEAL_LOCATION_SLATEPORT_CITY},
-    [MAPSEC_MAUVILLE_CITY] = {MAP_GROUP(MAP_MAUVILLE_CITY), MAP_NUM(MAP_MAUVILLE_CITY), HEAL_LOCATION_MAUVILLE_CITY},
-    [MAPSEC_RUSTBORO_CITY] = {MAP_GROUP(MAP_RUSTBORO_CITY), MAP_NUM(MAP_RUSTBORO_CITY), HEAL_LOCATION_RUSTBORO_CITY},
-    [MAPSEC_FORTREE_CITY] = {MAP_GROUP(MAP_FORTREE_CITY), MAP_NUM(MAP_FORTREE_CITY), HEAL_LOCATION_FORTREE_CITY},
-    [MAPSEC_LILYCOVE_CITY] = {MAP_GROUP(MAP_LILYCOVE_CITY), MAP_NUM(MAP_LILYCOVE_CITY), HEAL_LOCATION_LILYCOVE_CITY},
-    [MAPSEC_MOSSDEEP_CITY] = {MAP_GROUP(MAP_MOSSDEEP_CITY), MAP_NUM(MAP_MOSSDEEP_CITY), HEAL_LOCATION_MOSSDEEP_CITY},
-    [MAPSEC_SOOTOPOLIS_CITY] = {MAP_GROUP(MAP_SOOTOPOLIS_CITY), MAP_NUM(MAP_SOOTOPOLIS_CITY), HEAL_LOCATION_SOOTOPOLIS_CITY},
-    [MAPSEC_EVER_GRANDE_CITY] = {MAP_GROUP(MAP_EVER_GRANDE_CITY), MAP_NUM(MAP_EVER_GRANDE_CITY), HEAL_LOCATION_EVER_GRANDE_CITY},
+    [MAPSEC_LITTLEROOT_TOWN] = {MAP_GROUP(MAP_HERETAUNGA_TOWN), MAP_NUM(MAP_HERETAUNGA_TOWN), HEAL_LOCATION_HERETAUNGA_TOWN},
+    [MAPSEC_OLDALE_TOWN] = {MAP_GROUP(MAP_TAMAKI_MAKAURAU), MAP_NUM(MAP_TAMAKI_MAKAURAU), HEAL_LOCATION_TAMAKI_MAKAURAU},
+    [MAPSEC_DEWFORD_TOWN] = {MAP_GROUP(MAP_TURANGA), MAP_NUM(MAP_TURANGA), HEAL_LOCATION_TURANGA},
+    [MAPSEC_LAVARIDGE_TOWN] = {MAP_GROUP(MAP_ROTORUA), MAP_NUM(MAP_ROTORUA), HEAL_LOCATION_ROTORUA},
+    [MAPSEC_FALLARBOR_TOWN] = {MAP_GROUP(MAP_TAUPO), MAP_NUM(MAP_TAUPO), HEAL_LOCATION_TAUPO},
+    [MAPSEC_VERDANTURF_TOWN] = {MAP_GROUP(MAP_NGAMOTU), MAP_NUM(MAP_NGAMOTU), HEAL_LOCATION_NGAMOTU},
+    [MAPSEC_PACIFIDLOG_TOWN] = {MAP_GROUP(MAP_WHANGANUI), MAP_NUM(MAP_WHANGANUI), HEAL_LOCATION_WHANGANUI},
+    [MAPSEC_PETALBURG_CITY] = {MAP_GROUP(MAP_AHURIRI_CITY), MAP_NUM(MAP_AHURIRI_CITY), HEAL_LOCATION_AHURIRI_CITY},
+    [MAPSEC_SLATEPORT_CITY] = {MAP_GROUP(MAP_OPOTIKI), MAP_NUM(MAP_OPOTIKI), HEAL_LOCATION_OPOTIKI},
+    [MAPSEC_MAUVILLE_CITY] = {MAP_GROUP(MAP_TAURANGA), MAP_NUM(MAP_TAURANGA), HEAL_LOCATION_TAURANGA},
+    [MAPSEC_RUSTBORO_CITY] = {MAP_GROUP(MAP_WAIROA), MAP_NUM(MAP_WAIROA), HEAL_LOCATION_WAIROA},
+    [MAPSEC_FORTREE_CITY] = {MAP_GROUP(MAP_WHAKATU), MAP_NUM(MAP_WHAKATU), HEAL_LOCATION_WHAKATU},
+    [MAPSEC_LILYCOVE_CITY] = {MAP_GROUP(MAP_OTAUTAHI), MAP_NUM(MAP_OTAUTAHI), HEAL_LOCATION_OTAUTAHI},
+    [MAPSEC_MOSSDEEP_CITY] = {MAP_GROUP(MAP_OTEPOTI), MAP_NUM(MAP_OTEPOTI), HEAL_LOCATION_OTEPOTI},
+    [MAPSEC_SOOTOPOLIS_CITY] = {MAP_GROUP(MAP_WELLINGTON), MAP_NUM(MAP_WELLINGTON), HEAL_LOCATION_WELLINGTON},
+    [MAPSEC_EVER_GRANDE_CITY] = {MAP_GROUP(MAP_WAITOHI), MAP_NUM(MAP_WAITOHI), HEAL_LOCATION_WAITOHI},
     [MAPSEC_ROUTE_101] = {MAP_GROUP(MAP_ROUTE101), MAP_NUM(MAP_ROUTE101), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_102] = {MAP_GROUP(MAP_ROUTE102), MAP_NUM(MAP_ROUTE102), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_103] = {MAP_GROUP(MAP_ROUTE103), MAP_NUM(MAP_ROUTE103), HEAL_LOCATION_NONE},
@@ -584,9 +587,9 @@ static const struct WindowTemplate sFlyMapWindowTemplates[] =
 {
     [WIN_MAPSEC_NAME] = {
         .bg = 0,
-        .tilemapLeft = 17,
+        .tilemapLeft = 15,       // Pounamu: two tiles wider, for Te Whanganui-a-Tara
         .tilemapTop = 17,
-        .width = 12,
+        .width = 14,
         .height = 2,
         .paletteNum = 15,
         .baseBlock = 0x01
@@ -598,16 +601,16 @@ static const struct WindowTemplate sFlyMapWindowTemplates[] =
         .width = 12,
         .height = 4,
         .paletteNum = 15,
-        .baseBlock = 0x19
+        .baseBlock = 0x1D
     },
     [WIN_FLY_TO_WHERE] = {
         .bg = 0,
         .tilemapLeft = 1,
         .tilemapTop = 18,
-        .width = 14,
+        .width = 12,             // (ends before the frame tiles at 101)
         .height = 2,
         .paletteNum = 15,
-        .baseBlock = 0x49
+        .baseBlock = 0x4D
     },
     DUMMY_WIN_TEMPLATE
 };
@@ -1366,6 +1369,52 @@ static void InitMapBasedOnPlayerLocation(void)
     }
     sRegionMap->cursorPosX = gRegionMapEntries[sRegionMap->mapSecId].x + x + MAPCURSOR_X_MIN;
     sRegionMap->cursorPosY = gRegionMapEntries[sRegionMap->mapSecId].y + y + MAPCURSOR_Y_MIN;
+    SetPounamuPlayerCell();
+}
+
+// Pounamu: the town map places the player by map rather than by section (one section, like
+// Route 2, runs through several maps in different parts of the country). Outdoors it's the
+// map you stand on; indoors or underground, the outdoor map you came in from. On a road that
+// spans several cells, the head moves along it with your position on the map.
+static void SetPounamuPlayerCell(void)
+{
+    const struct MapHeader *header;
+    u16 map, pos, span;
+    u32 i, n;
+
+    switch (GetMapTypeByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
+    {
+    case MAP_TYPE_TOWN:
+    case MAP_TYPE_CITY:
+    case MAP_TYPE_ROUTE:
+    case MAP_TYPE_OCEAN_ROUTE:
+    case MAP_TYPE_UNDERWATER:
+        map = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
+        header = &gMapHeader;
+        break;
+    default:
+        map = (gSaveBlock1Ptr->escapeWarp.mapGroup << 8) | gSaveBlock1Ptr->escapeWarp.mapNum;
+        header = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->escapeWarp.mapGroup, gSaveBlock1Ptr->escapeWarp.mapNum);
+        break;
+    }
+    for (i = 0; i < ARRAY_COUNT(sPounamuMapCells); i++)
+    {
+        if (sPounamuMapCells[i].map != map)
+            continue;
+        n = 0;
+        if (sPounamuMapCells[i].count > 1 && header == &gMapHeader)
+        {
+            pos = sPounamuMapCells[i].alongX ? gSaveBlock1Ptr->pos.x : gSaveBlock1Ptr->pos.y;
+            span = sPounamuMapCells[i].alongX ? header->mapLayout->width : header->mapLayout->height;
+            if (span != 0)
+                n = (pos * sPounamuMapCells[i].count) / span;
+            if (n >= sPounamuMapCells[i].count)
+                n = sPounamuMapCells[i].count - 1;
+        }
+        sRegionMap->cursorPosX = sPounamuMapCells[i].x[n] + MAPCURSOR_X_MIN;
+        sRegionMap->cursorPosY = sPounamuMapCells[i].y[n] + MAPCURSOR_Y_MIN;
+        return;
+    }
 }
 
 static void RegionMap_InitializeStateBasedOnSSTidalLocation(void)
@@ -1427,37 +1476,37 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
     case MAPSEC_NONE:
         return MAPSECTYPE_NONE;
     case MAPSEC_LITTLEROOT_TOWN:
-        return FlagGet(FLAG_VISITED_LITTLEROOT_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_LITTLEROOT_TOWN);
     case MAPSEC_OLDALE_TOWN:
-        return FlagGet(FLAG_VISITED_OLDALE_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_OLDALE_TOWN);
     case MAPSEC_DEWFORD_TOWN:
-        return FlagGet(FLAG_VISITED_DEWFORD_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_DEWFORD_TOWN);
     case MAPSEC_LAVARIDGE_TOWN:
-        return FlagGet(FLAG_VISITED_LAVARIDGE_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_LAVARIDGE_TOWN);
     case MAPSEC_FALLARBOR_TOWN:
-        return FlagGet(FLAG_VISITED_FALLARBOR_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_FALLARBOR_TOWN);
     case MAPSEC_VERDANTURF_TOWN:
-        return FlagGet(FLAG_VISITED_VERDANTURF_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_VERDANTURF_TOWN);
     case MAPSEC_PACIFIDLOG_TOWN:
-        return FlagGet(FLAG_VISITED_PACIFIDLOG_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_PACIFIDLOG_TOWN);
     case MAPSEC_PETALBURG_CITY:
-        return FlagGet(FLAG_VISITED_PETALBURG_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_PETALBURG_CITY);
     case MAPSEC_SLATEPORT_CITY:
-        return FlagGet(FLAG_VISITED_SLATEPORT_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_SLATEPORT_CITY);
     case MAPSEC_MAUVILLE_CITY:
-        return FlagGet(FLAG_VISITED_MAUVILLE_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_MAUVILLE_CITY);
     case MAPSEC_RUSTBORO_CITY:
-        return FlagGet(FLAG_VISITED_RUSTBORO_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_RUSTBORO_CITY);
     case MAPSEC_FORTREE_CITY:
-        return FlagGet(FLAG_VISITED_FORTREE_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_FORTREE_CITY);
     case MAPSEC_LILYCOVE_CITY:
-        return FlagGet(FLAG_VISITED_LILYCOVE_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_LILYCOVE_CITY);
     case MAPSEC_MOSSDEEP_CITY:
-        return FlagGet(FLAG_VISITED_MOSSDEEP_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_MOSSDEEP_CITY);
     case MAPSEC_SOOTOPOLIS_CITY:
-        return FlagGet(FLAG_VISITED_SOOTOPOLIS_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_SOOTOPOLIS_CITY);
     case MAPSEC_EVER_GRANDE_CITY:
-        return FlagGet(FLAG_VISITED_EVER_GRANDE_CITY) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+        return PounamuTownFlyType(mapSecId, FLAG_VISITED_EVER_GRANDE_CITY);
     case MAPSEC_BATTLE_FRONTIER:
         return FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
     case MAPSEC_SOUTHERN_ISLAND:
@@ -1505,6 +1554,54 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
     default:
         return MAPSECTYPE_ROUTE;
     }
+}
+
+// Pounamu: a town can be flown to once you've been there (arriving sets its flag; for a save
+// from before the town map, being past it in the story counts too). Home - Heretaunga and
+// Ahuriri - is shut while you're in exile: from the coup until the Sky Tower is done.
+static u8 PounamuTownFlyType(mapsec_u16_t mapSecId, u16 flag)
+{
+    bool32 visited = FlagGet(flag);
+
+    switch (mapSecId)
+    {
+    case MAPSEC_LITTLEROOT_TOWN:   // Heretaunga
+    case MAPSEC_PETALBURG_CITY:    // Ahuriri
+        if (VarGet(VAR_POUNAMU_INTRO_STATE) >= 4)
+        {
+            if (!FlagGet(FLAG_UNUSED_0x907))   // the Sky Tower is done
+                return MAPSECTYPE_CITY_CANTFLY;
+            visited = TRUE;
+        }
+        break;
+    case MAPSEC_RUSTBORO_CITY:     // Wairoa
+    case MAPSEC_DEWFORD_TOWN:      // Turanga
+    case MAPSEC_SLATEPORT_CITY:    // Opotiki
+    case MAPSEC_MAUVILLE_CITY:     // Tauranga
+    case MAPSEC_LAVARIDGE_TOWN:    // Rotorua
+        visited |= FlagGet(FLAG_BADGE03_GET);
+        break;
+    case MAPSEC_FALLARBOR_TOWN:    // Taupo
+    case MAPSEC_VERDANTURF_TOWN:   // Ngamotu
+    case MAPSEC_PACIFIDLOG_TOWN:   // Whanganui
+    case MAPSEC_SOOTOPOLIS_CITY:   // Wellington
+        visited |= FlagGet(FLAG_BADGE05_GET);
+        break;
+    case MAPSEC_EVER_GRANDE_CITY:  // Waitohi
+    case MAPSEC_FORTREE_CITY:      // Whakatu
+        visited |= FlagGet(FLAG_BADGE06_GET);
+        break;
+    case MAPSEC_LILYCOVE_CITY:     // Otautahi
+        visited |= FlagGet(FLAG_BADGE07_GET);
+        break;
+    case MAPSEC_MOSSDEEP_CITY:     // Otepoti
+        visited |= FlagGet(FLAG_BADGE08_GET);
+        break;
+    case MAPSEC_OLDALE_TOWN:       // Tamaki Makaurau
+        visited |= FlagGet(FLAG_UNUSED_0x907);
+        break;
+    }
+    return visited ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
 }
 
 mapsec_u16_t GetRegionMapSecIdAt(u16 x, u16 y)
@@ -2358,7 +2455,7 @@ static void CreateFlyDestIcons(void)
         {
             gSprites[spriteId].oam.shape = shape;
 
-            if (FlagGet(sFlyLocations[i].flag))
+            if (GetMapsecType(sFlyLocations[i].mapsec) == MAPSECTYPE_CITY_CANFLY)
                 gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
             else
                 shape += 3;
@@ -2507,10 +2604,6 @@ u32 FilterFlyDestination(struct RegionMap* regionMap)
         return HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR;
     case MAPSEC_BATTLE_FRONTIER:
         return HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST;
-    case MAPSEC_LITTLEROOT_TOWN:
-        return (gSaveBlock2Ptr->playerGender == MALE ? HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE : HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE);
-    case MAPSEC_EVER_GRANDE_CITY:
-        return (FlagGet(FLAG_LANDMARK_POKEMON_LEAGUE) && regionMap->posWithinMapSec == 0 ? HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE : HEAL_LOCATION_EVER_GRANDE_CITY);
     default:
         if (sMapHealLocations[regionMap->mapSecId][2] != HEAL_LOCATION_NONE)
             return sMapHealLocations[regionMap->mapSecId][2];

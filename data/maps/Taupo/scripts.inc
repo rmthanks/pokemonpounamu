@@ -1,5 +1,10 @@
 Taupo_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Taupo_OnTransition_Visited
 	.byte 0
+
+Taupo_OnTransition_Visited:
+	setflag FLAG_VISITED_FALLARBOR_TOWN
+	end
 
 Taupo_EventScript_LakeMan::
 	msgbox Taupo_Text_LakeMan, MSGBOX_NPC

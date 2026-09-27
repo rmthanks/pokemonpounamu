@@ -1,5 +1,10 @@
 Turanga_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Turanga_OnTransition_Visited
 	.byte 0
+
+Turanga_OnTransition_Visited:
+	setflag FLAG_VISITED_DEWFORD_TOWN
+	end
 
 @ ------------------------------------------------------------------
 @ Turanga - first light city. Gateway to the East Cape.

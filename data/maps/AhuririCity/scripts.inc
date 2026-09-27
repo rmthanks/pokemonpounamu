@@ -1,5 +1,10 @@
 AhuririCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, AhuririCity_OnTransition_Visited
 	.byte 0
+
+AhuririCity_OnTransition_Visited:
+	setflag FLAG_VISITED_PETALBURG_CITY
+	end
 
 AhuririCity_EventScript_DecoLady::
 	msgbox AhuririCity_Text_DecoLady, MSGBOX_NPC

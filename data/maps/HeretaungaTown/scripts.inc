@@ -3,6 +3,7 @@ HeretaungaTown_MapScripts::
 	.byte 0
 
 HeretaungaTown_OnTransition::
+	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call HeretaungaTown_OnTransition_OrchardHide
 	call HeretaungaTown_OnTransition_Awhi
 	call HeretaungaTown_OnTransition_Break

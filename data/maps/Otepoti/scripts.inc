@@ -3,6 +3,7 @@ Otepoti_MapScripts::
 	.byte 0
 
 Otepoti_OnTransition:
+	setflag FLAG_VISITED_MOSSDEEP_CITY
 	call_if_unset FLAG_BADGE08_GET, Otepoti_EventScript_HideKauri
 	call_if_set FLAG_UNUSED_0x900, Otepoti_EventScript_HideKauri
 	end

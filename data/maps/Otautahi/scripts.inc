@@ -1,5 +1,10 @@
 Otautahi_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Otautahi_OnTransition_Visited
 	.byte 0
+
+Otautahi_OnTransition_Visited:
+	setflag FLAG_VISITED_LILYCOVE_CITY
+	end
 Otautahi_EventScript_RebuildWoman::
 	msgbox Otautahi_Text_RebuildWoman, MSGBOX_NPC
 	end

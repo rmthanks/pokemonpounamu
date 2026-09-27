@@ -3,16 +3,16 @@
     {
       "id": "MAPSEC_LITTLEROOT_TOWN",
       "name": "Heretaunga",
-      "x": 23,
-      "y": 6,
+      "x": 22,
+      "y": 7,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_OLDALE_TOWN",
-      "name": "Havelock North",
-      "x": 24,
-      "y": 7,
+      "name": "Tamaki Makaurau",
+      "x": 16,
+      "y": 2,
       "width": 1,
       "height": 1
     },
@@ -27,7 +27,7 @@
     {
       "id": "MAPSEC_LAVARIDGE_TOWN",
       "name": "Rotorua",
-      "x": 22,
+      "x": 20,
       "y": 4,
       "width": 1,
       "height": 1
@@ -35,31 +35,31 @@
     {
       "id": "MAPSEC_FALLARBOR_TOWN",
       "name": "Taupo",
-      "x": 21,
-      "y": 5,
+      "x": 20,
+      "y": 6,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_VERDANTURF_TOWN",
       "name": "Ngamotu",
-      "x": 17,
-      "y": 6,
+      "x": 16,
+      "y": 7,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_PACIFIDLOG_TOWN",
       "name": "Whanganui",
-      "x": 19,
-      "y": 7,
+      "x": 17,
+      "y": 8,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_PETALBURG_CITY",
       "name": "Ahuriri",
-      "x": 24,
+      "x": 23,
       "y": 6,
       "width": 1,
       "height": 1
@@ -67,16 +67,16 @@
     {
       "id": "MAPSEC_SLATEPORT_CITY",
       "name": "Opotiki",
-      "x": 24,
-      "y": 4,
+      "x": 23,
+      "y": 2,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_MAUVILLE_CITY",
       "name": "Tauranga",
-      "x": 23,
-      "y": 4,
+      "x": 20,
+      "y": 2,
       "width": 1,
       "height": 1
     },
@@ -91,7 +91,7 @@
     {
       "id": "MAPSEC_FORTREE_CITY",
       "name": "Whakatu",
-      "x": 18,
+      "x": 12,
       "y": 10,
       "width": 1,
       "height": 1
@@ -99,7 +99,7 @@
     {
       "id": "MAPSEC_LILYCOVE_CITY",
       "name": "Otautahi",
-      "x": 17,
+      "x": 14,
       "y": 11,
       "width": 1,
       "height": 1
@@ -107,23 +107,23 @@
     {
       "id": "MAPSEC_MOSSDEEP_CITY",
       "name": "Otepoti",
-      "x": 15,
-      "y": 12,
+      "x": 11,
+      "y": 13,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_SOOTOPOLIS_CITY",
       "name": "Te Whanganui-a-Tara",
-      "x": 21,
-      "y": 9,
+      "x": 17,
+      "y": 10,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_EVER_GRANDE_CITY",
       "name": "Waitohi",
-      "x": 19,
+      "x": 14,
       "y": 10,
       "width": 1,
       "height": 1
@@ -131,112 +131,112 @@
     {
       "id": "MAPSEC_ROUTE_101",
       "name": "Route 51",
-      "x": 4,
-      "y": 10,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_102",
-      "name": "Route 2",
-      "x": 2,
-      "y": 9,
-      "width": 2,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_103",
-      "name": "Route 35",
-      "x": 4,
-      "y": 8,
-      "width": 4,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_104",
-      "name": "Route 36",
-      "x": 0,
-      "y": 7,
-      "width": 1,
-      "height": 3
-    },
-    {
-      "id": "MAPSEC_ROUTE_105",
-      "name": "Route 5",
-      "x": 0,
-      "y": 10,
-      "width": 1,
-      "height": 3
-    },
-    {
-      "id": "MAPSEC_ROUTE_106",
-      "name": "Route 1",
-      "x": 0,
-      "y": 13,
-      "width": 2,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_107",
-      "name": "Route 43",
-      "x": 3,
-      "y": 14,
-      "width": 3,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_108",
-      "name": "Route 3",
-      "x": 6,
-      "y": 14,
-      "width": 2,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_109",
-      "name": "Route 1",
-      "x": 8,
-      "y": 12,
-      "width": 1,
-      "height": 3
-    },
-    {
-      "id": "MAPSEC_ROUTE_110",
-      "name": "Route 6",
-      "x": 8,
-      "y": 7,
-      "width": 1,
-      "height": 3
-    },
-    {
-      "id": "MAPSEC_ROUTE_111",
-      "name": "Route 7",
-      "x": 8,
-      "y": 0,
-      "width": 1,
-      "height": 6
-    },
-    {
-      "id": "MAPSEC_ROUTE_112",
-      "name": "Route 1",
-      "x": 6,
-      "y": 3,
-      "width": 2,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_ROUTE_113",
-      "name": "Te Mata Peak",
       "x": 23,
       "y": 7,
       "width": 1,
       "height": 1
     },
     {
+      "id": "MAPSEC_ROUTE_102",
+      "name": "Route 2",
+      "x": 24,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_103",
+      "name": "Route 35",
+      "x": 25,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_104",
+      "name": "Route 36",
+      "x": 20,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_105",
+      "name": "Route 5",
+      "x": 20,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_106",
+      "name": "Route 1",
+      "x": 20,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_107",
+      "name": "Route 43",
+      "x": 19,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_108",
+      "name": "Route 3",
+      "x": 16,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_109",
+      "name": "Route 1",
+      "x": 17,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_110",
+      "name": "Route 6",
+      "x": 13,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_111",
+      "name": "Route 7",
+      "x": 12,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_112",
+      "name": "Route 1",
+      "x": 14,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ROUTE_113",
+      "name": "Te Mata Peak",
+      "x": 23,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_ROUTE_114",
       "name": "Ruapehu",
-      "x": 21,
-      "y": 6,
+      "x": 19,
+      "y": 8,
       "width": 1,
       "height": 1
     },
@@ -290,7 +290,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_121",
-      "name": "Tamaki Makaurau",
+      "name": "Route 121",
       "x": 20,
       "y": 3,
       "width": 1,
@@ -362,10 +362,10 @@
     },
     {
       "id": "MAPSEC_ROUTE_130",
-      "name": "Route 130",
-      "x": 21,
-      "y": 10,
-      "width": 3,
+      "name": "Piopiotahi",
+      "x": 4,
+      "y": 12,
+      "width": 1,
       "height": 1
     },
     {

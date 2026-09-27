@@ -3,7 +3,7 @@
 
 ON adds a POUNAMU_QA block to src/new_game.c and src/main_menu.c that skips the
 opening speech, names the player RYAN, sets all badges, gives the QA party
-(test species first, then a Lv100 Surf-only Kyogre), sets the in-game hour and
+(test species first, then a Lv100 Kyogre knowing only Surf, or QA_KYOGRE_MOVE), sets the in-game hour and
 warps to the spawn in include/qa_spawn.h (written by run.py).
 OFF restores both files from git. NEVER commit with the hooks on:
     grep -rn POUNAMU_QA src   # must print nothing before a commit
@@ -19,7 +19,11 @@ QA_BLOCK = '''#ifdef POUNAMU_QA // QA-ONLY: never commit
         static const u16 sQaParty[] = QA_PARTY;
         static const u16 sQaFlags[] = QA_FLAGS;
         u32 i;
+#ifdef QA_KYOGRE_MOVE
+        u16 move = QA_KYOGRE_MOVE, none = MOVE_NONE;
+#else
         u16 move = MOVE_SURF, none = MOVE_NONE;
+#endif
         u8 pp = 15, zero = 0;
         StringCopy(gSaveBlock2Ptr->playerName, sQaName);
         gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;

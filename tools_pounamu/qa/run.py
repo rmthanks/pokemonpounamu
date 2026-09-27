@@ -14,9 +14,9 @@ QA = os.path.dirname(os.path.abspath(__file__))
 
 BOOT = 'run 120\nmash START 8 40\nrun 60\ntap A\nrun 360\nshot 00_spawn\n'
 
-def T(map, x, y, script, hour=12, flags=(), party=('PIDGEY',), deco=None, intro=None):
+def T(map, x, y, script, hour=12, flags=(), party=('PIDGEY',), deco=None, intro=None, kmove=None):
     return dict(map=map, x=x, y=y, hour=hour, flags=list(flags), party=list(party), script=BOOT + script, deco=deco,
-                intro=intro)
+                intro=intro, kmove=kmove)
 
 TESTS = {
     'wellington': T('MAP_WELLINGTON', 20, 14, 'tap UP\nsteps A 18 s\nrun 120\nsteps A 3 t\n'),
@@ -151,6 +151,14 @@ TESTS = {
     'nt_otepoti': T('MAP_OTEPOTI', 5, 14, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
     'nt_turanga': T('MAP_TURANGA', 5, 7, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
     'nt_tauranga': T('MAP_TAURANGA', 7, 16, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
+    'fly_map': T('MAP_WELLINGTON', 17, 15, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\nshot a\ntap A\nrun 150\nshot b\n'
+                 'tap UP\nrun 12\ntap UP\nrun 12\ntap UP\nrun 12\ntap UP\nrun 12\ntap UP\nrun 12\ntap UP\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 20\nshot c\n'
+                 'tap A\nrun 240\nshot d\nrun 60\nshot e\n', party=[], kmove='MOVE_FLY',
+                 flags=['FLAG_UNUSED_0x907']),
+    'fly_exile': T('MAP_WELLINGTON', 17, 15, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 150\nshot a\n'
+                 'tap UP\nrun 12\ntap UP\nrun 12\ntap UP\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 20\nshot b\ntap A\nrun 60\nshot c\n', party=[], kmove='MOVE_FLY'),
+    'fly_route43': T('MAP_ROUTE43_POUNAMU', 21, 30, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 150\nshot a\n', party=[], kmove='MOVE_FLY'),
+    'fly_south': T('MAP_ROUTE1_SOUTH', 20, 60, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 150\nshot a\n', party=[], kmove='MOVE_FLY'),
 }
 
 def main(name):
@@ -161,7 +169,8 @@ def main(name):
         f'#define QA_MAP {t["map"]}\n#define QA_X {t["x"]}\n#define QA_Y {t["y"]}\n'
         f'#define QA_HOUR {t["hour"]}\n#define QA_PARTY {{ {party} }}\n#define QA_FLAGS {{ {flags} }}\n'
         + (f'#define QA_DECO {t["deco"]}\n' if t.get('deco') is not None else '')
-        + (f'#define QA_INTRO {t["intro"]}\n' if t.get('intro') is not None else ''))
+        + (f'#define QA_INTRO {t["intro"]}\n' if t.get('intro') is not None else '')
+        + (f'#define QA_KYOGRE_MOVE {t["kmove"]}\n' if t.get('kmove') else ''))
     r = subprocess.run('make modern -j2', shell=True, cwd=REPO, capture_output=True, text=True)
     if r.returncode:
         print(r.stdout[-3000:], r.stderr[-3000:]); sys.exit(1)

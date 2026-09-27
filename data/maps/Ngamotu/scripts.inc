@@ -1,5 +1,10 @@
 Ngamotu_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Ngamotu_OnTransition_Visited
 	.byte 0
+
+Ngamotu_OnTransition_Visited:
+	setflag FLAG_VISITED_VERDANTURF_TOWN
+	end
 
 Ngamotu_EventScript_MountainMan::
 	msgbox Ngamotu_Text_MountainMan, MSGBOX_NPC

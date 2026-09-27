@@ -1,5 +1,10 @@
 Whakatu_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Whakatu_OnTransition_Visited
 	.byte 0
+
+Whakatu_OnTransition_Visited:
+	setflag FLAG_VISITED_FORTREE_CITY
+	end
 Whakatu_EventScript_SunWoman::
 	msgbox Whakatu_Text_SunWoman, MSGBOX_NPC
 	end

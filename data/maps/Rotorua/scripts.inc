@@ -1,5 +1,10 @@
 Rotorua_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Rotorua_OnTransition_Visited
 	.byte 0
+
+Rotorua_OnTransition_Visited:
+	setflag FLAG_VISITED_LAVARIDGE_TOWN
+	end
 
 Rotorua_EventScript_PoolMan::
 	msgbox Rotorua_Text_PoolMan, MSGBOX_NPC

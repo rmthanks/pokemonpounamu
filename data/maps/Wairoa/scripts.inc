@@ -1,5 +1,10 @@
 Wairoa_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Wairoa_OnTransition_Visited
 	.byte 0
+
+Wairoa_OnTransition_Visited:
+	setflag FLAG_VISITED_RUSTBORO_CITY
+	end
 
 Wairoa_EventScript_Woman::
 	msgbox Wairoa_Text_Woman, MSGBOX_NPC
