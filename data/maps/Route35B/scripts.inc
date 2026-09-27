@@ -138,3 +138,19 @@ Route35B_Text_PKuiniDefeat:
 
 Route35B_Text_PKuiniPost:
 	.string "Don't tell my nan I lost.$"
+
+Route35B_EventScript_SignNorth::
+	msgbox Route35B_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route35B_Text_SignNorth:
+	.string "ROUTE 35\n"
+	.string "South to EAST CAPE$"
+
+Route35B_EventScript_SignSouth::
+	msgbox Route35B_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route35B_Text_SignSouth:
+	.string "ROUTE 35\n"
+	.string "North to OPOTIKI$"

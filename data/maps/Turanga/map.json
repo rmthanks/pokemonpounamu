@@ -16,12 +16,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE2_EAST",
-      "offset": 0,
+      "offset": -14,
       "direction": "down"
     },
     {
       "map": "MAP_ROUTE35_A",
-      "offset": 5,
+      "offset": -20,
       "direction": "up"
     }
   ],

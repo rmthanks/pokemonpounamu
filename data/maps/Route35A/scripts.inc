@@ -363,3 +363,19 @@ Route35A_Text_DawnJobAfter:
 	.string "Turanga museum. First faces of\l"
 	.string "the day. Has a ring to it.$"
 
+
+Route35A_EventScript_SignNorth::
+	msgbox Route35A_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route35A_Text_SignNorth:
+	.string "ROUTE 35\n"
+	.string "South to TURANGA$"
+
+Route35A_EventScript_SignSouth::
+	msgbox Route35A_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route35A_Text_SignSouth:
+	.string "ROUTE 35\n"
+	.string "North to EAST CAPE$"

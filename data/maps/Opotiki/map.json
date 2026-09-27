@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE35_B",
-      "offset": 0,
+      "offset": -14,
       "direction": "down"
     },
     {

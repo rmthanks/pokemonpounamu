@@ -21,7 +21,7 @@
     },
     {
       "map": "MAP_ROUTE2_EAST",
-      "offset": 0,
+      "offset": -12,
       "direction": "up"
     }
   ],

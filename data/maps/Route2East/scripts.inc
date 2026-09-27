@@ -110,3 +110,19 @@ Route2East_Text_PHohepaDefeat:
 
 Route2East_Text_PHohepaPost:
 	.string "Southerly's coming. Take care\nup the track.$"
+
+Route2East_EventScript_SignNorth::
+	msgbox Route2East_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route2East_Text_SignNorth:
+	.string "ROUTE 2\n"
+	.string "South to WAIROA$"
+
+Route2East_EventScript_SignSouth::
+	msgbox Route2East_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route2East_Text_SignSouth:
+	.string "ROUTE 2\n"
+	.string "North to TURANGA$"
