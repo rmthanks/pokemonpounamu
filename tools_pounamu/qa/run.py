@@ -68,6 +68,9 @@ TESTS = {
     'ht2_watchers': T('MAP_HERETAUNGA_TOWN', 25, 12, 'hold UP 34\nrun 40\nsteps A 5 s\n', flags=['FLAG_UNUSED_0x041']),
     'ht2_flax': T('MAP_HERETAUNGA_TOWN', 9, 13, 'run 60\nshot a\nhold DOWN 200\nrun 30\nshot b\nhold DOWN 120\nrun 30\nshot c\n'),
     'ht2_havelock': T('MAP_HERETAUNGA_TOWN', 47, 38, 'run 60\nshot a\nhold LEFT 120\nrun 30\nshot b\n'),
+    'or_south': T('MAP_ORCHARD_ROAD', 15, 42, 'run 60\nshot a\nhold DOWN 40\nrun 20\nshot b\nhold DOWN 40\nrun 60\nshot c\nhold UP 70\nrun 30\nshot d\n'),
+    'or_north': T('MAP_ORCHARD_ROAD', 15, 3, 'run 60\nshot a\nhold UP 50\nrun 20\nshot b\nhold UP 40\nrun 60\nshot c\nhold DOWN 60\nrun 30\nshot d\n'),
+    'or_mid': T('MAP_ORCHARD_ROAD', 13, 27, 'run 60\nshot a\n'),
     'durie': T('MAP_WHANGANUI', 16, 3, 'tap UP\nsteps A 12 s\nrun 60\nsteps A 4 t\n'),
 }
 

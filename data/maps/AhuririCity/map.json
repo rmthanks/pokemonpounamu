@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ORCHARD_ROAD",
-      "offset": 0,
+      "offset": -8,
       "direction": "down"
     },
     {

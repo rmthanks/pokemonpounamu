@@ -134,3 +134,19 @@ OrchardRoad_Text_PTaneDefeat:
 
 OrchardRoad_Text_PTanePost:
 	.string "Don't tell my nan I lost.$"
+
+OrchardRoad_EventScript_SignNorth::
+	msgbox OrchardRoad_Text_SignNorth, MSGBOX_SIGN
+	end
+
+OrchardRoad_Text_SignNorth:
+	.string "ORCHARD ROAD\n"
+	.string "South to HERETAUNGA$"
+
+OrchardRoad_EventScript_SignSouth::
+	msgbox OrchardRoad_Text_SignSouth, MSGBOX_SIGN
+	end
+
+OrchardRoad_Text_SignSouth:
+	.string "ORCHARD ROAD\n"
+	.string "North to AHURIRI$"
