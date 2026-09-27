@@ -123,3 +123,19 @@ Route6_Text_PUnaDefeat:
 
 Route6_Text_PUnaPost:
 	.string "Worth it. Rematch at smoko?$"
+
+Route6_EventScript_SignNorth::
+	msgbox Route6_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route6_Text_SignNorth:
+	.string "ROUTE 6\n"
+	.string "South to WHAKATU$"
+
+Route6_EventScript_SignSouth::
+	msgbox Route6_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route6_Text_SignSouth:
+	.string "ROUTE 6\n"
+	.string "North to WAITOHI$"

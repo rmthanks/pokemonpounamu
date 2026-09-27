@@ -148,6 +148,7 @@ class Route:
         self.fix = {}
         self.notes = []
         self.boulders = set()
+        self.pond_open_top = set()      # columns where a pond carries on from the map above
 
     # -- primitives
     def inb(self, x, y):
@@ -280,7 +281,7 @@ class Route:
                 if c == 'T':
                     m = self._tree_tile(x, y)
                 elif c == 'W':
-                    up = y > 0 and self.cls[y - 1][x] == 'W'
+                    up = self.cls[y - 1][x] == 'W' if y > 0 else x in self.pond_open_top
                     lw = x > 0 and self.cls[y][x - 1] == 'W'
                     rw = x < W - 1 and self.cls[y][x + 1] == 'W'
                     if not up:

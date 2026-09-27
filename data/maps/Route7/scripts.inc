@@ -413,3 +413,19 @@ Route7_Text_HeatherPost:
 	.string "again. Twice this week. They're\l"
 	.string "smarter than the walkers.$"
 
+
+Route7_EventScript_SignWest::
+	msgbox Route7_Text_SignWest, MSGBOX_SIGN
+	end
+
+Route7_Text_SignWest:
+	.string "ROUTE 7\n"
+	.string "South to OTAUTAHI$"
+
+Route7_EventScript_SignSouth::
+	msgbox Route7_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route7_Text_SignSouth:
+	.string "ROUTE 7\n"
+	.string "North to WHAKATU$"

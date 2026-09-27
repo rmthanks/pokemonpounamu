@@ -195,3 +195,19 @@ Route1South_Text_Suitcase:
 	.string "{PLAYER} picked it up to hand\n"
 	.string "in at Otepoti.$"
 
+
+Route1South_EventScript_SignNorth::
+	msgbox Route1South_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route1South_Text_SignNorth:
+	.string "ROUTE 1\n"
+	.string "South to OTEPOTI$"
+
+Route1South_EventScript_SignSouth::
+	msgbox Route1South_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route1South_Text_SignSouth:
+	.string "ROUTE 1\n"
+	.string "North to OTAUTAHI$"

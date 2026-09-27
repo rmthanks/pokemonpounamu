@@ -30,6 +30,16 @@ def fail(msg, problems):
     return 1
 
 
+def object_names(objs):
+    """each object's name: its script suffix, with #2, #3... for repeats of the same script"""
+    seen, out = {}, []
+    for o in objs:
+        suffix = o['script'].split('_EventScript_')[-1]
+        seen[suffix] = seen.get(suffix, 0) + 1
+        out.append(suffix if seen[suffix] == 1 else f'{suffix}#{seen[suffix]}')
+    return out
+
+
 def build(spec):
     write = '--write' in sys.argv
     name = spec['folder']
@@ -37,6 +47,7 @@ def build(spec):
     if spec.get('seal'):
         markers += spec['seal']['beyond']
     r = rk.from_ascii(name, spec['rows'], markers)
+    r.pond_open_top = set(spec.get('pond_open_top', ()))
     errors = 0
     print(f'{name}: {r.W}x{r.H}')
     if r.snap_warnings:
@@ -83,8 +94,7 @@ def build(spec):
             continue
         placed[suffix] = (spots[0], face)
     blocked = set()
-    for o in objs:
-        suffix = o['script'].split('_EventScript_')[-1]
+    for o, suffix in zip(objs, object_names(objs)):
         if suffix not in placed:
             errors += fail('object not placed', [suffix])
             continue
@@ -124,21 +134,29 @@ def build(spec):
         free = blocked - {placed[s][0] for s in seal['by'] if s in placed}
         if not all(c in r.reach(allexits, free) for c in beyond):
             errors += fail('the road does not carry on past the blockers', [seal['by']])
+    if spec.get('coord_rows') and len(exits) >= 2:
+        # the story trigger rows must be impossible to walk round
+        rows_cells = {(x, y) for y in spec['coord_rows'].values() for x in range(r.W) if r.walkable(x, y)}
+        ex = list(exits.values())
+        if any(c in r.reach(ex[0], rows_cells) for c in ex[1]):
+            errors += fail('the trigger rows can be walked round', sorted(spec['coord_rows'].values()))
     main = r.reach(allexits, blocked)
     for suffix, ((x, y), face) in placed.items():
         near = any((x + dx, y + dy) in main for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
         if not near and suffix not in spec.get('allow_unreached', ()):
             errors += fail('object cannot be reached', [(suffix, x, y)])
     # trainers must see onto ground the player walks
-    for o in objs:
-        suffix = o['script'].split('_EventScript_')[-1]
+    for o, suffix in zip(objs, object_names(objs)):
         if suffix not in placed or o.get('trainer_type', 'TRAINER_TYPE_NONE') == 'TRAINER_TYPE_NONE':
             continue
         (x, y), face = placed[suffix]
         f = face or o['movement_type'].replace('MOVEMENT_TYPE_FACE_', '')
         if f not in FACES:
             continue
-        sight = rk.sight_cells(r, x, y, f, int(o.get('trainer_sight_or_berry_tree_id', 2) or 2))
+        rng = int(o.get('trainer_sight_or_berry_tree_id', 2) or 0)
+        if rng == 0:
+            continue                      # a talk-to trainer: sees nobody by design
+        sight = rk.sight_cells(r, x, y, f, rng)
         if not any(c in main for c in sight):
             errors += fail('trainer looks at nothing', [(suffix, x, y, f)])
     hidden_spots = {}
@@ -192,8 +210,7 @@ def build(spec):
         elif new not in t:
             print(f'  WARNING: could not apply script edit in {path}: {old!r}')
     mj = rk.map_json(name)
-    for o in mj['object_events']:
-        suffix = o['script'].split('_EventScript_')[-1]
+    for o, suffix in zip(mj['object_events'], object_names(mj['object_events'])):
         (x, y), face = placed[suffix]
         o['x'], o['y'] = x, y
         if face:
@@ -208,6 +225,18 @@ def build(spec):
         signs.append({'type': 'sign', 'x': x, 'y': y, 'elevation': 0,
                       'player_facing_dir': 'BG_EVENT_PLAYER_FACING_ANY', 'script': f'{name}_EventScript_{label}'})
     mj['bg_events'] = others + hid + signs
+    # story trigger rows: every old coord event on row `old` becomes a full row of the same
+    # event at row `new`, across every walkable cell (so the scene can't be walked round)
+    if spec.get('coord_rows'):
+        keep = [c for c in mj['coord_events'] if c['y'] not in spec['coord_rows']]
+        made = []
+        for old, new in spec['coord_rows'].items():
+            proto = next(c for c in mj['coord_events'] if c['y'] == old)
+            for x in range(r.W):
+                if r.walkable(x, new):
+                    e = dict(proto); e['x'], e['y'] = x, new
+                    made.append(e)
+        mj['coord_events'] = keep + made
     mj['weather'] = spec.get('weather', mj['weather'])
     for cn in mj['connections']:
         if cn['map'] in spec['conns']:
