@@ -226,19 +226,19 @@
     },
     {
       "id": "MAPSEC_ROUTE_113",
-      "name": "Route 113",
-      "x": 4,
-      "y": 0,
-      "width": 4,
+      "name": "Te Mata Peak",
+      "x": 23,
+      "y": 7,
+      "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_114",
-      "name": "Route 114",
-      "x": 1,
-      "y": 0,
-      "width": 2,
-      "height": 3
+      "name": "Ruapehu",
+      "x": 21,
+      "y": 6,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_115",
