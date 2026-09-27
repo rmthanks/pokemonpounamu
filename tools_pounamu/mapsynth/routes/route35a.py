@@ -12,7 +12,6 @@ SPEC = dict(
     folder='Route35A', layout='LAYOUT_ROUTE35_A', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
     conns={'MAP_TURANGA': 20, 'MAP_ROUTE35_B': 0},
-    defer_seams=['MAP_ROUTE35_B'],
     rows=[
         #0         1         2         3         4
         #012345678901234567890123456789012345678901234567

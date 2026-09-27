@@ -118,3 +118,19 @@ Route43_Text_PWillowDefeat:
 
 Route43_Text_PWillowPost:
 	.string "The League's tougher than me.\nBarely.$"
+
+Route43_EventScript_SignNorth::
+	msgbox Route43_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route43_Text_SignNorth:
+	.string "ROUTE 43\n"
+	.string "South to NGAMOTU$"
+
+Route43_EventScript_SignSouth::
+	msgbox Route43_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route43_Text_SignSouth:
+	.string "ROUTE 43\n"
+	.string "North to the DESERT ROAD$"

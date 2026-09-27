@@ -128,3 +128,19 @@ Route1Kapiti_Text_PMiloDefeat:
 
 Route1Kapiti_Text_PMiloPost:
 	.string "They're biting better since\nyou showed up. Weird.$"
+
+Route1Kapiti_EventScript_SignNorth::
+	msgbox Route1Kapiti_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route1Kapiti_Text_SignNorth:
+	.string "ROUTE 1\n"
+	.string "South to WELLINGTON$"
+
+Route1Kapiti_EventScript_SignSouth::
+	msgbox Route1Kapiti_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route1Kapiti_Text_SignSouth:
+	.string "ROUTE 1\n"
+	.string "North to WHANGANUI$"

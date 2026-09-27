@@ -191,3 +191,19 @@ Route5_Text_RockJobNo:
 Route5_Text_RockJobAfter:
 	.string "Haere ra. Safe road ahead.$"
 
+
+Route5_EventScript_SignNorth::
+	msgbox Route5_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route5_Text_SignNorth:
+	.string "ROUTE 5\n"
+	.string "South to TAUPO$"
+
+Route5_EventScript_SignSouth::
+	msgbox Route5_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route5_Text_SignSouth:
+	.string "ROUTE 5\n"
+	.string "North to ROTORUA$"

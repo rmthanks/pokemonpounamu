@@ -16,12 +16,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE5_POUNAMU",
-      "offset": 0,
+      "offset": -16,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE5_RANGES",
-      "offset": 3,
+      "offset": -2,
       "direction": "right"
     },
     {

@@ -609,6 +609,8 @@ def from_ascii(name, rows, markers=''):
                 c = rows[ny][nx]
                 if c in '.,BPp*':
                     votes[c] = votes.get(c, 0) + 1
+        if sum(votes.values()) < 2:              # a marker dropped into rock, trees or water
+            r.snap_warnings.append((x, y, 'marker off the ground'))
         if not votes:
             return '.'
         best = max(votes.values())

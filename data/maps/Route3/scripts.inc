@@ -130,3 +130,19 @@ Route3_Text_PFloraDefeat:
 
 Route3_Text_PFloraPost:
 	.string "Worth it. Rematch at smoko?$"
+
+Route3_EventScript_SignNorth::
+	msgbox Route3_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route3_Text_SignNorth:
+	.string "ROUTE 3\n"
+	.string "South to WHANGANUI$"
+
+Route3_EventScript_SignSouth::
+	msgbox Route3_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route3_Text_SignSouth:
+	.string "ROUTE 3\n"
+	.string "North to NGAMOTU$"

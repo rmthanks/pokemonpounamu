@@ -16,7 +16,6 @@ SPEC = dict(
     folder='Route2Bay', layout='LAYOUT_ROUTE2_BAY', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Mauville',
     conns={'MAP_AHURIRI_CITY': 2, 'MAP_ROUTE2_NORTH': 0},
-    defer_seams=['MAP_ROUTE2_NORTH'],
     rows=[
         #0         1         2         3         4
         #012345678901234567890123456789012345678901234567

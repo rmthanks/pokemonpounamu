@@ -20,8 +20,8 @@
       "direction": "right"
     },
     {
-      "map": "MAP_ROUTE5",
-      "offset": 0,
+      "map": "MAP_ROUTE5_POUNAMU",
+      "offset": -14,
       "direction": "down"
     }
   ],

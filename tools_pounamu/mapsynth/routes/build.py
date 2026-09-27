@@ -34,6 +34,8 @@ def build(spec):
     write = '--write' in sys.argv
     name = spec['folder']
     markers = ''.join(spec.get('objects', {}).keys()) + ''.join(spec.get('hidden', {}).keys())
+    if spec.get('seal'):
+        markers += spec['seal']['beyond']
     r = rk.from_ascii(name, spec['rows'], markers)
     errors = 0
     print(f'{name}: {r.W}x{r.H}')
@@ -111,6 +113,17 @@ def build(spec):
             if not any(c in back for c in allexits):
                 errors += fail('one-way trap (ledges?)', [cell])
                 break
+    if spec.get('seal'):
+        # story blockers on a dead end: what lies beyond them is out of reach while they stand,
+        # and the road really does carry on past them
+        seal = spec['seal']
+        beyond = r.marks.get(seal['beyond'], [])
+        stand = blocked | {placed[s][0] for s in seal['by'] if s in placed}
+        if any(c in r.reach(allexits, stand) for c in beyond):
+            errors += fail('the blockers do not seal the road', [seal['by']])
+        free = blocked - {placed[s][0] for s in seal['by'] if s in placed}
+        if not all(c in r.reach(allexits, free) for c in beyond):
+            errors += fail('the road does not carry on past the blockers', [seal['by']])
     main = r.reach(allexits, blocked)
     for suffix, ((x, y), face) in placed.items():
         near = any((x + dx, y + dy) in main for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
@@ -146,7 +159,8 @@ def build(spec):
     conns = [(cn['direction'], rk.folder_of(cn['map']), spec['conns'].get(cn['map'], cn['offset']))
              for cn in mj['connections']]
     water = lambda v: rk.BEH.get(v & 0x3FF, 0) in rk.WATER_BEH
-    reachable = r.reach(allexits)          # where the player can actually stand (objects aside)
+    standing = {placed[s][0] for s in placed}
+    reachable = r.reach(allexits, standing)  # where the player can actually stand, everyone in place
     probs, grid, src = cv.edge_problems(r.W, r.H, r.cells, border, conns, secondary,
                                         lambda x, y: (x, y) in reachable, water=water)
     skip_sides = {cn['direction'] for cn in mj['connections'] if cn['map'] in deferred}

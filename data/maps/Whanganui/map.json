@@ -16,12 +16,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE3_POUNAMU",
-      "offset": 0,
+      "offset": -18,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE1_KAPITI",
-      "offset": 0,
+      "offset": -18,
       "direction": "down"
     }
   ],
