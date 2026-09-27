@@ -23,7 +23,7 @@ SPEC = dict(
         "TTTTTTTT,,,,,,..**..PP............TTTTTTTTTT",
         "TTTTTTTT,,,,,,......PP............TTTTTTTTTT",
         "TTTTTTTT............PP..a.........TTTTTTTTTT",
-        "TTTTTTTT............PP............TTTTTTTTTT",
+        "TTTTTTTT............PP...........2TTTTTTTTTT",
         "TTTTTT........PPPPPPPP........TTTT..TTTTTTTT",  # 10
         "TTTTTT........PPPPPPPP........TTTT..TTTTTTTT",
         "TTTTTT........PP..........WWWWTTTT..TTTTTTTT",
@@ -65,17 +65,18 @@ SPEC = dict(
         "TTTTTT...............PP.......g.....TTTTTTTT",
         "TTTTTT...............PP.............TTTTTTTT",
         "TTTTTT..........**...PP...,,,,,,....TTTTTTTT",  # 50
-        "TTTTTT...............PP...,,,,,,....TTTTTTTT",
+        "TTTTTT...............PP...,,,,,,...1TTTTTTTT",
         "TTTTTTTTTT..,,,,,,.i.PP...,,,,,,TTTTTTTTTTTT",
         "TTTTTTTTTT..,,,,,,...PP...,,,,,,TTTTTTTTTTTT",
         "TTTTTTTTTT..,,,,,,...PP.........TTTTTTTTTTTT",
-        "TTTTTTTTTT..,,,,,,...PP.s.......TTTTTTTTTTTT",  # 55
+        "TTTTTTTTTT3.,,,,,,...PP.s.......TTTTTTTTTTTT",  # 55
         "TTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Wai', 'DOWN'), 'b': ('PRiley', 'LEFT'), 'c': ('PRuby', 'RIGHT'), 'd': ('PSam', 'LEFT'),
         'e': ('PSophie', 'DOWN'), 'f': ('PThomas', 'RIGHT'), 'g': ('PTyler', 'LEFT'), 'i': ('PWillow', 'RIGHT'),
     },

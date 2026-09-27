@@ -11,7 +11,7 @@ from build import build
 SPEC = dict(
     folder='Route35B', layout='LAYOUT_ROUTE35_B', weather='WEATHER_RAIN',
     tileset='gTileset_Petalburg',
-    conns={'MAP_ROUTE35_A': 0, 'MAP_OPOTIKI': 14},
+    conns={'MAP_ROUTE35_A': 0, 'MAP_OPOTIKI': 10},
     rows=[
         #0         1         2         3         4
         #012345678901234567890123456789012345678901234567
@@ -26,7 +26,7 @@ SPEC = dict(
         "TTTTTTTTTT......**...PP.......TTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTT..d........PP.......TTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTT.........PP.....TTTTBBBBBBBBTTTTTTTT",  # 10
-        "TTTTTTTTTTTT.........PP.....TTTTBBBBBBBBTTTTTTTT",
+        "TTTTTTTTTTTT.........PP.....TTTTBBBBBBB2TTTTTTTT",
         "TTTTTTTTTTTT.,,,,,,..PP.........BBBBBBSSSSSSSSSS",
         "TTTTTTTTTTTT.,,,,,,..PP.........BBBBBBSSSSSSSSSS",
         "TTTTTTTTTT...,,,,,,..PP.TT......BBBBBBSSSSSSSSSS",
@@ -49,7 +49,7 @@ SPEC = dict(
         "TTTTTTTTTT...WWWWWW..PP......BBBBBBSSSSSSSSSSSSS",
         "TTTTTTTTTT...WWWWWW..PP......BBBBBBSSSSSSSSSSSSS",
         "TTTTTTTTTT...........Pb......BBBBBBSSSSSSSSSSSSS",
-        "TTTTTTTTTTTT.........PP...TT...BBBBBBSSSSSSSSSSS",
+        "TTTTTTTTTTTT.........PP...TT...BBBBB3SSSSSSSSSSS",
         "TTTTTTTTTTTT.........PP...TT...BBBBBBSSSSSSSSSSS",  # 35
         "TTTTTTTTTTTT,,,,,,,,.PP........BBBBBBSSSSSSSSSSS",
         "TTTTTTTTTTTT,,,,,,,,.PP........BBBBBBSSSSSSSSSSS",
@@ -67,7 +67,7 @@ SPEC = dict(
         "TTTTTTTTTTTTTT..........,,,,,.PPBBBBBBSSSSSSSSSS",
         "TTTTTTTTTTTTTTTT....**..,,,,,.PPBBBBBBSSSSSSSSSS",  # 50
         "TTTTTTTTTTTTTTTT........,,,,,.PPBBBBBBSSSSSSSSSS",
-        "TTTTTTTTTTTTTTTT........k.....PPBBBBBBBBSSSSSSSS",
+        "TTTTTTTTTTTTTTTT........k.....PPBBBBBBB1SSSSSSSS",
         "TTTTTTTTTTTTTTTT..............PPBBBBBBBBSSSSSSSS",
         "TTTTTTTTTTTTTTTTTTTT,,,,......PPBBBBBBBBSSSSSSSS",
         "TTTTTTTTTTTTTTTTTTTT,,,,....s.PPBBBBBBBBSSSSSSSS",  # 55
@@ -77,6 +77,7 @@ SPEC = dict(
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTT..PP..BBBBBBSSSSSSSS",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Manaia', 'DOWN'), 'b': ('Aroha', 'LEFT'), 'c': ('PHuhana', 'RIGHT'), 'd': ('POriwa', 'RIGHT'),
         'e': ('PPeti', 'LEFT'), 'f': ('PRuta', 'RIGHT'), 'g': ('PMeri', 'RIGHT'), 'i': ('PRiria', 'LEFT'),
         'k': ('PKuini', 'DOWN'),

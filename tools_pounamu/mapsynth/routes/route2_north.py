@@ -12,7 +12,7 @@ from build import build
 SPEC = dict(
     folder='Route2North', layout='LAYOUT_ROUTE2_NORTH', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
-    conns={'MAP_ROUTE2_BAY': 0, 'MAP_WAIROA': 10},
+    conns={'MAP_ROUTE2_BAY': 0, 'MAP_WAIROA': 6},
     rows=[
         #0         1         2         3         4
         #012345678901234567890123456789012345678901234567
@@ -36,7 +36,7 @@ SPEC = dict(
         "TTTTTT..........PP..WWWWWWWWWWWW....TTTTTTTTTTTT",
         "TTTTTT..........PPa.WWWWWWWWWWWW....TTTTTTTTTTTT",
         "TTTTTT..........PP..WWWWWWWWWWWW....TTTTTTTTTTTT",
-        "TTTTTTTT....TT..PP..WWWWWWWWWWW...TTTTTTTTTTTTTT",
+        "TTTTTTTT....TT..PP..WWWWWWWWWWW2..TTTTTTTTTTTTTT",
         "TTTTTTTT....TT..PP................TTTTTTTTTTTTTT",
         "TTTTTTTT..TT....PP....**..TT......TTTTTTTTTTTTTT",
         "TTTTTTTT..TT....PP........TT......TTTTTTTTTTTTTT",
@@ -51,13 +51,13 @@ SPEC = dict(
         "TTTT..b.......PP......,,,,,,........TTTTTTTTTTTT",
         "TTTT..........PP......,,,,,,........TTTTTTTTTTTT",
         "TTTTTT....TT..PP............**TT..TTTTTTTTTTTTTT",
-        "TTTTTT....TT..PP..............TT..TTTTTTTTTTTTTT",
+        "TTTTTT3...TT..PP..............TT..TTTTTTTTTTTTTT",
         "TTTTTTTT......PP..........BBBBBB..TTTTTTTTTTTTTT",
         "TTTTTTTT......PP........BBBBBBBBBBTTTTTTTTTTTTTT",
         "TTTTTTTTTT....PP......BBBBBBBBBBBBBBTTTTTTTTTTTT",
         "TTTTTTTTTT....PP....BBBBBBBBBBBBBBBBTTTTTTTTTTTT",
         "TTTTTTTTTTTT..PP....BBBBBBBBBBBBBBSSSSSSSSSSSSSS",
-        "TTTTTTTTTTTT..PP....BBBBBBBBBBBBBBSSSSSSSSSSSSSS",
+        "TTTTTTTTTTTT..PP....BBBBBBBBBBBBB1SSSSSSSSSSSSSS",
         "TTTTTTTTTTTT..PP..s..BBBBBBBBBBBBSSSSSSSSSSSSSSS",
         "TTTTTTTTTTTT..PP......BBBBBBBBBBBSSSSSSSSSSSSSSS",
         "TTTTTTTTTTTT..PP......BBBBBBBBBBSSSSSSSSSSSSSSSS",
@@ -70,6 +70,7 @@ SPEC = dict(
         "TTTTTTTTTTTTTTPP..TTTTTTTTTTBBBBSSSSSSSSSSSSSSSS",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Rewi', 'RIGHT'), 'b': ('PIhaia', 'RIGHT'), 'c': ('PHine', 'LEFT'), 'd': ('PRipeka', 'LEFT'),
         'e': ('PMiro', 'LEFT'), 'f': ('Piri', 'LEFT'), 'g': ('PTui', 'DOWN'),
     },

@@ -10,7 +10,7 @@ from build import build
 SPEC = dict(
     folder='Route5Ranges', layout='LAYOUT_ROUTE5_RANGES', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
-    conns={'MAP_TAUPO': 2},
+    conns={'MAP_TAUPO': 0},
     rows=[
         #0         1         2         3         4
         #012345678901234567890123456789012345678901234567
@@ -39,11 +39,12 @@ SPEC = dict(
         "TTTTTTTT..........,,,,,,.i..WWWWWW..,,TTTTTTTTTT",
         "TTTTTTTT..........,,,,,,....WWWWWW..,,TTTTTTTTTT",
         "TTTTTTTT..........,,,,,,**............TTTTTTTTTT",
-        "TTTTTTTT..........,,,,,,..............TTTTTTTTTT",  # 25
+        "TTTTTTTT1.........,,,,,,.............2TTTTTTTTTT",  # 25
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None),
         'a': ('Grunt1', 'LEFT'), 'b': ('Grunt2', 'LEFT'), 'c': ('PPete', 'RIGHT'), 'd': ('PRata', 'DOWN'),
         'e': ('PSid', 'LEFT'), 'f': ('PTila', 'DOWN'), 'g': ('PUmi', 'LEFT'), 'i': ('PVada', 'UP'),
         'k': ('PWes', 'RIGHT'),

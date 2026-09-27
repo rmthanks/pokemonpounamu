@@ -143,6 +143,9 @@ TESTS = {
     'tn_temata_gate': T('MAP_HERETAUNGA_TOWN', 38, 45, 'run 60\nshot a\nhold DOWN 32\nrun 60\nshot b\nmash A 6 20\nrun 60\nshot c\n', intro=4),
     'tn_look_whakatu': T('MAP_WHAKATU', 15, 13, 'run 60\nshot a\nhold RIGHT 96\nrun 20\nshot b\nhold LEFT 192\nhold DOWN 128\nrun 20\nshot c\n'),
     'tn_look_otautahi': T('MAP_OTAUTAHI', 19, 15, 'run 60\nshot a\nhold DOWN 96\nrun 20\nshot b\nhold RIGHT 160\nrun 20\nshot c\n'),
+    'it_orchard': T('MAP_ORCHARD_ROAD', 26, 39, 'tap RIGHT\nrun 20\nshot a\ntap A\nrun 90\nshot b\ntap A\nrun 60\nshot c\ntap A\nrun 60\nshot d\n'),
+    'it_desert': T('MAP_ROUTE1_DESERT', 34, 51, 'tap DOWN\nrun 20\nshot a\ntap A\nrun 90\nshot b\ntap A\nrun 60\nshot c\ntap A\nrun 60\nshot d\n'),
+    'it_route7': T('MAP_ROUTE7_POUNAMU', 6, 3, 'tap UP\nrun 20\nshot a\ntap A\nrun 90\nshot b\ntap A\nrun 60\nshot c\ntap A\nrun 60\nshot d\n'),
 }
 
 def main(name):

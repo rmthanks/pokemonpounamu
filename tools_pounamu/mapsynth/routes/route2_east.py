@@ -10,7 +10,7 @@ from build import build
 SPEC = dict(
     folder='Route2East', layout='LAYOUT_ROUTE2_EAST', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
-    conns={'MAP_WAIROA': 12, 'MAP_TURANGA': 14},
+    conns={'MAP_WAIROA': 8, 'MAP_TURANGA': 8},
     rows=[
         #0         1         2         3         4
         #01234567890123456789012345678901234567890123
@@ -25,7 +25,7 @@ SPEC = dict(
         "TTTTTTTT..TT.........PP...**....TTTTTTTTTTTT",
         "TTTTTTTT..TT.*.......PP.........TTTTTTTTTTTT",
         "TTTTTT...............PP...BBBBBBTTTTTTTTTTTT",  # 10
-        "TTTTTT...............PP...BBBBBBTTTTTTTTTTTT",
+        "TTTTTT...............PP...BBBBB3TTTTTTTTTTTT",
         "TTTTTT....,,,,.......PP...BBBBSSSSSSSSTTTTTT",
         "TTTTTT....,,,,.......PP...BBBBSSSSSSSSTTTTTT",
         "TTTTTT...............PP..aBBBBSSSSSSSSTTTTTT",
@@ -41,7 +41,7 @@ SPEC = dict(
         "TTTTTTTTTT...........PP.BBBBBBBBSSSSSSTTTTTT",
         "TTTTTTTTTT...........PP.BBBBBBBBSSSSSSTTTTTT",  # 25
         "TTTTTTTTTT...........PP.BBBBBBBBBBBBBBTTTTTT",
-        "TTTTTTTTTT...........PP.BBBBBBBBBBBBBBTTTTTT",
+        "TTTTTTTTTT...........PP.BBBBBBBBBBBBB1TTTTTT",
         "TTTTTTTTTT...........PP...TTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTT...........PP...TTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTT.........PP...TTTTTTTTTTTTTTTTTT",  # 30
@@ -71,11 +71,12 @@ SPEC = dict(
         "TTTTTT..f..........PP........**.TTTTTTTTTTTT",
         "TTTTTT.............PP..g........TTTTTTTTTTTT",  # 55
         "TTTTTTTTTT....s....PP...........TTTTTTTTTTTT",
-        "TTTTTTTTTT.........PP...........TTTTTTTTTTTT",
+        "TTTTTTTTTT.........PP..........2TTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Mihi', 'RIGHT'), 'b': ('Hemi', 'LEFT'), 'c': ('PMatiu', 'LEFT'), 'd': ('PRawiri', 'RIGHT'),
         'e': ('PTimoti', 'LEFT'), 'f': ('PPetera', 'RIGHT'), 'g': ('PHohepa', 'LEFT'),
     },

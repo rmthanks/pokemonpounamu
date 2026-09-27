@@ -27,7 +27,7 @@ SPEC = dict(
         "TTTT................PP.WWWWWTTTT",
         "TTTTLLLLLLLLLLLLL...PP.WWWWWTTTT",  # 15
         "TTTT................PP.WWWWWTTTT",
-        "TTTT.,,,,,,,,,,.....PP......TTTT",
+        "TTTT.,,,,,,,,,,.....PP.....2TTTT",
         "TTTT..,,,,,,,,,.....PP..TT..TTTT",
         "TTTT..,,,,,,,,....d.PP..TT..TTTT",
         "TTTT...,,,,,........PP..,,,,TTTT",  # 20
@@ -49,7 +49,7 @@ SPEC = dict(
         "TTTT..**......PP..,,,,,,....TTTT",
         "TTTT...*......PP.h,,,,,,,...TTTT",
         "TTTTTT..TT....PP...,,,,,,...TTTT",
-        "TTTTTT..TT....PP....,,,,....TTTT",
+        "TTTTTT..TT....PP....,,,,...1TTTT",
         "TTTTTTTT......PP........TTTTTTTT",  # 40
         "TTTTTTTT......PP........TTTTTTTT",
         "TTTTTTTTTT....PP....TTTTTTTTTTTT",
@@ -60,6 +60,7 @@ SPEC = dict(
         "TTTTTTTTTTTTTTPPTTTTTTTTTTTTTTTT",  # 47 to Heretaunga
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None),
         'a': ('Anaru', 'LEFT'), 'b': ('Mereana', 'LEFT'), 'c': ('Wiremu', 'RIGHT'),
         'd': ('PWiremu', 'RIGHT'), 'e': ('PAnahera', 'RIGHT'), 'f': ('PMere', 'LEFT'),
         'g': ('PAroha', 'RIGHT'), 'h': ('PTane', 'LEFT'),

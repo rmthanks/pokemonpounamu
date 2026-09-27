@@ -11,7 +11,7 @@ from build import build
 SPEC = dict(
     folder='Route6', layout='LAYOUT_ROUTE6', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
-    conns={'MAP_WAITOHI': 10, 'MAP_WHAKATU': 16},
+    conns={'MAP_WAITOHI': 10, 'MAP_WHAKATU': 8},
     pond_open_top=list(range(24, 30)),
     rows=[
         #0         1         2         3         4
@@ -29,7 +29,7 @@ SPEC = dict(
         "TTTTTTTT..,,,,,,.PP...TTWWWWWWTTTT....TTTTTT",  # 10
         "TTTTTTTT..,,,,,,.PP...TTWWWWWWTTTT....TTTTTT",
         "TTTTTT...........PP...TTWWWWWWTTTT....TTTTTT",
-        "TTTTTT...........PP...TTWWWWWWTTTT....TTTTTT",
+        "TTTTTT...........PP...TTWWWWWWTTTT...2TTTTTT",
         "TTTTTT........b..PP.................TTTTTTTT",
         "TTTTTT...........PP.................TTTTTTTT",  # 15
         "TTTTTT........**.PP.................TTTTTTTT",
@@ -53,7 +53,7 @@ SPEC = dict(
         "TTTTTTTT..TT...........PP.............TTTTTT",
         "TTTTTTTT..TT...........PP.............TTTTTT",  # 35
         "TTTTTT.................PP.WWWWWW......TTTTTT",
-        "TTTTTT.................PP.WWWWWW......TTTTTT",
+        "TTTTTT.................PP.WWWWWW.....1TTTTTT",
         "TTTTTT............g....PP.WWWWWW....TTTTTTTT",
         "TTTTTT.................PP.WWWWWW....TTTTTTTT",
         "TTTTTT......,,,,,,,,...PP.WWWWWW....TTTTTTTT",  # 40
@@ -69,7 +69,7 @@ SPEC = dict(
         "TTTTTTTTTT.............PP.,,,,,,TTTTTTTTTTTT",  # 50
         "TTTTTTTTTT.............PP.,,,,,,TTTTTTTTTTTT",
         "TTTTTTTTTT....TT.......PP.,,,,,,TTTTTTTTTTTT",
-        "TTTTTTTTTT....TT.......PP.,,,,,,TTTTTTTTTTTT",
+        "TTTTTTTTTT3...TT.......PP.,,,,,,TTTTTTTTTTTT",
         "TTTTTTTTTTTT...........PP.......TTTTTTTTTTTT",
         "TTTTTTTTTTTT...........PP.......TTTTTTTTTTTT",  # 55
         "TTTTTTTTTTTT,,,,.......PP...k.TTTTTTTTTTTTTT",
@@ -82,6 +82,7 @@ SPEC = dict(
         "TTTTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Sol', 'LEFT'), 'b': ('Nova', 'RIGHT'), 'c': ('PNina', 'DOWN'), 'd': ('POtis', 'LEFT'),
         'e': ('PPippa', 'RIGHT'), 'f': ('PReid', 'LEFT'), 'g': ('PStella', 'DOWN'), 'i': ('PTroy', 'RIGHT'),
         'k': ('PUna', 'LEFT'),

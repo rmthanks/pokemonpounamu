@@ -17,7 +17,7 @@ SPEC = dict(
         #012345678901234567890123456789012345678901234567
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTT..PP..BBBBBBSSSSSSSS",  # 0
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTT..PP..BBBBBBSSSSSSSS",
-        "TTTTTTTTTTTTTTTTTTTT....s.....PP..BBBBBBSSSSSSSS",
+        "TTTTTTTTTTTTTTTTTTTT2...s.....PP..BBBBBBSSSSSSSS",
         "TTTTTTTTTTTTTTTTTTTT..........PP..BBBBBBSSSSSSSS",
         "TTTTTTTTRRRRRRRR.n............PPBBBBBBBBSSSSSSSS",
         "TTTTTTTTRRRRRRRR..............PPBBBBBBBBSSSSSSSS",  # 5
@@ -64,7 +64,7 @@ SPEC = dict(
         "TTTTTTTTTTTTTT..,,,,,,..PP........BBBBBBSSSSSSSS",
         "TTTTTTTTTTTTTT..,,,,,,..PP........BBBBBBSSSSSSSS",
         "TTTTTTTTTTTTTTTT,,,,,,..PP..b.....BBBBBBSSSSSSSS",
-        "TTTTTTTTTTTTTTTT,,,,,,..PP........BBBBBBSSSSSSSS",
+        "TTTTTTTTTTTTTTTT,,,,,,..PP........BBBBB3SSSSSSSS",
         "TTTTTTTTTTTTTTTT........PP..........BBTT________",  # 50
         "TTTTTTTTTTTTTTTT........PP..........BBTT________",
         "TTTTTTTTTTTTTTTT........PPPPPPPPPP..BBTTTTTTTTTT",
@@ -76,11 +76,12 @@ SPEC = dict(
         "TTTTTTTTTTTTTTTTTT..........s...PPTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTT..............PPTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTT..........PPTTTTTTTTTTTTTT",  # 60
-        "TTTTTTTTTTTTTTTTTTTTTT..........PPTTTTTTTTTTTTTT",
+        "TTTTTTTTTTTTTTTTTTTTTT1.........PPTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTPPTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTPPTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Tai', 'UP'), 'b': ('Nikora', 'LEFT'), 'c': ('Tawhai', 'RIGHT'), 'd': ('PEruera', 'RIGHT'),
         'e': ('PHirini', 'DOWN'), 'f': ('PWetini', 'LEFT'), 'g': ('PMihi', 'RIGHT'), 'i': ('PNgaio', 'RIGHT'),
         'k': ('PRima', 'DOWN'), 'm': ('PKawe', 'LEFT'), 'n': ('DAWNJOB', 'RIGHT'),

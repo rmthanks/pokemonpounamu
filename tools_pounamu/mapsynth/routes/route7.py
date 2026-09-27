@@ -11,13 +11,13 @@ from build import build
 SPEC = dict(
     folder='Route7', layout='LAYOUT_ROUTE7', weather='WEATHER_RAIN',
     tileset='gTileset_Petalburg',
-    conns={'MAP_WHAKATU': 0, 'MAP_OTAUTAHI': 14},
+    conns={'MAP_WHAKATU': 0, 'MAP_OTAUTAHI': 2},
     rows=[
         #0         1         2         3         4
         #01234567890123456789012345678901234567890123
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",  # 0
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-        "TTTTTT..................RRRRRRRRRR......TTTT",
+        "TTTTTT2.................RRRRRRRRRR......TTTT",
         "TTTTTT..................RRRRRRRRRR......TTTT",
         "TTTTTT..q...............RRQQQQQQRR......TTTT",
         "TTTTTT..................RRQQQQQQRR......TTTT",  # 5
@@ -54,7 +54,7 @@ SPEC = dict(
         "TTTT....WWWWW.....,,.PP.,,,,,,......TTTTTTTT",
         "TTTT....WWWWW.....,,.PP.,,,,,,......TTTTTTTT",
         "TTTT....WWWWW........PP..........e....TTTTTT",
-        "TTTT.................PP...............TTTTTT",
+        "TTTT3................PP...............TTTTTT",
         "TTTTTT........**.....PP.TT............TTTTTT",  # 40
         "TTTTTT...............PP.TT............TTTTTT",
         "TTTTTT,,,,,,.........PP...............TTTTTT",
@@ -66,7 +66,7 @@ SPEC = dict(
         "TTTTTTTT..f..........PP.,,,,,,......TTTTTTTT",
         "TTTTTTTT.............PP.,,,,,,......TTTTTTTT",
         "TTTTTTTT.............PP.,,,,,,...g..TTTTTTTT",  # 50
-        "TTTTTTTT.............PP.,,,,,,......TTTTTTTT",
+        "TTTTTTTT.............PP.,,,,,,.....1TTTTTTTT",
         "TTTTTTTTTT....j......PP...........TTTTTTTTTT",
         "TTTTTTTTTT...........PP...........TTTTTTTTTT",
         "TTTTTTTTTTTTTTTT.....PP.....TTTTTTTTTTTTTTTT",
@@ -93,6 +93,7 @@ SPEC = dict(
         "TTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTT",  # 75
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Kae', 'LEFT'), 'b': ('Rangi', 'RIGHT'), 'c': ('PVince', 'DOWN'), 'd': ('PWade', 'RIGHT'),
         'e': ('PXimena', 'LEFT'), 'f': ('PYvette', 'DOWN'), 'g': ('PZach', 'LEFT'), 'i': ('PAki', 'DOWN'),
         'k': ('PBex', 'RIGHT'), 'm': ('PCal', 'DOWN'), 'n': ('PDee', 'RIGHT'), 'o': ('PEli', 'LEFT'),

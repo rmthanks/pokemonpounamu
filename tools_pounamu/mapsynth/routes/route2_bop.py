@@ -11,7 +11,7 @@ from build import build
 SPEC = dict(
     folder='Route2BoP', layout='LAYOUT_ROUTE2_BOP', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
-    conns={'MAP_OPOTIKI': 14, 'MAP_TAURANGA': 12},
+    conns={'MAP_OPOTIKI': 10, 'MAP_TAURANGA': 12},
     rows=[
         #0         1         2         3         4
         #012345678901234567890123456789012345678901234567
@@ -33,7 +33,7 @@ SPEC = dict(
         "TT......b..........PPPPPPPPPPPPBBBBBBSSSSSSSSSSS",  # 15
         "TT......................,,,,.PPBBBBBBSSSSSSSSSSS",
         "TT......................,,,,.PPBBiBBBSSSSSSSSSSS",
-        "TTTT..,,,,,,,,..........,,,,.PPBBBBBBBBSSSSSSSSS",
+        "TTTT..,,,,,,,,..........,,,,.PPBBBBBBB2SSSSSSSSS",
         "TTTT..,,,,,,,,..........,,,,.PPBBBBBBBBSSSSSSSSS",
         "TTTT..,,,,,,,,...............PPBBBBBBBBSSSOOSSSS",  # 20
         "TTTT..,,,,,,,,...............PPBBBBBBBBSSSOOSSSS",
@@ -57,7 +57,7 @@ SPEC = dict(
         "TTTTTT.......................PPBBBBBBSSSSSSSSSSS",
         "TTTTTT.........g.............PPBBBBBBSSSSSSSSSSS",  # 40
         "TTTTTT.......................PPBBBBBBSSSSSSSSSSS",
-        "TTTTTTTTTT...................PPBBBBBBBBSSSSSSSSS",
+        "TTTTTTTTTT...................PPBBBBBBB1SSSSSSSSS",
         "TTTTTTTTTT...................PPBBBdBBBBSSSSSSSSS",
         "TTTTTTTT.............PPPPPPPPPPBBBBBBBBSSSSSSSSS",
         "TTTTTTTT.............PPPPPPPPPPBBBBBBBBSSSSSSSSS",  # 45
@@ -76,11 +76,12 @@ SPEC = dict(
         "TTTTTTTTTTTTTTTT.....PP...........TTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTT...s.PP...........TTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTT.....PP...........TTTTTTTTTTTTTT",  # 60
-        "TTTTTTTTTTTTTTTT.....PP...........TTTTTTTTTTTTTT",
+        "TTTTTTTTTTTTTTTT.....PP..........3TTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Rangi', 'LEFT'), 'b': ('Kiri', 'RIGHT'), 'c': ('PPare', 'DOWN'), 'd': ('PAnika', 'UP'),
         'e': ('PBeau', 'LEFT'), 'f': ('PBlake', 'RIGHT'), 'g': ('PCaleb', 'RIGHT'), 'i': ('PCharlie', 'DOWN'),
         'k': ('PDylan', 'LEFT'),

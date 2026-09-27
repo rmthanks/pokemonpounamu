@@ -8,7 +8,7 @@ from build import build
 SPEC = dict(
     folder='Route5', layout='LAYOUT_ROUTE5', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
-    conns={'MAP_ROTORUA': 14, 'MAP_TAUPO': 16},
+    conns={'MAP_ROTORUA': 0, 'MAP_TAUPO': 8},
     rows=[
         #0         1         2         3         4
         #01234567890123456789012345678901234567890123
@@ -23,7 +23,7 @@ SPEC = dict(
         "TTTT......,,,,,,,,,,.PP...WWWWWW....TTTTTTTT",
         "TTTT......,,,,,,,,,,.PP...WWWWWW....TTTTTTTT",
         "TTTT....TT...........PP...WWWWWW....TTTTTTTT",  # 10
-        "TTTT....TT...........PP.............TTTTTTTT",
+        "TTTT....TT...........PP............2TTTTTTTT",
         "TTTTTT..TT...........PP,,,,,,,,,..TTTTTTTTTT",
         "TTTTTT..TT...........PP,,,,,,,,,..TTTTTTTTTT",
         "TTTTTT...............PP.**........TTTTTTTTTT",
@@ -47,7 +47,7 @@ SPEC = dict(
         "TTTT..,,,,,,...PP.........TT..TT....TTTTTTTT",
         "TTTT..,,,,,,...PP.........TT..TT....TTTTTTTT",
         "TTTT...........PP.**......TT..TT....TTTTTTTT",
-        "TTTT...........PP.........TT..TT....TTTTTTTT",  # 35
+        "TTTT...........PP.........TT..TT...1TTTTTTTT",  # 35
         "TTTTTT..f......PP.................TTTTTTTTTT",
         "TTTTTT.........PP.................TTTTTTTTTT",
         "TTTTTT.........PPPPPPPPPP.........TTTTTTTTTT",
@@ -69,11 +69,12 @@ SPEC = dict(
         "TTTTTTTTTT.............PP.,,,,TTTTTTTTTTTTTT",
         "TTTTTTTTTT.............PP.,,,,TTTTTTTTTTTTTT",  # 55
         "TTTTTTTTTT......**.....PP.s...TTTTTTTTTTTTTT",
-        "TTTTTTTTTT.............PP.....TTTTTTTTTTTTTT",
+        "TTTTTTTTTT3............PP.....TTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTT.PP.TTTTTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Pita', 'LEFT'), 'b': ('Eru', 'RIGHT'), 'c': ('PJake', 'RIGHT'), 'd': ('PJess', 'DOWN'),
         'e': ('PKayla', 'LEFT'), 'f': ('PLiam', 'RIGHT'), 'g': ('PLucas', 'LEFT'), 'i': ('PMaddie', 'DOWN'),
         'k': ('PMason', 'LEFT'), 'm': ('ROCKJOB', 'RIGHT'),

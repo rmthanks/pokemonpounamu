@@ -14,7 +14,7 @@ SPEC = dict(
         #012345678901234567890123456789012345678901234567890123456789
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",  # 0
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-        "TTTTTT........,,,,,.TTTTTTTTTT....RRRRRR..................TT",
+        "TTTTTT........,,,,,.TTTTTTTTTT....RRRRRR.................1TT",
         "TTTTTT........,,,,,.TTTTTTTTTT....RQQQQR..................TT",
         "TTTTTT........,,,,,.TTTTTTTTTT**..RQQQQR..TT......TT..TT..TT",
         "TTTTTT........,,,,,.TTTTTTTTTT....RRRRRR..TT......TT..TT..TT",  # 5
@@ -35,13 +35,14 @@ SPEC = dict(
         "TTTTTTTT....WWWWWWWWWWWW,,,,,,,,..TTTTTTTT..TT..TT........TT",  # 20
         "TTTTTTTT....WWWWWWWWWWWW,,,,,,,,..TTTTTTTT..TT..TT........TT",
         "TTTTTTTT..........................TTTTTTTT..........TTTTTTTT",
-        "TTTTTTTT..................f.......TTTTTTTT..........TTTTTTTT",
+        "TTTTTTTT..................f......3TTTTTTTT..........TTTTTTTT",
         "TTTTTTTT....**....TTTTTTTTTTTTTTTTTTTTTTTT..........TTTTTTTT",
-        "TTTTTTTT..........TTTTTTTTTTTTTTTTTTTTTTTT..........TTTTTTTT",  # 25
+        "TTTTTTTT..........TTTTTTTTTTTTTTTTTTTTTTTT.........2TTTTTTTT",  # 25
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
         "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
     ],
     objects={
+        '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Roadworks', 'DOWN'), 'b': ('PElla', 'DOWN'), 'c': ('PFinn', 'UP'), 'd': ('PHarper', 'RIGHT'),
         'e': ('PHunter', 'LEFT'), 'f': ('PIsla', 'UP'), 'g': ('PJack', 'LEFT'),
     },
