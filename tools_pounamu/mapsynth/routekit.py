@@ -246,7 +246,9 @@ class Route:
         W, H = self.W, self.H
         # the autotiled classes see everything else as a neighbour of another class
         # trees, ponds, ledges and rock look like "something else" (X) to the autotiler
-        sk = [''.join(c if c in '.,PS*pB' else 'X' for c in self.cls[y]) for y in range(H)]
+        # (a town can say its buildings stand on sand: fixed_class 'B' - Dewford's houses do)
+        fc = getattr(self, 'fixed_class', 'X')
+        sk = [''.join(c if c in '.,PS*pB' else (fc if c == '#' else 'X') for c in self.cls[y]) for y in range(H)]
         # a beach meets grass and trees the way vanilla does it: its outer ring of sand is
         # drawn with the soft-edged path tiles, the rest with beach sand. So for tiling, beach
         # cells that touch land count as path, paths see any sand as path, and the sea and the

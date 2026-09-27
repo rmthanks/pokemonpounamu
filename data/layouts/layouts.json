@@ -9418,10 +9418,10 @@
     {
       "id": "LAYOUT_TURANGA",
       "name": "Turanga_Layout",
-      "width": 26,
-      "height": 22,
+      "width": 40,
+      "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Turanga/border.bin",
       "blockdata_filepath": "data/layouts/Turanga/map.bin",
       "layout_version": "emerald"

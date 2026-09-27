@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE2_EAST",
-      "offset": -14,
+      "offset": -8,
       "direction": "down"
     },
     {
@@ -28,8 +28,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 23,
-      "y": 9,
+      "x": 4,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -41,10 +41,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WORKER_F",
-      "x": 11,
-      "y": 3,
+      "x": 14,
+      "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -54,8 +54,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 14,
-      "y": 9,
+      "x": 10,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -67,10 +67,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 20,
+      "x": 31,
       "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -80,8 +80,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 4,
-      "y": 12,
+      "x": 24,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -94,43 +94,43 @@
   ],
   "warp_events": [
     {
-      "x": 4,
+      "x": 5,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_TURANGA_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 9,
+      "x": 17,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_TURANGA_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
-      "y": 6,
+      "x": 23,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_TURANGA_SURF_SHACK",
       "dest_warp_id": "0"
     },
     {
-      "x": 4,
-      "y": 16,
+      "x": 7,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_TURANGA_VINEYARD_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 11,
-      "y": 16,
+      "x": 17,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_TURANGA_KAPA_HAKA_HALL",
       "dest_warp_id": "0"
     },
     {
-      "x": 16,
-      "y": 16,
+      "x": 18,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_TURANGA_NANNY_FLAT",
       "dest_warp_id": "0"
@@ -139,17 +139,25 @@
   "coord_events": [],
   "bg_events": [
     {
+      "type": "hidden_item",
+      "x": 23,
+      "y": 21,
+      "elevation": 3,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_UNUSED_0x268"
+    },
+    {
       "type": "sign",
-      "x": 19,
-      "y": 6,
+      "x": 25,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Turanga_EventScript_Museum"
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 9,
+      "x": 6,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Turanga_EventScript_TrackSign"
@@ -157,18 +165,10 @@
     {
       "type": "sign",
       "x": 10,
-      "y": 12,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Turanga_EventScript_TownSign"
-    },
-    {
-      "type": "hidden_item",
-      "x": 7,
-      "y": 14,
-      "elevation": 3,
-      "item": "ITEM_STAR_PIECE",
-      "flag": "FLAG_UNUSED_0x268"
     }
   ]
 }

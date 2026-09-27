@@ -119,16 +119,15 @@ TESTS = {
     'r1s_top': T('MAP_ROUTE1_SOUTH', 23, 3, 'run 60\nshot a\nhold UP 80\nrun 30\nshot b\n'),
     'r1s_coast': T('MAP_ROUTE1_SOUTH', 36, 44, 'run 60\nshot a\n'),
     'r1s_bottom': T('MAP_ROUTE1_SOUTH', 27, 67, 'run 60\nshot a\nhold DOWN 80\nrun 30\nshot b\n'),
-    'tn_turanga': T('MAP_TURANGA', 20, 12, 'run 60\nshot a\nhold RIGHT 48\nrun 20\nshot b\nhold UP 64\nrun 20\nshot c\n'),
     'tn_taupo': T('MAP_TAUPO', 16, 14, 'run 60\nshot a\nhold DOWN 32\nrun 20\nshot b\n'),
     'tn_ngamotu': T('MAP_NGAMOTU', 22, 14, 'run 60\nshot a\nhold DOWN 48\nrun 20\nshot b\n'),
     'tn_whanganui': T('MAP_WHANGANUI', 14, 8, 'run 60\nshot a\nhold DOWN 48\nrun 20\nshot b\n'),
     'tn_waitohi': T('MAP_WAITOHI', 12, 12, 'run 60\nshot a\nhold RIGHT 48\nrun 20\nshot b\n'),
-    'tn_turanga_pc': T('MAP_TURANGA', 4, 8, 'run 60\nhold UP 40\nrun 90\nshot a\nhold DOWN 40\nrun 90\nshot b\n'),
     'surf35a': T('MAP_ROUTE35_A', 38, 16, 'run 60\ntap RIGHT\nrun 10\ntap A\nrun 60\ntap A\nrun 40\nmash A 6 20\nrun 200\nshot a\nhold RIGHT 16\nhold UP 400\nrun 30\nshot b\nhold DOWN 400\nrun 30\nshot c\n', party=[]),
     'r2n_lake': T('MAP_ROUTE2_NORTH', 18, 17, 'run 60\nshot a\nhold DOWN 160\nrun 30\nshot b\n'),
     'tn_wairoa': T('MAP_WAIROA', 6, 9, 'run 60\nshot a\nhold UP 16\nrun 150\nshot b\nhold DOWN 16\nrun 150\nshot c\nhold RIGHT 160\nhold UP 32\nrun 150\nshot d\nhold DOWN 16\nrun 150\nshot e\nhold DOWN 16\nhold LEFT 80\nhold DOWN 128\nhold LEFT 80\nhold UP 16\nrun 150\nshot f\nhold DOWN 16\nrun 150\nshot g\nhold RIGHT 80\nhold DOWN 112\nrun 30\nshot h\n'),
     'tn_rotorua': T('MAP_ROTORUA', 36, 14, 'run 60\nshot a\nhold RIGHT 64\nrun 20\nshot b\nhold LEFT 64\nhold LEFT 464\nshot c\nhold UP 16\nrun 150\nshot d\nhold DOWN 16\nrun 150\nhold RIGHT 96\nhold UP 16\nrun 150\nshot e\nhold DOWN 16\nrun 150\nhold RIGHT 192\nhold UP 48\nrun 150\nshot f\nhold DOWN 16\nrun 150\nhold DOWN 160\nhold RIGHT 32\nhold UP 16\nrun 150\nshot g\nhold DOWN 16\nrun 150\nhold RIGHT 64\nhold UP 16\nrun 150\nshot h\nhold DOWN 16\nrun 150\nhold LEFT 96\nhold DOWN 16\nhold LEFT 80\nhold DOWN 128\nrun 30\nshot i\n'),
+    'tn_turanga': T('MAP_TURANGA', 12, 5, 'run 60\nhold UP 96\nrun 30\nshot n\nhold DOWN 96\nhold DOWN 48\nhold LEFT 112\nhold UP 32\nrun 150\nshot a\nhold DOWN 16\nrun 150\nhold RIGHT 192\nhold UP 16\nrun 150\nshot b\nhold DOWN 16\nrun 150\nhold RIGHT 64\nhold DOWN 144\nhold LEFT 64\nhold UP 16\nrun 150\nshot c\nhold DOWN 16\nrun 150\nhold RIGHT 96\nhold UP 16\nrun 150\nshot d\nhold DOWN 16\nrun 150\nhold DOWN 80\nhold LEFT 80\nhold UP 16\nrun 150\nshot e\nhold DOWN 16\nrun 150\nhold LEFT 176\nhold UP 32\nrun 150\nshot f\nhold DOWN 16\nrun 150\nhold RIGHT 96\nhold DOWN 112\nrun 30\nshot g\n'),
 }
 
 def main(name):

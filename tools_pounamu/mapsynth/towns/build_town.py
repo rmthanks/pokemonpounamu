@@ -110,6 +110,7 @@ def build(spec):
     use_secondary(tileset)
     r = rk.from_ascii(name, spec['rows'], '')
     r.pond_open_top = set(spec.get('pond_open_top', ()))
+    r.fixed_class = spec.get('fixed_class', 'X')
     errors = 0
     print(f'{name}: {r.W}x{r.H} drawn with {tileset}')
     if r.snap_warnings:
@@ -140,11 +141,24 @@ def build(spec):
     # signs are fixed sign posts
     for sx, sy, _ in spec.get('signs', []):
         r.cls[sy][sx] = '#'; r.fix[(sx, sy)] = rk.val(rk.SIGN)
+    # jetties: plank walks out over the sea (Dewford's dock, stretched). The sea is drawn
+    # as if the jetty weren't there (open water all round it), then the planks go on top.
+    jet = {}
+    if spec.get('jetties'):
+        dock = get_stamp('dew.dock')['cells']
+        for jx, jy, n in spec['jetties']:
+            for i in range(n):
+                jet[(jx + i, jy)] = dock[0][0 if i == 0 else 1]
+                jet[(jx + i, jy + 1)] = dock[1][0 if i == 0 else 1]
+        for (x, y) in jet:
+            r.cls[y][x] = 'S'
 
     shapes = rk.lint_shapes(r)
     if shapes:
         errors += fail('shapes the tiles cannot draw', shapes)
     r.render(seed=spec.get('seed', 1))
+    for (x, y), v in jet.items():
+        r.cells[y * r.W + x] = v
     bad = rk.check_trees(r)
     if bad:
         errors += fail('broken trees', bad)
