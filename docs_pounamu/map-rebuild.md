@@ -3,7 +3,8 @@
 ## Status (morning of Mon 28 Sept 2026)
 Every route and every template town has been rebuilt; the whole-region audit is clean on the
 Pounamu outdoor maps (the few flags left are listed at the end, with why). Tonight's commits run
-from ae70952a (Orchard Road) to 84a9cab8 on main.
+from ae70952a (Orchard Road) to 16cc8f63 on main. Every route and town now rebuilds
+byte-identically from its spec (all 16 route specs and 13 town specs pass their gates).
 
 - **Routes (16):** Orchard Road, Route 2 Bay, Route 2 North, Route 2 East, Route 35 A and B,
   Route 2 (BoP), Route 36, Route 5, Route 5 Ranges, Desert Road (Rangipo), Route 43, Route 3,
@@ -31,7 +32,15 @@ from ae70952a (Orchard Road) to 84a9cab8 on main.
   88x46): bush and water added north and west so the sea border never shows past the museum and
   department store (fix_tamaki_edges.py).
 
+- **Item balls:** 48 on the 17 routes (none before), two or three per route on the level curve:
+  Potions and Poke Balls on Orchard Road up to Max Revives and PP Ups on Route 1 South, Rare
+  Candies on Routes 5 and 7 (seed_items.py; flags 0x4BB-0x4DF, 0x493-0x49D).
+
 ## Game-breaking things found and fixed tonight
+- **Old saves would have loaded the wrong map.** Tamaki's new layout had gone into layouts.json
+  mid-list and its Pokemon Center in front of the Sky Tower floors, shifting 811 layout indices
+  and three map numbers (the save stores both). Both moved to the ends of their lists: saves from
+  any build back to July's endgame load correctly again (check_save_compat.py).
 - **The Sky Tower could not be entered** (its lobby warp sat on plain grass in Tamaki). The old
   department store is now the tower's door; the villa that had that door got its own house at the
   end of the old west road.
@@ -41,6 +50,8 @@ from ae70952a (Orchard Road) to 84a9cab8 on main.
 - **Wellington's ferry** warp sat on open sea (never usable) and the gym kid stood in Manu's
   doorway with 'Gym's closed for now' — July's build meant both open. Now: the ferryman keeps the
   terminal until badge 5, Tama holds the ramp until the strait scene, then 'SAILINGS RESUMED'.
+- **Tamaki had nowhere to heal:** its Pokemon Center building led into the Studio Flat. It now
+  has a Pokemon Center and a heal spot.
 - **Names:** Tamaki and its interiors showed 'Waitohi'; Te Mata and Ruapehu showed 'Mt. Pyre'.
   They now have their own region-map sections.
 - Heretaunga: the closed Te Mata track trigger covers the grass either side of the path.
@@ -67,8 +78,12 @@ from ae70952a (Orchard Road) to 84a9cab8 on main.
   doors reachable (story blockers allowed), objects/signs/hidden items reachable, trainers see
   something (or are declared talk-to), seams, what we see past our edges, **and what each
   neighbour sees of us** (a route draws our edge with ITS tileset).
+- **seed_items.py**: item balls off the line between a route's exits, in nooks (two or three
+  sides closed), on plain ground or sand, never on the only way through (everything reachable
+  before still is with the ball standing), clear of people/signs/hidden items/warps/triggers,
+  spread along the route. Written into the spec as markers 1/2/3 and into map.json.
 - Sweeps: audit_maps.py (whole region), check_connections.py (mirrored), check_warps.py (every
-  warp on a warp tile, valid target). QA in the emulator with tools_pounamu/qa (never commit with
+  warp on a warp tile, valid target), check_save_compat.py (layouts and maps only ever appended). QA in the emulator with tools_pounamu/qa (never commit with
   the hooks on: `python3 tools_pounamu/qa/qa_hooks.py off`, `grep -rn POUNAMU_QA src` empty).
 
 ## Hard rules learned
@@ -89,7 +104,10 @@ from ae70952a (Orchard Road) to 84a9cab8 on main.
 8. **Petalburg hedge kit** (unchanged): 0x23F/0x24C/0x254 vertical; 0x244/0x245/0x246 box top;
    0x267 0x23D… 0x266 over 0x264 0x245… 0x265 box bottom; 0x24D/0x24E/0x255/0x256 are tree
    bottoms with a hedge rim, only under tree tops.
-9. **Grass-country mountains** (primary): tier 1 0x068/0x069/0x06A, 0x070/0x072, 0x071 inside;
+9. **Save compatibility:** new layouts go at the END of layouts.json and new maps at the END of
+   their map group, never mid-list; route/town specs keep their connection offsets in step with
+   the maps (a town rebuild moves the route's side too) or a later route rebuild undoes the seam.
+10. **Grass-country mountains** (primary): tier 1 0x068/0x069/0x06A, 0x070/0x072, 0x071 inside;
    higher tiers 0x06B/0x06C/0x06D, 0x073/0x075; concave feet 0x089/0x074.
 
 ## Custom tiles
@@ -100,10 +118,15 @@ from ae70952a (Orchard Road) to 84a9cab8 on main.
 ## Left for Ryan / later
 - Te Mata o Rongokako sign wording (cultural call).
 - The two new functional ferry lines in Wellington (marked for the voice pass).
-- Tamaki's Pokemon Center building leads to the Studio Flat (there's no Tamaki PC map);
-  its old harbour warp on the shoal is unused.
+- Tamaki has a real Pokemon Center now (TamakiPokemonCenter1F, a copy of Waitohi's, nurse
+  only); the hairdresser's Studio Flat moved to the Harbourview Apartments' right-hand door.
+  Tamaki's old harbour warp on the shoal is unused.
 - Route 5 Ranges ends at the east edge by design (the road home is shut until the post-game).
 - Audit flags that are not flaws: Tamaki's vanilla staggered trees and a whole sea boulder at
   its east edge; Taupo Lake Isle (vanilla Southern Island trees); Heretaunga's bottom edge
   (the track trigger stops you first); the Ruapehu/Te Mata maps' vanilla edges.
-- Sea encounter tables on the six new seas are placeholders.
+- Sea encounter tables on the six new seas are placeholders (species Pounamu already uses on
+  its coasts) until the dex's coastal lines are designed.
+- A save made OUTDOORS on a rebuilt town or route continues at the same coordinates on the new
+  map, with a screen-sized patch of the old map around the player until the next door (the game
+  saves the tiles in view). Saves made indoors carry over cleanly.
