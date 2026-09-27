@@ -15,9 +15,20 @@ WellingtonGym_EventScript_Manu::
 	waitmessage
 	setflag FLAG_BADGE05_GET
 	msgbox WellingtonGym_Text_Sting5, MSGBOX_DEFAULT
+	call WellingtonGym_EventScript_ManuGiveFly
 	msgbox WellingtonGym_Text_After, MSGBOX_DEFAULT
 	release
 	end
+
+@ HM02 (Sept 2026): the Flying leader gives Fly. It works from the sixth badge,
+@ the way Mua's Surf works from the fifth.
+WellingtonGym_EventScript_ManuGiveFly::
+	msgbox WellingtonGym_Text_ManuFly, MSGBOX_DEFAULT
+	giveitem ITEM_HM02
+	goto_if_eq VAR_RESULT, FALSE, WellingtonGym_EventScript_ManuFlyEnd
+	setflag FLAG_RECEIVED_HM_FLY
+WellingtonGym_EventScript_ManuFlyEnd::
+	return
 
 WellingtonGym_EventScript_ManuNoBadge::
 	msgbox WellingtonGym_Text_NoBadge, MSGBOX_DEFAULT
@@ -25,6 +36,12 @@ WellingtonGym_EventScript_ManuNoBadge::
 	end
 
 WellingtonGym_EventScript_ManuRetalk::
+	goto_if_set FLAG_RECEIVED_HM_FLY, WellingtonGym_EventScript_ManuRetalkWind
+	call WellingtonGym_EventScript_ManuGiveFly
+	release
+	end
+
+WellingtonGym_EventScript_ManuRetalkWind::
 	msgbox WellingtonGym_Text_Retalk, MSGBOX_DEFAULT
 	release
 	end
@@ -75,6 +92,14 @@ WellingtonGym_Text_After:
 	.string "you, eh.\p"
 	.string "Winds change, though. Doors too.\n"
 	.string "Keep going.$"
+
+WellingtonGym_Text_ManuFly:
+	.string "Manu: One more thing.\p"
+	.string "You rode the gale in here.\n"
+	.string "Now learn to ride it home.\p"
+	.string "HM02 - Fly. Once you've a\n"
+	.string "sixth badge, anywhere you've\l"
+	.string "been is one gust away.$"
 
 WellingtonGym_Text_Retalk:
 	.string "Manu: Feel that southerly?\p"

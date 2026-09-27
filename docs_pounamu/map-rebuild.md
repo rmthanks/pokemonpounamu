@@ -1,6 +1,6 @@
 # Pounamu map rebuild — method, rules, and what was done (started Sat 26 Sept 2026)
 
-## Status (morning of Mon 28 Sept 2026)
+## Status (Mon 28 Sept 2026)
 Every route and every template town has been rebuilt; the whole-region audit is clean on the
 Pounamu outdoor maps (the few flags left are listed at the end, with why). Tonight's commits run
 from ae70952a (Orchard Road) to 16cc8f63 on main. Every route and town now rebuilds
@@ -14,7 +14,7 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
 
   | Town | Tileset | Signature |
   |---|---|---|
-  | Wairoa | Slateport | the white lighthouse on the river mouth |
+  | Wairoa (retired 28 Sept) | Slateport | the white lighthouse on the river mouth |
   | Turanga | Dewford | sand streets, blue-roof fishing houses, Kapa Haka Hall, harbour jetty |
   | Opotiki | Petalburg | kiwifruit orchard rows, the river wharf |
   | Tauranga | Slateport | Mauao's tiered rock, yachts moored in the harbour |
@@ -39,6 +39,23 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
 - **The town map (Fly map), redrawn (Mon 28 Sept):** NZ's real coastline turned corner to
   corner in Emerald's region-map style, every town, landmark and highway where it really is,
   and Fly wired to Pounamu's towns (it pointed at Hoenn). See "Town map" below.
+
+- **Wairoa retired (Mon 28 Sept, Ryan's call: Hawke's Bay was too crowded on the town map).**
+  Route 2 North now runs straight into Route 2 East (offset -2; Route 2 East's last stretch of
+  road moved a column west to meet it). Wairoa's content moved rather than went:
+  Awhi's first meeting -> Turanga, at the Mart ("the dairy wall"), hidden once she's met you in
+  Rotorua (FLAG_UNUSED_0x27A); the welcome lady -> Turanga by the PC; the lighthouse keeper's job
+  (A Light That Walks), the eel man's Poke Balls and Panapa -> the Wairoa end of Route 2 East;
+  Akenehi -> Route 2 North; the hidden pounamu shard (0x267) -> Route 2 East. Signs and the two
+  lines that named Wairoa as the next stop were updated (Route 2 North's hiker; Awhi in
+  Rotorua now says "since Turanga"); Tawhai's "since Wairoa" on Route 7 is backstory and stays.
+  The Wairoa maps stay in the ROM, unreachable, for save compatibility; Wairoa keeps its old
+  exits so a save made inside it can walk out (check_connections.py LEGACY). No fly point.
+- **Exile softlock fixed:** blacking out on Route 2 after the exile respawned you south of the
+  checkpoint with no way out of the Bay. The exile now sets the respawn to Turanga.
+- **The Bay unseals after the Sky Tower:** the Route 2 Bay grunts are hidden by
+  FLAG_UNUSED_0x907. **Manu gives HM02** with the Gale Badge (usable from badge 6, the way Mua's
+  Surf works from badge 5); an old save past badge 5 gets it by talking to Manu.
 
 ## Game-breaking things found and fixed tonight
 - **Old saves would have loaded the wrong map.** Tamaki's new layout had gone into layouts.json
@@ -100,7 +117,9 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
   ever collide) and the real highways as waypoints (SH2, SH35 round East Cape, SH5 both ways,
   the Desert Road, the Forgotten World Highway, the Surf Highway, SH1 Kapiti and south, SH6,
   Lewis Pass). A road's cells are the ones its line passes through; a road too short for a cell
-  of its own (Orchard Road, Route 2 Bay/North, Route 5, Route 6) puts the player on its towns.
+  of its own (Orchard Road, Route 2 Bay, Route 5, Route 6) puts the player on its towns. SH2
+  from Ahuriri to Turanga is three maps with their own waypoints: the bay to Tangoio, the
+  Devil's Elbow to Wairoa, then Nuhaka and Morere to Turanga.
 - **draw.py**: Emerald's palette and look (striped sea, dark rim, greens by elevation noise),
   roads as yellow lines with an orange edge, the Interislander dashed, lakes, snow peaks, a
   compass rose showing the tilted north, Emerald's orb pixels; packs the Fly map (8bpp affine,
@@ -110,12 +129,14 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
 - **apply.py** writes region_map_sections.json (positions; Tamaki = MAPSEC_OLDALE_TOWN,
   Piopiotahi = MAPSEC_ROUTE_130), region_map_layout.h (cursor names per cell),
   pounamu_map_cells.h (per-map cells, up to 8: the head goes by map and moves along long
-  roads), the League rooms -> Otepoti's section, HEAL_LOCATION_HERETAUNGA_TOWN, the fly table in
+  roads; each road's cells are ordered so the end nearer the map above/left comes first, which
+  also put Orchard Road, Route 5, Route 6 and Route 35 A/B the right way round), the League rooms -> Otepoti's section, HEAL_LOCATION_HERETAUNGA_TOWN, the fly table in
   region_map.c, and `setflag FLAG_VISITED_*` in every town's ON_TRANSITION.
 - **Fly rules (region_map.c PounamuTownFlyType):** a town is flyable once visited, or once
   the story is past it (badge 3/5/6/7/8, the Sky Tower for Tamaki) so old saves work;
   Heretaunga and Ahuriri are shut from the coup (VAR_POUNAMU_INTRO_STATE >= 4) until the
-  Sky Tower is done (FLAG_UNUSED_0x907). QA: fly_map, fly_exile, fly_route43, fly_south.
+  Sky Tower is done (FLAG_UNUSED_0x907). QA: fly_map, fly_exile, fly_route43, fly_south,
+  fly_turanga, fly_r2e_south, fly_r2e_north.
 
 ## Hard rules learned
 1. **Seams:** a connected map is drawn with the *current* map's tileset. Anything within ~8
@@ -152,14 +173,16 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
 - Tamaki has a real Pokemon Center now (TamakiPokemonCenter1F, a copy of Waitohi's, nurse
   only); the hairdresser's Studio Flat moved to the Harbourview Apartments' right-hand door.
   Tamaki's old harbour warp on the shoal is unused.
-- Route 5 Ranges ends at the east edge by design (the road home is shut until the post-game).
+- Route 5 Ranges ends at the east edge (no connection). Even with its grunts gone it would lead
+  nowhere, so they stay. To walk "the ranges road home" it needs joining to Route 2 Bay at Bay
+  View (SH5 meets SH2 there, south of the Route 2 checkpoint), with pre-exile lines for its
+  grunts since the Bay side would then reach them in Act 1.
 - Audit flags that are not flaws: Tamaki's vanilla staggered trees and a whole sea boulder at
   its east edge; Taupo Lake Isle (vanilla Southern Island trees); Heretaunga's bottom edge
   (the track trigger stops you first); the Ruapehu/Te Mata maps' vanilla edges.
-- **Fly and the road home (design call):** no HM02 is given anywhere; Fly comes only from a
-  Pokemon that learns it (Flapple at 40, with badge 6). On foot the exile checkpoints (Route 2
-  Bay, Route 5 Ranges) never lift, so after the Sky Tower the homecoming is reachable only by
-  flying home. Decide how the Bay unseals (and whether to give HM02).
+- **Fly and the road home (28 Sept):** Manu now gives HM02 and the Route 2 checkpoint stands
+  down after the Sky Tower, so the homecoming is reachable by Fly or on foot via Turanga. Manu's
+  HM02 line and the Route 2 North hiker's new line are placeholders for Ryan's voice pass.
 - Sea encounter tables on the six new seas are placeholders (species Pounamu already uses on
   its coasts) until the dex's coastal lines are designed.
 - A save made OUTDOORS on a rebuilt town or route continues at the same coordinates on the new

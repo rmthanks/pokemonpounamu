@@ -35,9 +35,10 @@ Route2North_Text_PiriDefeat:
 	.string "Solid as the ranges, you are.$"
 
 Route2North_Text_PiriPost:
-	.string "Wairoa's just up the way.\p"
+	.string "Turanga's a fair way up yet.\p"
 	.string "Get a proper feed and a proper\n"
-	.string "sleep. The coast road is long.$"
+	.string "sleep there. The coast road is\l"
+	.string "long.$"
 
 Route2North_EventScript_PTui::
 	trainerbattle_single TRAINER_R2N_TUI, Route2North_Text_PTuiIntro, Route2North_Text_PTuiDefeat
@@ -123,4 +124,18 @@ Route2North_EventScript_SignSouth::
 
 Route2North_Text_SignSouth:
 	.string "ROUTE 2\n"
-	.string "North to WAIROA$"
+	.string "North to TURANGA$"
+
+Route2North_EventScript_PUenuku::
+	trainerbattle_single TRAINER_WRT_UENUKU, Route2North_Text_PUenukuIntro, Route2North_Text_PUenukuDefeat
+	msgbox Route2North_Text_PUenukuPost, MSGBOX_AUTOCLOSE
+	end
+
+Route2North_Text_PUenukuIntro:
+	.string "Akenehi: Between milkings. You've got\nten minutes. Go.$"
+
+Route2North_Text_PUenukuDefeat:
+	.string "Back to the shed, then.$"
+
+Route2North_Text_PUenukuPost:
+	.string "Rain's coming. Good for the\ngrass, good for nothing else.$"

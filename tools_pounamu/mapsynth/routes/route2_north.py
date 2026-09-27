@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Route 2 North: from the top of Hawke Bay up SH2 to Wairoa - the Tangoio beach
+"""Route 2 North: from the top of Hawke Bay up SH2 toward Wairoa - the Tangoio beach
 where the bay ends, the climb inland over the Devil's Elbow, Lake Tūtira, and the
 sheep paddocks on the Wairoa side.
 
 The sea at the bottom carries on from Route 2 Bay (same columns, offset 0) and
 closes under a line of bush along its north shore; nothing past the map's east
 edge is ever in view from the sand. Drawn with Petalburg (all tiles here are
-primary) so Wairoa's Petalburg streets render correctly across the northern seam."""
+primary). Wairoa is no longer a stop (Sept 2026): the north edge runs straight on into
+Route 2 East, and Akenehi, Wairoa's farmer, works the paddocks here."""
 from build import build
 
 SPEC = dict(
     folder='Route2North', layout='LAYOUT_ROUTE2_NORTH', weather='WEATHER_SUNNY_CLOUDS',
     tileset='gTileset_Petalburg',
-    conns={'MAP_ROUTE2_BAY': 0, 'MAP_WAIROA': 6},
+    conns={'MAP_ROUTE2_BAY': 0, 'MAP_ROUTE2_EAST': -2},
     rows=[
         #0         1         2         3         4
         #012345678901234567890123456789012345678901234567
@@ -24,7 +25,7 @@ SPEC = dict(
         "TTTTTTTT..,,,,,.PP.....,,,,,..TTTTTTTTTTTTTTTTTT",
         "TTTTTT....,,,,,.PP.....,,,,,....TTTTTTTTTTTTTTTT",
         "TTTTTT..........PP..............TTTTTTTTTTTTTTTT",
-        "TTTTTT..TT......PP...f..........TTTTTTTTTTTTTTTT",
+        "TTTTTT..TT..u...PP...f..........TTTTTTTTTTTTTTTT",
         "TTTTTT..TT......PP..............TTTTTTTTTTTTTTTT",
         "TTTT............PP..,,,,....TT..TTTTTTTTTTTTTTTT",
         "TTTT..**........PP..,,,,....TT..TTTTTTTTTTTTTTTT",
@@ -72,10 +73,10 @@ SPEC = dict(
     objects={
         '1': ('FindItem', None), '2': ('FindItem#2', None), '3': ('FindItem#3', None),
         'a': ('Rewi', 'RIGHT'), 'b': ('PIhaia', 'RIGHT'), 'c': ('PHine', 'LEFT'), 'd': ('PRipeka', 'LEFT'),
-        'e': ('PMiro', 'LEFT'), 'f': ('Piri', 'LEFT'), 'g': ('PTui', 'DOWN'),
+        'e': ('PMiro', 'LEFT'), 'f': ('Piri', 'LEFT'), 'g': ('PTui', 'DOWN'), 'u': ('PUenuku', 'RIGHT'),
     },
     sign_text=[('SignNorth', ['ROUTE 2\\n', 'South to AHURIRI$']),
-               ('SignSouth', ['ROUTE 2\\n', 'North to WAIROA$'])],
+               ('SignSouth', ['ROUTE 2\\n', 'North to TURANGA$'])],
 )
 
 if __name__ == '__main__':

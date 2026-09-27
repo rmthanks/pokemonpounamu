@@ -40,7 +40,7 @@ EXTRA_CELLS = {'TeMataTrack': PLACES['TE_MATA']['cell'], 'TeMataSummit': PLACES[
                'RuapehuAscent': PLACES['RUAPEHU']['cell'], 'RuapehuSummit': PLACES['RUAPEHU']['cell'],
                'Piopiotahi': PLACES['PIOPIOTAHI']['cell'], 'TaupoLakeIsle': PLACES['TAUPO_ISLE']['cell']}
 TOWN_FOLDERS = {'TAMAKI': 'TamakiMakaurau', 'TAURANGA': 'Tauranga', 'OPOTIKI': 'Opotiki', 'TURANGA': 'Turanga',
-                'WAIROA': 'Wairoa', 'AHURIRI': 'AhuririCity', 'HERETAUNGA': 'HeretaungaTown', 'ROTORUA': 'Rotorua',
+                'AHURIRI': 'AhuririCity', 'HERETAUNGA': 'HeretaungaTown', 'ROTORUA': 'Rotorua',
                 'TAUPO': 'Taupo', 'NGAMOTU': 'Ngamotu', 'WHANGANUI': 'Whanganui', 'WELLINGTON': 'Wellington',
                 'WAITOHI': 'Waitohi', 'WHAKATU': 'Whakatu', 'OTAUTAHI': 'Otautahi', 'OTEPOTI': 'Otepoti'}
 ROAD_FOLDERS = {'ORCHARD_ROAD': 'OrchardRoad', 'ROUTE2_BAY': 'Route2Bay', 'ROUTE2_NORTH': 'Route2North',
@@ -81,7 +81,9 @@ def sections():
     for p in PLACES.values():
         if p['mapsec']:
             home[p['mapsec']] = p['cell']
-    for r in ROADS.values():
+    # a road section sits on a cell of its own road (a road that shares a section with a
+    # shorter one, like Route 2's three maps, takes the first with a cell of its own)
+    for r in sorted(ROADS.values(), key=lambda r: not r['cells']):
         home.setdefault(r['mapsec'], (r['cells'] or r['ends'])[0])
     for s in j['map_sections']:
         if s['id'] in home:
@@ -122,15 +124,18 @@ def road_order(key):
         return axis, cells
     first = [c for c in conns if c['direction'] in ('up', 'left')]
     last = [c for c in conns if c['direction'] in ('down', 'right')]
-    adj = lambda a, b: abs(a[0] - b[0]) + abs(a[1] - b[1]) == 1
-    if first:
-        nb = neighbour_cells(first[0]['map'])
-        if any(adj(cells[-1], n) for n in nb) and not any(adj(cells[0], n) for n in nb):
-            cells = cells[::-1]
-    elif last:
-        nb = neighbour_cells(last[0]['map'])
-        if any(adj(cells[0], n) for n in nb) and not any(adj(cells[-1], n) for n in nb):
-            cells = cells[::-1]
+    near = lambda cell, nb: min((abs(cell[0] - n[0]) + abs(cell[1] - n[1]) for n in nb), default=0)
+    # the end nearer the map above (or left) goes first, the end nearer the map below (or
+    # right) last: score both ways round and keep the closer fit
+    def fit(cs):
+        score = 0
+        if first:
+            score += near(cs[0], neighbour_cells(first[0]['map']))
+        if last:
+            score += near(cs[-1], neighbour_cells(last[0]['map']))
+        return score
+    if fit(cells[::-1]) < fit(cells):
+        cells = cells[::-1]
     return axis, cells
 
 

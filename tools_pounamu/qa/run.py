@@ -125,7 +125,6 @@ TESTS = {
     'tn_waitohi': T('MAP_WAITOHI', 12, 12, 'run 60\nshot a\nhold RIGHT 48\nrun 20\nshot b\n'),
     'surf35a': T('MAP_ROUTE35_A', 38, 16, 'run 60\ntap RIGHT\nrun 10\ntap A\nrun 60\ntap A\nrun 40\nmash A 6 20\nrun 200\nshot a\nhold RIGHT 16\nhold UP 400\nrun 30\nshot b\nhold DOWN 400\nrun 30\nshot c\n', party=[]),
     'r2n_lake': T('MAP_ROUTE2_NORTH', 18, 17, 'run 60\nshot a\nhold DOWN 160\nrun 30\nshot b\n'),
-    'tn_wairoa': T('MAP_WAIROA', 6, 9, 'run 60\nshot a\nhold UP 16\nrun 150\nshot b\nhold DOWN 16\nrun 150\nshot c\nhold RIGHT 160\nhold UP 32\nrun 150\nshot d\nhold DOWN 16\nrun 150\nshot e\nhold DOWN 16\nhold LEFT 80\nhold DOWN 128\nhold LEFT 80\nhold UP 16\nrun 150\nshot f\nhold DOWN 16\nrun 150\nshot g\nhold RIGHT 80\nhold DOWN 112\nrun 30\nshot h\n'),
     'tn_rotorua': T('MAP_ROTORUA', 36, 14, 'run 60\nshot a\nhold RIGHT 64\nrun 20\nshot b\nhold LEFT 64\nhold LEFT 464\nshot c\nhold UP 16\nrun 150\nshot d\nhold DOWN 16\nrun 150\nhold RIGHT 96\nhold UP 16\nrun 150\nshot e\nhold DOWN 16\nrun 150\nhold RIGHT 192\nhold UP 48\nrun 150\nshot f\nhold DOWN 16\nrun 150\nhold DOWN 160\nhold RIGHT 32\nhold UP 16\nrun 150\nshot g\nhold DOWN 16\nrun 150\nhold RIGHT 64\nhold UP 16\nrun 150\nshot h\nhold DOWN 16\nrun 150\nhold LEFT 96\nhold DOWN 16\nhold LEFT 80\nhold DOWN 128\nrun 30\nshot i\n'),
     'tn_turanga': T('MAP_TURANGA', 12, 5, 'run 60\nhold UP 96\nrun 30\nshot n\nhold DOWN 96\nhold DOWN 48\nhold LEFT 112\nhold UP 32\nrun 150\nshot a\nhold DOWN 16\nrun 150\nhold RIGHT 192\nhold UP 16\nrun 150\nshot b\nhold DOWN 16\nrun 150\nhold RIGHT 64\nhold DOWN 144\nhold LEFT 64\nhold UP 16\nrun 150\nshot c\nhold DOWN 16\nrun 150\nhold RIGHT 96\nhold UP 16\nrun 150\nshot d\nhold DOWN 16\nrun 150\nhold DOWN 80\nhold LEFT 80\nhold UP 16\nrun 150\nshot e\nhold DOWN 16\nrun 150\nhold LEFT 176\nhold UP 32\nrun 150\nshot f\nhold DOWN 16\nrun 150\nhold RIGHT 96\nhold DOWN 112\nrun 30\nshot g\n'),
     'tn_wellington': T('MAP_WELLINGTON', 23, 3, 'run 60\nhold UP 64\nrun 30\nshot a\nhold DOWN 64\nhold DOWN 176\nhold LEFT 96\nhold UP 16\nrun 150\nshot b\nhold DOWN 16\nrun 150\nhold RIGHT 160\nhold UP 16\nrun 150\nshot c\nhold DOWN 16\nrun 150\nhold RIGHT 144\nhold UP 32\nrun 150\nshot d\nhold DOWN 16\nrun 150\nhold DOWN 32\nhold LEFT 384\nhold DOWN 176\nhold LEFT 48\nhold UP 16\nrun 150\nshot e\nhold DOWN 16\nrun 150\nhold RIGHT 48\nhold DOWN 16\nhold RIGHT 48\nhold UP 16\nrun 150\nshot f\nhold DOWN 16\nrun 150\nhold LEFT 48\nhold DOWN 144\nhold RIGHT 48\nhold UP 16\nrun 150\nshot g\nhold DOWN 16\nrun 150\nhold RIGHT 48\nhold UP 96\nhold RIGHT 48\nhold UP 32\nrun 200\nshot h\n'),
@@ -137,7 +136,6 @@ TESTS = {
     'tn_temata_down': T('MAP_TE_MATA_SUMMIT', 22, 30, 'run 60\nshot a\nhold DOWN 32\nrun 200\nshot b\n'),
     'tn_tamaki_pc': T('MAP_TAMAKI_MAKAURAU', 32, 21, 'run 60\nshot a\nhold UP 16\nrun 200\nshot b\nhold UP 64\nrun 10\ntap A\nrun 60\nshot c\nmash A 12 30\nrun 200\nshot d\nhold DOWN 64\nrun 200\nshot e\nhold LEFT 192\nhold UP 144\nrun 10\nshot f\n'),
     'tn_shadows': T('MAP_HERETAUNGA_TOWN', 45, 17, 'run 60\nshot a\nhold UP 16\nrun 120\nshot b\nmash A 12 30\nrun 60\nshot c\nmash A 20 30\nrun 200\nshot d\nmash A 60 20\nrun 200\nshot e\nmash A 60 20\nrun 200\nshot f\nmash A 60 20\nrun 300\nshot g\n', intro=1),
-    'tn_wairoa_n': T('MAP_WAIROA', 11, 3, 'run 60\nshot a\nhold UP 80\nrun 40\nshot b\n'),
     'tn_turanga_s': T('MAP_TURANGA', 13, 22, 'run 60\nshot a\nhold DOWN 80\nrun 40\nshot b\n'),
     'tn_strait': T('MAP_WELLINGTON', 21, 31, 'run 60\nshot a\nhold UP 32\nrun 30\nshot b\ntap A\nrun 90\nshot c\n'),
     'tn_temata_gate': T('MAP_HERETAUNGA_TOWN', 38, 45, 'run 60\nshot a\nhold DOWN 32\nrun 60\nshot b\nmash A 6 20\nrun 60\nshot c\n', intro=4),
@@ -151,6 +149,26 @@ TESTS = {
     'nt_otepoti': T('MAP_OTEPOTI', 5, 14, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
     'nt_turanga': T('MAP_TURANGA', 5, 7, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
     'nt_tauranga': T('MAP_TAURANGA', 7, 16, 'run 60\nshot a\nhold RIGHT 112\nrun 20\nshot b\n', hour=21),
+    # Wairoa retired (Sept 2026): Route 2 North runs into Route 2 East; its people moved
+    'r2_seam': T('MAP_ROUTE2_NORTH', 16, 5, 'run 60\nshot a\nhold UP 112\nrun 40\nshot b\nhold UP 96\nrun 40\nshot c\n'),
+    'r2e_wairoa': T('MAP_ROUTE2_EAST', 19, 57, 'run 90\nshot a\nhold UP 48\nrun 40\nshot b\n'),
+    'lightjob': T('MAP_ROUTE2_EAST', 16, 51, 'tap LEFT\nsteps A 16 s\nrun 60\nsteps A 3 t\n', party=['MAREEP']),
+    'eelman': T('MAP_ROUTE2_EAST', 21, 52, 'tap RIGHT\nsteps A 8 s\n'),
+    'turanga_awhi': T('MAP_TURANGA', 20, 7, 'run 60\nshot a\ntap UP\nsteps A 26 s\nrun 60\nsteps A 4 t\n'),
+    'turanga_woman': T('MAP_TURANGA', 8, 8, 'tap UP\nsteps A 5 s\n'),
+    # the exile: a blackout (or Teleport) on the road north lands in Turanga, not behind the checkpoint
+    'exile_teleport': T('MAP_ROUTE2_BAY', 30, 16, 'run 30\nsteps A 24 m\nrun 120\nshot z\n'
+                        'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\nshot t0\n'
+                        'tap A\nrun 400\nshot t1\nrun 120\nshot t2\n', intro=4, party=[], kmove='MOVE_TELEPORT'),
+    # the Bay unsealed once the Sky Tower is done; still shut before it
+    'bay_open': T('MAP_ROUTE2_BAY', 30, 24, 'run 60\nshot a\nhold UP 112\nrun 30\nshot b\n', flags=['FLAG_UNUSED_0x907'], intro=5),
+    'bay_shut': T('MAP_ROUTE2_BAY', 30, 24, 'run 60\nshot a\nhold UP 112\nrun 30\nshot b\n', intro=5),
+    # Manu hands over HM02 (an old save past the badge gets it on talking to Manu)
+    'manu_fly': T('MAP_WELLINGTON_GYM', 5, 16, 'tap UP\nsteps A 10 s\nrun 60\nsteps A 3 t\n'),
+    # the town map from Turanga (cursor onto Route 2 where Wairoa was), and the head on Route 2 East
+    'fly_turanga': T('MAP_TURANGA', 13, 20, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 150\nshot a\ntap LEFT\nrun 20\nshot b\ntap DOWN\nrun 20\nshot c\n', party=[], kmove='MOVE_FLY', flags=['FLAG_UNUSED_0x907']),
+    'fly_r2e_south': T('MAP_ROUTE2_EAST', 19, 57, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 150\nshot a\n', party=[], kmove='MOVE_FLY'),
+    'fly_r2e_north': T('MAP_ROUTE2_EAST', 21, 3, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 150\nshot a\n', party=[], kmove='MOVE_FLY'),
     'fly_map': T('MAP_WELLINGTON', 17, 15, 'tap START\nrun 30\ntap DOWN\nrun 10\ntap A\nrun 90\ntap A\nrun 30\ntap DOWN\nrun 10\nshot a\ntap A\nrun 150\nshot b\n'
                  'tap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap RIGHT\nrun 12\ntap UP\nrun 12\ntap UP\nrun 20\nshot c\n'
                  'tap A\nrun 240\nshot d\nrun 60\nshot e\n', party=[], kmove='MOVE_FLY',

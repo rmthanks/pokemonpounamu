@@ -20,8 +20,8 @@
       "direction": "down"
     },
     {
-      "map": "MAP_WAIROA",
-      "offset": 6,
+      "map": "MAP_ROUTE2_EAST",
+      "offset": -2,
       "direction": "up"
     }
   ],
@@ -155,6 +155,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_POTION",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_UNUSED_0x4C1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+      "x": 12,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route2North_EventScript_PUenuku",
+      "flag": "0"
     }
   ],
   "warp_events": [],

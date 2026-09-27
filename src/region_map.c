@@ -394,7 +394,7 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_PETALBURG_CITY] = {MAP_GROUP(MAP_AHURIRI_CITY), MAP_NUM(MAP_AHURIRI_CITY), HEAL_LOCATION_AHURIRI_CITY},
     [MAPSEC_SLATEPORT_CITY] = {MAP_GROUP(MAP_OPOTIKI), MAP_NUM(MAP_OPOTIKI), HEAL_LOCATION_OPOTIKI},
     [MAPSEC_MAUVILLE_CITY] = {MAP_GROUP(MAP_TAURANGA), MAP_NUM(MAP_TAURANGA), HEAL_LOCATION_TAURANGA},
-    [MAPSEC_RUSTBORO_CITY] = {MAP_GROUP(MAP_WAIROA), MAP_NUM(MAP_WAIROA), HEAL_LOCATION_WAIROA},
+    [MAPSEC_RUSTBORO_CITY] = {MAP_GROUP(MAP_RUSTBORO_CITY), MAP_NUM(MAP_RUSTBORO_CITY), HEAL_LOCATION_RUSTBORO_CITY},
     [MAPSEC_FORTREE_CITY] = {MAP_GROUP(MAP_WHAKATU), MAP_NUM(MAP_WHAKATU), HEAL_LOCATION_WHAKATU},
     [MAPSEC_LILYCOVE_CITY] = {MAP_GROUP(MAP_OTAUTAHI), MAP_NUM(MAP_OTAUTAHI), HEAL_LOCATION_OTAUTAHI},
     [MAPSEC_MOSSDEEP_CITY] = {MAP_GROUP(MAP_OTEPOTI), MAP_NUM(MAP_OTEPOTI), HEAL_LOCATION_OTEPOTI},
@@ -1495,8 +1495,8 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
         return PounamuTownFlyType(mapSecId, FLAG_VISITED_SLATEPORT_CITY);
     case MAPSEC_MAUVILLE_CITY:
         return PounamuTownFlyType(mapSecId, FLAG_VISITED_MAUVILLE_CITY);
-    case MAPSEC_RUSTBORO_CITY:
-        return PounamuTownFlyType(mapSecId, FLAG_VISITED_RUSTBORO_CITY);
+    case MAPSEC_RUSTBORO_CITY:     // Wairoa: no longer a stop (Sept 2026) - part of Route 2
+        return MAPSECTYPE_ROUTE;
     case MAPSEC_FORTREE_CITY:
         return PounamuTownFlyType(mapSecId, FLAG_VISITED_FORTREE_CITY);
     case MAPSEC_LILYCOVE_CITY:
@@ -1574,7 +1574,6 @@ static u8 PounamuTownFlyType(mapsec_u16_t mapSecId, u16 flag)
             visited = TRUE;
         }
         break;
-    case MAPSEC_RUSTBORO_CITY:     // Wairoa
     case MAPSEC_DEWFORD_TOWN:      // Turanga
     case MAPSEC_SLATEPORT_CITY:    // Opotiki
     case MAPSEC_MAUVILLE_CITY:     // Tauranga
@@ -2285,11 +2284,6 @@ static const struct FlyLocation sFlyLocations[] =
         .regionMapType = REGION_MAP_HOENN,
         .mapsec = MAPSEC_MAUVILLE_CITY,
         .flag = FLAG_VISITED_MAUVILLE_CITY,
-    },
-    {
-        .regionMapType = REGION_MAP_HOENN,
-        .mapsec = MAPSEC_RUSTBORO_CITY,
-        .flag = FLAG_VISITED_RUSTBORO_CITY,
     },
     {
         .regionMapType = REGION_MAP_HOENN,

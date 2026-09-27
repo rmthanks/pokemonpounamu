@@ -35,13 +35,16 @@ Route2Bay_EventScript_Exile::
 	waitmoncry
 	msgbox Route2Bay_Text_LugiaSurfaces, MSGBOX_DEFAULT
 	special HealPlayerParty
+	@ home is behind the checkpoint now: a blackout on the road north wakes you in Turanga
+	setrespawn HEAL_LOCATION_TURANGA
 	setvar VAR_POUNAMU_INTRO_STATE, 5
 	releaseall
 	end
 
 @ ------------------------------------------------------------------
 @ Checkpoint grunts. Before the exile they seal the road north;
-@ after it they seal the road home.
+@ after it they seal the road home - until the Sky Tower is done
+@ (FLAG_UNUSED_0x907 hides them: the Bay unsealed).
 @ ------------------------------------------------------------------
 Route2Bay_EventScript_Grunt1::
 	lock
@@ -234,4 +237,4 @@ Route2Bay_EventScript_SignSouth::
 
 Route2Bay_Text_SignSouth:
 	.string "ROUTE 2\n"
-	.string "North to WAIROA$"
+	.string "North to TURANGA$"

@@ -84,7 +84,7 @@ Rotorua_EventScript_AwhiRetalk::
 Rotorua_Text_Awhi1:
 	.string "Awhi: There you are. You've\n"
 	.string "grown a badge or two since\l"
-	.string "Wairoa.\p"
+	.string "Turanga.\p"
 	.string "News. It's not good.\p"
 	.string "The orchard's struggling - he's\n"
 	.string "squeezing every supplier in\l"

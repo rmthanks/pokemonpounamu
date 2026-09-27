@@ -37,7 +37,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route2Bay_EventScript_Grunt1",
-      "flag": "0",
+      "flag": "FLAG_UNUSED_0x907",
       "local_id": "LOCALID_R2_GRUNT1"
     },
     {
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route2Bay_EventScript_Grunt2",
-      "flag": "0",
+      "flag": "FLAG_UNUSED_0x907",
       "local_id": "LOCALID_R2_GRUNT2"
     },
     {

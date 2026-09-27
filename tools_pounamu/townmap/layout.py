@@ -14,7 +14,6 @@ TOWN_GEO = {
     'TAURANGA':   ((-37.69, 176.17), 'city', 'MAPSEC_MAUVILLE_CITY'),
     'OPOTIKI':    ((-38.01, 177.29), 'town', 'MAPSEC_SLATEPORT_CITY'),
     'TURANGA':    ((-38.66, 178.02), 'town', 'MAPSEC_DEWFORD_TOWN'),
-    'WAIROA':     ((-39.04, 177.42), 'town', 'MAPSEC_RUSTBORO_CITY'),
     'AHURIRI':    ((-39.49, 176.91), 'city', 'MAPSEC_PETALBURG_CITY'),
     'HERETAUNGA': ((-39.64, 176.84), 'city', 'MAPSEC_LITTLEROOT_TOWN'),
     'ROTORUA':    ((-38.14, 176.25), 'city', 'MAPSEC_LAVARIDGE_TOWN'),
@@ -38,9 +37,12 @@ NUDGE = {}                  # name -> (dx, dy) in cells, when two would share a 
 # the highways, town to town, as (lat, lon) waypoints between the two ends
 ROAD_GEO = {
     'ORCHARD_ROAD':  ('HERETAUNGA', 'AHURIRI', [], 'MAPSEC_ROUTE_101'),
-    'ROUTE2':        ('AHURIRI', 'WAIROA', [(-39.43, 176.87), (-39.33, 176.91), (-39.21, 176.89),
-                                            (-39.13, 177.00), (-39.05, 177.18)], 'MAPSEC_ROUTE_102'),
-    'ROUTE2_EAST':   ('WAIROA', 'TURANGA', [(-39.04, 177.74), (-38.98, 177.79), (-38.80, 177.90)],
+    # SH2 from Ahuriri to Turanga is three maps: round the bay to Tangoio, over the Devil's
+    # Elbow to Wairoa, and on through Nuhaka and Morere (Wairoa itself is a stop on the road)
+    'ROUTE2_BAY':    ('AHURIRI', None, [(-39.43, 176.87), (-39.33, 176.91)], 'MAPSEC_ROUTE_102'),
+    'ROUTE2_NORTH':  (None, None, [(-39.33, 176.91), (-39.21, 176.89), (-39.13, 177.00), (-39.05, 177.18),
+                                   (-39.04, 177.42)], 'MAPSEC_ROUTE_102'),
+    'ROUTE2_EAST':   (None, 'TURANGA', [(-39.04, 177.42), (-39.04, 177.74), (-38.98, 177.79), (-38.80, 177.90)],
                       'MAPSEC_ROUTE_102'),
     'ROUTE35':       ('TURANGA', 'OPOTIKI', [(-38.37, 178.30), (-38.13, 178.31), (-37.89, 178.32),
                                              (-37.66, 178.35), (-37.58, 178.30), (-37.62, 177.92),
@@ -66,7 +68,7 @@ ROAD_GEO = {
                                               (-45.48, 170.72)], 'MAPSEC_ROUTE_112'),
 }
 # two in-game maps share one highway: each takes its end of the road
-SPLITS = {'ROUTE2': ('ROUTE2_BAY', 'ROUTE2_NORTH'), 'ROUTE35': ('ROUTE35_A', 'ROUTE35_B')}
+SPLITS = {'ROUTE35': ('ROUTE35_A', 'ROUTE35_B')}
 SEA_GEO = [('WELLINGTON', 'WAITOHI', [(-41.36, 174.60), (-41.30, 174.40), (-41.22, 174.30)])]   # the Interislander
 
 LAKE_GEO = [((-38.80, 175.90), (22, 14), 30),     # Taupo: centre, half-axes in km, tilt

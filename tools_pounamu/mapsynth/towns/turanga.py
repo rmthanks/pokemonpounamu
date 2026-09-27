@@ -4,7 +4,7 @@
 A beach town on Poverty Bay: sand streets, the blue-roofed houses of a fishing town,
 the Kapa Haka Hall on the square, the harbour on the east with its jetty, and the
 Hikurangi track leaving town past the kaitiaki (who isn't letting anyone up yet).
-North to the East Cape (Route 35), south to Wairoa (Route 2)."""
+North to the East Cape (Route 35), south down Route 2 past Wairoa to the Bay."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_town import Canvas, build
@@ -12,7 +12,7 @@ from build_town import Canvas, build
 W, H = 40, 26
 c = Canvas(W, H, fill='B')
 c.border()
-# roads: north to the Cape (x 12-13), south to Wairoa (gap x 12-15, road 13-14)
+# roads: north to the Cape (x 12-13), south to Route 2 (gap x 12-15, road 13-14)
 # grass along the back of town and in the corners
 c.box(2, 2, 27, 4, '.'); c.box(2, 22, 23, 23, '.'); c.box(2, 2, 3, 23, '.')
 c.road([(12, 0), (12, 5)])
@@ -39,7 +39,9 @@ SPEC = dict(
     rows=c.rows(), stamps=stamps, pc_warp=0, fixed_class='B',
     jetties=[(28, 13, 4)],
     objects={'Kaitiaki': (4, 12, 'RIGHT'), 'Roadworks': (14, 5, 'LEFT'), 'MainStreetWoman': (10, 11, None),
-             'HarbourMan': (31, 13, 'RIGHT'), 'SunKid': (24, 17, None)},
+             'HarbourMan': (31, 13, 'RIGHT'), 'SunKid': (24, 17, None),
+             # moved from Wairoa (Sept 2026): Awhi at the dairy wall, the welcome by the PC
+             'Awhi': (20, 6, 'DOWN'), 'CheckpointWoman': (8, 7, 'DOWN')},
     signs=[(25, 10, 'Museum'), (6, 11, 'TrackSign'), (10, 7, 'TownSign')],
     hidden={0: (23, 21)},
     conns={'MAP_ROUTE2_EAST': 12 - 20, 'MAP_ROUTE35_A': 12 - 32},
