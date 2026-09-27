@@ -31,6 +31,9 @@ QA_BLOCK = '''#ifdef POUNAMU_QA // QA-ONLY: never commit
         for (i = 0; i < ARRAY_COUNT(sQaFlags); i++)
             if (sQaFlags[i]) FlagSet(sQaFlags[i]);
         VarSet(VAR_POUNAMU_INTRO_STATE, 6);
+#ifdef QA_INTRO
+        VarSet(VAR_POUNAMU_INTRO_STATE, QA_INTRO);
+#endif
 #ifdef QA_DECO
         VarSet(VAR_POUNAMU_DECO_STATE, QA_DECO);
 #endif

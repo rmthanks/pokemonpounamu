@@ -21,7 +21,7 @@ w, h, c = read_cells(LAYOUT)
 if h != 36:     # already extended: start again from the committed 44x36 original
     raw = subprocess.run(['git', 'show', 'a2046f27:data/layouts/AhuririCity/map.bin'], cwd=ROOT,
                          capture_output=True).stdout
-    c = list(struct.unpack(f'<{len(raw) // 2}H', raw)); h = len(c) // w
+    c = list(struct.unpack(f'<{len(raw) // 2}H', raw)); w = 44; h = len(c) // w
     assert h == 36
 
 rows = [
@@ -58,13 +58,44 @@ for y in range(10):
 out = list(c[:34 * w])
 for line in new:
     out.extend(line)
+
+# ---- the Marine Parade (Sept 2026, second pass). The east edge was a column of
+# walkable dense-tree tiles beside a strip of sea that ran straight into forest at
+# both ends, with half trees at its corners. Now: a two-cell beach below the
+# promenade, the sea two cells wider (so nothing past the map's edge is ever in
+# view from the sand), whole trees at the corners, and the sea closed at the south
+# the vanilla way (shore lip, canopy row, trees; Route 103). Its north end runs on
+# into Route 2 Bay.
+W2 = 46
+out[42 * 44 + 35] = (out[42 * 44 + 35] & 0xFC00) | rk.TREE_TR    # the corner tree now has a neighbour
+out[12 * 44 + 35] = out[11 * 44 + 35]           # a stray shore-lip tile sat in the promenade
+strip = []
+for y in range(44):
+    row = '..'                                         # x34-35: the promenade, kept as it is
+    row += 'TT' if y < 2 or y >= 40 else 'BB'          # x36-37
+    row += 'S' * 8 if y < 40 else '.' * 8 if y < 42 else 'T' * 8   # x38-45: sea, shore grass, bush
+    strip.append(row)
+sr = rk.from_ascii('AhuririParade', strip)
+for y in range(44):
+    for x in range(2):
+        sr.put(x, y, out[y * 44 + 34 + x] & 0x3FF)
+        sr.fix[(x, y)] = out[y * 44 + 34 + x]
+cells2 = sr.render(seed=5)
+wide = []
+for y in range(44):
+    base = out[y * 44:(y + 1) * 44][:36]
+    extra = [cells2[y * 12 + x] for x in range(2, 12)]
+    wide.extend(base + extra)
+out, w = wide, W2
+
 lay = LAYOUTS[LAYOUT]
 open(os.path.join(ROOT, lay['blockdata_filepath']), 'wb').write(struct.pack(f'<{len(out)}H', *out))
 lp = os.path.join(ROOT, 'data/layouts/layouts.json')
 txt = open(lp).read()
 i = txt.index(f'"id": "{LAYOUT}"')
-j = txt.index('"height":', i)
-k = txt.index(',', j)
-txt = txt[:j] + '"height": 44' + txt[k:]
+for key, v in (('width', W2), ('height', 44)):
+    j = txt.index(f'"{key}":', i)
+    k = txt.index(',', j)
+    txt = txt[:j] + f'"{key}": {v}' + txt[k:]
 open(lp, 'w').write(txt)
-print('Ahuriri extended to 44x44 with a garden strip along the south seam')
+print(f'Ahuriri now {W2}x44: garden strip along the south seam, Marine Parade beach on the east')

@@ -50,10 +50,13 @@ def build(spec):
     # ---- connections and seams
     mj = rk.map_json(name)
     exits = {}
+    deferred = set(spec.get('defer_seams', ()))
     for cn in mj['connections']:
         off = spec['conns'].get(cn['map'], cn['offset'])
         probs = rk.check_seam(r, cn['direction'], rk.folder_of(cn['map']), off)
-        if probs:
+        if cn['map'] in deferred:
+            print(f'  (seam with {cn["map"]} is checked when that map is rebuilt: {len(probs)} open now)')
+        elif probs:
             errors += fail(f'seam with {cn["map"]} (offset {off})', probs)
         d = cn['direction']
         if d == 'up':
@@ -90,6 +93,13 @@ def build(spec):
 
     # ---- reachability: every exit reaches every other, both ways, with objects standing still
     allexits = [c for cs in exits.values() for c in cs]
+    split = {placed[s][0] for s in spec.get('split_by', ()) if s in placed}
+    if split:
+        # story blockers (a checkpoint) must really seal the road...
+        seen = r.reach(list(exits.values())[0], blocked)
+        if any(c in seen for c in list(exits.values())[1]):
+            errors += fail('the checkpoint does not seal the road', sorted(split))
+        blocked = blocked - split     # ...and the road must be whole without them
     for a, acells in exits.items():
         seen = r.reach(acells, blocked)
         for b, bcells in exits.items():
@@ -128,11 +138,26 @@ def build(spec):
     odd = rk.check_pairs(r)
     print(f'  tile pairs not seen in vanilla: {len(odd)} (review the render)')
 
+    # ---- what the player sees past the edges (neighbours drawn with our tileset, and the border)
+    import context_view as cv
+    lay = rk.LAYOUTS[spec['layout']]
+    secondary = spec.get('tileset') or lay['secondary_tileset']
+    border = [rk.val(m) for m in spec.get('border', (rk.TREE_TL, rk.TREE_TR, rk.TREE_BL, rk.TREE_BR))]
+    conns = [(cn['direction'], rk.folder_of(cn['map']), spec['conns'].get(cn['map'], cn['offset']))
+             for cn in mj['connections']]
+    water = lambda v: rk.BEH.get(v & 0x3FF, 0) in rk.WATER_BEH
+    probs, grid, src = cv.edge_problems(r.W, r.H, r.cells, border, conns, secondary, r.walkable, water=water)
+    skip_sides = {cn['direction'] for cn in mj['connections'] if cn['map'] in deferred}
+    probs = [p for side, p in probs if side not in skip_sides]
+    if probs:
+        errors += fail('flaws the player can see past the edges', probs)
+
     # ---- preview
     os.makedirs(OUT, exist_ok=True)
     ev = [(x, y, 'red') for (x, y), f in placed.values()] + [(x, y, 'yellow') for x, y in hidden_spots.values()]
     rk.preview(r, os.path.join(OUT, f'{name}.png'), scale=1, events=ev)
-    print(f'  preview: {os.path.join(OUT, name + ".png")}')
+    cv.render_grid(grid, 'gTileset_General', secondary, (8, 6, r.W, r.H)).save(os.path.join(OUT, f'{name}_context.png'))
+    print(f'  preview: {os.path.join(OUT, name + ".png")} (+ _context.png: as the game draws the edges)')
     if errors:
         print(f'  {errors} gate(s) failed - not writing')
         return r, False
@@ -141,7 +166,15 @@ def build(spec):
         return r, True
 
     # ---- write
-    rk.write_layout(r, spec['layout'])
+    rk.write_layout(r, spec['layout'], border=spec.get('border', (rk.TREE_TL, rk.TREE_TR, rk.TREE_BL, rk.TREE_BR)),
+                    secondary=spec.get('tileset'))
+    for path, old, new in spec.get('script_edits', []):
+        fp = os.path.join(rk.ROOT, path)
+        t = open(fp).read()
+        if old in t:
+            open(fp, 'w').write(t.replace(old, new))
+        elif new not in t:
+            print(f'  WARNING: could not apply script edit in {path}: {old!r}')
     mj = rk.map_json(name)
     for o in mj['object_events']:
         suffix = o['script'].split('_EventScript_')[-1]

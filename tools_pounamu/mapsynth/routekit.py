@@ -53,6 +53,12 @@ ROCK1 = dict(nw=0x068, n=0x069, ne=0x06A, w=0x070, e=0x072, sw=0x078, s=0x079, s
 ROCK2 = dict(nw=0x06B, n=0x06C, ne=0x06D, w=0x073, e=0x075, sw=0x07B, s=0x07C, se=0x07D, c=0x071)
 ROCK_CONCAVE_SW, ROCK_CONCAVE_SE = 0x089, 0x074
 BOULDER = [0x093, 0x094, 0x09B, 0x09C]     # 2x2 rock on a mountain top
+# grass/forest coast, named by where the land lies: 's' = sea cell under the land's south
+# edge, 'e' = sea cell east of the land, '_in' = inside corner, '_out' = the land's corner
+# seen diagonally; lip = the grass cell under the sea (the land's north shore)
+COAST = dict(open=0x170, s=0x189, sw_in=0x188, se_in=0x18A, e=0x190, w=0x192, ne_out=0x179, nw_out=0x178,
+             se_out=0x198, sw_out=0x19A, lip_w=0x0D3, lip_e=0x0D4)
+SEA_ROCK = [0x150, 0x151, 0x158, 0x159]     # 2x2 boulder standing in the sea
 
 COL = 0x400
 
@@ -74,6 +80,9 @@ for m in ROCK_IDS:
     ATTR[m] = COL
 for m in POND.values():
     ATTR[m] = 0x1000
+for m in (0x170, 0x189, 0x188, 0x18A, 0x190, 0x192, 0x179, 0x178, 0x198, 0x19A):
+    ATTR[m] = 0x1000
+ATTR[0x0D3] = ATTR[0x0D4] = 0x3000
 ATTR[LEDGE] = ATTR[LEDGE_L] = ATTR[LEDGE_R] = 0x3400
 
 
@@ -85,9 +94,10 @@ _AT = None
 def autotiler():
     global _AT
     if _AT is None:
-        _AT = AutoTiler(SAMPLES, {'.': [GRASS], ',': [TALL], 'P': PATH, 'S': SEA, '*': [FLOWER],
+        _AT = AutoTiler(SAMPLES, {'.': [GRASS], ',': [TALL], 'P': PATH, 'S': SEA, '*': [FLOWER], 'B': BEACH,
                                   'p': [0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA, 0x1E0, 0x1E1, 0x1E2]},
                         texture='.,*')
+        _AT.exact_first = True
     return _AT
 
 
@@ -137,6 +147,7 @@ class Route:
         self.lev = [[0] * W for _ in range(H)]
         self.fix = {}
         self.notes = []
+        self.boulders = set()
 
     # -- primitives
     def inb(self, x, y):
@@ -232,18 +243,36 @@ class Route:
         W, H = self.W, self.H
         # the autotiled classes see everything else as a neighbour of another class
         # trees, ponds, ledges and rock look like "something else" (X) to the autotiler
-        sk = [''.join(c if c in '.,PS*p' else 'X' for c in self.cls[y]) for y in range(H)]
+        sk = [''.join(c if c in '.,PS*pB' else 'X' for c in self.cls[y]) for y in range(H)]
+        # a beach meets grass and trees the way vanilla does it: its outer ring of sand is
+        # drawn with the soft-edged path tiles, the rest with beach sand. So for tiling, beach
+        # cells that touch land count as path, paths see any sand as path, and the sea and the
+        # inner beach see any sand as beach.
+        def touches_land(x, y):
+            return any(0 <= x + dx < W and 0 <= y + dy < H and sk[y + dy][x + dx] in '.,*pX'
+                       for dx in (-1, 0, 1) for dy in (-1, 0, 1))
+        sand_edge = {(x, y) for y in range(H) for x in range(W) if sk[y][x] == 'B' and touches_land(x, y)}
+        self.sand_edge = sand_edge
+        # (the sea counts as sand too: its own tiles draw the waterline, the sand draws no fringe)
+        as_path = [''.join('P' if c in 'BS' else c for c in row) for row in sk]
+        as_beach = [''.join('B' if c == 'P' else c for c in row) for row in sk]
         at = autotiler()
         grid = [[None] * W for _ in range(H)]
         import random
         rnd = random.Random(seed)
         for y in range(H):
             for x in range(W):
-                if sk[y][x] != 'X':
-                    try:
-                        grid[y][x] = at.tile_at(sk, x, y, rnd)
-                    except KeyError:
-                        grid[y][x] = GRASS
+                if sk[y][x] == 'X':
+                    continue
+                g = sk
+                if sk[y][x] == 'P' or (x, y) in sand_edge:
+                    g = as_path
+                elif sk[y][x] in 'SB':
+                    g = as_beach
+                try:
+                    grid[y][x] = at.tile_at(g, x, y, rnd)
+                except KeyError:
+                    grid[y][x] = GRASS
         cells = [0] * (W * H)
         for y in range(H):
             for x in range(W):
@@ -275,6 +304,59 @@ class Route:
                         tall = c == ','
                         m = (CANOPY_TALL_L if tall else CANOPY_L) if x % 2 == 0 else (CANOPY_TALL_R if tall else CANOPY_R)
                 cells[y * W + x] = val(m)
+        # grass and forest coasts (the vanilla rules, read off Routes 103 and 110): the edge is
+        # drawn on the sea cell (189 under the land, 190 east of it, 192 west of it, corners
+        # 188 18A 198 19A 179 178), except along the land's north shore, where the grass cell
+        # itself carries the lip (002; 0D3 and 0D4 at its ends)
+        def landc(xx, yy):
+            return self.inb(xx, yy) and self.cls[yy][xx] not in ('S', 'B', 'P', 'W')
+        def sandc(xx, yy):
+            return self.inb(xx, yy) and self.cls[yy][xx] in ('B', 'P')
+        for y in range(H):
+            for x in range(W):
+                if self.cls[y][x] != 'S':
+                    continue
+                if any(sandc(x + dx, y + dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1)):
+                    continue                                # a sand shore: the autotiler's
+                n, w, e = landc(x, y - 1), landc(x - 1, y), landc(x + 1, y)
+                # a grass coast running on up into a beach keeps its straight edge
+                nw = landc(x - 1, y - 1) or sandc(x - 1, y - 1)
+                ne = landc(x + 1, y - 1) or sandc(x + 1, y - 1)
+                if n:
+                    m = COAST['sw_in'] if w else COAST['se_in'] if e else COAST['s']
+                elif w:
+                    m = COAST['e'] if nw else COAST['ne_out']
+                elif e:
+                    m = COAST['w'] if ne else COAST['nw_out']
+                elif nw:
+                    m = COAST['se_out']
+                elif ne:
+                    m = COAST['sw_out']
+                else:
+                    m = COAST['open']
+                cells[y * W + x] = val(m)
+        for y in range(1, H):
+            for x in range(W):
+                if self.cls[y][x] == '.' and self.cls[y - 1][x] == 'S' and not sandc(x, y - 1):
+                    sw_ = x > 0 and self.cls[y][x - 1] == 'S'
+                    se_ = x + 1 < W and self.cls[y][x + 1] == 'S'
+                    cells[y * W + x] = val(COAST['lip_w'] if sw_ else COAST['lip_e'] if se_ else SHORE_LIP)
+        # bay corners the autotiler has no example of: the rounded sea corners
+        for y in range(H):
+            for x in range(W):
+                if self.cls[y][x] != 'S':
+                    continue
+                C = lambda dx, dy: self.cls[y + dy][x + dx] if self.inb(x + dx, y + dy) else 'S'
+                up_b, left_b, down_b = C(0, -1) == 'B', C(-1, 0) == 'B', C(0, 1) == 'B'
+                if up_b and left_b:
+                    cells[y * W + x] = val(0x146)
+                elif down_b and left_b:
+                    cells[y * W + x] = val(0x125)
+                if down_b:
+                    cells[(y + 1) * W + x] = val(0x11C)      # the sand's wet edge below the sea
+        for (x, y) in self.boulders:                          # rocks out in the water (Route 103/104)
+            k = (1 if (x - 1, y) in self.boulders else 0) + (2 if (x, y - 1) in self.boulders else 0)
+            cells[y * W + x] = val(SEA_ROCK[k])
         self.cells = cells
         return cells
 
@@ -451,7 +533,7 @@ def sight_cells(route, x, y, face, rng):
 
 
 # ---------------------------------------------------------------- output
-def write_layout(route, layout_id, border=(TREE_TL, TREE_TR, TREE_BL, TREE_BR)):
+def write_layout(route, layout_id, border=(TREE_TL, TREE_TR, TREE_BL, TREE_BR), secondary=None):
     lay = LAYOUTS[layout_id]
     open(os.path.join(ROOT, lay['blockdata_filepath']), 'wb').write(struct.pack(f'<{len(route.cells)}H', *route.cells))
     open(os.path.join(ROOT, lay['border_filepath']), 'wb').write(struct.pack('<4H', *[val(m) for m in border]))
@@ -462,6 +544,10 @@ def write_layout(route, layout_id, border=(TREE_TL, TREE_TR, TREE_BL, TREE_BR)):
         j = txt.index(f'"{key}":', i)
         k = min(txt.index(',', j), txt.index('\n', j))
         txt = txt[:j] + f'"{key}": {v}' + txt[k:]
+    if secondary:
+        j = txt.index('"secondary_tileset":', i)
+        k = txt.index(',', j)
+        txt = txt[:j] + f'"secondary_tileset": "{secondary}"' + txt[k:]
     open(lp, 'w').write(txt)
 
 
@@ -498,7 +584,7 @@ def preview(route, path, scale=1, events=None):
 
 # ---------------------------------------------------------------- hand-drawn routes
 PALE = [0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA, 0x1E0, 0x1E1, 0x1E2]
-TERRAIN = set('.,PWLRQ*TpSs')
+TERRAIN = set('.,PWLRQ*TpSsBO')
 
 
 def from_ascii(name, rows, markers=''):
@@ -513,11 +599,28 @@ def from_ascii(name, rows, markers=''):
     r = Route(W, H, name)
     r.marks = {}
     r.snap_warnings = []
+
+    def ground_under(x, y):
+        """a marker stands on whatever ground surrounds it (sand, path, tall grass...), not a grass hole"""
+        votes = {}
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < W and 0 <= ny < H:
+                c = rows[ny][nx]
+                if c in '.,BPp*':
+                    votes[c] = votes.get(c, 0) + 1
+        if not votes:
+            return '.'
+        best = max(votes.values())
+        for c in '.BP,p*':          # ties go to plain ground
+            if votes.get(c) == best:
+                return c
+
     for y, row in enumerate(rows):
         for x, ch in enumerate(row):
             if ch in markers:
                 r.marks.setdefault(ch, []).append((x, y))
-                ch = '.'
+                ch = ground_under(x, y)
             if ch == 'Q':
                 r.cls[y][x] = 'R'; r.lev[y][x] = 2
             elif ch == 'R':
@@ -525,6 +628,8 @@ def from_ascii(name, rows, markers=''):
             elif ch == 's':
                 r.cls[y][x] = '#'; r.fix[(x, y)] = val(SIGN)
                 r.marks.setdefault('s', []).append((x, y))
+            elif ch == 'O':                       # a 2x2 boulder standing in the sea
+                r.cls[y][x] = 'S'; r.boulders.add((x, y))
             elif ch in TERRAIN:
                 r.cls[y][x] = ch
             else:
@@ -578,4 +683,34 @@ def lint_shapes(r):
                         if r.inb(nx, ny) and r.lev[ny][nx] < k - 1:
                             out.append(f'upper rock tier touches the ground at ({x},{y})')
                             break
+            # coasts: the tiles only draw sand shores and grass shores, one at a time
+            if c == 'S':
+                below = C(x, y + 1)
+                if below in ('T', ',', '*', 'p', 'R', 'L', 'W', '#'):
+                    out.append(f'{below!r} directly under the sea at ({x},{y + 1}): the land needs a grass shore row')
+                if below == '.' and C(x, y + 2) == 'T' and (y + 2) % 2 == 0:
+                    out.append(f'grass shore at ({x},{y + 1}) is also a tree canopy row: leave two grass rows')
+                # a sea cell draws the shore on its own west, east and north sides, so it can't
+                # draw a sand shore and a grass shore at once (a beach meeting a grass coast
+                # must stack: sand above, grass below, never side by side on one sea cell)
+                nb = {C(x + dx, y + dy) for dx, dy in ((-1, 0), (1, 0), (0, -1))} - {None, 'S'}
+                if nb & {'B', 'P'} and nb - {'B', 'P'}:
+                    out.append(f'mixed shore at ({x},{y}): sand and grass both touch this sea cell')
+            if (x, y) in r.boulders:
+                tl = (x - ((x - 1, y) in r.boulders), y - ((x, y - 1) in r.boulders))
+                blk = {(tl[0] + i, tl[1] + j) for i in (0, 1) for j in (0, 1)}
+                ring = {(tl[0] + i, tl[1] + j) for i in (-1, 0, 1, 2) for j in (-1, 0, 1, 2)} - blk
+                if not blk <= r.boulders or ring & r.boulders:
+                    out.append(f'sea boulder at ({x},{y}) must be a lone 2x2 block')
+                elif any(C(*c) not in ('S', None) for c in ring):
+                    out.append(f'sea boulder at ({x},{y}) must stand in open water')
+            if c == 'P' and any(C(x + dx, y + dy) == 'S' for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))):
+                out.append(f'path meets the sea at ({x},{y}): run it onto beach (B) first')
+            if c == 'B':
+                # one cell of sand can't carry a grass fringe on one side and surf on the other
+                isl = lambda dx, dy: C(x + dx, y + dy) not in (None, 'B', 'P', 'S')
+                iss = lambda dx, dy: C(x + dx, y + dy) == 'S'
+                if (isl(-1, 0) and iss(1, 0)) or (iss(-1, 0) and isl(1, 0)) or \
+                   (isl(0, -1) and iss(0, 1)) or (iss(0, -1) and isl(0, 1)):
+                    out.append(f'beach too thin at ({x},{y}): keep two sand cells between land and sea')
     return out

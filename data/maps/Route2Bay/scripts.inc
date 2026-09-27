@@ -46,7 +46,7 @@ Route2Bay_EventScript_Exile::
 Route2Bay_EventScript_Grunt1::
 	lock
 	faceplayer
-	goto_if_eq VAR_POUNAMU_INTRO_STATE, 5, Route2Bay_EventScript_Grunt1After
+	goto_if_ge VAR_POUNAMU_INTRO_STATE, 5, Route2Bay_EventScript_Grunt1After
 	msgbox Route2Bay_Text_Grunt1Before, MSGBOX_DEFAULT
 	release
 	end
@@ -58,7 +58,7 @@ Route2Bay_EventScript_Grunt1After::
 Route2Bay_EventScript_Grunt2::
 	lock
 	faceplayer
-	goto_if_eq VAR_POUNAMU_INTRO_STATE, 5, Route2Bay_EventScript_Grunt2After
+	goto_if_ge VAR_POUNAMU_INTRO_STATE, 5, Route2Bay_EventScript_Grunt2After
 	msgbox Route2Bay_Text_Grunt2Before, MSGBOX_DEFAULT
 	release
 	end
@@ -222,3 +222,19 @@ Route2Bay_Text_PPiriDefeat:
 
 Route2Bay_Text_PPiriPost:
 	.string "Mum says losing builds\ncharacter. I'm SO strong now.$"
+
+Route2Bay_EventScript_SignNorth::
+	msgbox Route2Bay_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route2Bay_Text_SignNorth:
+	.string "ROUTE 2\n"
+	.string "South to AHURIRI$"
+
+Route2Bay_EventScript_SignSouth::
+	msgbox Route2Bay_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route2Bay_Text_SignSouth:
+	.string "ROUTE 2\n"
+	.string "North to WAIROA$"

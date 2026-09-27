@@ -52,6 +52,9 @@ class AutoTiler:
             for m in ms:
                 owner.setdefault(m, ch)
         self.tables = [defaultdict(Counter) for _ in range(5)]
+        # most specific context of all: which class each of the 8 neighbours belongs to
+        # (a sea cell beside sand differs from one beside a rock); used when it has data
+        self.exact = defaultdict(Counter)
         self.freq = defaultdict(Counter)
         self.attr = defaultdict(Counter)
         for s in samples:
@@ -75,6 +78,13 @@ class AutoTiler:
                     for t, key in zip(self.tables, ((k, x % 2, y % 2, m8), (k, x % 2, y % 2, m4),
                                                     (k, m8), (k, m4), (k,))):
                         t[key][m] += 1
+                    def ncls(dx, dy):
+                        nx, ny = x+dx, y+dy
+                        if not (0 <= nx < w and 0 <= ny < h):
+                            return k
+                        return cls[ny*w+nx]
+                    self.exact[(k, tuple(ncls(dx, dy) for dx, dy in
+                                         ((0, -1), (1, 0), (0, 1), (-1, 0), (1, -1), (1, 1), (-1, 1), (-1, -1))))][m] += 1
 
     def tile_at(self, sketch, x, y, rnd):
         H, W = len(sketch), len(sketch[0])
@@ -100,6 +110,22 @@ class AutoTiler:
             return int(n == k or n in higher)
         m4 = (same(0, -1), same(1, 0), same(0, 1), same(-1, 0))
         m8 = m4 + (same(1, -1), same(1, 1), same(-1, 1), same(-1, -1))
+        if getattr(self, 'exact_first', False) and not (base in self.interior_texture and all(m8)):
+            def ncls(dx, dy):
+                nx, ny = x+dx, y+dy
+                if not (0 <= nx < W and 0 <= ny < H):
+                    return base
+                n = sketch[ny][nx]
+                if n == k or n in higher:
+                    return base
+                while n in self.tiers:
+                    n = self.tiers[n]
+                return n if n in self.classes else None
+            key = (base, tuple(ncls(dx, dy) for dx, dy in
+                               ((0, -1), (1, 0), (0, 1), (-1, 0), (1, -1), (1, 1), (-1, 1), (-1, -1))))
+            c = self.exact.get(key)
+            if c and base not in self.texture and sum(c.values()) >= 2:
+                return c.most_common(1)[0][0]
         for t, key in zip(self.tables, ((base, x % 2, y % 2, m8), (base, x % 2, y % 2, m4),
                                         (base, m8), (base, m4), (base,))):
             if key in t:

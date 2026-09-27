@@ -108,3 +108,19 @@ Route2North_Text_PIhaiaDefeat:
 
 Route2North_Text_PIhaiaPost:
 	.string "Keep to the track and take\nyour rubbish out, eh.$"
+
+Route2North_EventScript_SignNorth::
+	msgbox Route2North_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route2North_Text_SignNorth:
+	.string "ROUTE 2\n"
+	.string "South to AHURIRI$"
+
+Route2North_EventScript_SignSouth::
+	msgbox Route2North_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route2North_Text_SignSouth:
+	.string "ROUTE 2\n"
+	.string "North to WAIROA$"

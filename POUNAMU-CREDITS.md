@@ -56,3 +56,15 @@ Known contributing artists (per the thread; confirm per-folder on import):
 - Reuses the title screen's Te Mata dawn backdrop and mist, and the game's own Lugia and Ho-Oh
   front sprites (drawn as translucent silhouettes). The only new art is an 8x8 twinkling star
   (graphics/intro/pounamu_star.png), drawn in code by Claude: placeholder under rule 3.
+
+## Rule 3 update from Ryan (27 Sept 2026)
+- Ryan, 27 Sept 2026: "I don't care about the AI generated bans." So AI-made art may now ship in
+  Pounamu builds. The entries above that say "replace before public release" are still worth
+  keeping as a list: PokéCommunity's own rule hasn't changed, so anything AI-made needs replacing
+  before a public release there. The quality bar stays the same either way: vanilla Emerald
+  tiles are kept wherever Claude-drawn art isn't clearly better.
+
+## Route rebuild (28 Sept 2026)
+- Route 2 Bay, Route 2 North and Ahuriri's Marine Parade are drawn entirely from vanilla Emerald
+  General-tileset metatiles (trees, sand, surf, grass coast, sea rocks), placed by rule by
+  tools_pounamu/mapsynth/routekit.py. No new art.

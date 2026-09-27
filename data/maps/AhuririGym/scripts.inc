@@ -102,7 +102,7 @@ AhuririGym_EventScript_ExileCommon::
 	setflag FLAG_UNUSED_0x048
 	setflag FLAG_UNUSED_0x049
 	setvar VAR_POUNAMU_INTRO_STATE, 4
-	warp MAP_ROUTE2_BAY, 7, 6
+	warp MAP_ROUTE2_BAY, 30, 16
 	waitstate
 	release
 	end

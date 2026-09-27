@@ -14,8 +14,9 @@ QA = os.path.dirname(os.path.abspath(__file__))
 
 BOOT = 'run 120\nmash START 8 40\nrun 60\ntap A\nrun 360\nshot 00_spawn\n'
 
-def T(map, x, y, script, hour=12, flags=(), party=('PIDGEY',), deco=None):
-    return dict(map=map, x=x, y=y, hour=hour, flags=list(flags), party=list(party), script=BOOT + script, deco=deco)
+def T(map, x, y, script, hour=12, flags=(), party=('PIDGEY',), deco=None, intro=None):
+    return dict(map=map, x=x, y=y, hour=hour, flags=list(flags), party=list(party), script=BOOT + script, deco=deco,
+                intro=intro)
 
 TESTS = {
     'wellington': T('MAP_WELLINGTON', 20, 14, 'tap UP\nsteps A 18 s\nrun 120\nsteps A 3 t\n'),
@@ -72,6 +73,16 @@ TESTS = {
     'or_north': T('MAP_ORCHARD_ROAD', 15, 3, 'run 60\nshot a\nhold UP 50\nrun 20\nshot b\nhold UP 40\nrun 60\nshot c\nhold DOWN 60\nrun 30\nshot d\n'),
     'or_mid': T('MAP_ORCHARD_ROAD', 13, 27, 'run 60\nshot a\n'),
     'durie': T('MAP_WHANGANUI', 16, 3, 'tap UP\nsteps A 12 s\nrun 60\nsteps A 4 t\n'),
+    # Route 2 rebuild (Sept 2026)
+    'r2b_bottom': T('MAP_ROUTE2_BAY', 9, 41, 'run 60\nshot a\nhold DOWN 48\nrun 30\nshot b\nhold DOWN 48\nrun 40\nshot c\nhold UP 112\nrun 40\nshot d\n'),
+    'r2b_gate': T('MAP_ROUTE2_BAY', 30, 26, 'run 60\nshot a\nhold UP 80\nrun 20\nshot b\ntap UP\nsteps A 4 t\n'),
+    'r2b_top': T('MAP_ROUTE2_BAY', 14, 3, 'run 60\nshot a\nhold UP 64\nrun 30\nshot b\nhold UP 64\nrun 40\nshot c\n'),
+    'r2b_beach': T('MAP_ROUTE2_BAY', 29, 3, 'run 60\nshot a\nhold UP 64\nrun 30\nshot b\nhold DOWN 200\nrun 40\nshot c\n'),
+    'r2b_exile': T('MAP_ROUTE2_BAY', 30, 16, 'run 30\nshot a\nsteps A 14 m\nrun 120\nshot z\n', intro=4),
+    'r2b_parade': T('MAP_AHURIRI_CITY', 37, 6, 'run 60\nshot a\nhold UP 64\nrun 20\nshot b\nhold DOWN 400\nrun 40\nshot c\n'),
+    'r2n_coast': T('MAP_ROUTE2_NORTH', 33, 41, 'run 60\nshot a\nhold UP 32\nrun 20\nshot b\nhold RIGHT 48\nrun 20\nshot c\n'),
+    'r2n_top': T('MAP_ROUTE2_NORTH', 16, 4, 'run 60\nshot a\nhold UP 80\nrun 30\nshot b\nhold UP 48\nrun 40\nshot c\nhold DOWN 120\nrun 30\nshot d\n'),
+    'r2n_lake': T('MAP_ROUTE2_NORTH', 18, 17, 'run 60\nshot a\nhold DOWN 160\nrun 30\nshot b\n'),
 }
 
 def main(name):
@@ -81,7 +92,8 @@ def main(name):
     open(f'{REPO}/include/qa_spawn.h', 'w').write(
         f'#define QA_MAP {t["map"]}\n#define QA_X {t["x"]}\n#define QA_Y {t["y"]}\n'
         f'#define QA_HOUR {t["hour"]}\n#define QA_PARTY {{ {party} }}\n#define QA_FLAGS {{ {flags} }}\n'
-        + (f'#define QA_DECO {t["deco"]}\n' if t.get('deco') is not None else ''))
+        + (f'#define QA_DECO {t["deco"]}\n' if t.get('deco') is not None else '')
+        + (f'#define QA_INTRO {t["intro"]}\n' if t.get('intro') is not None else ''))
     r = subprocess.run('make modern -j2', shell=True, cwd=REPO, capture_output=True, text=True)
     if r.returncode:
         print(r.stdout[-3000:], r.stderr[-3000:]); sys.exit(1)
