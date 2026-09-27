@@ -19,6 +19,7 @@ c.box(4, 11, 5, 11, 'P'); c.box(10, 11, 11, 11, 'P'); c.box(20, 11, 21, 11, 'P')
 # Lake Taupo and its shore
 c.box(2, 16, 19, 21, 'W'); c.box(2, 22, 19, 23, '.')
 c.box(2, 16, 5, 17, '.'); c.box(15, 20, 19, 21, '.')      # the shore bends
+c.box(12, 16, 19, 16, '.'); c.box(8, 22, 13, 22, 'W')      # a bay under the town, a cove in the south
 c.box(26, 14, 29, 23, 'T'); c.box(28, 2, 31, 9, 'T')
 for x, y in [(2, 2), (8, 2), (20, 2), (22, 2), (2, 14)]:
     c.tree(x, y)

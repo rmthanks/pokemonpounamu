@@ -18,6 +18,7 @@ c.road([(31, 8), (31, 13)])                                       # the League a
 c.road([(6, 15), (6, 25)]); c.box(6, 24, 21, 25, 'P')             # the lane by the harbour
 # Otago Harbour's inlet in the south-east
 c.box(26, 19, 37, 25, 'W'); c.box(24, 28, 37, 29, 'T')
+c.box(26, 19, 28, 20, '.'); c.box(26, 24, 29, 25, '.'); c.box(34, 19, 37, 19, '.')   # the inlet's shore
 for x, y in [(2, 2), (8, 2), (20, 2), (2, 16), (10, 28), (16, 28), (22, 18), (18, 8)]:
     c.tree(x, y)
 for x, y in [(4, 8), (5, 9), (10, 8), (11, 9), (24, 4), (25, 5), (34, 10), (35, 11), (8, 19), (9, 18),
