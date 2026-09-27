@@ -136,6 +136,9 @@ TESTS = {
     'tn_league_exit': T('MAP_POUNAMU_LEAGUE_ENTRANCE', 5, 17, 'run 60\nshot a\nhold DOWN 32\nrun 200\nshot b\n'),
     'tn_temata_down': T('MAP_TE_MATA_SUMMIT', 22, 30, 'run 60\nshot a\nhold DOWN 32\nrun 200\nshot b\n'),
     'tn_tamaki_pc': T('MAP_TAMAKI_MAKAURAU', 32, 21, 'run 60\nshot a\nhold UP 16\nrun 200\nshot b\nhold UP 64\nrun 10\ntap A\nrun 60\nshot c\nmash A 12 30\nrun 200\nshot d\nhold DOWN 64\nrun 200\nshot e\nhold LEFT 192\nhold UP 144\nrun 10\nshot f\n'),
+    'tn_shadows': T('MAP_HERETAUNGA_TOWN', 45, 17, 'run 60\nshot a\nhold UP 16\nrun 120\nshot b\nmash A 12 30\nrun 60\nshot c\nmash A 20 30\nrun 200\nshot d\nmash A 60 20\nrun 200\nshot e\nmash A 60 20\nrun 200\nshot f\nmash A 60 20\nrun 300\nshot g\n', intro=1),
+    'tn_wairoa_n': T('MAP_WAIROA', 11, 3, 'run 60\nshot a\nhold UP 80\nrun 40\nshot b\n'),
+    'tn_turanga_s': T('MAP_TURANGA', 13, 22, 'run 60\nshot a\nhold DOWN 80\nrun 40\nshot b\n'),
 }
 
 def main(name):
