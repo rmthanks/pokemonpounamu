@@ -68,3 +68,18 @@ Known contributing artists (per the thread; confirm per-folder on import):
 - Route 2 Bay, Route 2 North and Ahuriri's Marine Parade are drawn entirely from vanilla Emerald
   General-tileset metatiles (trees, sand, surf, grass coast, sea rocks), placed by rule by
   tools_pounamu/mapsynth/routekit.py. No new art.
+- All fifteen template routes and Orchard Road were rebuilt the same way (vanilla General
+  metatiles only). No new art.
+
+## Town rebuild (28 Sept 2026)
+- The thirteen template towns (Wairoa, Turanga, Opotiki, Tauranga, Rotorua, Taupo, Ngamotu,
+  Whanganui, Wellington, Waitohi, Whakatu, Otautahi, Otepoti) are drawn with vanilla Emerald
+  town tilesets and buildings, stamped whole from Game Freak's own maps by
+  tools_pounamu/mapsynth/towns (library.py lists every source rectangle): Petalburg/Littleroot/
+  Oldale (Wairoa, Opotiki, Whanganui, Waitohi, Taupo, Whakatu, Otautahi), Dewford (Turanga),
+  Slateport (Tauranga, Ngamotu; its boats and Battle Tent), Lavaridge (Rotorua; the hot spring
+  and sand bath), Mossdeep (Wellington; the space centre without its rocket stands in for the
+  Beehive), Ever Grande (Otepoti; the Pokemon League building). Pokemon Center, Mart, gym and
+  red-roofed houses are General-tileset buildings. No new art.
+- Tamaki Makaurau keeps vanilla Lilycove, extended north and west with vanilla General trees,
+  water and rock (tools_pounamu/mapsynth/fix_tamaki_edges.py); its villa is a Lilycove house.
