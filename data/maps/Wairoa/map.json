@@ -16,22 +16,22 @@
   "connections": [
     {
       "map": "MAP_ROUTE2_NORTH",
-      "offset": -10,
+      "offset": -6,
       "direction": "down"
     },
     {
       "map": "MAP_ROUTE2_EAST",
-      "offset": -12,
+      "offset": -8,
       "direction": "up"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 5,
-      "y": 9,
+      "x": 8,
+      "y": 16,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -41,8 +41,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 12,
-      "y": 10,
+      "x": 7,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -54,8 +54,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 9,
-      "y": 13,
+      "x": 13,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -67,8 +67,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 8,
-      "y": 10,
+      "x": 13,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -80,10 +80,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 5,
+      "x": 9,
       "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -93,10 +93,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 15,
-      "y": 2,
+      "x": 14,
+      "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -107,22 +107,22 @@
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 6,
+      "x": 6,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_WAIROA_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
-      "y": 6,
+      "x": 16,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_WAIROA_RIVER_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 12,
+      "x": 6,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_WAIROA_LIGHTHOUSE_KEEPER",
       "dest_warp_id": "0"
@@ -131,20 +131,20 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "sign",
-      "x": 4,
-      "y": 8,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Wairoa_EventScript_TownSign"
-    },
-    {
       "type": "hidden_item",
-      "x": 13,
-      "y": 12,
+      "x": 21,
+      "y": 17,
       "elevation": 3,
       "item": "ITEM_STAR_PIECE",
       "flag": "FLAG_UNUSED_0x267"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Wairoa_EventScript_TownSign"
     }
   ]
 }

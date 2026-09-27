@@ -127,6 +127,7 @@ TESTS = {
     'tn_turanga_pc': T('MAP_TURANGA', 4, 8, 'run 60\nhold UP 40\nrun 90\nshot a\nhold DOWN 40\nrun 90\nshot b\n'),
     'surf35a': T('MAP_ROUTE35_A', 38, 16, 'run 60\ntap RIGHT\nrun 10\ntap A\nrun 60\ntap A\nrun 40\nmash A 6 20\nrun 200\nshot a\nhold RIGHT 16\nhold UP 400\nrun 30\nshot b\nhold DOWN 400\nrun 30\nshot c\n', party=[]),
     'r2n_lake': T('MAP_ROUTE2_NORTH', 18, 17, 'run 60\nshot a\nhold DOWN 160\nrun 30\nshot b\n'),
+    'tn_wairoa': T('MAP_WAIROA', 6, 9, 'run 60\nshot a\nhold UP 16\nrun 150\nshot b\nhold DOWN 16\nrun 150\nshot c\nhold RIGHT 160\nhold UP 32\nrun 150\nshot d\nhold DOWN 16\nrun 150\nshot e\nhold DOWN 16\nhold LEFT 80\nhold DOWN 128\nhold LEFT 80\nhold UP 16\nrun 150\nshot f\nhold DOWN 16\nrun 150\nshot g\nhold RIGHT 80\nhold DOWN 112\nrun 30\nshot h\n'),
 }
 
 def main(name):
