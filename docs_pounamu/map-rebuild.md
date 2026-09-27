@@ -36,9 +36,9 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
   Potions and Poke Balls on Orchard Road up to Max Revives and PP Ups on Route 1 South, Rare
   Candies on Routes 5 and 7 (seed_items.py; flags 0x4BB-0x4DF, 0x493-0x49D).
 
-- **The town map (Fly map), redrawn (Mon 28 Sept, late morning):** Aotearoa in Emerald's
-  region-map style filling the screen, every town and road on it, and Fly wired to Pounamu's
-  towns (it pointed at Hoenn). See "Town map" below.
+- **The town map (Fly map), redrawn (Mon 28 Sept):** NZ's real coastline turned corner to
+  corner in Emerald's region-map style, every town, landmark and highway where it really is,
+  and Fly wired to Pounamu's towns (it pointed at Hoenn). See "Town map" below.
 
 ## Game-breaking things found and fixed tonight
 - **Old saves would have loaded the wrong map.** Tamaki's new layout had gone into layouts.json
@@ -91,20 +91,27 @@ byte-identically from its spec (all 16 route specs and 13 town specs pass their 
   the hooks on: `python3 tools_pounamu/qa/qa_hooks.py off`, `grep -rn POUNAMU_QA src` empty).
 
 ## Town map (tools_pounamu/townmap)
-- **layout.py** is the source of truth: each town's cell (red orb = gym town or city, blue =
-  town), each road's cells in order, landmarks (Te Mata, Ruapehu, Piopiotahi), the Cook
-  Strait sea lane. Move a town here and it moves everywhere.
-- **draw.py** draws the art from it (Emerald's palette: striped sea, dark-green coast rim,
-  greens by elevation noise, orange road bands over the land's shading, vanilla orb pixels,
-  lakes, snow peaks) and packs it: Fly map as an 8bpp affine BG (64x64 byte tilemap, <=256
-  tiles), the Pokedex area map as the same picture on a 32x32 16-bit tilemap.
-  `--write` updates graphics/pokenav/region_map/map.* and graphics/pokedex/region_map.* and
-  the -num_tiles counts in src/region_map.c.
+- **geo.py**: NZ's real coastline (Natural Earth 1:50m, data/nz_coast_ne50m.json) turned
+  TILT = 48 degrees clockwise (Ryan's idea: Te Rerenga Wairua top right, Rakiura bottom left)
+  and scaled to the 28x15 fly grid: true shape, ~52 km per cell. North-up would be ~100 km
+  per cell; 36-42 degrees looks more upright but Hastings/Napier/Te Mata and Rotorua/Taupo or
+  Tauranga/Rotorua then share cells (TOWNMAP_TILT=40 python3 draw.py previews it).
+- **layout.py**: real coordinates for every town and landmark (one cell each; NUDGE if two
+  ever collide) and the real highways as waypoints (SH2, SH35 round East Cape, SH5 both ways,
+  the Desert Road, the Forgotten World Highway, the Surf Highway, SH1 Kapiti and south, SH6,
+  Lewis Pass). A road's cells are the ones its line passes through; a road too short for a cell
+  of its own (Orchard Road, Route 2 Bay/North, Route 5, Route 6) puts the player on its towns.
+- **draw.py**: Emerald's palette and look (striped sea, dark rim, greens by elevation noise),
+  roads as yellow lines with an orange edge, the Interislander dashed, lakes, snow peaks, a
+  compass rose showing the tilted north, Emerald's orb pixels; packs the Fly map (8bpp affine,
+  64x64 byte tilemap, <=256 tiles) and the Pokedex area map (same picture, 32x32 16-bit).
+  `--write` updates graphics/pokenav/region_map/map.*, graphics/pokedex/region_map.* and the
+  -num_tiles counts.
 - **apply.py** writes region_map_sections.json (positions; Tamaki = MAPSEC_OLDALE_TOWN,
   Piopiotahi = MAPSEC_ROUTE_130), region_map_layout.h (cursor names per cell),
-  pounamu_map_cells.h (per-map cells: the player's head goes by map, not section, and moves
-  along long roads), the League rooms -> Otepoti's section, HEAL_LOCATION_HERETAUNGA_TOWN,
-  the fly table in region_map.c, and `setflag FLAG_VISITED_*` in every town's ON_TRANSITION.
+  pounamu_map_cells.h (per-map cells, up to 8: the head goes by map and moves along long
+  roads), the League rooms -> Otepoti's section, HEAL_LOCATION_HERETAUNGA_TOWN, the fly table in
+  region_map.c, and `setflag FLAG_VISITED_*` in every town's ON_TRANSITION.
 - **Fly rules (region_map.c PounamuTownFlyType):** a town is flyable once visited, or once
   the story is past it (badge 3/5/6/7/8, the Sky Tower for Tamaki) so old saves work;
   Heretaunga and Ahuriri are shut from the coup (VAR_POUNAMU_INTRO_STATE >= 4) until the
