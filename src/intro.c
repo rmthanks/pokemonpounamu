@@ -19,6 +19,7 @@
 #include "intro_credits_graphics.h"
 #include "trig.h"
 #include "intro.h"
+#include "pounamu_intro.h"
 #include "graphics.h"
 #include "sound.h"
 #include "util.h"
@@ -1109,7 +1110,7 @@ static u8 SetUpCopyrightScreen(void)
         SetMainCallback2(CB2_ExpansionIntro);
         CreateTask(Task_HandleExpansionIntro, 0);
 #else
-        CreateTask(Task_Scene1_Load, 0);
+        CreateTask(Task_PounamuIntro_Load, 0);   // Pounamu: the two shadows at dawn
         SetMainCallback2(MainCB2_Intro);
 #endif
         if (gMultibootProgramStruct.gcmb_field_2 != 0)

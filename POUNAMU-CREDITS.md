@@ -51,3 +51,8 @@ Known contributing artists (per the thread; confirm per-folder on import):
   after the real 1935 Sidney Chaplin tower. It is AI-made, so rule 3 applies: replace with
   hand-drawn art before any public release. Everything else on the rebuilt map is vanilla
   Emerald tiles (Rongokako's terraces use the Route 119 ridge tiles).
+
+## Opening intro (27 Sept 2026)
+- Reuses the title screen's Te Mata dawn backdrop and mist, and the game's own Lugia and Ho-Oh
+  front sprites (drawn as translucent silhouettes). The only new art is an 8x8 twinkling star
+  (graphics/intro/pounamu_star.png), drawn in code by Claude: placeholder under rule 3.

@@ -9,6 +9,7 @@
 #include "trig.h"
 #include "main.h"
 #include "intro.h"
+#include "pounamu_intro.h"
 #include "intro_frlg.h"
 #include "m4a.h"
 #include "expansion_intro.h"
@@ -282,7 +283,7 @@ void Task_HandleExpansionIntro(u8 taskId)
             }
             else
             {
-                CreateTask(Task_Scene1_Load, 0);
+                CreateTask(Task_PounamuIntro_Load, 0);   // Pounamu: the two shadows at dawn
                 SetMainCallback2(MainCB2_Intro);
             }
         }
