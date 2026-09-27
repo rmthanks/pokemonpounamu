@@ -39,6 +39,12 @@ STAMPS = {
     'dew.house':     ('DewfordTown', 7, 5, 4, 4, [(1, 3)], None),
     'dew.house2':    ('DewfordTown', 16, 11, 4, 4, [(1, 3)], None),
     'dew.dock':      ('DewfordTown', 11, 9, 3, 2, [], None),      # plank jetty over the sea
+    # ---- Mossdeep
+    'moss.house':    ('MossdeepCity', 27, 6, 4, 4, [(1, 3)], None),
+    'moss.house_st': ('MossdeepCity', 18, 7, 4, 4, [(1, 3)], None),     # Steven's, with the aerial
+    'moss.hall':     ('MossdeepCity', 35, 20, 5, 5, [(1, 4)], None),    # the game corner's hall
+    'moss.dome':     ('MossdeepCity', 60, 8, 9, 8, [(4, 7)], None),     # the space centre, no rocket
+    'moss.tree':     ('MossdeepCity', 22, 14, 2, 2, [], None),          # round bushy tree
     # ---- Lavaridge
     'lav.spring':    ('LavaridgeTown', 2, 2, 6, 5, [], None),     # hot spring in its rock rim; way in at (4,0)
     'lav.sandbath':  ('LavaridgeTown', 2, 7, 6, 4, [], None),     # the hot sand bath (against rock on its west)

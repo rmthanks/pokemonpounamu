@@ -9583,10 +9583,10 @@
     {
       "id": "LAYOUT_WELLINGTON",
       "name": "Wellington_Layout",
-      "width": 50,
+      "width": 48,
       "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Wellington/border.bin",
       "blockdata_filepath": "data/layouts/Wellington/map.bin",
       "layout_version": "emerald"

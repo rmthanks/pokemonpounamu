@@ -195,7 +195,7 @@ def build(spec):
         placed[suffix] = ((x, y), face)
         if not r.walkable(x, y):
             errors += fail('object on a blocked tile', [(suffix, x, y)])
-        if (x, y) in fronts.values() or (x, y) in warps.values():
+        if ((x, y) in fronts.values() or (x, y) in warps.values()) and suffix not in spec.get('blockers', ()):
             errors += fail('object in a doorway', [(suffix, x, y)])
     for suffix in spec['objects']:
         if suffix not in names:
@@ -210,10 +210,12 @@ def build(spec):
         for b, bcells in exits.items():
             if b != a and not any(c in seen for c in bcells):
                 errors += fail('town cannot be crossed', [f'{a} -> {b}'])
+    # doors a story blocker stands in front of are reached with the blocker gone
+    open_main = r.reach(allexits, standing - {placed[b][0] for b in spec.get('blockers', ()) if b in placed})
     for i, (x, y) in sorted(warps.items()):
         if i in fronts:
             fx, fy = fronts[i]
-            if (fx, fy) not in main:
+            if (fx, fy) not in open_main:
                 errors += fail('door cannot be reached', [(i, mj['warp_events'][i]['dest_map'], fx, fy)])
         elif not any((x + dx, y + dy) in main for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))) and (x, y) not in main:
             errors += fail('warp cannot be reached', [(i, x, y)])
@@ -221,6 +223,15 @@ def build(spec):
         near = any((x + dx, y + dy) in main for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
         if not near and suffix not in spec.get('allow_unreached', ()):
             errors += fail('object cannot be reached', [(suffix, x, y)])
+    # trainers must see onto ground the player walks
+    for o, suffix in zip(objs, names):
+        if suffix not in placed or o.get('trainer_type', 'TRAINER_TYPE_NONE') == 'TRAINER_TYPE_NONE':
+            continue
+        (x, y), face = placed[suffix]
+        f = face or o['movement_type'].replace('MOVEMENT_TYPE_FACE_', '')
+        rng = int(o.get('trainer_sight_or_berry_tree_id', 2) or 0)
+        if f in FACES and rng and not any(c in main for c in rk.sight_cells(r, x, y, f, rng)):
+            errors += fail('trainer looks at nothing', [(suffix, x, y, f)])
     for sx, sy, _ in spec.get('signs', []):
         if (sx, sy + 1) not in main:
             errors += fail('sign cannot be read from below', [(sx, sy)])

@@ -7,7 +7,7 @@ TamakiMakaurau_EventScript_FerryHome::
 	msgbox TamakiMakaurau_Text_FerryHome, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, TamakiMakaurau_EventScript_FerryStay
 	closemessage
-	warp MAP_WELLINGTON, 25, 20
+	warp MAP_WELLINGTON, 28, 30
 	waitstate
 	end
 
