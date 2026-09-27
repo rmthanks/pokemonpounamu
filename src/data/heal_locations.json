@@ -402,7 +402,7 @@
       "id": "HEAL_LOCATION_TAUPO",
       "map": "MAP_TAUPO",
       "x": 5,
-      "y": 10,
+      "y": 11,
       "respawn_map": "MAP_TAUPO_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_TAUPO_NURSE"
     },

@@ -3,7 +3,7 @@ RuapehuAscent_MapScripts::
 
 RuapehuAscent_EventScript_Descend::
 	lockall
-	warp MAP_TAUPO, 4, 13
+	warp MAP_TAUPO, 6, 13
 	waitstate
 	releaseall
 	end

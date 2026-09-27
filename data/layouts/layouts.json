@@ -9506,8 +9506,8 @@
     {
       "id": "LAYOUT_TAUPO",
       "name": "Taupo_Layout",
-      "width": 30,
-      "height": 24,
+      "width": 32,
+      "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Taupo/border.bin",
