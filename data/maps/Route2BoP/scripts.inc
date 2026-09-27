@@ -138,3 +138,19 @@ Route2BoP_Text_PDylanDefeat:
 
 Route2BoP_Text_PDylanPost:
 	.string "The huts are full this weekend.\nBook ahead, e hoa.$"
+
+Route2BoP_EventScript_SignNorth::
+	msgbox Route2BoP_Text_SignNorth, MSGBOX_SIGN
+	end
+
+Route2BoP_Text_SignNorth:
+	.string "ROUTE 2\n"
+	.string "South to OPOTIKI$"
+
+Route2BoP_EventScript_SignSouth::
+	msgbox Route2BoP_Text_SignSouth, MSGBOX_SIGN
+	end
+
+Route2BoP_Text_SignSouth:
+	.string "ROUTE 2\n"
+	.string "North to TAURANGA$"

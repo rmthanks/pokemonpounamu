@@ -95,3 +95,19 @@ Route36_Text_PJackDefeat:
 
 Route36_Text_PJackPost:
 	.string "Southerly's coming. Take care\nup the track.$"
+
+Route36_EventScript_SignWest::
+	msgbox Route36_Text_SignWest, MSGBOX_SIGN
+	end
+
+Route36_Text_SignWest:
+	.string "ROUTE 36\n"
+	.string "West to ROTORUA$"
+
+Route36_EventScript_SignEast::
+	msgbox Route36_Text_SignEast, MSGBOX_SIGN
+	end
+
+Route36_Text_SignEast:
+	.string "ROUTE 36\n"
+	.string "East to TAURANGA$"

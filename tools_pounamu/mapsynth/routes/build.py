@@ -146,7 +146,9 @@ def build(spec):
     conns = [(cn['direction'], rk.folder_of(cn['map']), spec['conns'].get(cn['map'], cn['offset']))
              for cn in mj['connections']]
     water = lambda v: rk.BEH.get(v & 0x3FF, 0) in rk.WATER_BEH
-    probs, grid, src = cv.edge_problems(r.W, r.H, r.cells, border, conns, secondary, r.walkable, water=water)
+    reachable = r.reach(allexits)          # where the player can actually stand (objects aside)
+    probs, grid, src = cv.edge_problems(r.W, r.H, r.cells, border, conns, secondary,
+                                        lambda x, y: (x, y) in reachable, water=water)
     skip_sides = {cn['direction'] for cn in mj['connections'] if cn['map'] in deferred}
     probs = [p for side, p in probs if side not in skip_sides]
     if probs:

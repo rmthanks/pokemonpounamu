@@ -9462,8 +9462,8 @@
     {
       "id": "LAYOUT_ROUTE2_BOP",
       "name": "Route2BoP_Layout",
-      "width": 16,
-      "height": 94,
+      "width": 48,
+      "height": 64,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route2BoP/border.bin",
@@ -9484,8 +9484,8 @@
     {
       "id": "LAYOUT_ROUTE36",
       "name": "Route36_Layout",
-      "width": 40,
-      "height": 16,
+      "width": 60,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route36/border.bin",

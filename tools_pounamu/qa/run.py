@@ -90,6 +90,11 @@ TESTS = {
     'r35a_close': T('MAP_ROUTE35_A', 37, 52, 'run 60\nshot a\nhold UP 48\nrun 30\nshot b\n'),
     'r35b_top': T('MAP_ROUTE35_B', 21, 4, 'run 60\nshot a\nhold UP 80\nrun 30\nshot b\nhold UP 32\nrun 40\nshot c\n'),
     'r35b_coast': T('MAP_ROUTE35_B', 33, 30, 'run 60\nshot a\nhold UP 160\nrun 30\nshot b\n'),
+    'r2bop_bottom': T('MAP_ROUTE2_BOP', 21, 60, 'run 60\nshot a\nhold DOWN 80\nrun 30\nshot b\nhold DOWN 32\nrun 40\nshot c\n'),
+    'r2bop_top': T('MAP_ROUTE2_BOP', 19, 3, 'run 60\nshot a\nhold UP 80\nrun 30\nshot b\nhold UP 32\nrun 40\nshot c\n'),
+    'r2bop_beach': T('MAP_ROUTE2_BOP', 33, 24, 'run 60\nshot a\nhold DOWN 400\nrun 30\nshot b\n'),
+    'r36_west': T('MAP_ROUTE36', 3, 12, 'run 60\nshot a\nhold LEFT 80\nrun 30\nshot b\nhold LEFT 32\nrun 40\nshot c\n'),
+    'r36_east': T('MAP_ROUTE36', 56, 12, 'run 60\nshot a\nhold RIGHT 80\nrun 30\nshot b\nhold RIGHT 32\nrun 40\nshot c\n'),
     'r2n_lake': T('MAP_ROUTE2_NORTH', 18, 17, 'run 60\nshot a\nhold DOWN 160\nrun 30\nshot b\n'),
 }
 
