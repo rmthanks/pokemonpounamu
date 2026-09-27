@@ -9550,10 +9550,10 @@
     {
       "id": "LAYOUT_NGAMOTU",
       "name": "Ngamotu_Layout",
-      "width": 30,
-      "height": 24,
+      "width": 32,
+      "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Ngamotu/border.bin",
       "blockdata_filepath": "data/layouts/Ngamotu/map.bin",
       "layout_version": "emerald"

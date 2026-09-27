@@ -409,8 +409,8 @@
     {
       "id": "HEAL_LOCATION_NGAMOTU",
       "map": "MAP_NGAMOTU",
-      "x": 3,
-      "y": 10,
+      "x": 4,
+      "y": 11,
       "respawn_map": "MAP_NGAMOTU_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_NGAMOTU_NURSE"
     },

@@ -28,7 +28,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 22,
+      "x": 16,
       "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -42,7 +42,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 14,
-      "y": 11,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -55,9 +55,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 23,
-      "y": 10,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -67,8 +67,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 10,
-      "y": 19,
+      "x": 5,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -81,36 +81,36 @@
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 9,
+      "x": 4,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_NGAMOTU_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 13,
-      "y": 9,
+      "x": 12,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_NGAMOTU_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 23,
-      "y": 9,
+      "x": 20,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_NGAMOTU_WIND_GALLERY",
       "dest_warp_id": "0"
     },
     {
-      "x": 3,
-      "y": 18,
+      "x": 10,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_NGAMOTU_SURF_HIGHWAY",
       "dest_warp_id": "0"
     },
     {
-      "x": 13,
-      "y": 18,
+      "x": 27,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_NGAMOTU_GARDENER_HOUSE",
       "dest_warp_id": "0"
@@ -120,8 +120,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 23,
-      "y": 8,
+      "x": 9,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ngamotu_EventScript_TaranakiSign"
