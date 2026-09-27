@@ -132,6 +132,7 @@ TESTS = {
     'tn_ferry': T('MAP_WELLINGTON', 21, 28, 'run 60\nhold UP 16\nrun 200\nshot a\nhold DOWN 16\nrun 200\nshot b\n'),
     'tn_beehive': T('MAP_WELLINGTON', 38, 13, 'run 60\nhold UP 16\nrun 200\nshot a\nhold DOWN 16\nrun 200\nshot b\n'),
     'tn_tamaki': T('MAP_TAMAKI_MAKAURAU', 9, 23, 'run 60\nshot a\nhold UP 16\nrun 200\nshot b\nhold DOWN 16\nrun 200\nshot c\nhold RIGHT 64\nrun 20\nshot d\n'),
+    'tn_wlg_gym': T('MAP_WELLINGTON', 13, 10, 'run 60\nshot a\nhold UP 16\nrun 200\nshot b\nhold DOWN 16\nrun 200\nhold DOWN 32\nhold RIGHT 128\nhold DOWN 240\nrun 30\nshot c\n'),
 }
 
 def main(name):

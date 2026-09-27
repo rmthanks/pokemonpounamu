@@ -42,13 +42,13 @@ stamps = [('pc', 16, 10, 0), ('mart', 26, 10, 1), ('moss.hall', 20, 23, 2), ('gy
 SPEC = dict(
     folder='Wellington', layout='LAYOUT_WELLINGTON', tileset='gTileset_Mossdeep',
     rows=c.rows(), stamps=stamps, pc_warp=0,
-    objects={'GymKid': (13, 10, 'DOWN'), 'BeehiveMan': (36, 13, 'DOWN'), 'WindWoman': (28, 17, None),
-             'FerryMan': (24, 29, 'LEFT'), 'CafeKid': (18, 17, None), 'TamakiFerry': (29, 30, 'RIGHT'),
+    objects={'GymKid': (12, 11, 'RIGHT'), 'BeehiveMan': (36, 13, 'DOWN'), 'WindWoman': (28, 17, None),
+             'FerryMan': (21, 28, 'DOWN'), 'CafeKid': (18, 17, None), 'TamakiFerry': (29, 30, 'RIGHT'),
              'TamaStrait': (21, 28, 'UP'), 'KauriStrait': (22, 28, 'UP'), 'Hori': (18, 26, None),
              'PNgahuia': (40, 13, 'LEFT'), 'POtene': (27, 22, 'DOWN'), 'PPaora': (10, 18, 'RIGHT'),
              'PRangimarie': (26, 5, 'LEFT'), 'PTamati': (10, 30, 'RIGHT'), 'WLJOB': (20, 4, 'DOWN'),
              'TRAMPJOB': (10, 13, 'RIGHT')},
-    blockers=('GymKid', 'TamaStrait'),
+    blockers=('FerryMan', 'TamaStrait'),     # the terminal doors: the ferryman till badge 5, then Tama
     signs=[(14, 12, 'GymSign'), (31, 12, 'BeehiveSign'), (19, 27, 'FerrySign')],
     hidden={0: (27, 34)},
     conns={'MAP_ROUTE1_KAPITI': 22 - 24},

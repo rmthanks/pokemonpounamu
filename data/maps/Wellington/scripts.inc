@@ -3,9 +3,16 @@ Wellington_MapScripts::
 	.byte 0
 
 Wellington_OnTransition::
+	call_if_set FLAG_BADGE05_GET, Wellington_EventScript_FerryManAside
 	goto_if_set FLAG_UNUSED_0x04A, Wellington_OnTransition_HideStrait
 	goto_if_set FLAG_BADGE05_GET, Wellington_OnTransition_ShowStrait
 	goto Wellington_OnTransition_HideStrait
+
+@ The ferryman keeps the terminal doors until Manu's badge is won; then he stands aside
+@ and the ramp is Tama's until the strait scene resolves.
+Wellington_EventScript_FerryManAside::
+	setobjectxyperm 4, 24, 29
+	return
 
 Wellington_OnTransition_ShowStrait::
 	clearflag FLAG_UNUSED_0x04B
@@ -103,7 +110,12 @@ Wellington_Text_METJOBAfter:
 	.string "“consult a bird”. The boss\l"
 	.string "thinks I'm joking.$"
 Wellington_EventScript_FerryMan::
+	goto_if_set FLAG_UNUSED_0x04A, Wellington_EventScript_FerryManOpen
 	msgbox Wellington_Text_FerryMan, MSGBOX_NPC
+	end
+
+Wellington_EventScript_FerryManOpen::
+	msgbox Wellington_Text_FerryManOpen, MSGBOX_NPC
 	end
 Wellington_EventScript_CafeKid::
 	msgbox Wellington_Text_CafeKid, MSGBOX_NPC
@@ -115,15 +127,19 @@ Wellington_EventScript_BeehiveSign::
 	msgbox Wellington_Text_BeehiveSign, MSGBOX_SIGN
 	end
 Wellington_EventScript_FerrySign::
+	goto_if_set FLAG_UNUSED_0x04A, Wellington_EventScript_FerrySignOpen
 	msgbox Wellington_Text_FerrySign, MSGBOX_SIGN
+	end
+
+Wellington_EventScript_FerrySignOpen::
+	msgbox Wellington_Text_FerrySignOpen, MSGBOX_SIGN
 	end
 
 Wellington_Text_GymKid:
 	.string "Leader Manu reads the wind like\n"
 	.string "a book.\p"
 	.string "In this town, that's not a\n"
-	.string "hobby. It's survival.\p"
-	.string "…Gym's closed for now, but.$"
+	.string "hobby. It's survival.$"
 Wellington_Text_BeehiveMan:
 	.string "That round building's where they\n"
 	.string "make the rules for the whole\l"
@@ -142,6 +158,10 @@ Wellington_Text_FerryMan:
 	.string "they say. And 'other reasons.'\p"
 	.string "The 'other reasons' wear\n"
 	.string "matching jackets. You follow?$"
+
+Wellington_Text_FerryManOpen:
+	.string "Ferry's running again, e hoa.\n"
+	.string "Through the doors behind me.$"
 Wellington_Text_CafeKid:
 	.string "Six cafes on one block! I've\n"
 	.string "had four hot chocolates.\p"
@@ -149,8 +169,7 @@ Wellington_Text_CafeKid:
 Wellington_Text_GymSign:
 	.string "TE WHANGANUI-A-TARA GYM\n"
 	.string "Leader: MANU - rides the gale.\p"
-	.string "“Back when the wind allows.”\p"
-	.string "(Gym 5 opens in a later build!)$"
+	.string "“Back when the wind allows.”$"
 Wellington_Text_BeehiveSign:
 	.string "THE BEEHIVE\p"
 	.string "“Where the motu makes its\n"
@@ -159,10 +178,13 @@ Wellington_Text_FerrySign:
 	.string "INTERISLANDER - COOK STRAIT\p"
 	.string "SAILINGS SUSPENDED.\p"
 	.string "A second notice, newer:\n"
-	.string "“By order. Bay business.”\p"
-	.string "(The South Island opens in a\n"
-	.string "later build - the ferry is your\l"
-	.string "door across.)$"
+	.string "“By order. Bay business.”$"
+
+Wellington_Text_FerrySignOpen:
+	.string "INTERISLANDER - COOK STRAIT\p"
+	.string "SAILINGS RESUMED.\p"
+	.string "Someone has torn the second\n"
+	.string "notice down.$"
 
 @ ---- Ferry north: Tamaki Makaurau (post-Choice) ----
 Wellington_EventScript_TamakiFerry::

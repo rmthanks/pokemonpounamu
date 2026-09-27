@@ -51,6 +51,7 @@ STAMPS = {
     'sl.dome':       ('SlateportCity', 8, 8, 5, 5, [(2, 4)], None),      # the Battle Tent
     'sl.boat':       ('SlateportCity', 33, 36, 3, 3, [], None),          # moored sailboat (over sea)
     'sl.dinghy':     ('SlateportCity', 36, 37, 3, 2, [], None),          # (over sea)
+    'sl.lighthouse': ('SlateportCity', 32, 51, 2, 4, [], None),
     # ---- Ever Grande
     'eg.league':     ('EverGrandeCity', 13, 0, 11, 6, [(5, 5)], None),   # the Pokemon League
     'eg.steps':      ('EverGrandeCity', 14, 6, 9, 4, [], None),           # the stair and plinths before it

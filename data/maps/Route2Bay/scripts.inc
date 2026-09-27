@@ -102,10 +102,7 @@ Route2Bay_Text_ExileClose:
 	.string "The checkpoint closes.\p"
 	.string "Somewhere south, the orchard rows\n"
 	.string "are turning over without you.\p"
-	.string "ACT 1: HAWKE'S BAY - complete.\p"
-	.string "(The road north to Wairoa and\n"
-	.string "beyond arrives in the next build.\l"
-	.string "Thanks for playing the draft!)$"
+	.string "ACT 1: HAWKE'S BAY - complete.$"
 
 Route2Bay_Text_Grunt1Before:
 	.string "Checkpoint. Mob business up\n"
