@@ -9616,8 +9616,8 @@
     {
       "id": "LAYOUT_OTAUTAHI",
       "name": "Otautahi_Layout",
-      "width": 50,
-      "height": 36,
+      "width": 40,
+      "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Otautahi/border.bin",

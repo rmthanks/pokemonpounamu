@@ -16,22 +16,22 @@
   "connections": [
     {
       "map": "MAP_ROUTE7_POUNAMU",
-      "offset": -14,
+      "offset": -2,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE1_SOUTH",
-      "offset": -16,
+      "offset": -4,
       "direction": "down"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 14,
+      "x": 29,
       "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -41,10 +41,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 23,
-      "y": 12,
+      "x": 24,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -54,8 +54,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 37,
-      "y": 13,
+      "x": 21,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -67,8 +67,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 10,
-      "y": 20,
+      "x": 12,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -80,10 +80,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 30,
-      "y": 22,
+      "x": 34,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -93,8 +93,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 14,
-      "y": 15,
+      "x": 13,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -106,8 +106,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 5,
-      "y": 28,
+      "x": 4,
+      "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -119,10 +119,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 44,
+      "x": 36,
       "y": 26,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -132,10 +132,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 20,
-      "y": 12,
+      "x": 12,
+      "y": 16,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -145,8 +145,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
-      "x": 10,
-      "y": 11,
+      "x": 3,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -158,10 +158,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 44,
-      "y": 14,
+      "x": 36,
+      "y": 16,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -171,8 +171,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 4,
-      "y": 4,
+      "x": 8,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -185,15 +185,15 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 11,
+      "x": 5,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_OTAUTAHI_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 11,
+      "x": 11,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_OTAUTAHI_MART",
       "dest_warp_id": "0"
@@ -206,29 +206,29 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 38,
+      "x": 16,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_OTAUTAHI_ISITE",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 28,
+      "x": 31,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_OTAUTAHI_REBUILD_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 21,
-      "y": 28,
+      "x": 10,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_OTAUTAHI_GARDEN_FLAT",
       "dest_warp_id": "0"
     },
     {
-      "x": 29,
-      "y": 28,
+      "x": 25,
+      "y": 27,
       "elevation": 0,
       "dest_map": "MAP_OTAUTAHI_CATHEDRAL_FLAT",
       "dest_warp_id": "0"
@@ -238,16 +238,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 23,
-      "y": 11,
+      "x": 21,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Otautahi_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 35,
-      "y": 11,
+      "x": 15,
+      "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Otautahi_EventScript_CathedralSign"

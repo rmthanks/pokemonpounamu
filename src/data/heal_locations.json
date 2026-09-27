@@ -449,8 +449,8 @@
     {
       "id": "HEAL_LOCATION_OTAUTAHI",
       "map": "MAP_OTAUTAHI",
-      "x": 6,
-      "y": 12,
+      "x": 5,
+      "y": 14,
       "respawn_map": "MAP_OTAUTAHI_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_OTAUTAHI_NURSE"
     },

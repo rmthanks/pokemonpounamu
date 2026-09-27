@@ -120,8 +120,15 @@ def build(spec):
 
     # ---- stamps
     warps, fronts = {}, {}
+    owner = {}
     for name_s, x, y, warp in spec['stamps']:
         st = get_stamp(name_s)
+        for dy, row in enumerate(st['cells']):
+            for dx, v in enumerate(row):
+                if v is not None:
+                    if (x + dx, y + dy) in owner:
+                        errors += fail('stamps overlap', [(name_s, owner[(x + dx, y + dy)], x + dx, y + dy)])
+                    owner[(x + dx, y + dy)] = name_s
         if not st['general'] and st['secondary'] != tileset:
             errors += fail('stamp from another tileset', [(name_s, st['secondary'])])
         for dy, row in enumerate(st['cells']):
@@ -243,7 +250,8 @@ def build(spec):
         (x, y), face = placed[suffix]
         f = face or o['movement_type'].replace('MOVEMENT_TYPE_FACE_', '')
         rng = int(o.get('trainer_sight_or_berry_tree_id', 2) or 0)
-        if f in FACES and rng and not any(c in main for c in rk.sight_cells(r, x, y, f, rng)):
+        if f in FACES and rng and suffix not in spec.get('talk_trainers', ()) \
+                and not any(c in main for c in rk.sight_cells(r, x, y, f, rng)):
             errors += fail('trainer looks at nothing', [(suffix, x, y, f)])
     for sx, sy, _ in spec.get('signs', []):
         if (sx, sy + 1) not in main:

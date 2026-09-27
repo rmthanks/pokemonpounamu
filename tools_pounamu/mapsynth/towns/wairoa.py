@@ -36,6 +36,7 @@ SPEC = dict(
     rows=c.rows(), stamps=stamps, pc_warp=0,
     objects={'Woman': (8, 16, 'LEFT'), 'Kid': (7, 11, None), 'OldMan': (13, 18, 'DOWN'),
              'Awhi': (13, 7, 'DOWN'), 'PUenuku': (9, 3, 'DOWN'), 'PWero': (14, 14, 'RIGHT')},
+    talk_trainers=('PWero',),      # fishing, back to the town: you go and talk to him
     signs=[(10, 7, 'TownSign')],
     hidden={0: (21, 17)},
     conns={'MAP_ROUTE2_NORTH': 10 - 16, 'MAP_ROUTE2_EAST': 10 - 18},
