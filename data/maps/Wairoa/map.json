@@ -67,7 +67,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 13,
+      "x": 19,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -94,7 +94,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
       "x": 14,
-      "y": 14,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -121,7 +121,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
+      "x": 5,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_WAIROA_LIGHTHOUSE_KEEPER",

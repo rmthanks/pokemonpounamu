@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Wairoa - "where the river meets the sea". A river town drawn the Oldale way (Sept 2026).
+"""Wairoa - "where the river meets the sea". Drawn with Slateport's tileset (Sept 2026).
 
-The Wairoa River widens into its mouth in the south-east of town, with the lighthouse
-keeper's house across the lane from it; the dairy (the River House) sits behind its hedge
-on the cross street where Awhi waits; the road runs north to the East Cape and south to
-the Bay's checkpoint."""
+The Wairoa River widens into its mouth in the south-east of town with the white
+lighthouse on its bank (Slateport's, its lantern set on grass), the keeper's house across
+the lane; the dairy (the River House) on the cross street where Awhi waits; the road runs
+north to the East Cape and south to the Bay's checkpoint."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_town import Canvas, build
@@ -29,13 +29,14 @@ for x, y in [(3, 6), (3, 7), (4, 7), (9, 6), (9, 7), (14, 11), (15, 16), (16, 16
     c.at(x, y, '*')
 
 stamps = [('pc', 5, 5, 0),
-          ('pet.garden_house', 14, 3, 1),      # the dairy (River House)
-          ('pet.house_big', 3, 12, 2)]         # the lighthouse keeper
+          ('sl.house', 15, 4, 1),              # the dairy (River House)
+          ('sl.clubhouse', 3, 12, 2),          # the lighthouse keeper
+          ('sl.lighthouse', 13, 11, None)]
 SPEC = dict(
-    folder='Wairoa', layout='LAYOUT_WAIROA', tileset='gTileset_Petalburg',
+    folder='Wairoa', layout='LAYOUT_WAIROA', tileset='gTileset_Slateport',
     rows=c.rows(), stamps=stamps, pc_warp=0,
     objects={'Woman': (8, 16, 'LEFT'), 'Kid': (7, 11, None), 'OldMan': (13, 18, 'DOWN'),
-             'Awhi': (13, 7, 'DOWN'), 'PUenuku': (9, 3, 'DOWN'), 'PWero': (14, 14, 'RIGHT')},
+             'Awhi': (19, 7, 'DOWN'), 'PUenuku': (9, 3, 'DOWN'), 'PWero': (14, 15, 'RIGHT')},
     talk_trainers=('PWero',),      # fishing, back to the town: you go and talk to him
     signs=[(10, 7, 'TownSign')],
     hidden={0: (21, 17)},
