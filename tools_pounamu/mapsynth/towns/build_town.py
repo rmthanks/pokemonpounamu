@@ -112,6 +112,7 @@ def build(spec):
     r.pond_open_top = set(spec.get('pond_open_top', ()))
     r.fixed_class = spec.get('fixed_class', 'X')
     r.pond_open_bottom = spec.get('pond_open_bottom', False)     # water running on into the map below
+    r.solid |= set(map(tuple, spec.get('solid', ())))              # drawn as their class, nobody stands there
     errors = 0
     print(f'{name}: {r.W}x{r.H} drawn with {tileset}')
     if r.snap_warnings:
@@ -153,6 +154,14 @@ def build(spec):
                 jet[(jx + i, jy + 1)] = dock[1][0 if i == 0 else 1]
         for (x, y) in jet:
             r.cls[y][x] = 'S'
+    # overlays: stamps laid over water after it is drawn (boats), so the sea around them
+    # stays open water
+    for name_o, ox, oy in spec.get('overlays', []):
+        st = get_stamp(name_o)
+        for dy, row in enumerate(st['cells']):
+            for dx, v in enumerate(row):
+                if v is not None:
+                    jet[(ox + dx, oy + dy)] = v
 
     shapes = rk.lint_shapes(r)
     if shapes:

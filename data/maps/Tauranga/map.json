@@ -28,8 +28,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 18,
-      "y": 14,
+      "x": 20,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -41,10 +41,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 6,
-      "y": 5,
+      "x": 27,
+      "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -54,8 +54,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 20,
-      "y": 17,
+      "x": 14,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -67,10 +67,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 32,
-      "y": 22,
+      "x": 31,
+      "y": 20,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -80,8 +80,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 13,
-      "y": 20,
+      "x": 24,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -93,10 +93,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 7,
-      "y": 21,
+      "x": 11,
+      "y": 27,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -106,8 +106,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 34,
-      "y": 18,
+      "x": 30,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -119,10 +119,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 28,
-      "y": 4,
+      "x": 13,
+      "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -132,8 +132,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
-      "x": 9,
-      "y": 4,
+      "x": 4,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -147,42 +147,42 @@
   "warp_events": [
     {
       "x": 7,
-      "y": 13,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_TAURANGA_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 25,
-      "y": 13,
+      "x": 13,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_TAURANGA_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 17,
-      "y": 12,
+      "x": 19,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_TAURANGA_GYM",
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
-      "y": 25,
+      "x": 18,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_TAURANGA_PORT_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 18,
-      "y": 25,
+      "x": 12,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_TAURANGA_MAUAO_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 24,
-      "y": 25,
+      "x": 3,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_TAURANGA_BACH_HOUSE",
       "dest_warp_id": "0"
@@ -192,16 +192,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 15,
-      "y": 13,
+      "x": 17,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Tauranga_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 4,
-      "y": 6,
+      "x": 23,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Tauranga_EventScript_MauaoSign"

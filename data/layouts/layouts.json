@@ -9476,7 +9476,7 @@
       "width": 40,
       "height": 34,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Tauranga/border.bin",
       "blockdata_filepath": "data/layouts/Tauranga/map.bin",
       "layout_version": "emerald"

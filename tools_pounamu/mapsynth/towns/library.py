@@ -45,6 +45,12 @@ STAMPS = {
     'moss.hall':     ('MossdeepCity', 35, 20, 5, 5, [(1, 4)], None),    # the game corner's hall
     'moss.dome':     ('MossdeepCity', 60, 8, 9, 8, [(4, 7)], None),     # the space centre, no rocket
     'moss.tree':     ('MossdeepCity', 22, 14, 2, 2, [], None),          # round bushy tree
+    # ---- Slateport
+    'sl.house':      ('SlateportCity', 4, 16, 4, 4, [(1, 3)], None),     # purple roof (the Name Rater's)
+    'sl.clubhouse':  ('SlateportCity', 2, 22, 5, 5, [(2, 4)], None),     # green roof (the Fan Club)
+    'sl.dome':       ('SlateportCity', 8, 8, 5, 5, [(2, 4)], None),      # the Battle Tent
+    'sl.boat':       ('SlateportCity', 33, 36, 3, 3, [], None),          # moored sailboat (over sea)
+    'sl.dinghy':     ('SlateportCity', 36, 37, 3, 2, [], None),          # (over sea)
     # ---- Lavaridge
     'lav.spring':    ('LavaridgeTown', 2, 2, 6, 5, [], None),     # hot spring in its rock rim; way in at (4,0)
     'lav.sandbath':  ('LavaridgeTown', 2, 7, 6, 4, [], None),     # the hot sand bath (against rock on its west)

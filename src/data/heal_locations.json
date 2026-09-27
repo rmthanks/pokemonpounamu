@@ -386,7 +386,7 @@
       "id": "HEAL_LOCATION_TAURANGA",
       "map": "MAP_TAURANGA",
       "x": 7,
-      "y": 14,
+      "y": 16,
       "respawn_map": "MAP_TAURANGA_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_TAURANGA_NURSE"
     },
