@@ -9498,7 +9498,7 @@
       "width": 40,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/Rotorua/border.bin",
       "blockdata_filepath": "data/layouts/Rotorua/map.bin",
       "layout_version": "emerald"

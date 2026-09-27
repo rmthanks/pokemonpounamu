@@ -34,6 +34,9 @@ STAMPS = {
     'pet.lab':         ('LittlerootTown', 3, 12, 7, 5, [(4, 4)], None),
     'pet.garden_house': ('PetalburgCity', 18, 20, 8, 7, [(2, 4)], None),   # hedged, with planters
     'pet.hedge_house': ('PetalburgCity', 4, 1, 7, 9, [(3, 4)], None),      # Wally's, hedges and flowers
+    # ---- Lavaridge
+    'lav.spring':    ('LavaridgeTown', 2, 2, 6, 5, [], None),     # hot spring in its rock rim; way in at (4,0)
+    'lav.sandbath':  ('LavaridgeTown', 2, 7, 6, 4, [], None),     # the hot sand bath (against rock on its west)
 }
 
 

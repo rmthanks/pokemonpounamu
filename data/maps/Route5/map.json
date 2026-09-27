@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROTORUA",
-      "offset": 14,
+      "offset": 0,
       "direction": "up"
     },
     {
