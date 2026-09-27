@@ -457,7 +457,7 @@
     {
       "id": "HEAL_LOCATION_OTEPOTI",
       "map": "MAP_OTEPOTI",
-      "x": 6,
+      "x": 5,
       "y": 14,
       "respawn_map": "MAP_OTEPOTI_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_OTEPOTI_NURSE"

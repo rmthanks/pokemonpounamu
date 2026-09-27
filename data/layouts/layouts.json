@@ -9641,7 +9641,7 @@
       "width": 40,
       "height": 32,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/Otepoti/border.bin",
       "blockdata_filepath": "data/layouts/Otepoti/map.bin",
       "layout_version": "emerald"

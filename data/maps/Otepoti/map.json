@@ -16,15 +16,15 @@
   "connections": [
     {
       "map": "MAP_ROUTE1_SOUTH",
-      "offset": -20,
+      "offset": -12,
       "direction": "up"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 14,
-      "y": 15,
+      "x": 12,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -36,10 +36,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 23,
-      "y": 14,
+      "x": 24,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -49,8 +49,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 33,
-      "y": 13,
+      "x": 12,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -62,8 +62,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 10,
-      "y": 21,
+      "x": 30,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -75,10 +75,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 12,
-      "y": 22,
+      "x": 25,
+      "y": 21,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -88,8 +88,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "x": 21,
-      "y": 17,
+      "x": 33,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -101,8 +101,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 10,
-      "y": 12,
+      "x": 8,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -115,7 +115,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 10,
-      "y": 3,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -127,10 +127,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 3,
-      "y": 15,
+      "x": 4,
+      "y": 17,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -140,8 +140,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
-      "x": 21,
-      "y": 8,
+      "x": 36,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -153,10 +153,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 28,
-      "y": 19,
+      "x": 23,
+      "y": 26,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -166,8 +166,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 4,
-      "y": 4,
+      "x": 3,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -179,8 +179,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 30,
-      "y": 6,
+      "x": 17,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -192,10 +192,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 35,
-      "y": 17,
+      "x": 25,
+      "y": 23,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -206,43 +206,43 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 5,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_OTEPOTI_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
+      "x": 11,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_OTEPOTI_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 25,
-      "y": 13,
+      "x": 23,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_OTEPOTI_GYM",
       "dest_warp_id": "0"
     },
     {
       "x": 32,
-      "y": 13,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_POUNAMU_LEAGUE_ENTRANCE",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
-      "y": 22,
+      "x": 9,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_OTEPOTI_SCARFIE_FLAT",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 22,
+      "x": 16,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_OTEPOTI_STONE_VILLA",
       "dest_warp_id": "0"
@@ -252,8 +252,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 23,
-      "y": 13,
+      "x": 19,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Otepoti_EventScript_GymSign"

@@ -51,6 +51,9 @@ STAMPS = {
     'sl.dome':       ('SlateportCity', 8, 8, 5, 5, [(2, 4)], None),      # the Battle Tent
     'sl.boat':       ('SlateportCity', 33, 36, 3, 3, [], None),          # moored sailboat (over sea)
     'sl.dinghy':     ('SlateportCity', 36, 37, 3, 2, [], None),          # (over sea)
+    # ---- Ever Grande
+    'eg.league':     ('EverGrandeCity', 13, 0, 11, 6, [(5, 5)], None),   # the Pokemon League
+    'eg.steps':      ('EverGrandeCity', 14, 6, 9, 4, [], None),           # the stair and plinths before it
     # ---- Lavaridge
     'lav.spring':    ('LavaridgeTown', 2, 2, 6, 5, [], None),     # hot spring in its rock rim; way in at (4,0)
     'lav.sandbath':  ('LavaridgeTown', 2, 7, 6, 4, [], None),     # the hot sand bath (against rock on its west)
